@@ -1,3 +1,9 @@
+.Introduce {
+  padding-top: 52px;
+  background-clip: black;
+  font-size: 0.5208333333vw;
+}
+
 .IntroduceSlogun {
   display: flex;
   align-items: center;
@@ -16,8 +22,61 @@
 .IntroduceSlogun .Slogun label {
   color: #fff;
   font-family: Pretendard;
-  font-size: 50px;
+  font-size: 5em;
   font-style: normal;
   font-weight: 600;
-  line-height: 66px; /* 132% */
+  line-height: 132%;
+}
+
+.IntroduceGoals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  aspect-ratio: 16/9;
+  position: relative;
+  background-color: white;
+  font-size: 0.5208333333vw;
+}
+.IntroduceGoals .Goals {
+  flex-basis: 62.5%;
+  white-space: pre-wrap;
+  aspect-ratio: 1200/760;
+}
+.IntroduceGoals .BeamworksLogo {
+  width: 24.5vw;
+  aspect-ratio: 470/60;
+  margin-bottom: 2.2%;
+}
+.IntroduceGoals .GoalDetails1 {
+  width: 36vw;
+}
+.IntroduceGoals .GoalDetails1 label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+.IntroduceGoals .GoalDescription {
+  margin-top: 6%;
+  margin-bottom: 4.8%;
+}
+.IntroduceGoals .GoalDescription img {
+  width: 100%;
+  aspect-ratio: 1200/478;
+}
+.IntroduceGoals .GoalDetails2 {
+  width: 37.5vw;
+  float: right;
+}
+.IntroduceGoals .GoalDetails2 label {
+  color: #000;
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
 }/*# sourceMappingURL=Introduce.css.map */

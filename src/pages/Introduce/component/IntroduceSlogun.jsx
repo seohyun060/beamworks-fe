@@ -4,7 +4,7 @@ import "../styles/introduce.css";
 
 const Slogun = () => {
   return (
-    <div className="IntroduceSlogun">
+    <section className="IntroduceSlogun">
       <div className="Slogun">
         <label>
           빔웍스는,
@@ -17,7 +17,7 @@ const Slogun = () => {
           <br />
         </label>
       </div>
-    </div>
+    </section>
   );
 };
 
