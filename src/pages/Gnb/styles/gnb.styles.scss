@@ -1,0 +1,75 @@
+.gnb {
+	display: flex;
+	z-index: 50;
+	width: 100vw;
+	height: 52px;
+	background: rgba(60, 60, 60, 0.9);
+	backdrop-filter: blur(5px);
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	position: fixed;
+	&-logo {
+		position: relative;
+		margin-left: 10.4vw;
+	}
+	&-tabs1 {
+		position: relative;
+		width: fit-content;
+		height: 52px;
+		margin-left: 2.9vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		.tab {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: fit-content;
+			margin-right: 2vw;
+			padding-top: 5px;
+			height: 52px;
+			div {
+				width: fit-content;
+				height: 28px;
+				color: #fff;
+				text-align: center;
+				font-family: Pretendard;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 30px; /* 175% */
+				margin-right: 4px;
+			}
+			.popup1,
+			.popup2,
+			.popup3 {
+				position: absolute;
+				display: inline-block;
+				width: 100vw;
+				height: 232px;
+				top: 52px;
+				left: calc(-13.3vw + -163px);
+				border: 1px solid black;
+				color: black;
+				//background-color: red;
+			}
+		}
+	}
+	&-tabs2 {
+		@extend .gnb-tabs1;
+		position: absolute;
+		right: 12%;
+		.tab {
+			margin-right: 2.6vw;
+			div {
+				margin-right: 0px;
+			}
+		}
+	}
+	&-language {
+		position: absolute;
+		right: 10.4%;
+	}
+}

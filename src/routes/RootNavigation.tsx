@@ -1,4 +1,6 @@
 import HomeContainer from 'src/pages/Home/containers/HomeContainer';
+import GnbContainer from 'src/pages/Gnb/containers/GnbContainer';
+
 import React, { useEffect, useState } from 'react';
 import {
 	BrowserRouter as Router,
@@ -9,15 +11,14 @@ import {
 import './styles/rootnavigation.style.css';
 
 const RootNavigation = () => {
-	const [key, setkey] = useState('');
-	useEffect(() => {
-		setkey(new Date().getSeconds().toString());
-	}, [key]);
 	const location = useLocation();
 	return (
-		<Routes location={location}>
-			<Route path='/' element={<HomeContainer />} />
-		</Routes>
+		<>
+			<GnbContainer location={location.pathname} />
+			<Routes location={location}>
+				<Route path='/' element={<HomeContainer />} />
+			</Routes>
+		</>
 	);
 };
 

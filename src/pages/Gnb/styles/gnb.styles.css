@@ -1,0 +1,79 @@
+.gnb {
+  display: flex;
+  z-index: 50;
+  width: 100vw;
+  height: 52px;
+  background: rgba(60, 60, 60, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+}
+.gnb-logo {
+  position: relative;
+  margin-left: 10.4vw;
+}
+.gnb-tabs1, .gnb-tabs2 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 52px;
+  margin-left: 2.9vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb-tabs1 .tab, .gnb-tabs2 .tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 2vw;
+  padding-top: 5px;
+  height: 52px;
+}
+.gnb-tabs1 .tab div, .gnb-tabs2 .tab div {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 28px;
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 175% */
+  margin-right: 4px;
+}
+.gnb-tabs1 .tab .popup1, .gnb-tabs2 .tab .popup1,
+.gnb-tabs1 .tab .popup2,
+.gnb-tabs2 .tab .popup2,
+.gnb-tabs1 .tab .popup3,
+.gnb-tabs2 .tab .popup3 {
+  position: absolute;
+  display: inline-block;
+  width: 100vw;
+  height: 232px;
+  top: 52px;
+  left: calc(-13.3vw - 163px);
+  border: 1px solid black;
+  color: black;
+}
+.gnb-tabs2 {
+  position: absolute;
+  right: 12%;
+}
+.gnb-tabs2 .tab {
+  margin-right: 2.6vw;
+}
+.gnb-tabs2 .tab div {
+  margin-right: 0px;
+}
+.gnb-language {
+  position: absolute;
+  right: 10.4%;
+}/*# sourceMappingURL=gnb.styles.css.map */
