@@ -1,0 +1,26 @@
+.IntroduceSlogun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  aspect-ratio: 16/9;
+  position: relative;
+  background-image: url("/public/assets/images/slogun.png");
+  background-size: cover;
+
+  .Slogun {
+    // flex: auto;
+    flex-basis: 62.5%;
+    white-space: pre-wrap;
+    aspect-ratio: 1200/760;
+
+    label {
+      color: #fff;
+      font-family: Pretendard;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 66px; /* 132% */
+    }
+  }
+}
