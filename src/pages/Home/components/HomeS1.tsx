@@ -2,7 +2,7 @@ import React from 'react';
 
 type Props = {};
 
-const Section1 = (props: Props) => {
+const HomeS1 = (props: Props) => {
 	return (
 		<div className='home-s1'>
 			<div className='home-s1-text'>
@@ -12,4 +12,4 @@ const Section1 = (props: Props) => {
 	);
 };
 
-export default Section1;
+export default HomeS1;

@@ -1,6 +1,6 @@
 import HomeContainer from 'src/pages/Home/containers/HomeContainer';
 import GnbContainer from 'src/pages/Gnb/containers/GnbContainer';
-
+import AwardContainer from 'src/pages/Award/containers/AwardContainer';
 import Introduce from 'src/pages/Introduce/Introduce';
 
 import React, { useEffect, useState } from 'react';
@@ -20,6 +20,7 @@ const RootNavigation = () => {
 			<Routes location={location}>
 				<Route path='/' element={<HomeContainer />} />
 				<Route path='/introduce' element={<Introduce />} />
+				<Route path='/award' element={<AwardContainer />} />
 			</Routes>
 		</>
 	);

@@ -46,7 +46,7 @@
 			.popup2,
 			.popup3 {
 				position: absolute;
-				display: inline-block;
+
 				width: 100vw;
 				height: 232px;
 				top: 52px;
@@ -54,6 +54,15 @@
 				border: 1px solid black;
 				color: black;
 				background-color: white;
+				opacity: 0; /* 초기에 숨겨짐 */
+				visibility: hidden; /* 초기에 숨겨짐 */
+				transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 트랜지션 적용 */
+
+				&-active {
+					@extend .popup1;
+					opacity: 1; /* 나타남 */
+					visibility: visible; /* 나타남 */
+				}
 				//background-color: red;
 			}
 		}

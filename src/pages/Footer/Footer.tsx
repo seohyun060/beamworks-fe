@@ -6,6 +6,9 @@ type Props = {};
 const Footer = (props: Props) => {
 	return (
 		<div className='footer'>
+			<div className='footer-news'>
+				<div className='footer-news-header'>뉴스레터를 구독해보세요</div>
+			</div>
 			<div className='footer-info'>
 				<div className='footer-info-head'>
 					<div className='legal'>Legal Notice</div>

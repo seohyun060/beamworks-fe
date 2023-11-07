@@ -3,7 +3,7 @@ import images from 'src/assets/images';
 
 type Props = {};
 
-const Section3 = (props: Props) => {
+const HomeS3 = (props: Props) => {
 	return (
 		<div className='home-s3'>
 			<div className='home-s3-text'>
@@ -21,4 +21,4 @@ const Section3 = (props: Props) => {
 	);
 };
 
-export default Section3;
+export default HomeS3;

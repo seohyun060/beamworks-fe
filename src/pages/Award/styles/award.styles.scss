@@ -1,0 +1,83 @@
+::-webkit-scrollbar {
+	width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.award {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100vw;
+	height: fit-content;
+	& * {
+		word-break: keep-all;
+	}
+	&-s1 {
+		width: 100vw;
+		height: 56.25vw;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding-left: 18.75vw;
+		padding-right: 18.75vw;
+		&-header {
+			margin-top: 11.1vw;
+			//margin-left: 18.75vw;
+			color: #000;
+			font-family: Pretendard;
+			font-size: 2.6vw;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1.32; /* 132% */
+		}
+		img {
+			width: 62.5vw;
+			height: 24.9vw;
+			margin-top: 2.97vw;
+		}
+		&-body {
+			width: 37vw;
+			margin-top: 2.7vw;
+			height: fit-content;
+			align-self: flex-end;
+
+			text-align: right;
+			font-family: Pretendard;
+			font-size: 1.25vw;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.42; /* 141.667% */
+		}
+	}
+	&-s2 {
+		width: 100vw;
+		height: 56.25vw;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		img {
+			width: 100vw;
+			height: 56.25vw;
+			position: absolute;
+		}
+		&-header {
+			z-index: 1;
+			color: #fff;
+			margin-top: 10.78vw;
+			margin-left: 18.75vw;
+			font-family: Pretendard;
+			font-size: 2.08vw;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1; /* 100% */
+		}
+	}
+}

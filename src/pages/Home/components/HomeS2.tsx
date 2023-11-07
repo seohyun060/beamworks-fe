@@ -9,7 +9,7 @@ type Props = {
 	}[];
 };
 
-const Section2 = ({ selectedTab, onTabClick, tabs }: Props) => {
+const HomeS2 = ({ selectedTab, onTabClick, tabs }: Props) => {
 	return (
 		<div className='home-s2'>
 			<div className='home-s2-header'>빔웍스의 기술력</div>
@@ -32,4 +32,4 @@ const Section2 = ({ selectedTab, onTabClick, tabs }: Props) => {
 	);
 };
 
-export default Section2;
+export default HomeS2;
