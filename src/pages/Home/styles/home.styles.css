@@ -20,6 +20,144 @@
   height: -moz-fit-content;
   height: fit-content;
 }
+.home-s1 {
+  width: 100vw;
+  height: 56.25vw;
+  position: relative;
+  display: flex;
+  background-image: url("/public/assets/images/mainback1.png");
+}
+.home-s1-text {
+  z-index: 10;
+  width: 19.375vw;
+  margin-left: 18.75vw;
+  margin-top: 11.1vw;
+  word-break: keep-all;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  font-family: Pretendard;
+  font-size: 2.6vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2; /* 132% */
+}
+.home-s2 {
+  width: 100vw;
+  height: 56.25vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.home-s2-header {
+  width: 62.5vw;
+  margin: auto;
+  margin-top: 5.26vw;
+  margin-bottom: 0;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+.home-s2-tabs {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 62.5vw;
+  height: 2.34vw;
+  margin: auto;
+  margin-top: 4.06vw;
+  border-bottom: 2px solid #ddd;
+}
+.home-s2-tabs .all, .home-s2-tabs .chatai, .home-s2-tabs .chatai-active, .home-s2-tabs .cadai, .home-s2-tabs .cadai-active, .home-s2-tabs .all-active {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  text-align: center;
+  height: 2.34vw;
+  left: 11.04vw;
+  transition: 0.075s ease;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 1.56vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.home-s2-tabs .all:hover, .home-s2-tabs .chatai:hover, .home-s2-tabs .chatai-active:hover, .home-s2-tabs .cadai:hover, .home-s2-tabs .cadai-active:hover, .home-s2-tabs .all-active:hover {
+  cursor: pointer;
+}
+.home-s2-tabs .all-active {
+  border-bottom: 2px solid black;
+}
+.home-s2-tabs .cadai, .home-s2-tabs .cadai-active {
+  left: 22.5vw;
+}
+.home-s2-tabs .cadai-active {
+  border-bottom: 2px solid black;
+}
+.home-s2-tabs .chatai, .home-s2-tabs .chatai-active {
+  left: 40vw;
+}
+.home-s2-tabs .chatai-active {
+  border-bottom: 2px solid black;
+}
+.home-s3 {
+  width: 100vw;
+  height: 56.25vw;
+  position: relative;
+  display: flex;
+  background-image: url("/public/assets/images/mainback3.png");
+}
+.home-s3-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 10;
+  width: 31.08vw;
+  margin-left: 18.75vw;
+  margin-top: 28.125vw;
+  word-break: keep-all;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.home-s3-text .header, .home-s3-text .body {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 100% */
+}
+.home-s3-text .body {
+  font-size: 1.56vw;
+  margin-top: 2.71vw;
+}
+.home-s3-text .readmore {
+  display: flex;
+  flex-direction: row;
+  width: 8.23vw;
+  margin-top: 4.8vw;
+  align-items: center;
+}
+.home-s3-text .readmore div {
+  color: #fff;
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 1.04vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+  margin-right: 0.6vw;
+}
+.home-s3-text .readmore img {
+  width: 0.73vw;
+  height: 0.73vw;
+}
 .home .a, .home .b {
   width: 100vw;
   height: 56.25vw;
