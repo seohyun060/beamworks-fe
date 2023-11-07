@@ -11,6 +11,10 @@ const images = {
 	mainback3: '/assets/images/mainback3.png',
 	rightW: '/assets/images/rightW.svg',
 	footerLogo: '/assets/images/footerLogo.svg',
+	mission_image: '/assets/images/mission_image.png',
+	mission_detail1: '/assets/images/mission_detail1.png',
+	mission_detail2: '/assets/images/mission_detail2.png',
+	mission_detail3: '/assets/images/mission_detail3.png',
 };
 
 export default images;
