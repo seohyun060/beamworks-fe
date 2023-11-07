@@ -1,16 +1,32 @@
-.Introduce {
-  padding-top: 52px;
-  background-clip: black;
-  font-size: 0.5208333333vw;
+@charset "UTF-8";
+.scroll {
+  overflow: hidden;
 }
 
-.IntroduceSlogun {
+.Introduce {
+  height: 100vh;
+  font-size: 0.5208333333vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.Introduce section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  aspect-ratio: 16/9;
+  width: 100%;
+  height: 100%;
   position: relative;
+  scroll-snap-align: start;
+  padding-top: 52px;
+}
+
+.Introduce::-webkit-scrollbar {
+  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
+}
+
+.IntroduceSlogun {
   background-image: url("/public/assets/images/slogun.png");
   background-size: cover;
 }
@@ -18,6 +34,7 @@
   flex-basis: 62.5%;
   white-space: pre-wrap;
   aspect-ratio: 1200/760;
+  padding-top: 3%;
 }
 .IntroduceSlogun .Slogun label {
   color: #fff;
@@ -28,24 +45,95 @@
   line-height: 132%;
 }
 
-.IntroduceGoals {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  aspect-ratio: 16/9;
-  position: relative;
-  background-color: white;
-  font-size: 0.5208333333vw;
+.IntroduceMission .Mission {
+  flex-basis: 62.5%;
+  aspect-ratio: 1200/760;
 }
+.IntroduceMission .MissionTitle {
+  margin-bottom: 3%;
+}
+.IntroduceMission .MissionTitle label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+.IntroduceMission .MissionSubTitle {
+  margin-bottom: 1.7%;
+}
+.IntroduceMission .MissionSubTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80%;
+}
+.IntroduceMission .MissionDescription {
+  margin-bottom: 3.7%;
+}
+.IntroduceMission .MissionDescription label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+}
+.IntroduceMission .MissionImage {
+  width: 100%;
+  height: 63%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.IntroduceMissionDetail .Mission {
+  display: flex;
+  flex-basis: 62.5%;
+  aspect-ratio: 1200/760;
+}
+.IntroduceMissionDetail .Contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30.5%;
+  margin-right: 12%;
+}
+.IntroduceMissionDetail .MissionDetailTitle {
+  margin-bottom: 10%;
+}
+.IntroduceMissionDetail .MissionDetailTitle label {
+  word-break: keep-all;
+  color: var(--Check, #346ec5);
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.IntroduceMissionDetail .MissionDetailDescription label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+}
+.IntroduceMissionDetail .MissionDetailImage {
+  width: 57.5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .IntroduceGoals .Goals {
   flex-basis: 62.5%;
-  white-space: pre-wrap;
   aspect-ratio: 1200/760;
 }
 .IntroduceGoals .BeamworksLogo {
   width: 24.5vw;
-  aspect-ratio: 470/60;
+  aspect-ratio: 460/60;
   margin-bottom: 2.2%;
 }
 .IntroduceGoals .GoalDetails1 {
@@ -66,6 +154,8 @@
 .IntroduceGoals .GoalDescription img {
   width: 100%;
   aspect-ratio: 1200/478;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .IntroduceGoals .GoalDetails2 {
   width: 37.5vw;
