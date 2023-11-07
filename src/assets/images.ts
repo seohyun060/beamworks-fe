@@ -10,6 +10,7 @@ const images = {
 	goal_description: '/assets/images/goal_description.png',
 	mainback3: '/assets/images/mainback3.png',
 	rightW: '/assets/images/rightW.svg',
+	footerLogo: '/assets/images/footerLogo.svg',
 };
 
 export default images;
