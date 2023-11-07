@@ -1,7 +1,7 @@
 import HomeContainer from 'src/pages/Home/containers/HomeContainer';
 import GnbContainer from 'src/pages/Gnb/containers/GnbContainer';
 
-import Introduce from 'src/pages/Introduce//Introduce';
+import Introduce from 'src/pages/Introduce/Introduce';
 
 import React, { useEffect, useState } from 'react';
 import {
