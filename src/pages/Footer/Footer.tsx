@@ -7,7 +7,21 @@ const Footer = (props: Props) => {
 	return (
 		<div className='footer'>
 			<div className='footer-news'>
+				<img className='footer-news-logo' src={images.footerLogoB} />
 				<div className='footer-news-header'>뉴스레터를 구독해보세요</div>
+				<div className='footer-news-body'>
+					뉴스레터를 구독하면 최신 소식과 유용한 정보를 주기적으로 받아볼 수
+					있어, 항상 업데이트된 정보를 손쉽게 얻을 수 있습니다. 뉴스레터를
+					구독하면, 계속해서 풍부한 지식과 인사이트를 쌓을 수 있는 기회를 놓치지
+					않을 것입니다.
+				</div>
+				<div className='footer-news-input'>
+					<input></input>
+					<div className='footer-news-input-button'>
+						<span>구독</span>
+						<img src={images.rightW} />
+					</div>
+				</div>
 			</div>
 			<div className='footer-info'>
 				<div className='footer-info-head'>

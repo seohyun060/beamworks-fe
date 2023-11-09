@@ -15,6 +15,7 @@ const images = {
 	awardback2: '/assets/images/awardback2.png',
 	awardback3: '/assets/images/awardback3.png',
 	awardback4: '/assets/images/awardback4.png',
+	footerLogoB: '/assets/images/footerLogoB.svg',
 };
 
 export default images;

@@ -12,46 +12,55 @@
 
 .award {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+
 	width: 100vw;
-	height: fit-content;
+	height: 100vh;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	font-size: 0.52083333vw;
+
 	& * {
 		word-break: keep-all;
 	}
 	&-s1 {
 		width: 100vw;
-		height: 56.25vw;
+		height: 100vh;
+		padding-top: 52px;
+		scroll-snap-align: start;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		padding-left: 18.75vw;
 		padding-right: 18.75vw;
 		&-header {
-			margin-top: 11.1vw;
+			//margin-top: 19.73vh;
 			//margin-left: 18.75vw;
+			margin-top: 1.48vh;
 			color: #000;
 			font-family: Pretendard;
-			font-size: 2.6vw;
+			font-size: 5em;
 			font-style: normal;
 			font-weight: 600;
 			line-height: 1.32; /* 132% */
 		}
 		img {
 			width: 62.5vw;
-			height: 24.9vw;
-			margin-top: 2.97vw;
+			//height: 24.9vw;
+			margin-top: 1.6vw;
 		}
 		&-body {
-			width: 37vw;
-			margin-top: 2.7vw;
+			width: 51.8vw;
+			margin-top: 2.96vw;
 			height: fit-content;
-			align-self: flex-end;
+			align-self: flex-start;
 
-			text-align: right;
+			text-align: left;
 			font-family: Pretendard;
-			font-size: 1.25vw;
+			font-size: 2.4em;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 1.42; /* 141.667% */
@@ -59,25 +68,78 @@
 	}
 	&-s2 {
 		width: 100vw;
-		height: 56.25vw;
+		height: 100vh;
+		padding-top: 52px;
+		scroll-snap-align: start;
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		img {
-			width: 100vw;
-			height: 56.25vw;
-			position: absolute;
-		}
+		background-image: url('/public/assets/images/awardback2.png');
+		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+		background-repeat: no-repeat;
+		justify-content: center;
+
 		&-header {
-			z-index: 1;
+			//z-index: 1;
 			color: #fff;
-			margin-top: 10.78vw;
+			margin-top: 0.1vh;
 			margin-left: 18.75vw;
 			font-family: Pretendard;
 			font-size: 2.08vw;
 			font-style: normal;
 			font-weight: 600;
 			line-height: 1; /* 100% */
+			margin-left: 18.75vw;
+		}
+		&-body {
+			width: 62.5vw;
+			height: 29.16vw;
+			display: flex;
+			flex-direction: row;
+			margin-left: 18.75vw;
+			margin-top: 5.73vw;
+			&-years {
+				width: 3.9vw;
+				height: fit-content;
+				display: flex;
+				flex-direction: column;
+
+				.year {
+					color: #fff;
+					font-family: Pretendard;
+					font-size: 3em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.33; /* 133.333% */
+					opacity: 0.3;
+					margin-bottom: 2.71vw;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						cursor: pointer;
+					}
+					&-active {
+						@extend .year;
+						opacity: 1;
+					}
+				}
+			}
+			&-achieves {
+				width: 51.9vw;
+				margin-left: 6.67vw;
+				height: fit-content;
+				display: flex;
+				flex-direction: column;
+				margin-top: -1.1vw;
+				.achieve {
+					color: #fff;
+					font-family: Pretendard;
+					font-size: 2.4em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 3.3; /* 333.333% */
+					//transition: 0.3s ease-in-out;
+				}
+			}
 		}
 	}
 }

@@ -13,49 +13,58 @@
 
 .home {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-margin: 100px 0px;
 }
 .home-s1 {
   width: 100vw;
-  height: 56.25vw;
+  height: 100vh;
+  padding-top: 52px;
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url("/public/assets/images/mainback1.png");
-  scroll-snap-align: center;
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+  scroll-snap-align: start;
 }
 .home-s1-text {
   z-index: 10;
-  width: 19.375vw;
+  width: 594px;
   margin-left: 18.75vw;
-  margin-top: 11.1vw;
   word-break: keep-all;
   height: -moz-fit-content;
   height: fit-content;
   color: white;
   font-family: Pretendard;
-  font-size: 2.6vw;
+  font-size: 80px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.2; /* 132% */
 }
 .home-s2 {
   width: 100vw;
-  height: 56.25vw;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
 }
-.home-s2-header {
+.home-s2-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 74.2vh;
+  margin: auto;
+}
+.home-s2-container-header {
   width: 62.5vw;
   margin: auto;
-  margin-top: 5.26vw;
   margin-bottom: 0;
   color: #000;
   font-family: Pretendard;
@@ -64,7 +73,7 @@
   font-weight: 600;
   line-height: 1; /* 100% */
 }
-.home-s2-tabs {
+.home-s2-container-tabs {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -74,7 +83,7 @@
   margin-top: 4.06vw;
   border-bottom: 2px solid #ddd;
 }
-.home-s2-tabs .all, .home-s2-tabs .chatai, .home-s2-tabs .chatai-active, .home-s2-tabs .cadai, .home-s2-tabs .cadai-active, .home-s2-tabs .all-active {
+.home-s2-container-tabs .all, .home-s2-container-tabs .chatai, .home-s2-container-tabs .chatai-active, .home-s2-container-tabs .cadai, .home-s2-container-tabs .cadai-active, .home-s2-container-tabs .all-active {
   position: absolute;
   width: -moz-fit-content;
   width: fit-content;
@@ -91,77 +100,81 @@
   font-weight: 600;
   line-height: 1.33; /* 133.333% */
 }
-.home-s2-tabs .all:hover, .home-s2-tabs .chatai:hover, .home-s2-tabs .chatai-active:hover, .home-s2-tabs .cadai:hover, .home-s2-tabs .cadai-active:hover, .home-s2-tabs .all-active:hover {
+.home-s2-container-tabs .all:hover, .home-s2-container-tabs .chatai:hover, .home-s2-container-tabs .chatai-active:hover, .home-s2-container-tabs .cadai:hover, .home-s2-container-tabs .cadai-active:hover, .home-s2-container-tabs .all-active:hover {
   cursor: pointer;
 }
-.home-s2-tabs .all-active {
+.home-s2-container-tabs .all-active {
   border-bottom: 2px solid black;
 }
-.home-s2-tabs .cadai, .home-s2-tabs .cadai-active {
+.home-s2-container-tabs .cadai, .home-s2-container-tabs .cadai-active {
   left: 22.5vw;
 }
-.home-s2-tabs .cadai-active {
+.home-s2-container-tabs .cadai-active {
   border-bottom: 2px solid black;
 }
-.home-s2-tabs .chatai, .home-s2-tabs .chatai-active {
+.home-s2-container-tabs .chatai, .home-s2-container-tabs .chatai-active {
   left: 40vw;
 }
-.home-s2-tabs .chatai-active {
+.home-s2-container-tabs .chatai-active {
   border-bottom: 2px solid black;
 }
-.home-s3 {
+.home-s4 {
   width: 100vw;
-  height: 56.25vw;
+  height: 100vh;
   position: relative;
   display: flex;
   background-image: url("/public/assets/images/mainback3.png");
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
   scroll-snap-align: start;
 }
-.home-s3-text {
+.home-s4-text {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   z-index: 10;
-  width: 31.08vw;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-left: 18.75vw;
-  margin-top: 28.125vw;
+  margin-top: 50vh;
   word-break: keep-all;
   height: -moz-fit-content;
   height: fit-content;
 }
-.home-s3-text .header, .home-s3-text .body {
+.home-s4-text .header, .home-s4-text .body {
   color: #fff;
   font-family: Pretendard;
-  font-size: 2.08vw;
+  font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: 40px; /* 100% */
 }
-.home-s3-text .body {
-  font-size: 1.56vw;
-  margin-top: 2.71vw;
+.home-s4-text .body {
+  font-size: 30px;
+  margin-top: 54px;
 }
-.home-s3-text .readmore {
+.home-s4-text .readmore {
   display: flex;
   flex-direction: row;
-  width: 8.23vw;
-  margin-top: 4.8vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 90px;
   align-items: center;
 }
-.home-s3-text .readmore div {
+.home-s4-text .readmore div {
   color: #fff;
   text-align: right;
   font-family: Pretendard;
-  font-size: 1.04vw;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px; /* 140% */
-  margin-right: 0.6vw;
+  margin-right: 12px;
 }
-.home-s3-text .readmore img {
-  width: 0.73vw;
-  height: 0.73vw;
+.home-s4-text .readmore img {
+  width: 14px;
+  height: 14px;
 }
-.home-s4 {
+.home .footer {
   scroll-snap-align: start;
 }/*# sourceMappingURL=home.styles.css.map */
