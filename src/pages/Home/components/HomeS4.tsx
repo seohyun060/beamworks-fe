@@ -3,10 +3,10 @@ import images from 'src/assets/images';
 
 type Props = {};
 
-const Section3 = (props: Props) => {
+const HomeS4 = (props: Props) => {
 	return (
-		<div className='home-s3'>
-			<div className='home-s3-text'>
+		<div className='home-s4'>
+			<div className='home-s4-text'>
 				<div className='header'>빔웍스를 통해 자신을 발견해보세요</div>
 				<div className='body'>
 					빔웍스는 직원의 성장을 위해 최선을 다하며 <br />
@@ -21,4 +21,4 @@ const Section3 = (props: Props) => {
 	);
 };
 
-export default Section3;
+export default HomeS4;

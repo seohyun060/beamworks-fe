@@ -27,8 +27,28 @@ const Gnb = ({ tabs, onTabEnter, onTabLeave, tabHovered }: Props) => {
 							>
 								<div>{tab}</div>
 								<img src={tabHovered[index] ? images.upW : images.downW} />
-
-								{index === 0 && tabHovered[0] && (
+								<div
+									className={
+										index === 0 && tabHovered[0] ? 'popup1-active' : 'popup1'
+									}
+								>
+									popup1
+								</div>
+								<div
+									className={
+										index === 1 && tabHovered[1] ? 'popup2-active' : 'popup1'
+									}
+								>
+									popup2
+								</div>
+								<div
+									className={
+										index === 2 && tabHovered[2] ? 'popup2-active' : 'popup1'
+									}
+								>
+									popup3
+								</div>
+								{/* {index === 0 && tabHovered[0] && (
 									<div className='popup1'>popup1</div>
 								)}
 								{index === 1 && tabHovered[1] && (
@@ -36,7 +56,7 @@ const Gnb = ({ tabs, onTabEnter, onTabLeave, tabHovered }: Props) => {
 								)}
 								{index === 2 && tabHovered[2] && (
 									<div className='popup3'>popup3</div>
-								)}
+								)} */}
 							</div>
 						);
 					}

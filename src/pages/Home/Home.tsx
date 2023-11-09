@@ -2,21 +2,22 @@ import React from 'react';
 import './styles/home.styles.css';
 import home_banner from '../../assets/images/HOME/home_banner.png';
 import SideBarContainer from 'src/pages/SideBar/containers/SideBarContainer';
-import Section1Container from './containers/Section1Container';
-import Section2Container from './containers/Section2Container';
-import Section3Container from './containers/Section3Container';
-import Section4Container from './containers/Section4Container';
+import HomeS1Container from './containers/HomeS1Container';
+import HomeS2Container from './containers/HomeS2Container';
+import HomeS4Container from './containers/HomeS4Container';
+import FooterContainer from 'src/pages/Footer/containers/FooterContainer';
+
 type Props = {};
 
 const Home = (props: Props) => {
 	return (
 		<>
-			<SideBarContainer />
+			{/* <SideBarContainer /> */}
 			<div className='home'>
-				<Section1Container />
-				<Section2Container />
-				<Section3Container />
-				<Section4Container />
+				<HomeS1Container />
+				<HomeS2Container />
+				<HomeS4Container />
+				<FooterContainer />
 			</div>
 		</>
 	);

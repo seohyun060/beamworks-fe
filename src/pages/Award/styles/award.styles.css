@@ -1,0 +1,137 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.award {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-size: 0.52083333vw;
+}
+.award * {
+  word-break: keep-all;
+}
+.award-s1 {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 18.75vw;
+  padding-right: 18.75vw;
+}
+.award-s1-header {
+  margin-top: 1.48vh;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.32; /* 132% */
+}
+.award-s1 img {
+  width: 62.5vw;
+  margin-top: 1.6vw;
+}
+.award-s1-body {
+  width: 51.8vw;
+  margin-top: 2.96vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: flex-start;
+  text-align: left;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42; /* 141.667% */
+}
+.award-s2 {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/public/assets/images/awardback2.png");
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+.award-s2-header {
+  color: #fff;
+  margin-top: 0.1vh;
+  margin-left: 18.75vw;
+  font-family: Pretendard;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+  margin-left: 18.75vw;
+}
+.award-s2-body {
+  width: 62.5vw;
+  height: 29.16vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 18.75vw;
+  margin-top: 5.73vw;
+}
+.award-s2-body-years {
+  width: 3.9vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.award-s2-body-years .year, .award-s2-body-years .year-active {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+  opacity: 0.3;
+  margin-bottom: 2.71vw;
+  transition: 0.3s ease-in-out;
+}
+.award-s2-body-years .year:hover, .award-s2-body-years .year-active:hover {
+  cursor: pointer;
+}
+.award-s2-body-years .year-active {
+  opacity: 1;
+}
+.award-s2-body-achieves {
+  width: 51.9vw;
+  margin-left: 6.67vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.1vw;
+}
+.award-s2-body-achieves .achieve {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.3; /* 333.333% */
+}/*# sourceMappingURL=award.styles.css.map */
