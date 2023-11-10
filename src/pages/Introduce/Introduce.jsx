@@ -6,6 +6,7 @@ import IntroduceMission from "./component/IntroduceMission";
 import IntroduceMissionCarousel from "./component/IntroduceMissionCarousel";
 import IntroduceBusiness from "./component/IntroduceBusiness";
 import IntroduceGoals from "./component/IntroduceGoals";
+import Footer from "src/pages/Footer/Footer";
 
 import "./styles/introduce.css";
 
@@ -20,11 +21,13 @@ const Introduce = () => {
         {/* 빔웍스의 미션 섹션 */}
         <IntroduceMission />
         {/* 미션설명 섹션 */}
-        <IntroduceMissionCarousel/>
+        <IntroduceMissionCarousel />
         {/* 빔웍스의 사업분야 */}
         <IntroduceBusiness />
         {/* 목표 */}
         <IntroduceGoals />
+        {/* 뉴스레터 구독 */}
+        <Footer />
       </div>
     </>
   );
