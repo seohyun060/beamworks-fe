@@ -6,7 +6,7 @@ import "../styles/introduce.css";
 const IntroduceMission = () => {
   return (
     <section className="IntroduceMission">
-      <div className="Mission">
+      <article className="Mission">
         <div className="MissionTitle">
           <label>빔웍스의 미션</label>
         </div>
@@ -21,7 +21,7 @@ const IntroduceMission = () => {
           </label>
         </div>
         <img className="MissionImage" src={images.mission_image}/>
-      </div>
+      </article>
     </section>
   );
 };

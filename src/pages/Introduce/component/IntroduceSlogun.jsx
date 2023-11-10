@@ -5,7 +5,7 @@ import "../styles/introduce.css";
 const Slogun = () => {
   return (
     <section className="IntroduceSlogun">
-      <div className="Slogun">
+      <article className="Slogun">
         <label>
           빔웍스는,
           <br />
@@ -16,7 +16,7 @@ const Slogun = () => {
           지속적으로 연구와 열정을 기여합니다.
           <br />
         </label>
-      </div>
+      </article>
     </section>
   );
 };

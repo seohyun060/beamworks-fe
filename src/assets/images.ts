@@ -15,6 +15,15 @@ const images = {
 	mission_detail1: '/assets/images/mission_detail1.png',
 	mission_detail2: '/assets/images/mission_detail2.png',
 	mission_detail3: '/assets/images/mission_detail3.png',
+	about_background: '/assets/images/about_background.png',
+	signature1: '/assets/images/signature1.png',
+	signature2: '/assets/images/signature2.png',
+	business_image1: '/assets/images/business_image1.png',
+	business_image2: '/assets/images/business_image2.png',
+	carousel_forward: '/assets/images/carousel_forward.svg',
+	carousel_backward: '/assets/images/carousel_backward.svg',
+	paging_dot_dark: '/assets/images/paging_dot_dark.svg',
+	paging_dot_medium: '/assets/images/paging_dot_medium.svg',
 };
 
 export default images;
