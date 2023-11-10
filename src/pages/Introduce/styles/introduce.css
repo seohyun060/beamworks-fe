@@ -20,6 +20,13 @@
   position: relative;
   scroll-snap-align: start;
   padding-top: 52px;
+  background-color: white;
+  transition: all 0.5s ease-out;
+}
+.Introduce section article {
+  position: relative;
+  flex-basis: 62.5%;
+  aspect-ratio: 1200/760;
 }
 
 .Introduce::-webkit-scrollbar {
@@ -29,12 +36,12 @@
 .IntroduceSlogun {
   background-image: url("/public/assets/images/slogun.png");
   background-size: cover;
+  background-position: center center;
+  position: sticky !important;
+  top: 0;
 }
 .IntroduceSlogun .Slogun {
-  flex-basis: 62.5%;
   white-space: pre-wrap;
-  aspect-ratio: 1200/760;
-  padding-top: 3%;
 }
 .IntroduceSlogun .Slogun label {
   color: #fff;
@@ -45,14 +52,19 @@
   line-height: 132%;
 }
 
-.IntroduceMission .Mission {
-  flex-basis: 62.5%;
-  aspect-ratio: 1200/760;
+.IntroduceAbout {
+  background-image: url("/public/assets/images/about_background.png");
+  background-size: cover;
+  background-position: center center;
 }
-.IntroduceMission .MissionTitle {
-  margin-bottom: 3%;
+.IntroduceAbout .About {
+  width: 66%;
+  height: 100%;
 }
-.IntroduceMission .MissionTitle label {
+.IntroduceAbout .About .Title {
+  margin-bottom: 2.4%;
+}
+.IntroduceAbout .About .Title label {
   color: var(--Middle-Glay, #a0a0a0);
   font-family: Pretendard;
   font-size: 4em;
@@ -60,10 +72,10 @@
   font-weight: 600;
   line-height: 100%;
 }
-.IntroduceMission .MissionSubTitle {
-  margin-bottom: 1.7%;
+.IntroduceAbout .About .BoardMember {
+  margin-bottom: 3%;
 }
-.IntroduceMission .MissionSubTitle label {
+.IntroduceAbout .About .BoardMember label {
   color: var(--Black, #000);
   font-family: Pretendard;
   font-size: 5em;
@@ -71,10 +83,13 @@
   font-weight: 600;
   line-height: 80%;
 }
-.IntroduceMission .MissionDescription {
-  margin-bottom: 3.7%;
+.IntroduceAbout .About .Greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 83.5%;
 }
-.IntroduceMission .MissionDescription label {
+.IntroduceAbout .About .Greeting label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -82,29 +97,110 @@
   font-weight: 400;
   line-height: 166.667%;
 }
-.IntroduceMission .MissionImage {
+.IntroduceAbout .About .Signature {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5.2%;
+  float: inline-end;
+}
+.IntroduceAbout .About .Signature img:nth-child(1) {
+  width: 15%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 5%;
+}
+.IntroduceAbout .About .Signature img:nth-child(2) {
+  width: 15%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.IntroduceMission .Mission .MissionTitle {
+  margin-bottom: 3%;
+}
+.IntroduceMission .Mission .MissionTitle label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+.IntroduceMission .Mission .MissionSubTitle {
+  margin-bottom: 1.7%;
+}
+.IntroduceMission .Mission .MissionSubTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80%;
+}
+.IntroduceMission .Mission .MissionDescription {
+  margin-bottom: 3.7%;
+}
+.IntroduceMission .Mission .MissionDescription label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+}
+.IntroduceMission .Mission .MissionImage {
   width: 100%;
   height: 63%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.IntroduceMissionDetail .Mission {
-  display: flex;
-  flex-basis: 62.5%;
-  aspect-ratio: 1200/760;
+.IntroduceMissionCarousel > img {
+  z-index: 10;
+  width: 2.85%;
+  aspect-ratio: 1/1;
 }
-.IntroduceMissionDetail .Contents {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 30.5%;
-  margin-right: 12%;
+.IntroduceMissionCarousel > img:first-child {
+  margin: 2%;
 }
-.IntroduceMissionDetail .MissionDetailTitle {
+.IntroduceMissionCarousel > img:last-child {
+  margin: 2%;
+}
+.IntroduceMissionCarousel .MissionCarousel {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.IntroduceMissionCarousel .MissionCarousel .Carousel {
+  display: flex;
+  position: absolute;
+}
+
+.MissionDetail {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 10%;
+}
+.MissionDetail .Contents {
+  width: 37.5%;
+  margin-right: 5%;
+  position: relative;
+  top: 30%;
+}
+.MissionDetail .ProgressDotbar {
+  display: flex;
+  position: relative;
   margin-bottom: 10%;
 }
-.IntroduceMissionDetail .MissionDetailTitle label {
+.MissionDetail .ProgressDotbar img {
+  width: 2%;
+  margin-right: 5%;
+}
+.MissionDetail .MissionDetailTitle {
+  margin-bottom: 10%;
+}
+.MissionDetail .MissionDetailTitle label {
   word-break: keep-all;
   color: var(--Check, #346ec5);
   font-family: Pretendard;
@@ -113,7 +209,11 @@
   font-weight: 600;
   line-height: 120%;
 }
-.IntroduceMissionDetail .MissionDetailDescription label {
+.MissionDetail .MissionDetailDescription {
+  width: 88%;
+  word-break: break-all;
+}
+.MissionDetail .MissionDetailDescription label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -121,25 +221,25 @@
   font-weight: 400;
   line-height: 166.667%;
 }
-.IntroduceMissionDetail .MissionDetailImage {
+.MissionDetail .MissionDetailImage {
   width: 57.5%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.IntroduceGoals .Goals {
-  flex-basis: 62.5%;
-  aspect-ratio: 1200/760;
-}
-.IntroduceGoals .BeamworksLogo {
+.IntroduceGoals .Goals .BeamworksLogo {
   width: 24.5vw;
   aspect-ratio: 460/60;
   margin-bottom: 2.2%;
 }
-.IntroduceGoals .GoalDetails1 {
-  width: 36vw;
+.IntroduceGoals .Goals .GoalDetailBox {
+  display: flex;
 }
-.IntroduceGoals .GoalDetails1 label {
+.IntroduceGoals .Goals .GoalDetails1 {
+  width: 42%;
+  word-break: break-all;
+}
+.IntroduceGoals .Goals .GoalDetails1 label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -147,26 +247,79 @@
   font-weight: 400;
   line-height: 141.667%;
 }
-.IntroduceGoals .GoalDescription {
-  margin-top: 6%;
-  margin-bottom: 4.8%;
+.IntroduceGoals .Goals .GoalDetails2 {
+  width: 49%;
+  position: absolute;
+  left: 51%;
 }
-.IntroduceGoals .GoalDescription img {
+.IntroduceGoals .Goals .GoalDetails2 label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+.IntroduceGoals .Goals .GoalDescription {
+  margin-top: 6%;
+}
+.IntroduceGoals .Goals .GoalDescription img {
   width: 100%;
-  aspect-ratio: 1200/478;
+  aspect-ratio: 1200/550;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.IntroduceGoals .GoalDetails2 {
-  width: 37.5vw;
-  float: right;
+
+.IntroduceBusiness .Business {
+  display: flex;
+  flex-direction: column;
 }
-.IntroduceGoals .GoalDetails2 label {
+.IntroduceBusiness .Business .BusinessTitle {
+  margin-bottom: 2.2%;
+}
+.IntroduceBusiness .Business .BusinessTitle label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+.IntroduceBusiness .Business .BusinessSubTitle {
+  margin-bottom: 2.2%;
+}
+.IntroduceBusiness .Business .BusinessSubTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80%;
+}
+.IntroduceBusiness .Business .BusinessDescription {
+  width: 57.5%;
+  word-break: keep-all;
+  margin-bottom: 5.1%;
+}
+.IntroduceBusiness .Business .BusinessDescription label {
   color: #000;
-  text-align: right;
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;
   font-weight: 400;
-  line-height: 141.667%;
-}/*# sourceMappingURL=introduce.css.map */
+  line-height: 166.667%;
+}
+.IntroduceBusiness .Business .BusinessImage img:nth-child(1) {
+  position: relative;
+  width: 57.5%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.IntroduceBusiness .Business .BusinessImage img:nth-child(2) {
+  position: relative;
+  width: 42.5%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Introduce.css.map */

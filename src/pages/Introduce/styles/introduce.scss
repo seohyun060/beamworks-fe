@@ -20,6 +20,13 @@
     scroll-snap-align: start;
     // 추후 상단바의 높이만큼 동적조절 필요
     padding-top: 52px;
+    background-color: white;
+    transition: all 0.5s ease-out;
+    article {
+      position: relative;
+      flex-basis: 62.5%;
+      aspect-ratio: 1200/760;
+    }
   }
 }
 
@@ -32,12 +39,12 @@
   // aspect-ratio: 16/9; // 1920/1080
   background-image: url("/public/assets/images/slogun.png");
   background-size: cover;
+  background-position: center center;
+  position: sticky !important;
+  top: 0; // 화면이 움직이다보면 스크롤 값이 변화하여  0의 위치가 변하는듯 함
 
   .Slogun {
-    flex-basis: 62.5%;
     white-space: pre-wrap;
-    aspect-ratio: 1200/760;
-    padding-top: 3%;
 
     label {
       color: #fff;
@@ -50,70 +57,171 @@
   }
 }
 
+// 인사말 섹션
+.IntroduceAbout {
+  background-image: url("/public/assets/images/about_background.png");
+  background-size: cover;
+  background-position: center center;
+
+  .About {
+    width: 66%;
+    height: 100%;
+
+    .Title {
+      margin-bottom: 2.4%;
+      label {
+        color: var(--Middle-Glay, #a0a0a0);
+        font-family: Pretendard;
+        font-size: 4em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+      }
+    }
+
+    .BoardMember {
+      margin-bottom: 3%;
+      label {
+        color: var(--Black, #000);
+        font-family: Pretendard;
+        font-size: 5em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80%;
+      }
+    }
+
+    .Greeting {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 83.5%;
+      label {
+        color: #000;
+        font-family: Pretendard;
+        font-size: 2.4em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166.667%;
+      }
+    }
+
+    .Signature {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 5.2%;
+      float: inline-end;
+
+      img:nth-child(1) {
+        width: 15%;
+        object-fit: contain;
+        margin-right: 5%;
+      }
+
+      img:nth-child(2) {
+        width: 15%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
 // 빔웍스의 미션
 .IntroduceMission {
   .Mission {
-    flex-basis: 62.5%;
-    aspect-ratio: 1200/760;
-  }
+    .MissionTitle {
+      margin-bottom: 3%;
+      label {
+        color: var(--Middle-Glay, #a0a0a0);
+        font-family: Pretendard;
+        font-size: 4em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+      }
+    }
 
-  .MissionTitle {
-    margin-bottom: 3%;
-    label {
-      color: var(--Middle-Glay, #a0a0a0);
-      font-family: Pretendard;
-      font-size: 4em;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 100%;
+    .MissionSubTitle {
+      margin-bottom: 1.7%;
+      label {
+        color: var(--Black, #000);
+        font-family: Pretendard;
+        font-size: 5em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80%;
+      }
+    }
+
+    .MissionDescription {
+      margin-bottom: 3.7%;
+      label {
+        color: #000;
+        font-family: Pretendard;
+        font-size: 2.4em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166.667%;
+      }
+    }
+
+    .MissionImage {
+      width: 100%;
+      height: 63%;
+      object-fit: cover;
+    }
+  }
+}
+
+// 미션 상세 캐러셀
+.IntroduceMissionCarousel {
+  > img {
+    z-index: 10;
+    width: 2.85%;
+    aspect-ratio: 1/1;
+
+    &:first-child {
+      margin: 2%;
+    }
+
+    &:last-child {
+      margin: 2%;
     }
   }
 
-  .MissionSubTitle {
-    margin-bottom: 1.7%;
-    label {
-      color: var(--Black, #000);
-      font-family: Pretendard;
-      font-size: 5em;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 80%;
+  .MissionCarousel {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .Carousel {
+      display: flex;
+      position: absolute;
     }
-  }
-
-  .MissionDescription {
-    margin-bottom: 3.7%;
-    label {
-      color: #000;
-      font-family: Pretendard;
-      font-size: 2.4em;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 166.667%;
-    }
-  }
-
-  .MissionImage {
-    width: 100%;
-    height: 63%;
-    object-fit: cover;
   }
 }
 
 // 미션 상세
-.IntroduceMissionDetail {
-  .Mission {
-    display: flex;
-    flex-basis: 62.5%;
-    aspect-ratio: 1200/760;
-  }
+.MissionDetail {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 10%;
 
   .Contents {
+    width: 37.5%;
+    margin-right: 5%;
+    position: relative;
+    top: 30%;
+  }
+
+  .ProgressDotbar {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30.5%;
-    margin-right: 12%;
+    position: relative;
+    margin-bottom: 10%;
+    img {
+      width: 2%;
+      margin-right: 5%;
+    }
   }
 
   .MissionDetailTitle {
@@ -130,6 +238,8 @@
   }
 
   .MissionDetailDescription {
+    width: 88%;
+    word-break: break-all;
     label {
       color: #000;
       font-family: Pretendard;
@@ -147,53 +257,113 @@
 }
 
 // 목표 섹션
-// 이따 세부디자인 좀 고쳐야함
 .IntroduceGoals {
   .Goals {
-    flex-basis: 62.5%;
-    aspect-ratio: 1200/760;
-  }
+    .BeamworksLogo {
+      width: 24.5vw;
+      aspect-ratio: 460/60;
+      margin-bottom: 2.2%;
+    }
 
-  .BeamworksLogo {
-    width: 24.5vw;
-    aspect-ratio: 460/60;
-    margin-bottom: 2.2%;
-  }
+    .GoalDetailBox {
+      display: flex;
+    }
 
-  .GoalDetails1 {
-    width: 36vw;
-    label {
-      color: #000;
-      font-family: Pretendard;
-      font-size: 2.4em;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 141.667%;
+    .GoalDetails1 {
+      width: 42%;
+      word-break: break-all;
+      label {
+        color: #000;
+        font-family: Pretendard;
+        font-size: 2.4em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 141.667%;
+      }
+    }
+
+    .GoalDetails2 {
+      width: 49%;
+      position: absolute;
+      left: 51%;
+      label {
+        color: #000;
+        font-family: Pretendard;
+        font-size: 2.4em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 141.667%;
+      }
+    }
+
+    .GoalDescription {
+      margin-top: 6%;
+      img {
+        // position: absolute;
+        width: 100%;
+        aspect-ratio: 1200/550;
+        object-fit: cover;
+      }
     }
   }
+}
 
-  .GoalDescription {
-    margin-top: 6%;
-    margin-bottom: 4.8%;
-    img {
-      // position: absolute;
-      width: 100%;
-      aspect-ratio: 1200/478;
-      object-fit: cover;
+// 빔웍스의 사업분야
+.IntroduceBusiness {
+  .Business {
+    display: flex;
+    flex-direction: column;
+    .BusinessTitle {
+      margin-bottom: 2.2%;
+      label {
+        color: var(--Middle-Glay, #a0a0a0);
+        font-family: Pretendard;
+        font-size: 4em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+      }
     }
-  }
 
-  .GoalDetails2 {
-    width: 37.5vw;
-    float: right;
-    label {
-      color: #000;
-      text-align: right;
-      font-family: Pretendard;
-      font-size: 2.4em;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 141.667%;
+    .BusinessSubTitle {
+      margin-bottom: 2.2%;
+      label {
+        color: var(--Black, #000);
+        font-family: Pretendard;
+        font-size: 5em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 80%;
+      }
+    }
+
+    .BusinessDescription {
+      width: 57.5%;
+      word-break: keep-all;
+      margin-bottom: 5.1%;
+      label {
+        color: #000;
+        font-family: Pretendard;
+        font-size: 2.4em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166.667%;
+      }
+    }
+
+    .BusinessImage {
+      img:nth-child(1) {
+        position: relative;
+        width: 57.5%;
+        height: 100%;
+        object-fit: cover;
+      }
+      img:nth-child(2) {
+        position: relative;
+        width: 42.5%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }

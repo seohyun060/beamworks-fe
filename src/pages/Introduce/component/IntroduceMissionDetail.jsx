@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 import images from "src/assets/images";
 
 const IntroduceMissionDetail = (props) => {
-  const { title, content, imageName } = props;
+  const { title, content, imageName, progressDotSet } = props;
 
   return (
-    <section className="IntroduceMissionDetail">
-      <div className="Mission">
-        <div className="Contents">
-          <div className="MissionDetailTitle">
-            <label>{title}</label>
-          </div>
-          <div className="MissionDetailDescription">
-            <label>{content}</label>
-          </div>
+    <div className="MissionDetail">
+      <div className="Contents">
+        <div className="ProgressDotbar">
+          {progressDotSet.map((data) => (
+            <img src={data} />
+          ))}
         </div>
-        <img className="MissionDetailImage" src={images[imageName]} />
+        <div className="MissionDetailTitle">
+          <label>{title}</label>
+        </div>
+        <div className="MissionDetailDescription">
+          <label>{content}</label>
+        </div>
       </div>
-    </section>
+      <img className="MissionDetailImage" src={images[imageName]} />
+    </div>
   );
 };
 
