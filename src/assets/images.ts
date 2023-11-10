@@ -35,6 +35,7 @@ const images = {
 	environment3: '/assets/images/environment3.png',
 	environment4: '/assets/images/environment4.png',
 	rightB: '/assets/images/rightB.svg',
+	go_details: '/assets/images/go_details.svg',
 };
 
 export default images;

@@ -10,7 +10,6 @@ const CultureEnvironment = () => {
   const [isSubjectClicked, setIsSuvjectClicked] = useState(0);
   const carouselImageRef = useRef();
   const onSubjectClick = (index) => {
-    console.log(index);
     setIsSuvjectClicked(index);
     carouselImageRef.current.style.transform = `translateY(
         -${38 * index}vh

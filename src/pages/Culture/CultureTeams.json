@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "name": "임원",
+      "projects": "CTO\nCSO\nCEO",
+      "information": "비전과 리더십은 의료 혁신을 이끄는 엔진으로 작용하며, 의료기기 분야에서 인공지능 기술의 발전을 촉진하고 있습니다. 사용자 중심과 좋은 환경을 제공하기 위해 최고 수준의 팀을 이끌고 있으며, 환자와 의료전문가들에게 혁신적인 솔루션을 제공하고자 끊임없이 노력하고 있습니다.",
+      "imageName": "TeamImage1"
+    },
+    {
+      "name": "Vision AI Team (VAT)",
+      "projects": "Predictive AI\nGenerative AI",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage2"
+    },
+    {
+      "name": "Conversational AI Team (CAT)",
+      "projects": "AI model\nFront App\nFront R&C\nBackend",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage2"
+    },
+    {
+      "name": "Predictive and\nGenerative AI Team (PGAT)",
+      "projects": "Predictive AI\nGenerative AI",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage4"
+    },
+    {
+      "name": "Alexandria Team (AT)",
+      "projects": "DA (data achive\nHomepage\nORCA (clinical study management)\nAlexandria-CTS (clinical test system)\nAlexandria-CRF (clinical report form)\nThoth (user monitoring/analysis)",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage5"
+    },
+    {
+      "name": "Management Team (MT)",
+      "projects": "재무/총무/노무\n기술영업/전시/고객관리",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage6"
+    },
+    {
+      "name": "GMP",
+      "projects": "재무/총무/노무\n기술영업/전시/고객관리",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage7"
+    },
+    {
+      "name": "Clinical and Regulatory\nAffairs Team (CRAT)",
+      "projects": "QA, 국내인허가, CE\nFDA, CE\n임상시험",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage8"
+    },
+    {
+      "name": "Creative\nMarketing Team (CMT)",
+      "projects": "Alexandria, Vision AI UI/UX\nConversational AI UI/UX\n영상 제작\n기획, 마케팅",
+      "information": "디지털의 신비한 세계를 개척하는 혁신의 중심지입니다. 우리 팀은 코드로 아이디어를 현실로 만들며, 새로운 기술과 창의적인 해결책을 통해 미래를 만들어갑니다. 업계를 선도하고, 기술적 역량을 끊임없이 향상시키며, 혁신적인 프로젝트를 실현합니다.",
+      "imageName": "TeamImage9"
+    }
+  ]
+}
