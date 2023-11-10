@@ -29,6 +29,7 @@ const images = {
 	carousel_backward: '/assets/images/carousel_backward.svg',
 	paging_dot_dark: '/assets/images/paging_dot_dark.svg',
 	paging_dot_medium: '/assets/images/paging_dot_medium.svg',
+	culture_slogun: '/assets/images/culture_slogun.png',
 };
 
 export default images;
