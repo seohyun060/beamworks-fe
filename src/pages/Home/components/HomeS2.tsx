@@ -29,6 +29,7 @@ const HomeS2 = ({ selectedTab, onTabClick, tabs }: Props) => {
 						</div>
 					))}
 				</div>
+				<div className='home-s2-container-body'></div>
 			</div>
 		</div>
 	);

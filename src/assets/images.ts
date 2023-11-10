@@ -20,6 +20,7 @@ const images = {
 	mission_detail1: '/assets/images/mission_detail1.png',
 	mission_detail2: '/assets/images/mission_detail2.png',
 	mission_detail3: '/assets/images/mission_detail3.png',
+	rightB: '/assets/images/rightB.svg',
 };
 
 export default images;
