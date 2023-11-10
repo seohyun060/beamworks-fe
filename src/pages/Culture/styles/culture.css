@@ -1,3 +1,7 @@
+.scroll {
+  overflow: hidden;
+}
+
 .Culture {
   height: 100vh;
   font-size: 0.5208333333vw;
@@ -52,4 +56,116 @@
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.CultureEnvironment .Environment .EnvironmentHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.CultureEnvironment .Environment .EnvironmentHead .EnvironmentTitle {
+  margin-bottom: 2.4%;
+}
+.CultureEnvironment .Environment .EnvironmentHead .EnvironmentTitle label {
+  color: var(--Middle-Glay, #a0a0a0);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+.CultureEnvironment .Environment .EnvironmentHead .EnvironmentSubtitle {
+  margin-bottom: 2.4%;
+}
+.CultureEnvironment .Environment .EnvironmentHead .EnvironmentSubtitle label {
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80%;
+}
+.CultureEnvironment .Environment .EnvironmentHead .EnvironmentDescription {
+  margin-bottom: 10%;
+  white-space: pre-wrap;
+  text-align: center;
+}
+.CultureEnvironment .Environment .EnvironmentHead .EnvironmentDescription label {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+}
+.CultureEnvironment .Environment .EnvironmentContents {
+  display: flex;
+  width: 100%;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject {
+  flex-basis: 45%;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList {
+  padding-top: 5%;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject {
+  margin-bottom: 8%;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label {
+  color: var(--Dark-Glay, #4d4f58);
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+  opacity: 0.3;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label.active {
+  opacity: 1;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label:hover {
+  cursor: pointer;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentCarousel {
+  flex-basis: 55%;
+  height: 36vh;
+  overflow: hidden;
+  position: relative;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentCarousel .EnvironmentImage {
+  transition: transform 0.4s ease-in-out 0s;
+}
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentCarousel .EnvironmentImage img {
+  width: 100%;
+  height: 36vh;
+  margin-bottom: 2vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.CultureOrganization .Organization .OrganizationTitle {
+  margin-bottom: 2.4em;
+}
+.CultureOrganization .Organization .OrganizationTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+.CultureOrganization .OrganizationDescription {
+  width: 69em;
+  word-break: break-all;
+}
+.CultureOrganization .OrganizationDescription label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
 }/*# sourceMappingURL=culture.css.map */

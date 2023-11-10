@@ -1,0 +1,21 @@
+{
+    "data": [
+      {
+        "subject": "열린 의사소통 문화",
+        "imageName": "environment1"
+      },
+      {
+        "subject": "편안하고 동기부여를 얻을 수 있는 사무환경",
+        "imageName": "environment2"
+      },
+      {
+        "subject": "학습 및 전문성 향상을 지원하는 프로그램",
+        "imageName": "environment3"
+      },
+      {
+        "subject": "유연한 근무 시간",
+        "imageName": "environment4"
+      }
+    ]
+  }
+  

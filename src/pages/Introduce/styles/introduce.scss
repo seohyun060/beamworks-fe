@@ -187,6 +187,10 @@
     &:last-child {
       margin: 2%;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .MissionCarousel {
@@ -367,9 +371,3 @@
     }
   }
 }
-
-// @media (max-width: 1200px) {
-//   .IntroduceSlogun {
-//     font-size: 8px;
-//   }
-// }

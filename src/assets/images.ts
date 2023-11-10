@@ -30,6 +30,10 @@ const images = {
 	paging_dot_dark: '/assets/images/paging_dot_dark.svg',
 	paging_dot_medium: '/assets/images/paging_dot_medium.svg',
 	culture_slogun: '/assets/images/culture_slogun.png',
+	environment1: '/assets/images/environment1.png',
+	environment2: '/assets/images/environment2.png',
+	environment3: '/assets/images/environment3.png',
+	environment4: '/assets/images/environment4.png',
 };
 
 export default images;

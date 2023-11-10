@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import images from "src/assets/images";
-import IntroduceMissionDetail from "./IntroduceMissionDetail";
-import MissionData from "../MissionData";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -24,25 +22,11 @@ function useInterval(callback, delay) {
 }
 
 const IntroduceMissionCarousel = (props) => {
-  const items = MissionData.data;
+  const { items } = props;
   const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
   const carouselRef = useRef(1);
   const [carouselMoving, setCarouselMoving] = useState(0);
-
-  const [pagingDotbar, setPagingDotbar] = useState([]);
-
-  const makeDotbar = (targetIndex) => {
-    const dotbar = [];
-    items.map((data, index) => {
-      if (targetIndex === index) {
-        dotbar.push(images.paging_dot_dark);
-      } else {
-        dotbar.push(images.paging_dot_medium);
-      }
-    });
-    return dotbar;
-  };
 
   // 뒤로가기 버튼 액션
   const carouselMoveBackward = () => {
@@ -92,8 +76,6 @@ const IntroduceMissionCarousel = (props) => {
     console.log(carouselRef.current.offsetWidth);
   }, []);
 
-  // setInterval(() => carouselMoveForward(), 2000);
-
   useEffect(() => {
     // 윈도우 크기 변할 시 반응형
     window.addEventListener("resize", function () {
@@ -105,7 +87,7 @@ const IntroduceMissionCarousel = (props) => {
   });
 
   useInterval(() => {
-    // carouselMoveForward();
+    carouselMoveForward();
   }, 4000);
 
   return (
@@ -113,15 +95,7 @@ const IntroduceMissionCarousel = (props) => {
       <img src={images.carousel_backward} onClick={carouselMoveBackward}></img>
       <article className="MissionCarousel">
         <div className="Carousel" ref={carouselRef}>
-          {items.map((data, index) => (
-            <IntroduceMissionDetail
-              // pagingDotbar={pagingDotbar[index]}
-              title={data.title}
-              content={data.content}
-              imageName={data.imageName}
-              progressDotSet={makeDotbar(index)} 
-            />
-          ))}
+          {items}
         </div>
       </article>
       <img src={images.carousel_forward} onClick={carouselMoveForward}></img>

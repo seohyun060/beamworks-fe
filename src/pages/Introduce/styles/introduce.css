@@ -166,6 +166,9 @@
 .IntroduceMissionCarousel > img:last-child {
   margin: 2%;
 }
+.IntroduceMissionCarousel > img:hover {
+  cursor: pointer;
+}
 .IntroduceMissionCarousel .MissionCarousel {
   display: flex;
   align-items: center;
@@ -322,4 +325,4 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=introduce.css.map */
+}/*# sourceMappingURL=Introduce.css.map */
