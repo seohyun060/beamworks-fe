@@ -1,17 +1,14 @@
 import React from 'react';
 import images from 'src/assets/images';
 import { Solution } from '@typedef/types';
+import useProductStore from '@store/rootZustand';
 type Props = {
 	solutionList: Solution[];
-	selectedSolution: number;
 	onSolutionClick: (index: number) => void;
 };
 
-const ProductS5 = ({
-	solutionList,
-	selectedSolution,
-	onSolutionClick,
-}: Props) => {
+const ProductS5 = ({ solutionList, onSolutionClick }: Props) => {
+	const { selectedSolution } = useProductStore();
 	return (
 		<div className='product-s5'>
 			<div className='product-s5-text'>

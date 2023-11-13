@@ -4,6 +4,7 @@ import AwardContainer from 'src/pages/Award/containers/AwardContainer';
 import Introduce from 'src/pages/Introduce/Introduce';
 import Culture from 'src/pages/Culture/Culture';
 import ProductContainer from 'src/pages/Product/containers/ProductContainer';
+import ChatAIContainer from 'src/pages/ChatAI/containers/ChatAIContainer';
 import React, { useEffect, useState } from 'react';
 import {
 	BrowserRouter as Router,
@@ -24,6 +25,7 @@ const RootNavigation = () => {
 				<Route path='/award' element={<AwardContainer />} />
 				<Route path='/culture' element={<Culture />} />
 				<Route path='/product' element={<ProductContainer />} />
+				<Route path='/chatai' element={<ChatAIContainer />} />
 			</Routes>
 		</>
 	);

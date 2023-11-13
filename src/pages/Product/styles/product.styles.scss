@@ -250,7 +250,7 @@
 						//background-color: #4d4f58;
 						/* 본문 */
 						font-family: Pretendard;
-						font-size: 2.4em;
+						font-size: 2em;
 						font-style: normal;
 						font-weight: 400;
 						line-height: 1.416; /* 141.667% */
@@ -259,7 +259,10 @@
 						//max-height: 0;
 						overflow: hidden;
 						transition: max-height 0.3s ease-in-out, opacity 0.3s ease-out 0.3s,
+							// 사라지는거
 							visibility 0.3s ease-out 0.3s;
+						transition: opacity 0s ease-out, visibility 0s ease-out,
+							max-height 0.3s ease-in-out;
 					}
 					&-active {
 						@extend .solbox;
@@ -269,15 +272,18 @@
 							}
 						}
 						.solution {
-							font-size: 2.4em;
+							// d
+							font-size: 2em;
 							margin-top: 2.08vw;
 							margin-bottom: 0.833vw;
 							//height: 3.54vw;
-							max-height: 3.54vw; /* 적절한 최대 높이 값	 설정 */
+							max-height: 2.9vw; /* 적절한 최대 높이 값	 설정 */
 							opacity: 1; /* 나타남 */
 							visibility: visible; /* 나타남 */
 							transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in 0.3s,
+								// 없었다 나타나는거
 								visibility 0.3s ease-in 0.3s;
+
 							//transition-delay: 0.3s;
 						}
 					}

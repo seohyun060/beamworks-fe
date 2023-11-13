@@ -1,6 +1,7 @@
 .footer {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,6 +9,7 @@
   font-size: 0.52083333vw;
   scroll-snap-align: start;
   background-color: white;
+  overflow: hidden;
 }
 .footer-news {
   margin-top: 12.3vh;
