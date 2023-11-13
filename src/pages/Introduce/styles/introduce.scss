@@ -194,12 +194,10 @@
   }
 
   .MissionCarousel {
-    display: flex;
-    align-items: center;
     overflow: hidden;
     .Carousel {
       display: flex;
-      position: absolute;
+      height: 100%;
     }
   }
 }

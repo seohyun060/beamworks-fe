@@ -21,7 +21,7 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-const IntroduceMissionCarousel = (props) => {
+const CultureTeamsCarousel = (props) => {
   const { items } = props;
   const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
@@ -51,7 +51,7 @@ const IntroduceMissionCarousel = (props) => {
 
   // 앞으로가기 버튼 액션
   const carouselMoveForward = () => {
-    console.log(currentCarouselPage);
+    console.log(carouselRef.current.getBoundingClientRect().width);
     const carouselSize =
       carouselRef.current.getBoundingClientRect().width * 1.1;
     if (currentCarouselPage < items.length - 1) {
@@ -73,7 +73,8 @@ const IntroduceMissionCarousel = (props) => {
   useEffect(() => {
     // css에서 주지않고 직접 지정
     carouselRef.current.style.transition = "transform 0.4s ease-in-out";
-    console.log(carouselRef.current.getBoundingClientRect().width);
+    console.log(carouselRef.current.offsetWidth);
+    console.log(items);
   }, []);
 
   useEffect(() => {
@@ -89,14 +90,15 @@ const IntroduceMissionCarousel = (props) => {
     });
   });
 
+  // 4초에 한번씩 자동으로 넘어감
   useInterval(() => {
     // carouselMoveForward();
   }, 4000);
 
   return (
-    <section className="IntroduceMissionCarousel">
+    <section className="CultureTeamsCarousel">
       <img src={images.carousel_backward} onClick={carouselMoveBackward}></img>
-      <article className="MissionCarousel">
+      <article className="TeamsCarousel">
         <div className="Carousel" ref={carouselRef}>
           {items}
         </div>
@@ -106,4 +108,4 @@ const IntroduceMissionCarousel = (props) => {
   );
 };
 
-export default IntroduceMissionCarousel;
+export default CultureTeamsCarousel;

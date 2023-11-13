@@ -36,6 +36,16 @@ const images = {
 	environment4: '/assets/images/environment4.png',
 	rightB: '/assets/images/rightB.svg',
 	go_details: '/assets/images/go_details.svg',
+	teamImage1: '/assets/images/teamImage1.png',
+	teamImage2: '/assets/images/teamImage2.png',
+	teamImage3: '/assets/images/teamImage3.png',
+	teamImage4: '/assets/images/teamImage4.png',
+	teamImage5: '/assets/images/teamImage5.png',
+	teamImage6: '/assets/images/teamImage6.png',
+	teamImage7: '/assets/images/teamImage7.png',
+	teamImage8: '/assets/images/teamImage8.png',
+	teamImage9: '/assets/images/teamImage9.png',
+	organization: '/assets/images/organization.png',
 };
 
 export default images;

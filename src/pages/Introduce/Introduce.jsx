@@ -15,9 +15,10 @@ import images from "src/assets/images";
 import "./styles/introduce.css";
 
 const Introduce = () => {
+
   const makeDotbar = (targetIndex) => {
     const dotbar = [];
-    for (let i = 0; i < MissionData.length; i++) {
+    for (let i = 0; i < MissionData.data.length; i++) {
       if (targetIndex === i) {
         dotbar.push(images.paging_dot_dark);
       } else {
