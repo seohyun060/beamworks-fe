@@ -6,9 +6,15 @@ export type EFile = React.ChangeEvent<HTMLInputElement>;
 export type VoidFunc = () => void;
 
 export type MainNews = {
-	image: string;
 	content: string;
-	title: string;
 	date: Date;
+	image: string;
+	title: string;
 	type: string;
+};
+
+export type Solution = {
+	index: number;
+	problem: string;
+	solution: string;
 };

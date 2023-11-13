@@ -36,6 +36,20 @@ const images = {
 	environment4: '/assets/images/environment4.png',
 	rightB: '/assets/images/rightB.svg',
 	go_details: '/assets/images/go_details.svg',
+	product1: '/assets/images/product1.png',
+	product2: '/assets/images/product2.png',
+	product3: '/assets/images/product3.png',
+	product4: '/assets/images/product4.png',
+	product5: '/assets/images/product5.png',
+	product6_1: '/assets/images/product6_1.png',
+	product6_2: '/assets/images/product6_2.png',
+	product7_1: '/assets/images/product7_1.png',
+	product7_2: '/assets/images/product7_2.png',
+	cadaiLogo: '/assets/images/cadaiLogo.png',
+	circledownW: '/assets/images/circledownW.svg',
+	cblogo_b: '/assets/images/cblogo-b.png',
+	ctlogo_b: '/assets/images/ctlogo-b.png',
+	calogo_b: '/assets/images/calogo-b.png',
 };
 
 export default images;
