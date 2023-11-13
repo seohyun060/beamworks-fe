@@ -170,13 +170,11 @@
   cursor: pointer;
 }
 .IntroduceMissionCarousel .MissionCarousel {
-  display: flex;
-  align-items: center;
   overflow: hidden;
 }
 .IntroduceMissionCarousel .MissionCarousel .Carousel {
   display: flex;
-  position: absolute;
+  height: 100%;
 }
 
 .MissionDetail {
@@ -325,4 +323,4 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=Introduce.css.map */
+}/*# sourceMappingURL=introduce.css.map */

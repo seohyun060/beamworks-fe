@@ -1,5 +1,7 @@
 import React from "react";
 
+import images from "src/assets/images";
+
 const CultureOrganization = () => {
   return (
     <section className="CultureOrganization">
@@ -13,6 +15,9 @@ const CultureOrganization = () => {
             강조합니다. 의사결정은 팀원들의 협력을 기반으로 이루어지며, 전체
             조직의 효율성을 유지하고 의사소통을 강화하는 역할을 합니다.
           </label>
+        </div>
+        <div className="OrganizationImage">
+          <img src={images.organization}></img>
         </div>
       </article>
     </section>
