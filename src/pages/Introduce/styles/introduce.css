@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.Introduce::-webkit-scrollbar {
+  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
+}
+
 .Introduce {
   height: 100vh;
   font-size: 0.5208333333vw;
@@ -27,10 +31,6 @@
   position: relative;
   flex-basis: 62.5%;
   aspect-ratio: 1200/760;
-}
-
-.Introduce::-webkit-scrollbar {
-  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
 }
 
 .IntroduceSlogun {

@@ -60,6 +60,17 @@ const images = {
 	teamImage8: '/assets/images/teamImage8.png',
 	teamImage9: '/assets/images/teamImage9.png',
 	organization: '/assets/images/organization.png',
+	go_apply: '/assets/images/go_apply.svg',
+	carousel_back: '/assets/images/carousel_back.svg',
+	carousel_go: '/assets/images/carousel_go.svg',
+	recruitment_job1: '/assets/images/recruitment_job1.png',
+	recruitment_job2: '/assets/images/recruitment_job2.png',
+	recruitment_job3: '/assets/images/recruitment_job3.png',
+	recruitment_job4: '/assets/images/recruitment_job4.png',
+	recruitment_job5: '/assets/images/recruitment_job5.png',
+	recruitment_environment1: '/assets/images/recruitment_environment1.png',
+	recruitment_environment2: '/assets/images/recruitment_environment2.png',
+	recruitment_environment3: '/assets/images/recruitment_environment3.png',
 };
 
 export default images;

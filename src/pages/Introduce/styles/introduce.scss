@@ -2,6 +2,10 @@
   overflow: hidden;
 }
 
+.Introduce::-webkit-scrollbar {
+  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
+}
+
 .Introduce {
   height: 100vh;
   font-size: 0.5208333333333vw; // 10px 기준 하위 항목 1em
@@ -28,10 +32,6 @@
       aspect-ratio: 1200/760;
     }
   }
-}
-
-.Introduce::-webkit-scrollbar {
-  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
 }
 
 // 슬로건 섹션

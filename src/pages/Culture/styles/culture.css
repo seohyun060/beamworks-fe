@@ -1,5 +1,10 @@
+@charset "UTF-8";
 .scroll {
   overflow: hidden;
+}
+
+.Introduce::-webkit-scrollbar {
+  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
 }
 
 .Culture {

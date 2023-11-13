@@ -23,7 +23,7 @@ function useInterval(callback, delay) {
 
 const CultureTeamsCarousel = (props) => {
   const { items } = props;
-  const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
+  const [currentCarouselPage, setCurrentCarouselPage] = useState(1);
 
   const carouselRef = useRef(1);
   const [carouselMoving, setCarouselMoving] = useState(0);
@@ -32,7 +32,7 @@ const CultureTeamsCarousel = (props) => {
   const carouselMoveBackward = () => {
     const carouselSize =
       carouselRef.current.getBoundingClientRect().width * 1.1;
-    if (currentCarouselPage !== 0) {
+    if (currentCarouselPage !== 1) {
       carouselRef.current.style.transform = `translateX(${
         carouselMoving + carouselSize
       }px)`;
@@ -40,12 +40,12 @@ const CultureTeamsCarousel = (props) => {
       setCurrentCarouselPage((prev) => prev - 1);
     }
     // 첫페이지일 때
-    if (currentCarouselPage === 0) {
+    if (currentCarouselPage === 1) {
       carouselRef.current.style.transform = `translateX(${
         -carouselSize * (items.length - 1)
       }px)`;
       setCarouselMoving(-carouselSize * (items.length - 1));
-      setCurrentCarouselPage(items.length - 1);
+      setCurrentCarouselPage(items.length);
     }
   };
 
@@ -54,7 +54,7 @@ const CultureTeamsCarousel = (props) => {
     console.log(carouselRef.current.getBoundingClientRect().width);
     const carouselSize =
       carouselRef.current.getBoundingClientRect().width * 1.1;
-    if (currentCarouselPage < items.length - 1) {
+    if (currentCarouselPage < items.length) {
       carouselRef.current.style.transform = `translateX(${
         carouselMoving - carouselSize
       }px)`;
@@ -63,10 +63,10 @@ const CultureTeamsCarousel = (props) => {
       setCurrentCarouselPage((prev) => prev + 1);
     }
     //마지막 페이지일 때
-    if (currentCarouselPage >= items.length - 1) {
+    if (currentCarouselPage >= items.length) {
       carouselRef.current.style.transform = `translateX(${0}px)`;
       setCarouselMoving(0);
-      setCurrentCarouselPage(0);
+      setCurrentCarouselPage(1);
     }
   };
 
@@ -79,6 +79,7 @@ const CultureTeamsCarousel = (props) => {
 
   useEffect(() => {
     // 윈도우 크기 변할 시 반응형
+    console.log(currentCarouselPage)
     window.addEventListener("resize", function () {
       const translateSize = -(
         carouselRef.current.getBoundingClientRect().width *

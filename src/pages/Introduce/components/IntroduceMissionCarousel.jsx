@@ -23,7 +23,7 @@ function useInterval(callback, delay) {
 
 const IntroduceMissionCarousel = (props) => {
   const { items } = props;
-  const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
+  const [currentCarouselPage, setCurrentCarouselPage] = useState(1);
 
   const carouselRef = useRef(1);
   const [carouselMoving, setCarouselMoving] = useState(0);

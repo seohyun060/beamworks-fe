@@ -1,0 +1,246 @@
+@charset "UTF-8";
+.scroll {
+  overflow: hidden;
+}
+
+.Introduce::-webkit-scrollbar {
+  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
+}
+
+.Recruitment {
+  height: 100vh;
+  font-size: 0.5208333333vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.Recruitment section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  scroll-snap-align: start;
+  padding-top: 52px;
+  background-color: white;
+  transition: all 0.5s ease-out;
+}
+.Recruitment section article {
+  position: relative;
+  flex-basis: 62.5%;
+  aspect-ratio: 1200/760;
+}
+
+.RecruitmentMain {
+  background-image: url("/public/assets/images/recruitment_main.png");
+  background-size: cover;
+  background-position: center center;
+}
+.RecruitmentMain .Main .Title {
+  margin-bottom: 2.4em;
+}
+.RecruitmentMain .Main .Title label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 132%;
+}
+.RecruitmentMain .Main .Description label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+
+.RecruitmentJob > img {
+  width: 1.2em;
+  height: 2.4em;
+  margin: 4em;
+}
+.RecruitmentJob .Job {
+  aspect-ratio: 1200/828;
+}
+.RecruitmentJob .Job .TitleHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+.RecruitmentJob .Job .TitleHeader label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+.RecruitmentJob .Job .TitleHeader .ApplyButton {
+  display: flex;
+  width: 20em;
+  height: 3em;
+  padding: 0.2em 3em;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--Dark-Glay, #4d4f58);
+  background: var(--Dark-Glay, #4d4f58);
+}
+.RecruitmentJob .Job .TitleHeader .ApplyButton label {
+  color: var(--White, #fff);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.RecruitmentJob .Job .TeamListCarousel {
+  width: 120em;
+  height: 72.8em;
+}
+.RecruitmentJob .Job .TeamListCarousel .Carousel {
+  display: flex;
+  height: 100%;
+}
+
+.RecruitmentJobCard {
+  width: 38.4em;
+  height: 72.8em;
+  margin-right: 2.4em;
+}
+.RecruitmentJobCard img {
+  width: 38.4em;
+  height: 60em;
+}
+.RecruitmentJobCard .JobName {
+  margin: 3em 0px;
+}
+.RecruitmentJobCard .JobName label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+.RecruitmentJobCard .GoDetails :hover {
+  cursor: pointer;
+}
+.RecruitmentJobCard .GoDetails label {
+  padding-right: 1.2em;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.RecruitmentJobCard .GoDetails img {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.RecruitmentEnvironment .Environment .EnvironmentTitle {
+  margin-bottom: 5em;
+}
+.RecruitmentEnvironment .Environment .EnvironmentTitle label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+.RecruitmentEnvironment .EnvironmentDescription {
+  flex-grow: 1;
+}
+.RecruitmentEnvironment .EnvironmentDescription .ImageSector {
+  height: 62.8em;
+}
+.RecruitmentEnvironment .EnvironmentDescription .ImageSector img {
+  height: 100%;
+  width: 18em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 2.3em;
+  transition: 0.4s ease-in-out;
+  opacity: 0.3;
+}
+.RecruitmentEnvironment .EnvironmentDescription .ImageSector img.active {
+  opacity: 1;
+  width: 79.2em;
+}
+.RecruitmentEnvironment .EnvironmentDescription .ImageSector img:last-child {
+  margin-right: 0;
+}
+.RecruitmentEnvironment .EnvironmentDescription .ImageSector img:hover {
+  cursor: pointer;
+}
+.RecruitmentEnvironment .EnvironmentDescription .DescriptionSector .Moving {
+  width: 79.2em;
+  transform: translateX(0);
+  transition: 0.4s ease-in-out;
+}
+.RecruitmentEnvironment .EnvironmentDescription .DescriptionSector .Moving label {
+  color: var(--Dark-Glay, #4d4f58);
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+
+.RecruitmentInternship {
+  background-image: url("/public/assets/images/recruitment_internship.png");
+  background-size: cover;
+  background-position: center center;
+}
+.RecruitmentInternship .Internship .Title {
+  margin-bottom: 2.4em;
+}
+.RecruitmentInternship .Internship .Title label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 132%;
+}
+.RecruitmentInternship .Internship .Description {
+  margin-bottom: 5em;
+}
+.RecruitmentInternship .Internship .Description label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+.RecruitmentInternship .Internship .ApplyButton {
+  display: flex;
+  width: 20em;
+  height: 3em;
+  padding: 0.2em 3em;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--Dark-Glay, #4d4f58);
+  background: var(--Dark-Glay, #4d4f58);
+}
+.RecruitmentInternship .Internship .ApplyButton label {
+  color: var(--White, #fff);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}/*# sourceMappingURL=recruitment.css.map */
