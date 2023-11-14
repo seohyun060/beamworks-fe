@@ -1,24 +1,44 @@
 {
-    "data": [
-      {
-        "jobName": "연구개발팀",
-        "imageName": "recruitment_job1"
-      },
-      {
-        "jobName": "인허가팀",
-        "imageName": "recruitment_job2"
-      },
-      {
-        "jobName": "GMP",
-        "imageName": "recruitment_job3"
-      },
-      {
-        "jobName": "마케팅, 디자인 팀",
-        "imageName": "recruitment_job4"
-      },
-      {
-        "jobName": "인사팀",
-        "imageName": "recruitment_job5"
-      }
-    ]
-  }
+  "data": [
+    {
+      "jobName": "연구개발팀",
+      "imageName": "recruitment_job1"
+    },
+    {
+      "jobName": "인허가팀",
+      "imageName": "recruitment_job2"
+    },
+    {
+      "jobName": "GMP",
+      "imageName": "recruitment_job3"
+    },
+    {
+      "jobName": "마케팅, 디자인 팀",
+      "imageName": "recruitment_job4"
+    },
+    {
+      "jobName": "인사팀",
+      "imageName": "recruitment_job5"
+    },
+    {
+      "jobName": "연구개발팀",
+      "imageName": "recruitment_job1"
+    },
+    {
+      "jobName": "인허가팀",
+      "imageName": "recruitment_job2"
+    },
+    {
+      "jobName": "GMP",
+      "imageName": "recruitment_job3"
+    },
+    {
+      "jobName": "마케팅, 디자인 팀",
+      "imageName": "recruitment_job4"
+    },
+    {
+      "jobName": "인사팀",
+      "imageName": "recruitment_job5"
+    }
+  ]
+}
