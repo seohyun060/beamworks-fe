@@ -43,7 +43,6 @@ const CultureEnvironment = () => {
                     className={index === isSubjectClicked ? "active" : ""}
                     onClick={(e) => {
                       onSubjectClick(index);
-                      console.log(index);
                     }}
                   >
                     {data.subject}

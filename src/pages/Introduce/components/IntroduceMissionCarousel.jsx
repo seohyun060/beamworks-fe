@@ -1,6 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import IntroduceMissionDetail from "./IntroduceMissionDetail";
+
+import MissionData from "../MissionData";
 import images from "src/assets/images";
+
+import "../styles/introduce.css";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -21,73 +26,45 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-const IntroduceMissionCarousel = (props) => {
-  const { items } = props;
-  const [currentCarouselPage, setCurrentCarouselPage] = useState(1);
+const IntroduceMissionCarousel = () => {
+  const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
   const carouselRef = useRef(1);
-  const [carouselMoving, setCarouselMoving] = useState(0);
+
+  // 프로그레스 바 생성
+  const makeDotbar = (targetIndex) => {
+    const dotbar = [];
+    for (let i = 0; i < MissionData.data.length; i++) {
+      if (targetIndex === i) {
+        dotbar.push(images.paging_dot_dark);
+      } else {
+        dotbar.push(images.paging_dot_medium);
+      }
+    }
+    return dotbar;
+  };
 
   // 뒤로가기 버튼 액션
   const carouselMoveBackward = () => {
-    const carouselSize =
-      carouselRef.current.getBoundingClientRect().width * 1.1;
-    if (currentCarouselPage !== 1) {
-      carouselRef.current.style.transform = `translateX(${
-        carouselMoving + carouselSize
-      }px)`;
-      setCarouselMoving((prev) => prev + carouselSize);
+    if (currentCarouselPage !== 0) {
       setCurrentCarouselPage((prev) => prev - 1);
     }
     // 첫페이지일 때
-    if (currentCarouselPage === 1) {
-      carouselRef.current.style.transform = `translateX(${
-        -carouselSize * (items.length - 1)
-      }px)`;
-      setCarouselMoving(-carouselSize * (items.length - 1));
-      setCurrentCarouselPage(items.length);
+    if (currentCarouselPage === 0) {
+      setCurrentCarouselPage(MissionData.data.length - 1);
     }
   };
 
   // 앞으로가기 버튼 액션
   const carouselMoveForward = () => {
-    console.log(currentCarouselPage);
-    const carouselSize =
-      carouselRef.current.getBoundingClientRect().width * 1.1;
-    if (currentCarouselPage < items.length) {
-      carouselRef.current.style.transform = `translateX(${
-        carouselMoving - carouselSize
-      }px)`;
-
-      setCarouselMoving((prev) => prev - carouselSize);
+    if (currentCarouselPage < MissionData.data.length - 1) {
       setCurrentCarouselPage((prev) => prev + 1);
     }
     //마지막 페이지일 때
-    if (currentCarouselPage >= items.length) {
-      carouselRef.current.style.transform = `translateX(${0}px)`;
-      setCarouselMoving(0);
-      setCurrentCarouselPage(1);
+    if (currentCarouselPage >= MissionData.data.length - 1) {
+      setCurrentCarouselPage(0);
     }
   };
-
-  useEffect(() => {
-    // css에서 주지않고 직접 지정
-    carouselRef.current.style.transition = "transform 0.4s ease-in-out";
-    console.log(carouselRef.current.getBoundingClientRect().width);
-  }, []);
-
-  useEffect(() => {
-    // 윈도우 크기 변할 시 반응형
-    window.addEventListener("resize", function () {
-      const translateSize = -(
-        carouselRef.current.getBoundingClientRect().width *
-        1.1 *
-        (currentCarouselPage - 1)
-      );
-      carouselRef.current.style.transform = `translateX(${translateSize}px)`;
-      setCarouselMoving(translateSize);
-    });
-  });
 
   useInterval(() => {
     // carouselMoveForward();
@@ -98,7 +75,15 @@ const IntroduceMissionCarousel = (props) => {
       <img src={images.carousel_backward} onClick={carouselMoveBackward}></img>
       <article className="MissionCarousel">
         <div className="Carousel" ref={carouselRef}>
-          {items}
+          {MissionData.data.map((data, index) => (
+            <IntroduceMissionDetail
+              title={data.title}
+              content={data.content}
+              imageName={data.imageName}
+              progressDotSet={makeDotbar(index)}
+              target={currentCarouselPage === index}
+            />
+          ))}
         </div>
       </article>
       <img src={images.carousel_forward} onClick={carouselMoveForward}></img>

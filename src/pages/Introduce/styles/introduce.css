@@ -182,12 +182,18 @@
   display: flex;
   flex-shrink: 0;
   margin-right: 10%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.MissionDetail.active {
+  opacity: 1;
 }
 .MissionDetail .Contents {
   width: 37.5%;
   margin-right: 5%;
   position: relative;
-  top: 30%;
+  margin-top: 18%;
 }
 .MissionDetail .ProgressDotbar {
   display: flex;

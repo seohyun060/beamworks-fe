@@ -208,12 +208,19 @@
   display: flex;
   flex-shrink: 0;
   margin-right: 10%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  
+  &.active {
+    opacity: 1;
+  }
 
   .Contents {
     width: 37.5%;
     margin-right: 5%;
     position: relative;
-    top: 30%;
+    margin-top: 18%;
   }
 
   .ProgressDotbar {

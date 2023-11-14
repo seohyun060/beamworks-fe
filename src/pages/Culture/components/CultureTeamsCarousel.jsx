@@ -82,7 +82,6 @@ const CultureTeamsCarousel = () => {
   useEffect(() => {
     // css에서 주지않고 직접 지정
     carouselRef.current.style.transition = "transform 0.4s ease-in-out";
-    console.log(TeamsData.data);
   }, []);
 
   // 4초에 한번씩 자동으로 넘어감

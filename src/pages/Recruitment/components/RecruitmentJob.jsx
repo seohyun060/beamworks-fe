@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import RecruitmentJobCarousel from "./RecruitmentJobCarousel";
 import RecruitmentJobCard from "./RecruitmentJobCard";
 
 import images from "src/assets/images";
@@ -10,24 +9,10 @@ const RecruitmentJob = () => {
   const carouselRef = useRef(0);
 
   const maxCarouselCount = RecruitmentJobs.data.length - 3;
-  // 추후 수정필요
-  const carouselItemRef = [
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0),
-    useRef(0)
-  ];
 
   const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
   const carouselMoveBackward = () => {
-    console.log(currentCarouselPage);
     if (currentCarouselPage - 3 >= 0) {
       // JobCard의 크기(마진포함) 40.8em
       carouselRef.current.style.transform = `translateX(${
@@ -43,7 +28,6 @@ const RecruitmentJob = () => {
   };
 
   const carouselMoveForward = () => {
-    console.log(currentCarouselPage);
     if (currentCarouselPage + 3 <= maxCarouselCount) {
       // JobCard의 크기(마진포함) 40.8em
       carouselRef.current.style.transform = `translateX(${
@@ -65,23 +49,14 @@ const RecruitmentJob = () => {
   useEffect(() => {
     // css에서 주지않고 직접 지정
     carouselRef.current.style.transition = "transform 0.5s ease-in-out";
-    carouselItemRef.map((ref) => {
-      ref.current.style.transition = "0.5s ease-in-out";
-    });
   }, []);
 
   useEffect(() => {
     // 윈도우 크기 변할 시 반응형
     window.addEventListener("resize", function () {
       carouselRef.current.style.transition = "";
-      carouselItemRef.map((ref) => {
-        ref.current.style.transition = "";
-      });
     });
     carouselRef.current.style.transition = "transform 0.5s ease-in-out";
-    carouselItemRef.map((ref) => {
-      ref.current.style.transition = "0.5s ease-in-out";
-    });
   });
 
   return (
@@ -101,7 +76,6 @@ const RecruitmentJob = () => {
               <RecruitmentJobCard
                 jobName={data.jobName}
                 imageName={data.imageName}
-                carouselItemRef={carouselItemRef[index]}
                 isVisible={
                   index >= currentCarouselPage &&
                   index <= currentCarouselPage + 2

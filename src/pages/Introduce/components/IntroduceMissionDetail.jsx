@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import images from "src/assets/images";
 
 const IntroduceMissionDetail = (props) => {
-  const { title, content, imageName, progressDotSet } = props;
+  const { title, content, imageName, progressDotSet, target } = props;
 
   return (
-    <div className="MissionDetail">
+    <div className={target ? "MissionDetail active" : "MissionDetail"}>
       <div className="Contents">
         <div className="ProgressDotbar">
           {progressDotSet.map((data) => (
