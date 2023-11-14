@@ -1,27 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useImperativeHandle, forwardRef } from "react";
 
 import images from "src/assets/images";
 
-function useInterval(callback, delay) {
-  const savedCallback = useRef();
-
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
-    function tick() {
-      savedCallback.current();
-    }
-
-    if (delay !== null) {
-      const intervalId = setInterval(tick, delay);
-      return () => clearInterval(intervalId);
-    }
-  }, [delay]);
-}
-
-const IntroduceMissionCarousel = (props) => {
+const RecruitmentJobCarousel = forwardRef((props, ref) => {
   const { items } = props;
   const [currentCarouselPage, setCurrentCarouselPage] = useState(1);
 
@@ -40,7 +21,7 @@ const IntroduceMissionCarousel = (props) => {
       setCurrentCarouselPage((prev) => prev - 1);
     }
     // 첫페이지일 때
-    if (currentCarouselPage === 1) {
+    else if (currentCarouselPage === 1) {
       carouselRef.current.style.transform = `translateX(${
         -carouselSize * (items.length - 1)
       }px)`;
@@ -63,12 +44,16 @@ const IntroduceMissionCarousel = (props) => {
       setCurrentCarouselPage((prev) => prev + 1);
     }
     //마지막 페이지일 때
-    if (currentCarouselPage >= items.length) {
+    else if (currentCarouselPage >= items.length) {
       carouselRef.current.style.transform = `translateX(${0}px)`;
       setCarouselMoving(0);
       setCurrentCarouselPage(1);
     }
   };
+
+  useImperativeHandle(ref, () => ({
+    carouselMoveForward
+  }));
 
   useEffect(() => {
     // css에서 주지않고 직접 지정
@@ -89,21 +74,13 @@ const IntroduceMissionCarousel = (props) => {
     });
   });
 
-  useInterval(() => {
-    // carouselMoveForward();
-  }, 4000);
-
   return (
-    <section className="IntroduceMissionCarousel">
-      <img src={images.carousel_backward} onClick={carouselMoveBackward}></img>
-      <article className="MissionCarousel">
-        <div className="Carousel" ref={carouselRef}>
-          {items}
-        </div>
-      </article>
-      <img src={images.carousel_forward} onClick={carouselMoveForward}></img>
-    </section>
+    <div className="TeamListCarousel">
+      <div className="Carousel" ref={carouselRef}>
+        {items}
+      </div>
+    </div>
   );
-};
+});
 
-export default IntroduceMissionCarousel;
+export default RecruitmentJobCarousel;
