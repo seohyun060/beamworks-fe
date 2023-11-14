@@ -4,9 +4,14 @@ import images from "src/assets/images";
 
 const RecruitmentJobCard = (props) => {
   const { jobName, imageName, carouselItemRef, isVisible } = props;
-  
+
   return (
-    <div className={isVisible ? "RecruitmentJobCard" : "RecruitmentJobCard unactive"} ref={carouselItemRef}>
+    <div
+      className={
+        isVisible ? "RecruitmentJobCard" : "RecruitmentJobCard unactive"
+      }
+      ref={carouselItemRef}
+    >
       <img src={images[imageName]} />
       <div className="JobName">
         <label>{jobName}</label>

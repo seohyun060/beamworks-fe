@@ -34,13 +34,11 @@ const RecruitmentJob = () => {
         -(currentCarouselPage - 3) * 40.8
       }em)`;
       setCurrentCarouselPage((prev) => prev - 3);
-      console.log(1);
     }
     //남은 카드가 3개 미만일 경우
     else if (currentCarouselPage - 3 < 0) {
       carouselRef.current.style.transform = `translateX(0em)`;
       setCurrentCarouselPage(0);
-      console.log(2);
     }
   };
 
@@ -52,7 +50,6 @@ const RecruitmentJob = () => {
         -(currentCarouselPage + 3) * 40.8
       }em)`;
       setCurrentCarouselPage((prev) => prev + 3);
-      console.log(1);
     }
     //남은 카드가 3개 미만일 경우
     else if (currentCarouselPage + 3 > maxCarouselCount) {
@@ -62,7 +59,6 @@ const RecruitmentJob = () => {
       setCurrentCarouselPage(
         (prev) => prev + (maxCarouselCount - currentCarouselPage)
       );
-      console.log(2);
     }
   };
 

@@ -4,10 +4,17 @@ import images from "src/assets/images";
 import "../styles/culture.css";
 
 const CultureTeams = (props) => {
-  const { name, projects, information, imageName } = props;
+  const { name, projects, information, imageName, progressDotSet, target } =
+    props;
 
   return (
-    <div className="CultureTeams">
+    <div className={target ? "CultureTeams active" : "CultureTeams"}>
+      <div className="ProgressBar">
+        {progressDotSet.map((data) => (
+          <img src={data} />
+        ))}
+      </div>
+      <div className="Teams">
         <div className="TeamInformation">
           <div className="TeamName">
             <label>{name}</label>
@@ -26,6 +33,7 @@ const CultureTeams = (props) => {
         <div className="TeamImage">
           <img src={images[imageName]} />
         </div>
+      </div>
     </div>
   );
 };

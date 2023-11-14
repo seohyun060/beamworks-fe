@@ -1,6 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import "../styles/culture.css";
+
+import CultureTeams from "./CultureTeams";
+
+import TeamsData from "../CultureTeams.json";
 import images from "src/assets/images";
+
+// 이동하는 케러셀에서 디자인이 변경, 이동하는 부분은 주석으로 남겨놓음
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -21,75 +28,62 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-const CultureTeamsCarousel = (props) => {
-  const { items } = props;
-  const [currentCarouselPage, setCurrentCarouselPage] = useState(1);
+const CultureTeamsCarousel = () => {
+  const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
-  const carouselRef = useRef(1);
+  const carouselRef = useRef(0);
   const [carouselMoving, setCarouselMoving] = useState(0);
+
+  // Progress Bar
+  const makeDotbar = (targetIndex) => {
+    const dotbar = [];
+    for (let i = 0; i < TeamsData.data.length; i++) {
+      if (targetIndex === i) {
+        dotbar.push(images.paging_dot_dark);
+      } else {
+        dotbar.push(images.paging_dot_medium);
+      }
+    }
+    return dotbar;
+  };
 
   // 뒤로가기 버튼 액션
   const carouselMoveBackward = () => {
-    const carouselSize =
-      carouselRef.current.getBoundingClientRect().width * 1.1;
-    if (currentCarouselPage !== 1) {
-      carouselRef.current.style.transform = `translateX(${
-        carouselMoving + carouselSize
-      }px)`;
-      setCarouselMoving((prev) => prev + carouselSize);
+    if (currentCarouselPage !== 0) {
+      // carouselRef.current.style.transform = `translateX(${
+      //   -(currentCarouselPage - 1) * 132
+      // }em)`;
       setCurrentCarouselPage((prev) => prev - 1);
     }
     // 첫페이지일 때
-    if (currentCarouselPage === 1) {
-      carouselRef.current.style.transform = `translateX(${
-        -carouselSize * (items.length - 1)
-      }px)`;
-      setCarouselMoving(-carouselSize * (items.length - 1));
-      setCurrentCarouselPage(items.length);
+    if (currentCarouselPage === 0) {
+      // carouselRef.current.style.transform = `translateX(${
+      //   -(TeamsData.data.length - 1) * 132
+      // }em)`;
+      setCurrentCarouselPage(TeamsData.data.length - 1);
     }
   };
 
   // 앞으로가기 버튼 액션
   const carouselMoveForward = () => {
-    console.log(carouselRef.current.getBoundingClientRect().width);
-    const carouselSize =
-      carouselRef.current.getBoundingClientRect().width * 1.1;
-    if (currentCarouselPage < items.length) {
-      carouselRef.current.style.transform = `translateX(${
-        carouselMoving - carouselSize
-      }px)`;
-
-      setCarouselMoving((prev) => prev - carouselSize);
+    if (currentCarouselPage < TeamsData.data.length) {
+      // carouselRef.current.style.transform = `translateX(${
+      //   -(currentCarouselPage + 1) * 132
+      // }em)`;
       setCurrentCarouselPage((prev) => prev + 1);
     }
     //마지막 페이지일 때
-    if (currentCarouselPage >= items.length) {
-      carouselRef.current.style.transform = `translateX(${0}px)`;
-      setCarouselMoving(0);
-      setCurrentCarouselPage(1);
+    if (currentCarouselPage >= TeamsData.data.length - 1) {
+      // carouselRef.current.style.transform = `translateX(${0}em)`;
+      setCurrentCarouselPage(0);
     }
   };
 
   useEffect(() => {
     // css에서 주지않고 직접 지정
     carouselRef.current.style.transition = "transform 0.4s ease-in-out";
-    console.log(carouselRef.current.offsetWidth);
-    console.log(items);
+    console.log(TeamsData.data);
   }, []);
-
-  useEffect(() => {
-    // 윈도우 크기 변할 시 반응형
-    console.log(currentCarouselPage)
-    window.addEventListener("resize", function () {
-      const translateSize = -(
-        carouselRef.current.getBoundingClientRect().width *
-        1.1 *
-        (currentCarouselPage - 1)
-      );
-      carouselRef.current.style.transform = `translateX(${translateSize}px)`;
-      setCarouselMoving(translateSize);
-    });
-  });
 
   // 4초에 한번씩 자동으로 넘어감
   useInterval(() => {
@@ -97,15 +91,29 @@ const CultureTeamsCarousel = (props) => {
   }, 4000);
 
   return (
-    <section className="CultureTeamsCarousel">
-      <img src={images.carousel_backward} onClick={carouselMoveBackward}></img>
-      <article className="TeamsCarousel">
-        <div className="Carousel" ref={carouselRef}>
-          {items}
-        </div>
-      </article>
-      <img src={images.carousel_forward} onClick={carouselMoveForward}></img>
-    </section>
+    <>
+      <section className="CultureTeamsCarousel">
+        <img
+          src={images.carousel_backward}
+          onClick={carouselMoveBackward}
+        ></img>
+        <article className="TeamsCarousel">
+          <div className="Carousel" ref={carouselRef}>
+            {TeamsData.data.map((data, index) => (
+              <CultureTeams
+                name={data.name}
+                projects={data.projects}
+                information={data.information}
+                imageName={data.imageName}
+                progressDotSet={makeDotbar(index)}
+                target={currentCarouselPage === index}
+              />
+            ))}
+          </div>
+        </article>
+        <img src={images.carousel_forward} onClick={carouselMoveForward}></img>
+      </section>
+    </>
   );
 };
 

@@ -211,22 +211,39 @@
 }
 
 .CultureTeams {
-  display: flex;
-  flex-shrink: 0;
-  width: 100%;
+  width: 120em;
   height: 100%;
+  flex-shrink: 0;
   margin-right: 10%;
+  opacity: 0;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+}
+.CultureTeams.active {
+  opacity: 1;
+}
+.CultureTeams .ProgressBar {
+  margin-bottom: 3.2em;
+}
+.CultureTeams .ProgressBar img {
+  width: 1em;
+  height: 1em;
+  margin-right: 2em;
+}
+.CultureTeams .Teams {
+  height: calc(100% - 4.2em);
+  display: flex;
   justify-content: space-between;
 }
-.CultureTeams .TeamInformation {
+.CultureTeams .Teams .TeamInformation {
   position: relative;
   width: 49%;
 }
-.CultureTeams .TeamInformation .TeamName {
+.CultureTeams .Teams .TeamInformation .TeamName {
   margin-bottom: 2em;
   white-space: pre-wrap;
 }
-.CultureTeams .TeamInformation .TeamName label {
+.CultureTeams .Teams .TeamInformation .TeamName label {
   color: #292929;
   font-family: Pretendard;
   font-size: 4em;
@@ -234,10 +251,10 @@
   font-weight: 600;
   line-height: 125%;
 }
-.CultureTeams .TeamInformation .TeamProjects {
+.CultureTeams .Teams .TeamInformation .TeamProjects {
   white-space: pre-wrap;
 }
-.CultureTeams .TeamInformation .TeamProjects label {
+.CultureTeams .Teams .TeamInformation .TeamProjects label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -246,13 +263,13 @@
   line-height: 141.667%;
   opacity: 0.3;
 }
-.CultureTeams .TeamInformation .TeamDescription {
+.CultureTeams .Teams .TeamInformation .TeamDescription {
   width: 82%;
   word-break: break-all;
   position: absolute;
   bottom: 0;
 }
-.CultureTeams .TeamInformation .TeamDescription label {
+.CultureTeams .Teams .TeamInformation .TeamDescription label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -260,23 +277,23 @@
   font-weight: 400;
   line-height: 141.667%;
 }
-.CultureTeams .TeamInformation .TeamDescription .GoDetails {
+.CultureTeams .Teams .TeamInformation .TeamDescription .GoDetails {
   display: flex;
   align-items: center;
   margin-top: 3.2em;
 }
-.CultureTeams .TeamInformation .TeamDescription .GoDetails :hover {
+.CultureTeams .Teams .TeamInformation .TeamDescription .GoDetails :hover {
   cursor: pointer;
 }
-.CultureTeams .TeamInformation .TeamDescription .GoDetails img {
+.CultureTeams .Teams .TeamInformation .TeamDescription .GoDetails img {
   margin-left: 1.2em;
   width: 2em;
   height: 2em;
 }
-.CultureTeams .TeamImage {
+.CultureTeams .Teams .TeamImage {
   width: 49%;
 }
-.CultureTeams .TeamImage img {
+.CultureTeams .Teams .TeamImage img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
