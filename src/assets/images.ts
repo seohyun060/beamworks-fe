@@ -86,6 +86,10 @@ const images = {
 	recruitment_environment1: '/assets/images/recruitment_environment1.png',
 	recruitment_environment2: '/assets/images/recruitment_environment2.png',
 	recruitment_environment3: '/assets/images/recruitment_environment3.png',
+	cadai_series_background: '/assets/images/cadai_series_background.png',
+	chatai_series_background: '/assets/images/chatai_series_background.png',
+	Logo_CadAI_B_1: '/assets/images/Logo_CadAI-B_1.png',
+	Logo_ChatAI_Series_1: '/assets/images/Logo_ChatAI-Series_1.png',
 };
 
 export default images;

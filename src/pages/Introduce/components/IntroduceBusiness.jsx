@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import images from "src/assets/images";
 import "../styles/introduce.css";
 
 const IntroduceBusiness = () => {
+  const [isSelected, setIsSelected] = useState(0);
+
   return (
     <section className="IntroduceBusiness">
       <article className="Business">
@@ -20,8 +22,22 @@ const IntroduceBusiness = () => {
           </label>
         </div>
         <div className="BusinessImage">
-          <img src={images.business_image1}/>
-          <img src={images.business_image2}/>
+          {/* Cad AI 부분 */}
+          <div
+            className={isSelected === 0 ? "seleted" : "none"}
+            // src={images.cadai_series_background}
+            onClick={() => setIsSelected(0)}
+          >
+            <img src={images.Logo_CadAI_B_1} />
+          </div>
+          {/* Chat AI 부분 */}
+          <div
+            className={isSelected === 1 ? "seleted" : "none"}
+            // src={images.chatai_series_background}
+            onClick={() => setIsSelected(1)}
+          >
+            <img src={images.Logo_ChatAI_Series_1} />
+          </div>
         </div>
       </article>
     </section>

@@ -316,17 +316,42 @@
   font-weight: 400;
   line-height: 166.667%;
 }
-.IntroduceBusiness .Business .BusinessImage img:nth-child(1) {
+.IntroduceBusiness .Business .BusinessImage {
+  flex-grow: 1;
   position: relative;
-  width: 57.5%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.IntroduceBusiness .Business .BusinessImage img:nth-child(2) {
+.IntroduceBusiness .Business .BusinessImage div {
+  border-radius: 3%;
+  transition: 0.4s ease-in-out;
   position: relative;
-  width: 42.5%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+.IntroduceBusiness .Business .BusinessImage div:hover {
+  cursor: pointer;
+}
+.IntroduceBusiness .Business .BusinessImage div img {
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.IntroduceBusiness .Business .BusinessImage div.seleted {
+  width: 66%;
+}
+.IntroduceBusiness .Business .BusinessImage div.seleted img {
+  left: 30%;
+}
+.IntroduceBusiness .Business .BusinessImage div.none {
+  opacity: 0.3;
+  width: 32%;
+}
+.IntroduceBusiness .Business .BusinessImage div:nth-child(1) {
+  float: left;
+  position: sticky;
+  left: 0;
+  background-image: url("/public/assets/images/cadai_series_background.png");
+}
+.IntroduceBusiness .Business .BusinessImage div:nth-child(2) {
+  float: right;
+  background-image: url("/public/assets/images/chatai_series_background.png");
 }/*# sourceMappingURL=introduce.css.map */

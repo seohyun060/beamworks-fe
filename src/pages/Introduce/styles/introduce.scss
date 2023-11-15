@@ -211,7 +211,7 @@
   position: absolute;
   opacity: 0;
   transition: 0.4s ease-in-out;
-  
+
   &.active {
     opacity: 1;
   }
@@ -361,17 +361,42 @@
     }
 
     .BusinessImage {
-      img:nth-child(1) {
+      flex-grow: 1;
+      position: relative;
+      div {
+        border-radius: 3%;
+        transition: 0.4s ease-in-out;
         position: relative;
-        width: 57.5%;
         height: 100%;
-        object-fit: cover;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          transition: 0.4s ease-in-out;
+          position: absolute;
+          top: 5%;
+          left: 5%;
+        }
+        &.seleted {
+          width: 66%;
+          img {
+            left: 30%;
+          }
+        }
+        &.none {
+          opacity: 0.3;
+          width: 32%;
+        }
       }
-      img:nth-child(2) {
-        position: relative;
-        width: 42.5%;
-        height: 100%;
-        object-fit: cover;
+      div:nth-child(1) {
+        float: left;
+        position: sticky;
+        left: 0;
+        background-image: url("/public/assets/images/cadai_series_background.png");
+      }
+      div:nth-child(2) {
+        float: right;
+        background-image: url("/public/assets/images/chatai_series_background.png");
       }
     }
   }
