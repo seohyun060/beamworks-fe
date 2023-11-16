@@ -90,6 +90,8 @@ const images = {
 	chatai_series_background: '/assets/images/chatai_series_background.png',
 	Logo_CadAI_B_1: '/assets/images/Logo_CadAI-B_1.png',
 	Logo_ChatAI_Series_1: '/assets/images/Logo_ChatAI-Series_1.png',
+	required_mark: '/assets/images/required_mark.svg',
+	select_box_open: '/assets/images/select_box_open.svg',
 };
 
 export default images;

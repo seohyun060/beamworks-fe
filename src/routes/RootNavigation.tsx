@@ -6,6 +6,7 @@ import Culture from 'src/pages/Culture/Culture';
 import ProductContainer from 'src/pages/Product/containers/ProductContainer';
 import ChatAIContainer from 'src/pages/ChatAI/containers/ChatAIContainer';
 import Recruitment from "src/pages/Recruitment/Recruitment";
+import Contact from 'src/pages/Contact/Contact';
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -28,6 +29,7 @@ const RootNavigation = () => {
 				<Route path='/chatai' element={<ChatAIContainer />} />
         <Route path="/product" element={<ProductContainer />} />
         <Route path="/recruitment" element={<Recruitment />} />
+		<Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
