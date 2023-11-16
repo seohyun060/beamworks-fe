@@ -121,6 +121,7 @@ const images = {
 	cadr_b: '/assets/images/cadr-b.png',
 	required_mark: '/assets/images/required_mark.svg',
 	select_box_open: '/assets/images/select_box_open.svg',
+	footerLogoW: '/assets/images/footerLogoW.svg',
 };
 
 export default images;

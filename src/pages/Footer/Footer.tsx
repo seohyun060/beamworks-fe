@@ -1,14 +1,31 @@
 import React from 'react';
 import images from 'src/assets/images';
 import './styles/footer.styles.css';
-type Props = {};
+type Props = {
+	type: string;
+};
 
-const Footer = (props: Props) => {
+const Footer = ({ type }: Props) => {
 	return (
-		<div className='footer'>
+		<div
+			className='footer'
+			style={{
+				backgroundColor: type === 'black' ? '#000' : '#fff',
+			}}
+		>
 			<div className='footer-news'>
-				<img className='footer-news-logo' src={images.footerLogoB} />
-				<div className='footer-news-header'>뉴스레터를 구독해보세요</div>
+				<img
+					className='footer-news-logo'
+					src={type === 'black' ? images.footerLogoW : images.footerLogoB}
+				/>
+				<div
+					className='footer-news-header'
+					style={{
+						color: type === 'black' ? '#fff' : '#000',
+					}}
+				>
+					뉴스레터를 구독해보세요
+				</div>
 				<div className='footer-news-body'>
 					뉴스레터를 구독하면 최신 소식과 유용한 정보를 주기적으로 받아볼 수
 					있어, 항상 업데이트된 정보를 손쉽게 얻을 수 있습니다. 뉴스레터를
