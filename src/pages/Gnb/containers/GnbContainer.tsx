@@ -2,11 +2,15 @@ import React, { useCallback, useState } from 'react';
 import Gnb from '../Gnb';
 import useCadbStore from '@store/zustand/cadbZustand';
 import { useNavigate } from 'react-router-dom';
+import { GnbStore } from '@store/zustand/gnbZustand';
+import useGnbStore from '@store/zustand/gnbZustand';
 type Props = {
 	location: string;
 };
 
 const GnbContainer = ({ location }: Props) => {
+	const { company, product, community } = useGnbStore() as GnbStore;
+	const tab1List = [company, product, community];
 	const navigate = useNavigate();
 	const tabs = [
 		'회사소개',
@@ -51,6 +55,7 @@ const GnbContainer = ({ location }: Props) => {
 			onTabLeave={onTabLeave}
 			tabHovered={tabHovered}
 			onPathClick={onPathClick}
+			tab1List={tab1List}
 		/>
 	);
 };
