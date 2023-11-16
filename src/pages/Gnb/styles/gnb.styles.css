@@ -14,6 +14,7 @@
 }
 .gnb-logo {
   position: relative;
+  width: 8.5vw;
   margin-left: 10.4vw;
 }
 .gnb-tabs1, .gnb-tabs2 {
@@ -27,17 +28,16 @@
   justify-content: space-between;
   align-items: center;
 }
-.gnb-tabs1 .tab, .gnb-tabs2 .tab {
+.gnb-tabs1 .tabs, .gnb-tabs2 .tabs {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: -moz-fit-content;
   width: fit-content;
   margin-right: 2vw;
-  padding-top: 5px;
-  height: 52px;
+  height: 100%;
 }
-.gnb-tabs1 .tab div, .gnb-tabs2 .tab div {
+.gnb-tabs1 .tabs div, .gnb-tabs2 .tabs div {
   width: -moz-fit-content;
   width: fit-content;
   height: 28px;
@@ -50,32 +50,171 @@
   line-height: 30px; /* 175% */
   margin-right: 4px;
 }
-.gnb-tabs1 .tab .popup1, .gnb-tabs2 .tab .popup1, .gnb-tabs1 .tab .popup1-active, .gnb-tabs2 .tab .popup1-active,
-.gnb-tabs1 .tab .popup2-active,
-.gnb-tabs2 .tab .popup2-active,
-.gnb-tabs1 .tab .popup3-active,
-.gnb-tabs2 .tab .popup3-active,
-.gnb-tabs1 .tab .popup2,
-.gnb-tabs2 .tab .popup2,
-.gnb-tabs1 .tab .popup3,
-.gnb-tabs2 .tab .popup3 {
+.gnb-tabs1 .tabs .popup1, .gnb-tabs2 .tabs .popup1, .gnb-tabs1 .tabs .popup2, .gnb-tabs2 .tabs .popup2, .gnb-tabs1 .tabs .popup2-active, .gnb-tabs2 .tabs .popup2-active,
+.gnb-tabs1 .tabs .popup3-active,
+.gnb-tabs2 .tabs .popup3-active,
+.gnb-tabs1 .tabs .popup3,
+.gnb-tabs2 .tabs .popup3, .gnb-tabs1 .tabs .popup1-active, .gnb-tabs2 .tabs .popup1-active {
   position: absolute;
   width: 100vw;
-  height: 232px;
+  height: 100px;
   top: 52px;
-  left: calc(-13.3vw - 163px);
-  border: 1px solid black;
+  left: -21.8vw;
   color: black;
   background-color: white;
   opacity: 0; /* 초기에 숨겨짐 */
   visibility: hidden; /* 초기에 숨겨짐 */
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 트랜지션 적용 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 19.5vw;
 }
-.gnb-tabs1 .tab .popup1-active, .gnb-tabs2 .tab .popup1-active,
-.gnb-tabs1 .tab .popup2-active,
-.gnb-tabs2 .tab .popup2-active,
-.gnb-tabs1 .tab .popup3-active,
-.gnb-tabs2 .tab .popup3-active {
+.gnb-tabs1 .tabs .popup1 .tab, .gnb-tabs2 .tabs .popup1 .tab, .gnb-tabs1 .tabs .popup2 .tab, .gnb-tabs2 .tabs .popup2 .tab, .gnb-tabs1 .tabs .popup2-active .tab, .gnb-tabs2 .tabs .popup2-active .tab,
+.gnb-tabs1 .tabs .popup3-active .tab,
+.gnb-tabs2 .tabs .popup3-active .tab,
+.gnb-tabs1 .tabs .popup3 .tab,
+.gnb-tabs2 .tabs .popup3 .tab, .gnb-tabs1 .tabs .popup1-active .tab, .gnb-tabs2 .tabs .popup1-active .tab {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.gnb-tabs1 .tabs .popup1 .tab-text, .gnb-tabs2 .tabs .popup1 .tab-text, .gnb-tabs1 .tabs .popup2 .tab-text, .gnb-tabs2 .tabs .popup2 .tab-text, .gnb-tabs1 .tabs .popup2-active .tab-text, .gnb-tabs2 .tabs .popup2-active .tab-text,
+.gnb-tabs1 .tabs .popup3-active .tab-text,
+.gnb-tabs2 .tabs .popup3-active .tab-text,
+.gnb-tabs1 .tabs .popup3 .tab-text,
+.gnb-tabs2 .tabs .popup3 .tab-text, .gnb-tabs1 .tabs .popup1-active .tab-text, .gnb-tabs2 .tabs .popup1-active .tab-text {
+  width: 131px;
+  text-align: center;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+}
+.gnb-tabs1 .tabs .popup1 .tab-text:hover, .gnb-tabs2 .tabs .popup1 .tab-text:hover, .gnb-tabs1 .tabs .popup2 .tab-text:hover, .gnb-tabs2 .tabs .popup2 .tab-text:hover, .gnb-tabs1 .tabs .popup2-active .tab-text:hover, .gnb-tabs2 .tabs .popup2-active .tab-text:hover,
+.gnb-tabs1 .tabs .popup3-active .tab-text:hover,
+.gnb-tabs2 .tabs .popup3-active .tab-text:hover,
+.gnb-tabs1 .tabs .popup3 .tab-text:hover,
+.gnb-tabs2 .tabs .popup3 .tab-text:hover, .gnb-tabs1 .tabs .popup1-active .tab-text:hover, .gnb-tabs2 .tabs .popup1-active .tab-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.gnb-tabs1 .tabs .popup1 .tab-divider, .gnb-tabs2 .tabs .popup1 .tab-divider, .gnb-tabs1 .tabs .popup2 .tab-divider, .gnb-tabs2 .tabs .popup2 .tab-divider, .gnb-tabs1 .tabs .popup2-active .tab-divider, .gnb-tabs2 .tabs .popup2-active .tab-divider,
+.gnb-tabs1 .tabs .popup3-active .tab-divider,
+.gnb-tabs2 .tabs .popup3-active .tab-divider,
+.gnb-tabs1 .tabs .popup3 .tab-divider,
+.gnb-tabs2 .tabs .popup3 .tab-divider, .gnb-tabs1 .tabs .popup1-active .tab-divider, .gnb-tabs2 .tabs .popup1-active .tab-divider {
+  height: 50px;
+  width: 0.75px;
+  margin-left: 37px;
+  margin-right: 37px;
+  margin-top: 0px;
+  background-color: #ddd;
+}
+.gnb-tabs1 .tabs .popup1-active, .gnb-tabs2 .tabs .popup1-active {
+  opacity: 1; /* 나타남 */
+  visibility: visible; /* 나타남 */
+}
+.gnb-tabs1 .tabs .popup2, .gnb-tabs2 .tabs .popup2, .gnb-tabs1 .tabs .popup2-active, .gnb-tabs2 .tabs .popup2-active,
+.gnb-tabs1 .tabs .popup3-active,
+.gnb-tabs2 .tabs .popup3-active,
+.gnb-tabs1 .tabs .popup3,
+.gnb-tabs2 .tabs .popup3 {
+  align-items: flex-start;
+  height: 254px;
+}
+.gnb-tabs1 .tabs .popup2 .tab, .gnb-tabs2 .tabs .popup2 .tab, .gnb-tabs1 .tabs .popup2-active .tab, .gnb-tabs2 .tabs .popup2-active .tab,
+.gnb-tabs1 .tabs .popup3-active .tab,
+.gnb-tabs2 .tabs .popup3-active .tab,
+.gnb-tabs1 .tabs .popup3 .tab,
+.gnb-tabs2 .tabs .popup3 .tab {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  margin-top: 50px;
+}
+.gnb-tabs1 .tabs .popup2 .tab-text, .gnb-tabs2 .tabs .popup2 .tab-text, .gnb-tabs1 .tabs .popup2-active .tab-text, .gnb-tabs2 .tabs .popup2-active .tab-text,
+.gnb-tabs1 .tabs .popup3-active .tab-text,
+.gnb-tabs2 .tabs .popup3-active .tab-text,
+.gnb-tabs1 .tabs .popup3 .tab-text,
+.gnb-tabs2 .tabs .popup3 .tab-text {
+  width: 132px;
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+  gap: 12px;
+}
+.gnb-tabs1 .tabs .popup2 .tab-text:hover, .gnb-tabs2 .tabs .popup2 .tab-text:hover, .gnb-tabs1 .tabs .popup2-active .tab-text:hover, .gnb-tabs2 .tabs .popup2-active .tab-text:hover,
+.gnb-tabs1 .tabs .popup3-active .tab-text:hover,
+.gnb-tabs2 .tabs .popup3-active .tab-text:hover,
+.gnb-tabs1 .tabs .popup3 .tab-text:hover,
+.gnb-tabs2 .tabs .popup3 .tab-text:hover {
+  text-decoration: none;
+  cursor: alias;
+}
+.gnb-tabs1 .tabs .popup2 .tab-text-title, .gnb-tabs2 .tabs .popup2 .tab-text-title, .gnb-tabs1 .tabs .popup2-active .tab-text-title, .gnb-tabs2 .tabs .popup2-active .tab-text-title,
+.gnb-tabs1 .tabs .popup3-active .tab-text-title,
+.gnb-tabs2 .tabs .popup3-active .tab-text-title, .gnb-tabs1 .tabs .popup2 .tab-text-sub, .gnb-tabs2 .tabs .popup2 .tab-text-sub, .gnb-tabs1 .tabs .popup2-active .tab-text-sub, .gnb-tabs2 .tabs .popup2-active .tab-text-sub,
+.gnb-tabs1 .tabs .popup3-active .tab-text-sub,
+.gnb-tabs2 .tabs .popup3-active .tab-text-sub,
+.gnb-tabs1 .tabs .popup3 .tab-text-title,
+.gnb-tabs2 .tabs .popup3 .tab-text-title,
+.gnb-tabs1 .tabs .popup3 .tab-text-sub,
+.gnb-tabs2 .tabs .popup3 .tab-text-sub {
+  text-align: center;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  opacity: 0.3;
+}
+.gnb-tabs1 .tabs .popup2 .tab-text-sub, .gnb-tabs2 .tabs .popup2 .tab-text-sub, .gnb-tabs1 .tabs .popup2-active .tab-text-sub, .gnb-tabs2 .tabs .popup2-active .tab-text-sub,
+.gnb-tabs1 .tabs .popup3-active .tab-text-sub,
+.gnb-tabs2 .tabs .popup3-active .tab-text-sub,
+.gnb-tabs1 .tabs .popup3 .tab-text-sub,
+.gnb-tabs2 .tabs .popup3 .tab-text-sub {
+  opacity: 1;
+  font-size: 16px;
+}
+.gnb-tabs1 .tabs .popup2 .tab-text-sub:hover, .gnb-tabs2 .tabs .popup2 .tab-text-sub:hover, .gnb-tabs1 .tabs .popup2-active .tab-text-sub:hover, .gnb-tabs2 .tabs .popup2-active .tab-text-sub:hover,
+.gnb-tabs1 .tabs .popup3-active .tab-text-sub:hover,
+.gnb-tabs2 .tabs .popup3-active .tab-text-sub:hover,
+.gnb-tabs1 .tabs .popup3 .tab-text-sub:hover,
+.gnb-tabs2 .tabs .popup3 .tab-text-sub:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.gnb-tabs1 .tabs .popup2 .tab-divider, .gnb-tabs2 .tabs .popup2 .tab-divider, .gnb-tabs1 .tabs .popup2-active .tab-divider, .gnb-tabs2 .tabs .popup2-active .tab-divider,
+.gnb-tabs1 .tabs .popup3-active .tab-divider,
+.gnb-tabs2 .tabs .popup3-active .tab-divider,
+.gnb-tabs1 .tabs .popup3 .tab-divider,
+.gnb-tabs2 .tabs .popup3 .tab-divider {
+  height: 120px;
+  width: 0.75px;
+  margin-left: 37px;
+  margin-right: 37px;
+  margin-top: 0px;
+  background-color: #ddd;
+}
+.gnb-tabs1 .tabs .popup2-active, .gnb-tabs2 .tabs .popup2-active,
+.gnb-tabs1 .tabs .popup3-active,
+.gnb-tabs2 .tabs .popup3-active {
   opacity: 1; /* 나타남 */
   visibility: visible; /* 나타남 */
 }
@@ -83,10 +222,10 @@
   position: absolute;
   right: 12%;
 }
-.gnb-tabs2 .tab {
+.gnb-tabs2 .tabs {
   margin-right: 2.6vw;
 }
-.gnb-tabs2 .tab div {
+.gnb-tabs2 .tabs div {
   margin-right: 0px;
 }
 .gnb-language {
