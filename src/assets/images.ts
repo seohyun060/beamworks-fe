@@ -119,6 +119,8 @@ const images = {
 	smode_box: '/assets/images/smode-box.png',
 	cadt_b: '/assets/images/cadt-b.svg',
 	cadr_b: '/assets/images/cadr-b.png',
+	required_mark: '/assets/images/required_mark.svg',
+	select_box_open: '/assets/images/select_box_open.svg',
 };
 
 export default images;

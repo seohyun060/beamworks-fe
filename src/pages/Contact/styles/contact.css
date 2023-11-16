@@ -1,0 +1,261 @@
+.Contact {
+  font-size: 0.5208333333vw;
+}
+.Contact section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: calc(52px + 10em);
+  background-color: white;
+}
+.Contact article {
+  position: relative;
+  width: 62.5%;
+}
+
+.ContactHeader .PageName {
+  margin-bottom: 1.2em;
+}
+.ContactHeader .PageName label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+.ContactHeader .HeaderTitle {
+  margin-bottom: 2.4em;
+}
+.ContactHeader .HeaderTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 124%;
+}
+.ContactHeader .HeaderDescription label {
+  color: var(--Dark-Glay, #4d4f58);
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+
+.ContactContents {
+  display: flex;
+  margin: 4em 0em;
+}
+.ContactContents .buttonBar {
+  display: flex;
+  flex-direction: column;
+  width: 19.5%;
+  margin-right: 2%;
+}
+.ContactContents .buttonBar .navButton {
+  display: flex;
+  width: 18em;
+  padding: 0.2em 3em;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7em 0em 2.5em 0em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--Check, #346ec5);
+  background: var(--White, #fff);
+}
+.ContactContents .buttonBar .navButton label {
+  color: var(--Check, #346ec5);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.ContactContents .buttonBar .navButton:hover {
+  cursor: pointer;
+}
+.ContactContents .buttonBar .navButton :hover {
+  cursor: pointer;
+}
+.ContactContents .buttonBar .navButton.selected {
+  background: var(--Check, #346ec5);
+}
+.ContactContents .buttonBar .navButton.selected label {
+  color: var(--White, #fff);
+}
+
+.ContentsArticle {
+  width: 78.5%;
+}
+.ContentsArticle .ContactInquire {
+  position: relative;
+  width: 69em;
+}
+.ContentsArticle .ContactInquire .Name {
+  display: flex;
+  justify-content: space-between;
+}
+.ContentsArticle .ContactInquire .Name .FirstName {
+  width: 28.2em;
+}
+.ContentsArticle .ContactInquire .Name .LastName {
+  width: 38.4em;
+}
+.ContentsArticle .ContactInquire .PrivacyPoilcyAgree {
+  display: flex;
+}
+.ContentsArticle .ContactInquire .PrivacyPoilcyAgree .Test {
+  width: 2em;
+  height: 2em;
+  margin-top: 0.4em;
+  margin-right: 0.8em;
+}
+.ContentsArticle .ContactInquire .PrivacyPoilcyAgree .Test input {
+  width: 100%;
+  height: 100%;
+}
+.ContentsArticle .ContactInquire .PrivacyPoilcyAgree .PrivacyPoilcyDescription label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.ContentsArticle .ContactInquire .InquireSubmit {
+  display: flex;
+  width: 18em;
+  padding: 0.2em 3em;
+  justify-content: center;
+  align-items: center;
+  margin: 7.9em 0em 2.5em 0em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--Check, #346ec5);
+  background: var(--White, #fff);
+}
+.ContentsArticle .ContactInquire .InquireSubmit label {
+  color: var(--Check, #346ec5);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.ContentsArticle .ContactInquire .InquireSubmit:hover {
+  cursor: pointer;
+}
+.ContentsArticle .ContactInquire .InquireSubmit :hover {
+  cursor: pointer;
+}
+.ContentsArticle .ContactInquire .InquireSubmit.active {
+  background: var(--Check, #346ec5);
+}
+.ContentsArticle .ContactInquire .InquireSubmit.active label {
+  color: var(--White, #fff);
+}
+
+.FormSpace {
+  margin-bottom: 2em;
+}
+.FormSpace .FormName {
+  position: relative;
+}
+.FormSpace .FormName label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+  margin-top: 0.3em;
+}
+.FormSpace .FormName img {
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.2em;
+  position: absolute;
+  top: 0px;
+}
+.FormSpace .InputCategory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2em 1.3em;
+  margin: 2em 0em;
+  border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+}
+.FormSpace .InputCategory label {
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.FormSpace .InputCategory img {
+  width: 1.6em;
+  height: 1em;
+  transition: 0.1s linear;
+}
+.FormSpace .InputCategory img.isOpen {
+  transform: rotate(180deg);
+}
+.FormSpace .InputCategory:hover {
+  cursor: pointer;
+}
+.FormSpace .CategorySelectBox {
+  position: absolute;
+  top: 10.6em;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  z-index: 10;
+}
+.FormSpace .CategorySelectBox li {
+  height: 5.2em;
+  padding: 1.2em 1.3em;
+  border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+}
+.FormSpace .CategorySelectBox li label {
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.FormSpace .CategorySelectBox :hover {
+  cursor: pointer;
+}
+.FormSpace .InputFormBox {
+  padding: 1.2em 1.3em;
+  margin: 2em 0em;
+  border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+}
+.FormSpace .InputFormBox.text {
+  height: 30em;
+}
+.FormSpace .InputFormBox input {
+  width: 100%;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.FormSpace .InputFormBox textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}/*# sourceMappingURL=contact.css.map */
