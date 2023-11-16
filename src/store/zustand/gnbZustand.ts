@@ -2,11 +2,31 @@ import create from 'zustand';
 import images from 'src/assets/images';
 import { NavContext, NavTitle } from '@typedef/types';
 export type GnbStore = {
+	tabs1: string[];
+	tabs2: {
+		label: string;
+		path: string;
+	}[];
 	company: NavTitle[];
 	product: NavContext[];
 	community: NavContext[];
 };
 const useGnbStore = create((set) => ({
+	tabs1: ['회사소개', '제품소개', '커뮤니티'],
+	tabs2: [
+		{
+			label: '제품 구입/다운',
+			path: '/purchase',
+		},
+		{
+			label: '문의하기',
+			path: '/contact',
+		},
+		{
+			label: '채용',
+			path: '/recruitment',
+		},
+	],
 	company: [
 		{
 			title: {

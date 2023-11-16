@@ -9,7 +9,8 @@ type Props = {
 };
 
 const GnbContainer = ({ location }: Props) => {
-	const { company, product, community } = useGnbStore() as GnbStore;
+	const { company, product, community, tabs1, tabs2 } =
+		useGnbStore() as GnbStore;
 	const tab1List = [company, product, community];
 	const navigate = useNavigate();
 	const tabs = [
@@ -51,6 +52,8 @@ const GnbContainer = ({ location }: Props) => {
 	return (
 		<Gnb
 			tabs={tabs}
+			tabs1={tabs1}
+			tabs2={tabs2}
 			onTabEnter={onTabEnter}
 			onTabLeave={onTabLeave}
 			tabHovered={tabHovered}
