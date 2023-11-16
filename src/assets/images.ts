@@ -112,6 +112,9 @@ const images = {
 	right_b: '/assets/images/right-b.svg',
 	left_w: '/assets/images/left-w.svg',
 	right_w: '/assets/images/right-w.svg',
+	smode_box: '/assets/images/smode-box.png',
+	cadt_b: '/assets/images/cadt-b.svg',
+	cadr_b: '/assets/images/cadr-b.png',
 };
 
 export default images;

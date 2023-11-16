@@ -1,7 +1,7 @@
 import React from 'react';
 import images from 'src/assets/images';
 import { Solution } from '@typedef/types';
-import useProductStore from '@store/rootZustand';
+import useProductStore from '@store/zustand/productZustand';
 type Props = {
 	solutionList: Solution[];
 	onSolutionClick: (index: number) => void;

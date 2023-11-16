@@ -42,11 +42,12 @@
   flex-direction: row;
   align-items: center;
   gap: 2.08vw;
-  position: absolute;
+  position: fixed;
   top: 8.89vh;
   right: 10.41vw;
   width: -moz-fit-content;
   width: fit-content;
+  z-index: 10;
 }
 .cadb-s1-button .s1-demo {
   color: #fff;
@@ -56,6 +57,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.75; /* 175% */
+  -webkit-text-emphasis-color: black;
+          text-emphasis-color: black;
+  -webkit-text-stroke: 0.03em black;
 }
 .cadb-s1-button .s1-buy {
   display: inline-flex;
@@ -211,7 +215,7 @@
   width: 0.625vw;
   position: absolute;
   left: -3.125vw;
-  top: 12.171875vw;
+  top: 12.471875vw;
   z-index: 20;
 }
 .cadb-s3-carousel .s3-next {
@@ -393,4 +397,49 @@
 }
 .cadb-s4-body .s4-rmode-off {
   z-index: 0;
+}
+.cadb-s4-freeze {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 21.1vw;
+  margin-top: 5.56vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.cadb-s4-freeze .s4-fmode {
+  position: absolute;
+  width: 46.5vw;
+  top: -2vw;
+  left: -3.5vw;
+}
+.cadb-s4-freeze .s4-fmodeb {
+  margin-left: 35.55vw;
+  width: 17.9vw;
+}
+.cadb-s4-freeze .s4-fmodec {
+  width: 20.78vw;
+  margin-left: 1.82vw;
+}
+.cadb-s4-setting {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 14.17vw;
+  margin-top: 7.7vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.cadb-s4-setting .s4-hdmi {
+  width: 16.98vw;
+  margin-right: 7.08vw;
+}
+.cadb-s4-setting .s4-box {
+  width: 18.49vw;
+}
+.cadb-s4-setting .s4-smode {
+  width: 25.3125vw;
+  margin-top: 2.5vw;
 }/*# sourceMappingURL=cadb.styles.css.map */

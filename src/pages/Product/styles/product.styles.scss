@@ -462,7 +462,7 @@
 
 		align-items: center;
 		justify-content: center;
-		&-header {
+		.s8-header {
 			color: var(--Middle-Glay, #a0a0a0);
 			margin-bottom: 2.7vw;
 			text-align: center;
@@ -472,10 +472,61 @@
 			font-weight: 600;
 			line-height: 1; /* 100% */
 		}
-		&-body {
+		.s8-body {
 			width: 62.5vw;
 			height: 31.35vw;
-			background-color: #a0a0a0;
+			display: flex;
+			flex-direction: row;
+			gap: 1.25vw;
+			&-box1 {
+				display: flex;
+				width: 20vw;
+				background-color: #bebebe;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				.s8box-logo {
+					width: 7.81vw;
+				}
+
+				// &-logo3 {
+				// 	width: 9.58vw;
+				// }
+				.s8box-text {
+					font-size: 2em;
+					font-weight: 00;
+				}
+				.s8box-chatai1 {
+					width: 3.07vw;
+					margin-right: 0.78vw;
+				}
+
+				.s8box-chatai2 {
+					width: 12.29vw;
+				}
+			}
+			&-box2 {
+				@extend .s8-body-box1;
+			}
+			&-box3 {
+				@extend .s8-body-box1;
+				.s8box-logo {
+					width: 9.58vw;
+				}
+				.s8box-chatai1 {
+					width: 7.55vw;
+				}
+				.s8box-chatai2 {
+					display: none;
+				}
+			}
+			//background-color: #a0a0a0;
+		}
+
+		&-black {
+			@extend .product-s8;
+			background-color: black;
 		}
 	}
 }

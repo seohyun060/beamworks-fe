@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import ProductS5 from '../components/ProductS5';
 import { Solution } from '@typedef/types';
-import useProductStore from '@store/rootZustand';
+import useProductStore from '@store/zustand/productZustand';
 type Props = {};
 
 const ProductS5Container = (props: Props) => {

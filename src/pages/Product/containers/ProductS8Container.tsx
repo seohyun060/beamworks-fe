@@ -1,9 +1,12 @@
 import React from 'react';
 import ProductS8 from '../components/ProductS8';
-type Props = {};
+import { Explore } from '@typedef/types';
+type Props = {
+	exploreType: Explore;
+};
 
-const ProductS8Container = (props: Props) => {
-	return <ProductS8 />;
+const ProductS8Container = ({ exploreType }: Props) => {
+	return <ProductS8 exploreType={exploreType} />;
 };
 
 export default ProductS8Container;

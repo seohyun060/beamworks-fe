@@ -19,6 +19,7 @@
 	scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
 	font-size: 0.52083333vw;
+
 	& * {
 		word-break: keep-all;
 	}
@@ -40,10 +41,11 @@
 			flex-direction: row;
 			align-items: center;
 			gap: 2.08vw;
-			position: absolute;
+			position: fixed;
 			top: 8.89vh;
 			right: 10.41vw;
 			width: fit-content;
+			z-index: 10;
 			.s1-demo {
 				color: #fff;
 				text-align: center;
@@ -52,6 +54,9 @@
 				font-style: normal;
 				font-weight: 400;
 				line-height: 1.75; /* 175% */
+				text-emphasis-color: black;
+				-webkit-text-stroke: 0.03em black;
+				//text-stroke: 1px black;
 			}
 			.s1-buy {
 				display: inline-flex;
@@ -219,7 +224,7 @@
 				width: 0.625vw;
 				position: absolute;
 				left: -3.125vw;
-				top: 12.171875vw;
+				top: 12.471875vw;
 				z-index: 20;
 			}
 			.s3-next {
@@ -428,7 +433,53 @@
 				&-off {
 					@extend .s4-rmode-active;
 					z-index: 0;
+					//opacity: 0;
 				}
+			}
+		}
+		&-freeze {
+			width: fit-content;
+			height: 21.1vw;
+			margin-top: 5.56vw;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			position: relative;
+			.s4-fmode {
+				position: absolute;
+				width: 46.5vw;
+				top: -2vw;
+				left: -3.5vw;
+			}
+			.s4-fmodeb {
+				margin-left: 35.55vw;
+				width: 17.9vw;
+			}
+			.s4-fmodec {
+				width: 20.78vw;
+				margin-left: 1.82vw;
+			}
+		}
+		&-setting {
+			width: fit-content;
+			height: 14.17vw;
+			margin-top: 7.7vw;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			position: relative;
+			.s4-hdmi {
+				width: 16.98vw;
+				margin-right: 7.08vw;
+			}
+			.s4-box {
+				width: 18.49vw;
+			}
+			.s4-smode {
+				width: 25.3125vw;
+				margin-top: 2.5vw;
 			}
 		}
 	}
