@@ -137,6 +137,7 @@
       }
     }
     .InquireSubmit {
+      font-size: 0.5208333333333vw; // 10px 기준 하위 항목 1em
       display: flex;
       width: 18em;
       padding: 0.2em 3em;
@@ -223,16 +224,17 @@
   }
   .CategorySelectBox {
     position: absolute;
-    top: 10.6em;
+    top: 10.7em;
     width: 100%;
     height: fit-content;
-    // border: 0.1em solid var(--Middle-Glay, #a0a0a0);
     background-color: white;
     z-index: 10;
     li {
       height: 5.2em;
       padding: 1.2em 1.3em;
-      border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+      border-width: 0em 0.1em 0.1em 0.1em;
+      border-color: var(--Middle-Glay, #a0a0a0);
+      border-style: solid;
       label {
         font-family: Pretendard;
         font-size: 1.6em;

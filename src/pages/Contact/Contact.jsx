@@ -2,8 +2,10 @@ import React from "react";
 
 import ContactHeader from "./components/ContactHeader";
 import ContactContents from "./components/ContactContents";
+import ContactFooter from "./components/ContactFooter";
 
-import Footer from "src/pages/Footer/Footer";
+import images from "src/assets/images";
+
 
 // Contact Us 페이지
 const Contact = () => {
@@ -15,8 +17,8 @@ const Contact = () => {
         {/* 내용 */}
         <ContactContents />
       </section>
-      {/* 뉴스레터 구독 */}
-      <Footer />
+      {/* 하단 기업정보 */}
+      <ContactFooter />
     </div>
   );
 };

@@ -129,6 +129,7 @@
   line-height: 175%;
 }
 .ContentsArticle .ContactInquire .InquireSubmit {
+  font-size: 0.5208333333vw;
   display: flex;
   width: 18em;
   padding: 0.2em 3em;
@@ -211,7 +212,7 @@
 }
 .FormSpace .CategorySelectBox {
   position: absolute;
-  top: 10.6em;
+  top: 10.7em;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -221,7 +222,9 @@
 .FormSpace .CategorySelectBox li {
   height: 5.2em;
   padding: 1.2em 1.3em;
-  border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+  border-width: 0em 0.1em 0.1em 0.1em;
+  border-color: var(--Middle-Glay, #a0a0a0);
+  border-style: solid;
 }
 .FormSpace .CategorySelectBox li label {
   font-family: Pretendard;

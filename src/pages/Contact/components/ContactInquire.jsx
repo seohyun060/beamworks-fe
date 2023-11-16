@@ -16,8 +16,26 @@ const ContactInquire = () => {
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
 
+  const onSubmitButtonClick = (e) => {
+    if (isPolicyAgreed === false) {
+      return;
+    }
+    e.preventDefault();
+
+    const inquireForm = new FormData(document.getElementById("inquireForm"));
+
+    console.log(inquireForm);
+
+    let entries = inquireForm.entries();
+    for (const pair of entries) {
+      console.log(pair[0] + ", " + pair[1]);
+    }
+
+    // inquireForm.submit()
+  };
+
   return (
-    <div className="ContactInquire">
+    <form className="ContactInquire" id="inquireForm">
       {/* 문의항목 입력, Select Box */}
       <div className="FormSpace">
         <div className="FormName">
@@ -59,7 +77,11 @@ const ContactInquire = () => {
               <img src={images.required_mark} />
             </div>
             <div className="InputFormBox">
-              <input name="firstName" placeholder="성을 입력해주세요" />
+              <input
+                name="firstName"
+                placeholder="성을 입력해주세요"
+                required
+              />
             </div>
           </div>
         </div>
@@ -70,7 +92,11 @@ const ContactInquire = () => {
               <img src={images.required_mark} />
             </div>
             <div className="InputFormBox">
-              <input name="lastName" placeholder="이름을 입력해주세요" />
+              <input
+                name="lastName"
+                placeholder="이름을 입력해주세요"
+                required
+              />
             </div>
           </div>
         </div>
@@ -83,7 +109,11 @@ const ContactInquire = () => {
             <img src={images.required_mark} />
           </div>
           <div className="InputFormBox">
-            <input name="email" placeholder="example@beamworks.co.kr" />
+            <input
+              name="email"
+              placeholder="example@beamworks.co.kr"
+              required
+            />
           </div>
         </div>
       </div>
@@ -97,6 +127,7 @@ const ContactInquire = () => {
             <input
               name="lastName"
               placeholder="연락이 가능한 전화번호를 입력하세요"
+              required
             />
           </div>
         </div>
@@ -109,7 +140,11 @@ const ContactInquire = () => {
             <img src={images.required_mark} />
           </div>
           <div className="InputFormBox">
-            <input name="affilation" placeholder="회사명을 입력해주세요" />
+            <input
+              name="affilation"
+              placeholder="회사명을 입력해주세요"
+              required
+            />
           </div>
         </div>
       </div>
@@ -121,7 +156,11 @@ const ContactInquire = () => {
             <img src={images.required_mark} />
           </div>
           <div className="InputFormBox">
-            <input name="inquireTitle" placeholder="제목을 입력해주세요" />
+            <input
+              name="inquireTitle"
+              placeholder="제목을 입력해주세요"
+              required
+            />
           </div>
         </div>
       </div>
@@ -133,7 +172,7 @@ const ContactInquire = () => {
             <img src={images.required_mark} />
           </div>
           <div className="InputFormBox text">
-            <textarea name="inquireContents" />
+            <textarea name="inquireContents" required />
           </div>
         </div>
       </div>
@@ -143,7 +182,7 @@ const ContactInquire = () => {
           <input
             type="checkbox"
             checked={isPolicyAgreed}
-            onClick={() => setIsPolicyAgreed((prev) => !prev)}
+            onChange={() => setIsPolicyAgreed((prev) => !prev)}
           ></input>
         </div>
         <div className="PrivacyPoilcyDescription">
@@ -156,10 +195,16 @@ const ContactInquire = () => {
           </label>
         </div>
       </div>
-      <div className={"InquireSubmit" + (isPolicyAgreed ? " active" : "")}>
+      {/* 촘 제출하기 버튼 */}
+      <button type="submit"
+        className={"InquireSubmit" + (isPolicyAgreed ? " active" : "")}
+        onClick={(e) => {
+          onSubmitButtonClick(e);
+        }}
+      >
         <label>제출하기</label>
-      </div>
-    </div>
+      </button>
+    </form>
   );
 };
 
