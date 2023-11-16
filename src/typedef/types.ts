@@ -41,3 +41,18 @@ export type Explore = {
 		background: string;
 	}[];
 };
+
+export type NavTitle = {
+	title: {
+		label: string;
+		path: string;
+	};
+};
+
+export type NavContext = {
+	title: string;
+	context: {
+		label: string;
+		path: string;
+	}[];
+};

@@ -8,9 +8,11 @@
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+
 	position: fixed;
 	&-logo {
 		position: relative;
+		width: 8.5vw;
 		margin-left: 10.4vw;
 	}
 	&-tabs1 {
@@ -22,14 +24,14 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		.tab {
+		.tabs {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			width: fit-content;
 			margin-right: 2vw;
-			padding-top: 5px;
-			height: 52px;
+			height: 100%; //padding-top: 5px;
+			//height: fit-content;
 			div {
 				width: fit-content;
 				height: 28px;
@@ -42,24 +44,123 @@
 				line-height: 30px; /* 175% */
 				margin-right: 4px;
 			}
-			.popup1,
-			.popup2,
-			.popup3 {
+			.popup1 {
 				position: absolute;
 
 				width: 100vw;
-				height: 232px;
+				height: 100px;
 				top: 52px;
-				left: calc(-13.3vw + -163px);
-				border: 1px solid black;
+				left: calc(-21.8vw);
+
 				color: black;
 				background-color: white;
 				opacity: 0; /* 초기에 숨겨짐 */
 				visibility: hidden; /* 초기에 숨겨짐 */
 				transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 트랜지션 적용 */
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding-left: 19.5vw;
+				//justify-content: center;
+				.tab {
+					width: fit-content;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					&-text {
+						//z-index: 100;
+						width: 131px;
+						text-align: center;
+						color: #000;
+						text-align: center;
+						font-family: Pretendard;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: 28px; /* 140% */
+						&:hover {
+							cursor: pointer;
+							text-decoration: underline;
+						}
+					}
+					&-divider {
+						height: 50px;
+						width: 0.75px;
+						margin-left: 37px;
+						margin-right: 37px;
+						margin-top: 0px;
+						background-color: #ddd;
+					}
+				}
 
 				&-active {
 					@extend .popup1;
+					opacity: 1; /* 나타남 */
+					visibility: visible; /* 나타남 */
+				}
+			}
+			.popup2,
+			.popup3 {
+				@extend .popup1;
+				align-items: flex-start;
+				height: 254px;
+				.tab {
+					width: fit-content;
+					height: fit-content;
+
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					align-items: flex-start;
+					margin: 0;
+					margin-top: 50px;
+					&-text {
+						//z-index: 100;
+						width: 132px;
+						height: 148px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin-top: 6px;
+						gap: 12px;
+						&:hover {
+							text-decoration: none;
+							cursor: alias;
+						}
+						&-title {
+							text-align: center;
+							color: #000;
+							text-align: center;
+							font-family: Pretendard;
+							font-size: 19px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: 28px; /* 140% */
+							opacity: 0.3;
+						}
+						&-sub {
+							@extend .tab-text-title;
+							opacity: 1;
+							font-size: 16px;
+							&:hover {
+								cursor: pointer;
+								text-decoration: underline;
+							}
+						}
+					}
+					&-divider {
+						height: 120px;
+						width: 0.75px;
+						margin-left: 37px;
+						margin-right: 37px;
+						margin-top: 0px;
+						background-color: #ddd;
+					}
+				}
+
+				&-active {
+					@extend .popup2;
 					opacity: 1; /* 나타남 */
 					visibility: visible; /* 나타남 */
 				}
@@ -71,7 +172,7 @@
 		@extend .gnb-tabs1;
 		position: absolute;
 		right: 12%;
-		.tab {
+		.tabs {
 			margin-right: 2.6vw;
 			div {
 				margin-right: 0px;
