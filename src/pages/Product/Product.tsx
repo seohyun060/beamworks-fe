@@ -9,9 +9,11 @@ import ProductS7Container from './containers/ProductS7Container';
 import ProductS8Container from './containers/ProductS8Container';
 import FooterContainer from 'src/pages/Footer/containers/FooterContainer';
 import './styles/product.styles.css';
+import useProductStore from '@store/zustand/productZustand';
 type Props = {};
 
 const Product = (props: Props) => {
+	const { cadsExplore } = useProductStore();
 	return (
 		<div className='product'>
 			<ProductS1Container />
@@ -21,7 +23,7 @@ const Product = (props: Props) => {
 			<ProductS5Container />
 			<ProductS6Container />
 			<ProductS7Container />
-			<ProductS8Container />
+			<ProductS8Container exploreType={cadsExplore} />
 			<FooterContainer />
 		</div>
 	);

@@ -1,0 +1,445 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.cadb {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-size: 0.52083333vw;
+}
+.cadb * {
+  word-break: keep-all;
+}
+.cadb-s1 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/public/assets/images/product1.png");
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+  position: relative;
+  align-items: center;
+}
+.cadb-s1-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.08vw;
+  position: fixed;
+  top: 8.89vh;
+  right: 10.41vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 10;
+}
+.cadb-s1-button .s1-demo {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+  -webkit-text-emphasis-color: black;
+          text-emphasis-color: black;
+  -webkit-text-stroke: 0.03em black;
+}
+.cadb-s1-button .s1-buy {
+  display: inline-flex;
+  padding: 0.104vw 1.56vw;
+  justify-content: center;
+  align-items: center;
+  gap: 0.52vw;
+  border-radius: 0.208vw;
+  border: 1px solid var(--Check, #346ec5);
+  background: var(--Check, #346ec5);
+  color: var(--White, #fff);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4; /* 140% */
+}
+.cadb-s1-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16.48vh;
+}
+.cadb-s1-text .s1-header {
+  width: 22.81vw;
+  margin-bottom: 1.09vw;
+}
+.cadb-s1-text .s1-body {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadb-s2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.cadb-s2-image {
+  width: 77.91vw;
+  position: absolute;
+  margin-top: 12.5vh;
+}
+.cadb-s2-text {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 67.9vw;
+  margin-top: 7.69vh;
+}
+.cadb-s2-text .s2-demo {
+  color: var(--Dark-Glay, #4d4f58);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+  margin-bottom: 0.52vw;
+}
+.cadb-s2-text .s2-header {
+  color: var(--Black, #000);
+  /* 주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+  margin-bottom: 0.52vw;
+}
+.cadb-s2-text .s2-logo {
+  width: 17.7vw;
+  margin-bottom: 7.9vw;
+}
+.cadb-s2-text .s2-body {
+  color: #000;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.41;
+  opacity: 0.3; /* 141.667% */
+}
+.cadb-s3 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+.cadb-s3-cadb {
+  margin-bottom: 0.625vw;
+  color: var(--Middle-Glay, #a0a0a0);
+  margin-left: 18.75vw;
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.cadb-s3-header {
+  color: var(--Black, #000);
+  margin-left: 18.75vw;
+  margin-bottom: 1.56vw;
+  /* 주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+}
+.cadb-s3-realtime {
+  color: var(--Dark-Glay, #4d4f58);
+  margin-left: 18.75vw;
+  /* 보조헤드 */
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25; /* 125% */
+}
+.cadb-s3-carousel {
+  width: 100%;
+  width: 40.9375vw;
+  height: 27.34375vw;
+  position: relative;
+  margin-top: 2.7vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 19.75vw;
+}
+.cadb-s3-carousel .s3-mock {
+  width: 60.26vw;
+  position: absolute;
+  left: -5.420657vw;
+  top: -2.5vw;
+  z-index: -1;
+}
+.cadb-s3-carousel .s3-prev, .cadb-s3-carousel .s3-next {
+  width: 0.625vw;
+  position: absolute;
+  left: -3.125vw;
+  top: 12.471875vw;
+  z-index: 20;
+}
+.cadb-s3-carousel .s3-next {
+  left: auto;
+  right: -3.125vw;
+}
+.cadb-s3-carousel .s3-frame {
+  width: 40.9375vw;
+  height: 27.34375vw;
+  background-color: black;
+  z-index: 2;
+}
+.cadb-s3-carousel .s3-frame-mode {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.cadb-s3-carousel .s3-frame-mode-slide, .cadb-s3-carousel .s3-frame-mode-slide-active {
+  height: 100%;
+  margin-right: 5%;
+  opacity: 0.2;
+  transition: opacity 0.3s cubic-bezier(0.5, 0, 1, 0.5);
+}
+.cadb-s3-carousel .s3-frame-mode-slide-active {
+  opacity: 1;
+}
+.cadb-s3-carousel .s3-mode-slide {
+  height: 100%;
+}
+.cadb-s4 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  background-color: black;
+  padding-left: 18.75vw;
+}
+.cadb-s4-cadb {
+  color: var(--Middle-Glay, #a0a0a0);
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.cadb-s4-header {
+  margin-top: 0.625vw;
+  margin-bottom: 1.25vw;
+  color: var(--White, #fff);
+  /* 주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+}
+.cadb-s4-descript {
+  color: var(--White, #fff);
+  width: 35.9vw;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadb-s4-body {
+  width: 81.25vw;
+  margin-top: 1.34vw;
+  height: 24.9vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.cadb-s4-body .s4-button {
+  width: 15.45vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.67vw;
+  margin-left: 0;
+}
+.cadb-s4-body .s4-button-text {
+  color: var(--White, #fff);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadb-s4-body .s4-button-body {
+  width: 15.47vw;
+  display: inline-flex;
+  flex-direction: row;
+  padding: 0.52vw 0.52vw 0.52vw 1.04vw;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25vw;
+  border-radius: 0.625vw;
+  background: var(--layer-color-background-color, #1b1b21);
+}
+.cadb-s4-body .s4-button-body .rm-title {
+  color: #fff;
+  /* 본문 강조 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.cadb-s4-body .s4-button-body .rm-switch, .cadb-s4-body .s4-button-body .rm-switch-active {
+  position: relative;
+  width: 6.04vw;
+  height: 3.02vw;
+  flex-shrink: 0;
+  border-radius: 0.52vw;
+  background-color: #556;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0.4vw;
+  color: var(--layer-color-variants-color-blocked-font, rgba(255, 255, 255, 0.3));
+  transition: 0.3s ease-in-out;
+}
+.cadb-s4-body .s4-button-body .rm-switch span, .cadb-s4-body .s4-button-body .rm-switch-active span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 2.51vw;
+  height: 1.61vw;
+  text-align: center;
+  /* 버튼 */
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4; /* 140% */
+}
+.cadb-s4-body .s4-button-body .rm-switch-toggle, .cadb-s4-body .s4-button-body .rm-switch-active-toggle {
+  position: absolute;
+  width: 2.685vw;
+  height: 2.685vw;
+  border-radius: 0.416vw;
+  background: var(--layer-color-white-color, #fff);
+  left: 0.167vw;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.cadb-s4-body .s4-button-body .rm-switch-active {
+  justify-content: flex-start;
+  background-color: #00908b;
+  color: #fff;
+}
+.cadb-s4-body .s4-button-body .rm-switch-active-toggle {
+  transform: translateX(3.02vw);
+}
+.cadb-s4-body .s4-rmode, .cadb-s4-body .s4-rmode-active, .cadb-s4-body .s4-rmode-off {
+  position: absolute;
+  width: 54.9vw;
+  left: 26.25vw;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.cadb-s4-body .s4-rmode-active, .cadb-s4-body .s4-rmode-off {
+  opacity: 1;
+  visibility: visible;
+}
+.cadb-s4-body .s4-rmode-off {
+  z-index: 0;
+}
+.cadb-s4-freeze {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 21.1vw;
+  margin-top: 5.56vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.cadb-s4-freeze .s4-fmode {
+  position: absolute;
+  width: 46.5vw;
+  top: -2vw;
+  left: -3.5vw;
+}
+.cadb-s4-freeze .s4-fmodeb {
+  margin-left: 35.55vw;
+  width: 17.9vw;
+}
+.cadb-s4-freeze .s4-fmodec {
+  width: 20.78vw;
+  margin-left: 1.82vw;
+}
+.cadb-s4-setting {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 14.17vw;
+  margin-top: 7.7vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.cadb-s4-setting .s4-hdmi {
+  width: 16.98vw;
+  margin-right: 7.08vw;
+}
+.cadb-s4-setting .s4-box {
+  width: 18.49vw;
+}
+.cadb-s4-setting .s4-smode {
+  width: 25.3125vw;
+  margin-top: 2.5vw;
+}/*# sourceMappingURL=cadb.styles.css.map */

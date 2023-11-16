@@ -415,7 +415,7 @@
 .product-s7-image .s7-com {
   width: 100%;
 }
-.product-s8 {
+.product-s8, .product-s8-black {
   width: 100%;
   height: 100%;
   padding-top: 52px;
@@ -426,7 +426,7 @@
   align-items: center;
   justify-content: center;
 }
-.product-s8-header {
+.product-s8 .s8-header, .product-s8-black .s8-header {
   color: var(--Middle-Glay, #a0a0a0);
   margin-bottom: 2.7vw;
   text-align: center;
@@ -436,8 +436,44 @@
   font-weight: 600;
   line-height: 1; /* 100% */
 }
-.product-s8-body {
+.product-s8 .s8-body, .product-s8-black .s8-body {
   width: 62.5vw;
   height: 31.35vw;
-  background-color: #a0a0a0;
+  display: flex;
+  flex-direction: row;
+  gap: 1.25vw;
+}
+.product-s8 .s8-body-box1, .product-s8-black .s8-body-box1, .product-s8 .s8-body-box3, .product-s8-black .s8-body-box3, .product-s8 .s8-body-box2, .product-s8-black .s8-body-box2 {
+  display: flex;
+  width: 20vw;
+  background-color: #bebebe;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.product-s8 .s8-body-box1 .s8box-logo, .product-s8-black .s8-body-box1 .s8box-logo, .product-s8 .s8-body-box3 .s8box-logo, .product-s8-black .s8-body-box3 .s8box-logo, .product-s8 .s8-body-box2 .s8box-logo, .product-s8-black .s8-body-box2 .s8box-logo {
+  width: 7.81vw;
+}
+.product-s8 .s8-body-box1 .s8box-text, .product-s8-black .s8-body-box1 .s8box-text, .product-s8 .s8-body-box3 .s8box-text, .product-s8-black .s8-body-box3 .s8box-text, .product-s8 .s8-body-box2 .s8box-text, .product-s8-black .s8-body-box2 .s8box-text {
+  font-size: 2em;
+  font-weight: 0;
+}
+.product-s8 .s8-body-box1 .s8box-chatai1, .product-s8-black .s8-body-box1 .s8box-chatai1, .product-s8 .s8-body-box3 .s8box-chatai1, .product-s8-black .s8-body-box3 .s8box-chatai1, .product-s8 .s8-body-box2 .s8box-chatai1, .product-s8-black .s8-body-box2 .s8box-chatai1 {
+  width: 3.07vw;
+  margin-right: 0.78vw;
+}
+.product-s8 .s8-body-box1 .s8box-chatai2, .product-s8-black .s8-body-box1 .s8box-chatai2, .product-s8 .s8-body-box3 .s8box-chatai2, .product-s8-black .s8-body-box3 .s8box-chatai2, .product-s8 .s8-body-box2 .s8box-chatai2, .product-s8-black .s8-body-box2 .s8box-chatai2 {
+  width: 12.29vw;
+}
+.product-s8 .s8-body-box3 .s8box-logo, .product-s8-black .s8-body-box3 .s8box-logo {
+  width: 9.58vw;
+}
+.product-s8 .s8-body-box3 .s8box-chatai1, .product-s8-black .s8-body-box3 .s8box-chatai1 {
+  width: 7.55vw;
+}
+.product-s8 .s8-body-box3 .s8box-chatai2, .product-s8-black .s8-body-box3 .s8box-chatai2 {
+  display: none;
+}
+.product-s8-black {
+  background-color: black;
 }/*# sourceMappingURL=product.styles.css.map */
