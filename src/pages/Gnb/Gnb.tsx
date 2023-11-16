@@ -10,6 +10,7 @@ type Props = {
 	onTabLeave: (index: number) => void;
 	tabHovered: boolean[];
 	onPathClick: (label: string, path: string) => void;
+	tab1List: any;
 };
 
 const Gnb = ({
@@ -18,9 +19,8 @@ const Gnb = ({
 	onTabLeave,
 	tabHovered,
 	onPathClick,
+	tab1List,
 }: Props) => {
-	const { company, product, community } = useGnbStore() as GnbStore;
-	console.log(company);
 	return (
 		<div className='gnb'>
 			<img className='gnb-logo' src={images.logo} />
@@ -42,72 +42,44 @@ const Gnb = ({
 								<img src={tabHovered[index] ? images.upW : images.downW} />
 								<div
 									className={
-										index === 0 && tabHovered[0] ? 'popup1-active' : 'popup1'
+										tabHovered[index]
+											? `popup${index + 1}-active`
+											: `popup${index + 1}`
 									}
 								>
-									{company.map((tab, index) => (
-										<div className='tab' key={index}>
-											<div
-												className='tab-text'
-												onClick={() => {
-													onPathClick(tab.title.label, tab.title.path);
-												}}
-											>
-												{tab.title.label}
-											</div>
-											{index !== 2 ? <div className='tab-divider' /> : ''}
-										</div>
-									))}
-								</div>
-								<div
-									className={
-										index === 1 && tabHovered[1] ? 'popup2-active' : 'popup2'
-									}
-								>
-									{product.map((tab, index) => (
-										<div className='tab' key={index}>
-											<div className='tab-text'>
-												<div className='tab-text-title'>{tab.title}</div>
-												{tab.context.map((sub, index) => (
+									{index === 0
+										? tab1List[index].map((tab: NavTitle, index: number) => (
+												<div className='tab' key={index}>
 													<div
-														className='tab-text-sub'
-														key={index}
+														className='tab-text'
 														onClick={() => {
-															onPathClick(sub.label, sub.path);
+															onPathClick(tab.title.label, tab.title.path);
 														}}
 													>
-														{sub.label}
+														{tab.title.label}
 													</div>
-												))}
-											</div>
-											{index !== 2 ? <div className='tab-divider' /> : ''}
-										</div>
-									))}
-								</div>
-								<div
-									className={
-										index === 2 && tabHovered[2] ? 'popup3-active' : 'popup3'
-									}
-								>
-									{community.map((tab, index) => (
-										<div className='tab' key={index}>
-											<div className='tab-text'>
-												<div className='tab-text-title'>{tab.title}</div>
-												{tab.context.map((sub, index) => (
-													<div
-														className='tab-text-sub'
-														key={index}
-														onClick={() => {
-															onPathClick(sub.label, sub.path);
-														}}
-													>
-														{sub.label}
+													{index !== 2 ? <div className='tab-divider' /> : ''}
+												</div>
+										  ))
+										: tab1List[index].map((tab: NavContext, index: number) => (
+												<div className='tab' key={index}>
+													<div className='tab-text'>
+														<div className='tab-text-title'>{tab.title}</div>
+														{tab.context.map((sub, index) => (
+															<div
+																className='tab-text-sub'
+																key={index}
+																onClick={() => {
+																	onPathClick(sub.label, sub.path);
+																}}
+															>
+																{sub.label}
+															</div>
+														))}
 													</div>
-												))}
-											</div>
-											{index !== 2 ? <div className='tab-divider' /> : ''}
-										</div>
-									))}
+													{index !== 2 ? <div className='tab-divider' /> : ''}
+												</div>
+										  ))}
 								</div>
 							</div>
 						);
