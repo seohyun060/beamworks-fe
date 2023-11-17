@@ -20,6 +20,7 @@ const AwardS2 = ({ selectedYear, histories, onYearClick }: Props) => {
 						: selectedYear === 2022
 						? `url('/assets/images/awardback3.png')`
 						: `url('/assets/images/awardback4.png')`,
+				transition: '0.3s ease-in-out',
 			}}
 		>
 			{/* <img src={images.awardback2} /> */}
@@ -39,13 +40,33 @@ const AwardS2 = ({ selectedYear, histories, onYearClick }: Props) => {
 					))}
 				</div>
 				<div className='award-s2-body-achieves'>
-					{histories
-						.find((history) => history.year === selectedYear)
-						?.achieve.map((achieve, index) => (
-							<div className='achieve' key={index}>
-								{achieve}
-							</div>
-						))}
+					{
+						histories.map((history, index) =>
+							history.achieve.map((achieve, index) => (
+								<div
+									className={
+										history.year === selectedYear ? 'achieve-active' : 'achieve'
+									}
+									key={index}
+								>
+									{achieve}
+								</div>
+							)),
+						)
+						// .find((history) => selectedYear === selectedYear)
+						// ?.achieve.map((achieve, index) => (
+						// 	<div
+						// 		className='achieve'
+						// 		key={index}
+						// 		style={{
+						// 			opacity: 1, // 초기값
+						// 			transition: 'opacity 0.3s ease-in-out', // 트랜지션 설정
+						// 		}}
+						// 	>
+						// 		{achieve}
+						// 	</div>
+						// ))
+					}
 				</div>
 			</div>
 		</div>
