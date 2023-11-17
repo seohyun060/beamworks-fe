@@ -41,7 +41,6 @@ export type Explore = {
 		background: string;
 	}[];
 };
-
 export type NavTitle = {
 	title: {
 		label: string;

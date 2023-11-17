@@ -1,8 +1,17 @@
 import create from 'zustand';
 import images from 'src/assets/images';
-const useProductStore = create((set) => ({
+const useProductStore = create((set, get) => ({
 	selectedSolution: -1,
 	setSelectedSolution: (solution) => set({ selectedSolution: solution }),
+	toggle: false,
+	setToggle1: () =>
+		set((state) => ({
+			toggle: !state.toggle, // state를 이용하여 state 값 변경
+		})),
+	setToggle2: () =>
+		set({
+			toggle: !get().toggle, // get을 이용하여 state 값 변경
+		}),
 	cadsExplore: {
 		type: 'cads',
 		title: 'CadAI-Series 둘러보기',

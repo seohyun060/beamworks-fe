@@ -131,11 +131,23 @@
 				.achieve {
 					color: #fff;
 					font-family: Pretendard;
-					font-size: 2.4em;
+					font-size: 0;
+					height: fit-content;
 					font-style: normal;
 					font-weight: 600;
 					line-height: 3.3; /* 333.333% */
-					//transition: 0.3s ease-in-out;
+					opacity: 0; /* 초기값 */
+
+					visibility: hidden;
+					transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+					&-active {
+						@extend .achieve;
+						font-size: 2.4em;
+
+						opacity: 1;
+						visibility: visible;
+					}
 				}
 			}
 		}

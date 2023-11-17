@@ -1,11 +1,17 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import ProductS5 from '../components/ProductS5';
 import { Solution } from '@typedef/types';
 import useProductStore from '@store/zustand/productZustand';
 type Props = {};
 
 const ProductS5Container = (props: Props) => {
-	const { selectedSolution, setSelectedSolution } = useProductStore();
+	const {
+		selectedSolution,
+		setSelectedSolution,
+		toggle,
+		setToggle1,
+		setToggle2,
+	} = useProductStore();
 	const solutionList: Solution[] = [
 		{
 			index: 0,
@@ -41,7 +47,13 @@ const ProductS5Container = (props: Props) => {
 
 		[selectedSolution],
 	);
+	useEffect(() => {
+		console.log(toggle);
+		setToggle2();
 
+		return () => {};
+	}, []);
+	console.log(toggle);
 	return (
 		<ProductS5 solutionList={solutionList} onSolutionClick={onSolutionClick} />
 	);
