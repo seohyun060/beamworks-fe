@@ -147,10 +147,10 @@
       margin: 7.9em 0em 2.5em 0em;
       border-radius: 0.4em;
       border: 0.1em solid var(--Check, #346ec5);
-      background: var(--White, #fff);
+      background: var(--Check, #346ec5);
 
       label {
-        color: var(--Check, #346ec5);
+        color: var(--White, #fff);
         text-align: right;
         font-family: Pretendard;
         font-size: 2em;
@@ -164,10 +164,11 @@
       :hover {
         cursor: pointer;
       }
-      &.active {
-        background: var(--Check, #346ec5);
+      &:disabled {
+        background: var(--White, #fff);
+
         label {
-          color: var(--White, #fff);
+          color: var(--Check, #346ec5);
         }
       }
     }
@@ -273,6 +274,65 @@
       font-style: normal;
       font-weight: 400;
       line-height: 175%;
+    }
+  }
+}
+
+.ContactFindUs {
+  .title label {
+    color: var(--Black, #000);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 2.4em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.333%;
+  }
+  .subTitle label {
+    color: var(--Black, #000);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.6em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%;
+  }
+  .description label {
+    color: var(--Black, #000);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.6em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+  }
+  .CompanyName {
+    margin-bottom: 1.2em;
+  }
+  .Address {
+    margin-bottom: 3.2em;
+  }
+  .ContactInformation {
+    margin-bottom: 3.6em;
+    .ContactNumber,
+    .ContactEmail,
+    .ContactFax {
+      display: flex;
+      margin-bottom: 0.4em;
+      div:first-child {
+        margin-right: 1em;
+      }
+    }
+  }
+  .Transportation {
+    margin-bottom: 6.1em;
+    .TransportationTitle {
+      margin-bottom: 1.2em;
+    }
+    .TransportationSubway,
+    .TransportationCar {
+      display: flex;
+      margin-bottom: 0.4em;
     }
   }
 }
