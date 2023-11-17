@@ -190,7 +190,7 @@
   transition: 0.3s ease-in-out;
   opacity: 0.3;
 }
-.RecruitmentEnvironment .EnvironmentDescription .ImageSector img.active {
+.RecruitmentEnvironment .EnvironmentDescription .ImageSector img.isActive {
   opacity: 1;
   width: 79.2em;
 }

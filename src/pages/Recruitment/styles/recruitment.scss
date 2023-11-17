@@ -199,7 +199,7 @@
         margin-right: 2.3em;
         transition: 0.3s ease-in-out;
         opacity: 0.3;
-        &.active {
+        &.isActive {
           opacity: 1;
           width: 79.2em;
         }

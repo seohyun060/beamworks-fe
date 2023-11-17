@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import images from "src/assets/images";
 
 // Inquire Form 부분
 const ContactInquire = () => {
-  const [selectedCategory, setSelectedCategory] = useState("선택");
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [isCategorySelectBoxOpen, setIsCategorySelectBoxOpen] = useState(false);
   const categoryArray = [
     "헬로지토헬로",
@@ -13,25 +14,56 @@ const ContactInquire = () => {
     "Minsu",
     "None",
   ];
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [affiliation, setAffiliation] = useState("");
+  const [inquireTitle, setInquireTitle] = useState("");
+  const [inquireContents, setInquireContents] = useState("");
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
 
   // sumbit버튼 동작
-  const onSubmitButtonClick = (e) => {
-    if (isPolicyAgreed === false) {
+  const onSubmitButtonClick = async (e) => {
+    if (
+      selectedCategory === null ||
+      firstName === "" ||
+      lastName === "" ||
+      email === "" ||
+      phoneNumber === "" ||
+      affiliation === "" ||
+      inquireTitle === "" ||
+      inquireContents === ""
+    ) {
+      console.log("Can't Commit");
       return;
     }
+
     e.preventDefault();
 
     const inquireForm = new FormData(document.getElementById("inquireForm"));
-    inquireForm.append("category", selectedCategory);
-
-    console.log(inquireForm);
 
     let entries = inquireForm.entries();
     for (const pair of entries) {
       console.log(pair[0] + ", " + pair[1]);
     }
+
+    await emailjs
+      .sendForm(
+        "service_5y4y492",
+        "template_9zizcyu",
+        document.getElementById("inquireForm"),
+        process.env.REACT_APP_EMAILJS_PUBLICK_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -46,7 +78,13 @@ const ContactInquire = () => {
           className="InputCategory"
           onClick={() => setIsCategorySelectBoxOpen((prev) => !prev)}
         >
-          <label>{selectedCategory}</label>
+          <input
+            name="category"
+            placeholder="선택"
+            value={selectedCategory}
+            readOnly
+            required
+          />
           <img
             className={isCategorySelectBoxOpen ? "isOpen" : ""}
             src={images.select_box_open}
@@ -80,6 +118,8 @@ const ContactInquire = () => {
               <input
                 name="firstName"
                 placeholder="성을 입력해주세요"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 required
               />
             </div>
@@ -95,6 +135,8 @@ const ContactInquire = () => {
               <input
                 name="lastName"
                 placeholder="이름을 입력해주세요"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 required
               />
             </div>
@@ -110,8 +152,11 @@ const ContactInquire = () => {
           </div>
           <div className="InputFormBox">
             <input
+              type="email"
               name="email"
               placeholder="example@beamworks.co.kr"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -125,8 +170,10 @@ const ContactInquire = () => {
           </div>
           <div className="InputFormBox">
             <input
-              name="lastName"
+              name="phoneNumber"
               placeholder="연락이 가능한 전화번호를 입력하세요"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
               required
             />
           </div>
@@ -141,8 +188,10 @@ const ContactInquire = () => {
           </div>
           <div className="InputFormBox">
             <input
-              name="affilation"
+              name="affiliation"
               placeholder="회사명을 입력해주세요"
+              value={affiliation}
+              onChange={(e) => setAffiliation(e.target.value)}
               required
             />
           </div>
@@ -159,6 +208,8 @@ const ContactInquire = () => {
             <input
               name="inquireTitle"
               placeholder="제목을 입력해주세요"
+              value={inquireTitle}
+              onChange={(e) => setInquireTitle(e.target.value)}
               required
             />
           </div>
@@ -172,7 +223,12 @@ const ContactInquire = () => {
             <img src={images.required_mark} />
           </div>
           <div className="InputFormBox text">
-            <textarea name="inquireContents" required />
+            <textarea
+              name="inquireContents"
+              value={inquireContents}
+              onChange={(e) => setInquireContents(e.target.value)}
+              required
+            />
           </div>
         </div>
       </div>
@@ -198,16 +254,17 @@ const ContactInquire = () => {
       {/* 촘 제출하기 버튼 */}
       {isPolicyAgreed ? (
         <button
-          className="InquireSubmit"
+          type="submit"
+          className="InquireSubmit isActive"
           onClick={(e) => {
             onSubmitButtonClick(e);
           }}
         >
-          <label>제출하기</label>
+          <span>제출하기</span>
         </button>
       ) : (
         <button className="InquireSubmit" disabled>
-          <label>제출하기</label>
+          <span>제출하기</span>
         </button>
       )}
     </form>

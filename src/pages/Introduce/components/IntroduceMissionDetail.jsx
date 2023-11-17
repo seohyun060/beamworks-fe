@@ -6,7 +6,7 @@ const IntroduceMissionDetail = (props) => {
   const { title, content, imageName, progressDotSet, target } = props;
 
   return (
-    <div className={target ? "MissionDetail active" : "MissionDetail"}>
+    <div className={target ? "MissionDetail isActive" : "MissionDetail"}>
       <div className="Contents">
         <div className="ProgressDotbar">
           {progressDotSet.map((data) => (

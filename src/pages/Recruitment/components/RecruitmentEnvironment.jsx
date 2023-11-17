@@ -23,17 +23,17 @@ const RecruitmentEnvironment = () => {
           <div className="ImageSector">
             <img
               src={images.recruitment_environment1}
-              className={isClicked === 0 && "active"}
+              className={isClicked === 0 && "isActive"}
               onClick={(e) => onImageClick(0)}
             />
             <img
               src={images.recruitment_environment2}
-              className={isClicked === 1 && "active"}
+              className={isClicked === 1 && "isActive"}
               onClick={(e) => onImageClick(1)}
             />
             <img
               src={images.recruitment_environment3}
-              className={isClicked === 2 && "active"}
+              className={isClicked === 2 && "isActive"}
               onClick={(e) => onImageClick(2)}
             />
           </div>

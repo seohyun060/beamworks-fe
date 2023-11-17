@@ -128,7 +128,7 @@
   line-height: 166.667%;
   opacity: 0.3;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label.active {
+.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label.isActive {
   opacity: 1;
 }
 .CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label:hover {
