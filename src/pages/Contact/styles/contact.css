@@ -138,10 +138,10 @@
   margin: 7.9em 0em 2.5em 0em;
   border-radius: 0.4em;
   border: 0.1em solid var(--Check, #346ec5);
-  background: var(--White, #fff);
+  background: var(--Check, #346ec5);
 }
 .ContentsArticle .ContactInquire .InquireSubmit label {
-  color: var(--Check, #346ec5);
+  color: var(--White, #fff);
   text-align: right;
   font-family: Pretendard;
   font-size: 2em;
@@ -155,11 +155,11 @@
 .ContentsArticle .ContactInquire .InquireSubmit :hover {
   cursor: pointer;
 }
-.ContentsArticle .ContactInquire .InquireSubmit.active {
-  background: var(--Check, #346ec5);
+.ContentsArticle .ContactInquire .InquireSubmit:disabled {
+  background: var(--White, #fff);
 }
-.ContentsArticle .ContactInquire .InquireSubmit.active label {
-  color: var(--White, #fff);
+.ContentsArticle .ContactInquire .InquireSubmit:disabled label {
+  color: var(--Check, #346ec5);
 }
 
 .FormSpace {
@@ -261,4 +261,63 @@
   font-style: normal;
   font-weight: 400;
   line-height: 175%;
+}
+
+.ContactFindUs .title label {
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+.ContactFindUs .subTitle label {
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 175%;
+}
+.ContactFindUs .description label {
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.ContactFindUs .CompanyName {
+  margin-bottom: 1.2em;
+}
+.ContactFindUs .Address {
+  margin-bottom: 3.2em;
+}
+.ContactFindUs .ContactInformation {
+  margin-bottom: 3.6em;
+}
+.ContactFindUs .ContactInformation .ContactNumber,
+.ContactFindUs .ContactInformation .ContactEmail,
+.ContactFindUs .ContactInformation .ContactFax {
+  display: flex;
+  margin-bottom: 0.4em;
+}
+.ContactFindUs .ContactInformation .ContactNumber div:first-child,
+.ContactFindUs .ContactInformation .ContactEmail div:first-child,
+.ContactFindUs .ContactInformation .ContactFax div:first-child {
+  margin-right: 1em;
+}
+.ContactFindUs .Transportation {
+  margin-bottom: 6.1em;
+}
+.ContactFindUs .Transportation .TransportationTitle {
+  margin-bottom: 1.2em;
+}
+.ContactFindUs .Transportation .TransportationSubway,
+.ContactFindUs .Transportation .TransportationCar {
+  display: flex;
+  margin-bottom: 0.4em;
 }/*# sourceMappingURL=contact.css.map */

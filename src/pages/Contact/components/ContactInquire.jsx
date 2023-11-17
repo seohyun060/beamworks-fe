@@ -16,6 +16,7 @@ const ContactInquire = () => {
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
 
+  // sumbit버튼 동작
   const onSubmitButtonClick = (e) => {
     if (isPolicyAgreed === false) {
       return;
@@ -23,6 +24,7 @@ const ContactInquire = () => {
     e.preventDefault();
 
     const inquireForm = new FormData(document.getElementById("inquireForm"));
+    inquireForm.append("category", selectedCategory);
 
     console.log(inquireForm);
 
@@ -30,8 +32,6 @@ const ContactInquire = () => {
     for (const pair of entries) {
       console.log(pair[0] + ", " + pair[1]);
     }
-
-    // inquireForm.submit()
   };
 
   return (
@@ -196,14 +196,20 @@ const ContactInquire = () => {
         </div>
       </div>
       {/* 촘 제출하기 버튼 */}
-      <button type="submit"
-        className={"InquireSubmit" + (isPolicyAgreed ? " active" : "")}
-        onClick={(e) => {
-          onSubmitButtonClick(e);
-        }}
-      >
-        <label>제출하기</label>
-      </button>
+      {isPolicyAgreed ? (
+        <button
+          className="InquireSubmit"
+          onClick={(e) => {
+            onSubmitButtonClick(e);
+          }}
+        >
+          <label>제출하기</label>
+        </button>
+      ) : (
+        <button className="InquireSubmit" disabled>
+          <label>제출하기</label>
+        </button>
+      )}
     </form>
   );
 };
