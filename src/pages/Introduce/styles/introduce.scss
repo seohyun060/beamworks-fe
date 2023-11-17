@@ -212,7 +212,7 @@
   opacity: 0;
   transition: 0.4s ease-in-out;
 
-  &.active {
+  &.isActive {
     opacity: 1;
   }
 

@@ -4,69 +4,69 @@ const ContactFindUs = () => {
   return (
     <div className="ContactFindUs">
       <div className="CompanyName title">
-        <label>주식회사 빔웍스 BeamWorks Inc.</label>
+        <span>주식회사 빔웍스 BeamWorks Inc.</span>
       </div>
       <div className="Address">
         <div className="AddressTitle subTitle">
-          <label>Business location and address</label>
+          <span>Business location and address</span>
         </div>
         <div className="AddressInformation description">
-          <label>
+          <span>
             107, 3rd Floor, 136-gil, Chilgok Central Road, Buk-gu, Daegu, South
             Korea (Hakjeong-dong)
-          </label>
+          </span>
         </div>
       </div>
       <div className="ContactInformation">
         <div className="ContactNumber">
           <div className="ContactNumberTitle subTitle">
-            <label>General Contact Number</label>
+            <span>General Contact Number</span>
           </div>
           <div className="ContactNumberInformation description">
-            <label>053-322-2107</label>
+            <span>053-322-2107</span>
           </div>
         </div>
         <div className="ContactEmail">
           <div className="ContactEmailTitle subTitle">
-            <label>General Contact Email</label>
+            <span>General Contact Email</span>
           </div>
           <div className="ContactEmailInformation description">
-            <label>bws@beamworks.co.kr</label>
+            <span>bws@beamworks.co.kr</span>
           </div>
         </div>
         <div className="ContactFax">
           <div className="ContactFaxTitle subTitle">
-            <label>Fax</label>
+            <span>Fax</span>
           </div>
           <div className="ContactFaxInformation description">
-            <label>053-322-2108</label>
+            <span>053-322-2108</span>
           </div>
         </div>
       </div>
       <div className="Transportation">
         <div className="TransportationTitle title">
-          <label>교통편</label>
+          <span>교통편</span>
         </div>
         <div className="TransportationSubway">
           <div className="TransportationSubwayTitle subTitle">
-            <label>지하철 이용 시 :</label>
+            <span>지하철 이용 시 :</span>
           </div>
           <div className="TransportationSubwayInformation description">
-            <label>
+            <span>
               107, 3rd Floor, 136-gil, Chilgok Central Road, Buk-gu, Daegu,
               South Korea (Hakjeong-dong)
-            </label>
+            </span>
           </div>
         </div>
         <div className="TransportationCar">
           <div className="TransportationCarTitle subTitle">
-            <label>자가용 이용 시 :</label>
+            <span>자가용 이용 시 :</span>
           </div>
           <div className="TransportationCarInformation description">
-            <label>
+            <span>
               107, 3rd Floor, 136-gil, Chilgok Central Road, Buk-gu, Daegu,
               South Korea (Hakjeong-dong)
-            </label>
+            </span>
           </div>
         </div>
       </div>

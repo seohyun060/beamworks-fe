@@ -68,7 +68,7 @@
   border: 0.1em solid var(--Check, #346ec5);
   background: var(--White, #fff);
 }
-.ContactContents .buttonBar .navButton label {
+.ContactContents .buttonBar .navButton span {
   color: var(--Check, #346ec5);
   text-align: right;
   font-family: Pretendard;
@@ -80,13 +80,10 @@
 .ContactContents .buttonBar .navButton:hover {
   cursor: pointer;
 }
-.ContactContents .buttonBar .navButton :hover {
-  cursor: pointer;
-}
 .ContactContents .buttonBar .navButton.selected {
   background: var(--Check, #346ec5);
 }
-.ContactContents .buttonBar .navButton.selected label {
+.ContactContents .buttonBar .navButton.selected span {
   color: var(--White, #fff);
 }
 
@@ -138,10 +135,10 @@
   margin: 7.9em 0em 2.5em 0em;
   border-radius: 0.4em;
   border: 0.1em solid var(--Check, #346ec5);
-  background: var(--Check, #346ec5);
+  background: var(--White, #fff);
 }
-.ContentsArticle .ContactInquire .InquireSubmit label {
-  color: var(--White, #fff);
+.ContentsArticle .ContactInquire .InquireSubmit span {
+  color: var(--Check, #346ec5);
   text-align: right;
   font-family: Pretendard;
   font-size: 2em;
@@ -152,14 +149,11 @@
 .ContentsArticle .ContactInquire .InquireSubmit:hover {
   cursor: pointer;
 }
-.ContentsArticle .ContactInquire .InquireSubmit :hover {
-  cursor: pointer;
+.ContentsArticle .ContactInquire .InquireSubmit.isActive {
+  background: var(--Check, #346ec5);
 }
-.ContentsArticle .ContactInquire .InquireSubmit:disabled {
-  background: var(--White, #fff);
-}
-.ContentsArticle .ContactInquire .InquireSubmit:disabled label {
-  color: var(--Check, #346ec5);
+.ContentsArticle .ContactInquire .InquireSubmit.isActive span {
+  color: var(--White, #fff);
 }
 
 .FormSpace {
@@ -186,13 +180,14 @@
 }
 .FormSpace .InputCategory {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding: 1.2em 1.3em;
   margin: 2em 0em;
   border: 0.1em solid var(--Middle-Glay, #a0a0a0);
 }
-.FormSpace .InputCategory label {
+.FormSpace .InputCategory input {
   font-family: Pretendard;
   font-size: 1.6em;
   font-style: normal;
@@ -263,7 +258,7 @@
   line-height: 175%;
 }
 
-.ContactFindUs .title label {
+.ContactFindUs .title span {
   color: var(--Black, #000);
   text-align: center;
   font-family: Pretendard;
@@ -272,7 +267,7 @@
   font-weight: 600;
   line-height: 133.333%;
 }
-.ContactFindUs .subTitle label {
+.ContactFindUs .subTitle span {
   color: var(--Black, #000);
   text-align: center;
   font-family: Pretendard;
@@ -281,7 +276,7 @@
   font-weight: 600;
   line-height: 175%;
 }
-.ContactFindUs .description label {
+.ContactFindUs .description span {
   color: var(--Black, #000);
   text-align: center;
   font-family: Pretendard;

@@ -40,7 +40,7 @@ const CultureEnvironment = () => {
               {environmentData.map((data, index) => (
                 <div className="Subject">
                   <label
-                    className={index === isSubjectClicked ? "active" : ""}
+                    className={index === isSubjectClicked ? "isActive" : ""}
                     onClick={(e) => {
                       onSubjectClick(index);
                     }}

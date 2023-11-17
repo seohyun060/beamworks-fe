@@ -2,6 +2,7 @@ import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const ContactGoogleMap = () => {
+  // 빔웍스 좌표
   const center = {
     lat: 35.955, // 위도
     lng: 128.5656, // 경도

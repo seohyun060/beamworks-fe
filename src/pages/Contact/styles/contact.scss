@@ -71,7 +71,7 @@
       border: 0.1em solid var(--Check, #346ec5);
       background: var(--White, #fff);
 
-      label {
+      span {
         color: var(--Check, #346ec5);
         text-align: right;
         font-family: Pretendard;
@@ -83,12 +83,9 @@
       &:hover {
         cursor: pointer;
       }
-      :hover {
-        cursor: pointer;
-      }
       &.selected {
         background: var(--Check, #346ec5);
-        label {
+        span {
           color: var(--White, #fff);
         }
       }
@@ -147,10 +144,10 @@
       margin: 7.9em 0em 2.5em 0em;
       border-radius: 0.4em;
       border: 0.1em solid var(--Check, #346ec5);
-      background: var(--Check, #346ec5);
+      background: var(--White, #fff);
 
-      label {
-        color: var(--White, #fff);
+      span {
+        color: var(--Check, #346ec5);
         text-align: right;
         font-family: Pretendard;
         font-size: 2em;
@@ -161,14 +158,10 @@
       &:hover {
         cursor: pointer;
       }
-      :hover {
-        cursor: pointer;
-      }
-      &:disabled {
-        background: var(--White, #fff);
-
-        label {
-          color: var(--Check, #346ec5);
+      &.isActive {
+        background: var(--Check, #346ec5);
+        span {
+          color: var(--White, #fff);
         }
       }
     }
@@ -198,13 +191,15 @@
   }
   .InputCategory {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 1.2em 1.3em;
     margin: 2em 0em;
     // height: 5.2em;
     border: 0.1em solid var(--Middle-Glay, #a0a0a0);
-    label {
+    input {
+      // position: absolute;
       font-family: Pretendard;
       font-size: 1.6em;
       font-style: normal;
@@ -279,7 +274,7 @@
 }
 
 .ContactFindUs {
-  .title label {
+  .title span {
     color: var(--Black, #000);
     text-align: center;
     font-family: Pretendard;
@@ -288,7 +283,7 @@
     font-weight: 600;
     line-height: 133.333%;
   }
-  .subTitle label {
+  .subTitle span {
     color: var(--Black, #000);
     text-align: center;
     font-family: Pretendard;
@@ -297,7 +292,7 @@
     font-weight: 600;
     line-height: 175%;
   }
-  .description label {
+  .description span {
     color: var(--Black, #000);
     text-align: center;
     font-family: Pretendard;

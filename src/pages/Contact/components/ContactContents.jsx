@@ -4,8 +4,6 @@ import ContactInquire from "./ContactInquire";
 import ContactFindUs from "./ContactFindUs";
 import ContactGoogleMap from "./ContactGoogleMap";
 
-import MapContainer from "./MapContainer";
-
 import images from "src/assets/images";
 
 const ContactContents = () => {
@@ -23,7 +21,7 @@ const ContactContents = () => {
               setIsButtonSelected(0);
             }}
           >
-            <label>문의사항</label>
+            <span>문의사항</span>
           </div>
           <div
             className={
@@ -33,7 +31,7 @@ const ContactContents = () => {
               setIsButtonSelected(1);
             }}
           >
-            <label>오시는 길</label>
+            <span>오시는 길</span>
           </div>
         </div>
         <div className="ContentsArticle">
@@ -41,7 +39,7 @@ const ContactContents = () => {
           {isButtonSelected === 1 && <ContactFindUs />}
         </div>
       </article>
-      {isButtonSelected === 1 && <MapContainer />}
+      {isButtonSelected === 1 && <ContactGoogleMap />}
     </>
   );
 };
