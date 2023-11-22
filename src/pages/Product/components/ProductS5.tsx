@@ -5,9 +5,10 @@ import useProductStore from '@store/zustand/productZustand';
 type Props = {
 	solutionList: Solution[];
 	onSolutionClick: (index: number) => void;
+	bannerName: string;
 };
 
-const ProductS5 = ({ solutionList, onSolutionClick }: Props) => {
+const ProductS5 = ({ solutionList, onSolutionClick, bannerName }: Props) => {
 	const { selectedSolution } = useProductStore();
 	return (
 		<div className='product-s5'>
@@ -36,7 +37,18 @@ const ProductS5 = ({ solutionList, onSolutionClick }: Props) => {
 					))}
 				</div>
 			</div>
-			<img className='product-s5-image' src={images.product5} />
+			<div
+				className={'product-s5-image'}
+				style={{
+					backgroundImage:
+						selectedSolution === 0
+							? `url('/assets/images/product5_2.png')`
+							: selectedSolution === 1
+							? `url('/assets/images/product5_3.png')`
+							: `url('/assets/images/product5_1.png')`,
+					transition: 'background-image 0.3s ease-in-out',
+				}}
+			/>
 		</div>
 	);
 };

@@ -2,16 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 import ProductS5 from '../components/ProductS5';
 import { Solution } from '@typedef/types';
 import useProductStore from '@store/zustand/productZustand';
+import images from 'src/assets/images';
 type Props = {};
 
 const ProductS5Container = (props: Props) => {
-	const {
-		selectedSolution,
-		setSelectedSolution,
-		toggle,
-		setToggle1,
-		setToggle2,
-	} = useProductStore();
+	const { selectedSolution, setSelectedSolution } = useProductStore();
 	const solutionList: Solution[] = [
 		{
 			index: 0,
@@ -39,6 +34,7 @@ const ProductS5Container = (props: Props) => {
 				'CadAI-Series는 뛰어난 성능과 편의성을 제공하여 업무의 부담을 덜어줄 수 있을 것입니다.',
 		},
 	];
+	const [bannerName, setBannerName] = useState('product-s5-image-0');
 	const onSolutionClick = useCallback(
 		(index: number) => {
 			setSelectedSolution(index);
@@ -48,14 +44,26 @@ const ProductS5Container = (props: Props) => {
 		[selectedSolution],
 	);
 	useEffect(() => {
-		console.log(toggle);
-		setToggle2();
-
 		return () => {};
 	}, []);
-	console.log(toggle);
+	useEffect(() => {
+		console.log(selectedSolution);
+		if (selectedSolution == 0) {
+			setBannerName('product-s5-image-1');
+		} else if (selectedSolution == 1) {
+			setBannerName('product-s5-image-2');
+		} else {
+			setBannerName('product-s5-image-0');
+		}
+		return () => {};
+	}, [selectedSolution]);
+
 	return (
-		<ProductS5 solutionList={solutionList} onSolutionClick={onSolutionClick} />
+		<ProductS5
+			solutionList={solutionList}
+			onSolutionClick={onSolutionClick}
+			bannerName={bannerName}
+		/>
 	);
 };
 
