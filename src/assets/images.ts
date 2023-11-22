@@ -40,7 +40,7 @@ const images = {
 	product2: '/assets/images/product2.png',
 	product3: '/assets/images/product3.png',
 	product4: '/assets/images/product4.png',
-	product5: '/assets/images/product5.png',
+	product5_1: '/assets/images/product5_1.png',
 	product6_1: '/assets/images/product6_1.png',
 	product6_2: '/assets/images/product6_2.png',
 	product7_1: '/assets/images/product7_1.png',
@@ -122,6 +122,8 @@ const images = {
 	required_mark: '/assets/images/required_mark.svg',
 	select_box_open: '/assets/images/select_box_open.svg',
 	footerLogoW: '/assets/images/footerLogoW.svg',
+	product5_2: '/assets/images/product5_2.png',
+	product5_3: '/assets/images/product5_3.png',
 };
 
 export default images;

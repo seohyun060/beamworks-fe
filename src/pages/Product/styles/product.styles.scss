@@ -298,6 +298,24 @@
 		}
 		&-image {
 			width: 30.625vw;
+			height: 43.125vw;
+			background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+			background-repeat: no-repeat;
+			justify-content: center;
+			align-items: center;
+			// transition: 0.3s ease-in-out;
+			// &-0 {
+			// 	content: url('/public/assets/images/product5_1.png');
+			// 	transition: 0.3s ease-in-out;
+			// }
+			// &-1 {
+			// 	content: url('/public/assets/images/product5_2.png');
+			// 	transition: 0.3s ease-in-out;
+			// }
+			// &-2 {
+			// 	content: url('/public/assets/images/product5_3.png');
+			// 	transition: 0.3s ease-in-out;
+			// }
 		}
 	}
 	&-s6 {
