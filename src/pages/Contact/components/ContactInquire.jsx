@@ -36,7 +36,7 @@ const ContactInquire = () => {
       .sendForm(
         // Outlook Email Serives
         "service_5y4y492",
-        // 
+        //
         "template_9zizcyu",
         document.getElementById("inquireForm"),
         process.env.REACT_APP_EMAILJS_PUBLICK_KEY
@@ -44,14 +44,15 @@ const ContactInquire = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("이메일 전송이 완료되었습니다.")
+          alert("이메일 전송이 완료되었습니다.");
         },
         (error) => {
           console.log(error.text);
-          alert("이메일 전송에 실패하였습니다.")
+          alert("이메일 전송에 실패하였습니다.");
         }
       );
     setIsLoading(false);
+    window.location.replace("/contact");
   };
 
   const inquireFormik = useFormik({
