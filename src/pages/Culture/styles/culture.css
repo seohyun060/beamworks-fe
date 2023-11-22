@@ -63,15 +63,15 @@
      object-fit: contain;
 }
 
-.CultureEnvironment .Environment .EnvironmentHead {
+.CultureWelfare .Welfare .WelfareHead {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.CultureEnvironment .Environment .EnvironmentHead .EnvironmentTitle {
+.CultureWelfare .Welfare .WelfareHead .WelfareTitle {
   margin-bottom: 2.4%;
 }
-.CultureEnvironment .Environment .EnvironmentHead .EnvironmentTitle label {
+.CultureWelfare .Welfare .WelfareHead .WelfareTitle label {
   color: var(--Middle-Glay, #a0a0a0);
   text-align: center;
   font-family: Pretendard;
@@ -80,10 +80,10 @@
   font-weight: 600;
   line-height: 100%;
 }
-.CultureEnvironment .Environment .EnvironmentHead .EnvironmentSubtitle {
+.CultureWelfare .Welfare .WelfareHead .WelfareSubtitle {
   margin-bottom: 2.4%;
 }
-.CultureEnvironment .Environment .EnvironmentHead .EnvironmentSubtitle label {
+.CultureWelfare .Welfare .WelfareHead .WelfareSubtitle label {
   color: var(--Black, #000);
   text-align: center;
   font-family: Pretendard;
@@ -92,12 +92,12 @@
   font-weight: 600;
   line-height: 80%;
 }
-.CultureEnvironment .Environment .EnvironmentHead .EnvironmentDescription {
+.CultureWelfare .Welfare .WelfareHead .WelfareDescription {
   margin-bottom: 10%;
   white-space: pre-wrap;
   text-align: center;
 }
-.CultureEnvironment .Environment .EnvironmentHead .EnvironmentDescription label {
+.CultureWelfare .Welfare .WelfareHead .WelfareDescription label {
   color: #000;
   text-align: center;
   font-family: Pretendard;
@@ -106,20 +106,20 @@
   font-weight: 400;
   line-height: 166.667%;
 }
-.CultureEnvironment .Environment .EnvironmentContents {
+.CultureWelfare .Welfare .WelfareContents {
   display: flex;
   width: 100%;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject {
+.CultureWelfare .Welfare .WelfareContents .WelfareSubject {
   flex-basis: 45%;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList {
+.CultureWelfare .Welfare .WelfareContents .WelfareSubject .SubjectList {
   padding-top: 5%;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject {
+.CultureWelfare .Welfare .WelfareContents .WelfareSubject .SubjectList .Subject {
   margin-bottom: 8%;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label {
+.CultureWelfare .Welfare .WelfareContents .WelfareSubject .SubjectList .Subject label {
   color: var(--Dark-Glay, #4d4f58);
   font-family: Pretendard;
   font-size: 2.4em;
@@ -128,22 +128,22 @@
   line-height: 166.667%;
   opacity: 0.3;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label.isActive {
+.CultureWelfare .Welfare .WelfareContents .WelfareSubject .SubjectList .Subject label.isActive {
   opacity: 1;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentSubject .SubjectList .Subject label:hover {
+.CultureWelfare .Welfare .WelfareContents .WelfareSubject .SubjectList .Subject label:hover {
   cursor: pointer;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentCarousel {
+.CultureWelfare .Welfare .WelfareContents .WelfareCarousel {
   flex-basis: 55%;
   height: 36vh;
   overflow: hidden;
   position: relative;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentCarousel .EnvironmentImage {
+.CultureWelfare .Welfare .WelfareContents .WelfareCarousel .WelfareImage {
   transition: transform 0.4s ease-in-out 0s;
 }
-.CultureEnvironment .Environment .EnvironmentContents .EnvironmentCarousel .EnvironmentImage img {
+.CultureWelfare .Welfare .WelfareContents .WelfareCarousel .WelfareImage img {
   width: 100%;
   height: 36vh;
   margin-bottom: 2vh;
@@ -151,41 +151,57 @@
      object-fit: cover;
 }
 
-.CultureOrganization .Organization {
-  display: flex;
-  flex-direction: column;
+.CultureEnvironment .Environment .EnvironmentTitle {
+  margin-bottom: 5em;
 }
-.CultureOrganization .Organization .OrganizationTitle {
-  margin-bottom: 2.4em;
-}
-.CultureOrganization .Organization .OrganizationTitle label {
-  color: var(--Black, #000);
+.CultureEnvironment .Environment .EnvironmentTitle label {
+  color: #000;
   font-family: Pretendard;
   font-size: 4em;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%;
+  line-height: 125%;
 }
-.CultureOrganization .OrganizationDescription {
-  width: 69em;
-  word-break: break-all;
+.CultureEnvironment .EnvironmentDescription {
+  flex-grow: 1;
 }
-.CultureOrganization .OrganizationDescription label {
-  color: #000;
+.CultureEnvironment .EnvironmentDescription .ImageSector {
+  height: 62.8em;
+}
+.CultureEnvironment .EnvironmentDescription .ImageSector img {
+  height: 100%;
+  width: 18em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 2.3em;
+  opacity: 0.3;
+  transition: 0.3s ease-in-out;
+}
+.CultureEnvironment .EnvironmentDescription .ImageSector img.isActive {
+  opacity: 1;
+  width: 79.2em;
+}
+.CultureEnvironment .EnvironmentDescription .ImageSector img:last-child {
+  margin-right: 0;
+}
+.CultureEnvironment .EnvironmentDescription .ImageSector img:hover {
+  cursor: pointer;
+}
+.CultureEnvironment .EnvironmentDescription .DescriptionSector {
+  margin-top: 2em;
+}
+.CultureEnvironment .EnvironmentDescription .DescriptionSector .Moving {
+  width: 79.2em;
+  transform: translateX(0);
+  transition: 0.3s ease-in-out;
+}
+.CultureEnvironment .EnvironmentDescription .DescriptionSector .Moving label {
+  color: var(--Dark-Glay, #4d4f58);
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;
   font-weight: 400;
-  line-height: 166.667%;
-}
-.CultureOrganization .OrganizationImage {
-  flex-grow: 1;
-}
-.CultureOrganization .OrganizationImage img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  line-height: 141.667%;
 }
 
 .CultureTeamsCarousel > img {
@@ -298,4 +314,41 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.CultureOrganization .Organization {
+  display: flex;
+  flex-direction: column;
+}
+.CultureOrganization .Organization .OrganizationTitle {
+  margin-bottom: 2.4em;
+}
+.CultureOrganization .Organization .OrganizationTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+.CultureOrganization .OrganizationDescription {
+  width: 69em;
+  word-break: break-all;
+}
+.CultureOrganization .OrganizationDescription label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+}
+.CultureOrganization .OrganizationImage {
+  flex-grow: 1;
+}
+.CultureOrganization .OrganizationImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=culture.css.map */

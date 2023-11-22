@@ -32,7 +32,6 @@ const CultureTeamsCarousel = () => {
   const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
   const carouselRef = useRef(0);
-  const [carouselMoving, setCarouselMoving] = useState(0);
 
   // Progress Bar
   const makeDotbar = (targetIndex) => {
@@ -100,6 +99,7 @@ const CultureTeamsCarousel = () => {
           <div className="Carousel" ref={carouselRef}>
             {TeamsData.data.map((data, index) => (
               <CultureTeams
+                key={index}
                 name={data.name}
                 projects={data.projects}
                 information={data.information}

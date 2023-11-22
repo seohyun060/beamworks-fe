@@ -1,62 +1,49 @@
 import React, { useState, useRef } from "react";
 
-import EnvironmentData from "../CultureEnvironment.json";
-
 import images from "src/assets/images";
 
 const CultureEnvironment = () => {
-  const environmentData = EnvironmentData.data;
+  const [isClicked, setIsClicked] = useState(0);
+  const descriptionRef = useRef(0);
 
-  const [isSubjectClicked, setIsSuvjectClicked] = useState(0);
-  const carouselImageRef = useRef();
-  const onSubjectClick = (index) => {
-    setIsSuvjectClicked(index);
-    carouselImageRef.current.style.transform = `translateY(
-        -${38 * index}vh
-    )`;
+  const onImageClick = (index) => {
+    setIsClicked(index);
+    descriptionRef.current.style.transform = `translateX(${
+      (18 + 2.3) * index
+    }em)`;
   };
 
   return (
     <section className="CultureEnvironment">
       <article className="Environment">
-        <div className="EnvironmentHead">
-          <div className="EnvironmentTitle">
-            <label>빔웍스의 업무환경</label>
-          </div>
-          <div className="EnvironmentSubtitle">
-            <label>직원들의 행복과 효율성을 최우선으로,</label>
-          </div>
-          <div className="EnvironmentDescription">
-            <label>
-              빔웍스의 업무환경은 직원들이 업무와 개인 생활을 균형있게 유지하며,
-              <br />
-              자신의 역량을 최대한 발휘할 수 있는 장소입니다.
-            </label>
-          </div>
+        <div className="EnvironmentTitle">
+          <label>업무환경</label>
         </div>
-        <div className="EnvironmentContents">
-          <div className="EnvironmentSubject">
-            <div className="SubjectList">
-              {environmentData.map((data, index) => (
-                <div className="Subject">
-                  <label
-                    className={index === isSubjectClicked ? "isActive" : ""}
-                    onClick={(e) => {
-                      onSubjectClick(index);
-                    }}
-                  >
-                    {data.subject}
-                  </label>
-                </div>
-              ))}
-            </div>
+        <div className="EnvironmentDescription">
+          <div className="ImageSector">
+            <img
+              src={images.culture_environment1}
+              className={isClicked === 0 ? "isActive" : undefined}
+              onClick={(e) => onImageClick(0)}
+            />
+            <img
+              src={images.culture_environment2}
+              className={isClicked === 1 ? "isActive" : undefined}
+              onClick={(e) => onImageClick(1)}
+            />
+            <img
+              src={images.culture_environment3}
+              className={isClicked === 2 ? "isActive" : undefined}
+              onClick={(e) => onImageClick(2)}
+            />
           </div>
-          <div className="EnvironmentCarousel">
-            <div className="EnvironmentImage" ref={carouselImageRef}>
-            {environmentData.map((data) => (
-                <img src={images[data.imageName]} />
-              ))}
-              
+          <div className="DescriptionSector">
+            <div className="Moving" ref={descriptionRef}>
+              <label>
+                빔웍스 회의실은 혁신과 협업을 촉진하며, 팀원들 간의 소통과
+                아이디어 공유를 용이하게 합니다. 업무 집중력을 향상시키고,
+                창의적인 문제 해결을 촉진합니다.
+              </label>
             </div>
           </div>
         </div>

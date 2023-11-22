@@ -9,8 +9,8 @@ const IntroduceMissionDetail = (props) => {
     <div className={target ? "MissionDetail isActive" : "MissionDetail"}>
       <div className="Contents">
         <div className="ProgressDotbar">
-          {progressDotSet.map((data) => (
-            <img src={data} />
+          {progressDotSet.map((data, index) => (
+            <img key={index} src={data} />
           ))}
         </div>
         <div className="MissionDetailTitle">

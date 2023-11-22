@@ -51,14 +51,6 @@ const RecruitmentJob = () => {
     carouselRef.current.style.transition = "transform 0.5s ease-in-out";
   }, []);
 
-  useEffect(() => {
-    // 윈도우 크기 변할 시 반응형
-    window.addEventListener("resize", function () {
-      carouselRef.current.style.transition = "";
-    });
-    carouselRef.current.style.transition = "transform 0.5s ease-in-out";
-  });
-
   return (
     <section className="RecruitmentJob">
       <img src={images.carousel_back} onClick={(e) => carouselMoveBackward()} />
@@ -74,6 +66,7 @@ const RecruitmentJob = () => {
           <div className="Carousel" ref={carouselRef}>
             {RecruitmentJobs.data.map((data, index) => (
               <RecruitmentJobCard
+                key={index}
                 jobName={data.jobName}
                 imageName={data.imageName}
                 isVisible={

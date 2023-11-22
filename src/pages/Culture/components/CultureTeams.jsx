@@ -10,8 +10,8 @@ const CultureTeams = (props) => {
   return (
     <div className={target ? "CultureTeams active" : "CultureTeams"}>
       <div className="ProgressBar">
-        {progressDotSet.map((data) => (
-          <img src={data} />
+        {progressDotSet.map((data, index) => (
+          <img key={index} src={data} />
         ))}
       </div>
       <div className="Teams">

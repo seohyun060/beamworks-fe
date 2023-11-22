@@ -77,6 +77,7 @@ const IntroduceMissionCarousel = () => {
         <div className="Carousel" ref={carouselRef}>
           {MissionData.data.map((data, index) => (
             <IntroduceMissionDetail
+              key={index}
               title={data.title}
               content={data.content}
               imageName={data.imageName}

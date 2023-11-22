@@ -71,13 +71,13 @@
   }
 }
 
-.CultureEnvironment {
-  .Environment {
-    .EnvironmentHead {
+.CultureWelfare {
+  .Welfare {
+    .WelfareHead {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .EnvironmentTitle {
+      .WelfareTitle {
         margin-bottom: 2.4%;
         label {
           color: var(--Middle-Glay, #a0a0a0);
@@ -89,7 +89,7 @@
           line-height: 100%;
         }
       }
-      .EnvironmentSubtitle {
+      .WelfareSubtitle {
         margin-bottom: 2.4%;
         label {
           color: var(--Black, #000);
@@ -101,7 +101,7 @@
           line-height: 80%;
         }
       }
-      .EnvironmentDescription {
+      .WelfareDescription {
         margin-bottom: 10%;
         white-space: pre-wrap;
         text-align: center;
@@ -116,10 +116,10 @@
         }
       }
     }
-    .EnvironmentContents {
+    .WelfareContents {
       display: flex;
       width: 100%;
-      .EnvironmentSubject {
+      .WelfareSubject {
         flex-basis: 45%;
         .SubjectList {
           padding-top: 5%;
@@ -143,12 +143,12 @@
           }
         }
       }
-      .EnvironmentCarousel {
+      .WelfareCarousel {
         flex-basis: 55%;
         height: 36vh;
         overflow: hidden;
         position: relative;
-        .EnvironmentImage {
+        .WelfareImage {
           transition: transform 0.4s ease-in-out 0s;
           img {
             width: 100%;
@@ -162,46 +162,60 @@
   }
 }
 
-.CultureOrganization {
-  .Organization {
-    display: flex;
-    flex-direction: column;
-    .OrganizationTitle {
-      margin-bottom: 2.4em;
+.CultureEnvironment {
+  .Environment {
+    .EnvironmentTitle {
+      margin-bottom: 5em;
       label {
-        color: var(--Black, #000);
+        color: #000;
         font-family: Pretendard;
         font-size: 4em;
         font-style: normal;
         font-weight: 600;
-        line-height: 100%;
+        line-height: 125%;
       }
     }
   }
-  .OrganizationDescription {
-    width: 69em;
-    word-break: break-all;
-    label {
-      color: #000;
-      font-family: Pretendard;
-      font-size: 2.4em;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 166.667%;
-    }
-  }
-  .OrganizationImage {
+  .EnvironmentDescription {
     flex-grow: 1;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .ImageSector {
+      height: 62.8em;
+      img {
+        height: 100%;
+        width: 18em;
+        object-fit: cover;
+        margin-right: 2.3em;
+        opacity: 0.3;
+        transition: 0.3s ease-in-out;
+        &.isActive {
+          opacity: 1;
+          width: 79.2em;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .DescriptionSector {
+      margin-top: 2em;
+      .Moving {
+        width: 79.2em;
+        transform: translateX(0);
+        transition: 0.3s ease-in-out;
+        label {
+          color: var(--Dark-Glay, #4d4f58);
+          font-family: Pretendard;
+          font-size: 2.4em;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 141.667%;
+        }
+      }
     }
   }
-}
-
-.progressBar {
 }
 
 // 미션 상세 캐러셀
@@ -319,6 +333,46 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+  }
+}
+
+// 사용 X
+.CultureOrganization {
+  .Organization {
+    display: flex;
+    flex-direction: column;
+    .OrganizationTitle {
+      margin-bottom: 2.4em;
+      label {
+        color: var(--Black, #000);
+        font-family: Pretendard;
+        font-size: 4em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+      }
+    }
+  }
+  .OrganizationDescription {
+    width: 69em;
+    word-break: break-all;
+    label {
+      color: #000;
+      font-family: Pretendard;
+      font-size: 2.4em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 166.667%;
+    }
+  }
+  .OrganizationImage {
+    flex-grow: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }

@@ -12,14 +12,6 @@ const RecruitmentJobCard = (props) => {
     cardRef.current.style.transition = "transform 0.5s ease-in-out";
   }, []);
 
-  useEffect(() => {
-    // 윈도우 크기 변할 시 반응형
-    window.addEventListener("resize", function () {
-      cardRef.current.style.transition = "";
-    });
-    cardRef.current.style.transition = "0.5s ease-in-out";
-  });
-
   return (
     <div
       className={
