@@ -171,6 +171,7 @@
 .FormSpace {
   margin-bottom: 2em;
   .FormName {
+    display: flex;
     position: relative;
     label {
       color: #000;
@@ -179,16 +180,26 @@
       font-style: normal;
       font-weight: 600;
       line-height: 133.333%;
-      margin-top: 0.3em;
     }
     img {
       width: 0.8em;
       height: 0.8em;
       margin-left: 0.2em;
-      position: absolute;
-      top: 0px;
+    }
+    div {
+      margin-left: 1em;
+
+      label {
+        color: #9c1111;
+        font-family: Pretendard;
+        font-size: 1.6em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%;
+      }
     }
   }
+
   .InputCategory {
     display: flex;
     position: relative;
@@ -231,7 +242,7 @@
       border-width: 0em 0.1em 0.1em 0.1em;
       border-color: var(--Middle-Glay, #a0a0a0);
       border-style: solid;
-      label {
+      span {
         font-family: Pretendard;
         font-size: 1.6em;
         font-style: normal;
@@ -330,4 +341,10 @@
       margin-bottom: 0.4em;
     }
   }
+}
+
+.LoadingMansYou {
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 100;
 }
