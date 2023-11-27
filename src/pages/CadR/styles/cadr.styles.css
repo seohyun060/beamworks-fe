@@ -1,0 +1,368 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.cadr {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-size: 0.52083333vw;
+}
+.cadr * {
+  word-break: keep-all;
+}
+.cadr-s1 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/public/assets/images/cadr1.png");
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+  position: relative;
+  align-items: center;
+}
+.cadr-s1-button {
+  position: fixed;
+  top: 8.89vh;
+  right: 10.41vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 10;
+  display: inline-flex;
+  padding: 0.104vw 1.56vw;
+  justify-content: center;
+  align-items: center;
+  gap: 0.52vw;
+  border-radius: 0.208vw;
+  border: 1px solid var(--Check, #346ec5);
+  background: var(--Check, #346ec5);
+  color: var(--White, #fff);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4; /* 140% */
+}
+.cadr-s1-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16.48vh;
+}
+.cadr-s1-text .s1-header {
+  width: 22.81vw;
+  margin-bottom: 1.09vw;
+}
+.cadr-s1-text .s1-body {
+  color: black;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadr-s2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+.cadr-s2-tablet {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 44vw;
+}
+.cadr-s2-text {
+  width: 24.48vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24.06vw;
+  margin-top: 21.66vh;
+}
+.cadr-s2-text .s2-demo {
+  color: var(--Dark-Glay, #4d4f58);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+  margin-bottom: 0.52vw;
+}
+.cadr-s2-text .s2-header {
+  color: var(--Black, #000);
+  /* 주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+  margin-bottom: 5.5vw;
+}
+.cadr-s2-text .s2-body {
+  width: 20vw;
+  color: #000;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.41;
+  opacity: 0.3; /* 141.667% */
+}
+.cadr-s2-desktop {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48.28vw;
+}
+.cadr-s3 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+.cadr-s3-image {
+  margin-top: 3.51vh;
+  margin-left: 5.93vw;
+  position: relative;
+  width: 53.33vw;
+  height: 46.875vw;
+}
+.cadr-s3-image .s3-scroll {
+  position: absolute;
+  color: var(--Dark-Glay, #4d4f58);
+  top: -2.135vw;
+  left: 17vw;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadr-s3-image .s3-frame {
+  width: 100%;
+  position: absolute;
+}
+.cadr-s3-image .s3-mac {
+  width: 53.33vw;
+  height: 29.2709vw;
+  position: relative;
+  margin-top: 2.1vw;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cadr-s3-image .s3-mac-screen {
+  width: 98%;
+  z-index: 10;
+}
+.cadr-s3-image .s3-phone {
+  bottom: 0vw;
+  right: 2.98vw;
+  position: absolute;
+  width: 13.8vw;
+  z-index: 20;
+}
+.cadr-s3-image:hover .cadr-s3 {
+  overflow-y: auto;
+}
+.cadr-s3-text {
+  width: 20.9vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.98vw;
+  margin-top: 11vh;
+}
+.cadr-s3-text .s3-demo {
+  color: var(--Dark-Glay, #4d4f58);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+  margin-bottom: 0.52vw;
+}
+.cadr-s3-text .s3-header {
+  color: var(--Black, #000);
+  /* 주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+  margin-bottom: 2.1vw;
+}
+.cadr-s3-text .s3-logo {
+  width: 21.875vw;
+  margin-bottom: 5.2vw;
+}
+.cadr-s3-text .s3-body {
+  color: #000;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.41;
+  opacity: 0.3; /* 141.667% */
+}
+.cadr-s4 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+}
+.cadr-s4-image {
+  width: 41.66vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10.41vw;
+  position: relative;
+  margin-bottom: 14vh;
+}
+.cadr-s4-image .s4-tab {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 4.16vw;
+  margin-bottom: 6.4vw;
+  margin-left: 7.7vw;
+}
+.cadr-s4-image .s4-tab-item, .cadr-s4-image .s4-tab-item-active {
+  color: #fff;
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+  opacity: 0.3;
+}
+.cadr-s4-image .s4-tab-item-active {
+  opacity: 1;
+}
+.cadr-s4-image .s4-tablet {
+  border-radius: 2.7em;
+  border: 1em solid black;
+}
+.cadr-s4-image .s4-mobile {
+  width: 8.6vw;
+  position: absolute;
+  top: 17vw;
+  right: -5.5vw;
+  border-radius: 1.3em;
+  border: 0.4em solid black;
+  background-color: black;
+}
+.cadr-s4-text {
+  width: 26.1vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7.91vw;
+}
+.cadr-s4-text .s4-series {
+  color: var(--White, #fff);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadr-s4-text .s4-header {
+  color: var(--White, #fff);
+  /* 주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+  margin-bottom: 10.2vw;
+}
+.cadr-s4-text .s4-body {
+  color: var(--White, #fff);
+  width: 20vw;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.cadr-s5 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/public/assets/images/cadr5.png");
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+  position: relative;
+  padding-left: 18.75vw;
+}
+.cadr-s5-header {
+  margin-top: 38.14vh;
+  margin-bottom: 1.25vw;
+  color: var(--Black, #000);
+  /* 보조헤드 */
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25; /* 125% */
+}
+.cadr-s5-body {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  width: 30.42vw;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.66; /* 166.667% */
+}/*# sourceMappingURL=cadr.styles.css.map */

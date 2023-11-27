@@ -33,8 +33,19 @@ const Footer = ({ type }: Props) => {
 					않을 것입니다.
 				</div>
 				<div className='footer-news-input'>
-					<input></input>
-					<div className='footer-news-input-button'>
+					<input
+						style={{
+							backgroundColor: type === 'black' ? '#000' : '#fff',
+							color: type === 'black' ? '#fff' : '#000',
+							borderColor: type === 'black' ? '#fff' : '#4d4f58',
+						}}
+					></input>
+					<div
+						className='footer-news-input-button'
+						style={{
+							backgroundColor: type === 'black' ? '#A0A0A0' : '#4D4F58',
+						}}
+					>
 						<span>구독</span>
 						<img src={images.rightW} />
 					</div>

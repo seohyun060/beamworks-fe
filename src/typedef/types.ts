@@ -55,3 +55,12 @@ export type NavContext = {
 		path: string;
 	}[];
 };
+
+export type CadrContent = {
+	type: string;
+	header: string;
+	body: string;
+	img1: string;
+	img2: string;
+	backImg: string;
+};

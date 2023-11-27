@@ -124,6 +124,22 @@ const images = {
 	footerLogoW: '/assets/images/footerLogoW.svg',
 	product5_2: '/assets/images/product5_2.png',
 	product5_3: '/assets/images/product5_3.png',
+	cadr1: '/assets/images/cadr1.png',
+	cadrLogo_b: '/assets/images/cadrLogo-b.png',
+	cadrMac: '/assets/images/cadrMac.png',
+	cadrPhone: '/assets/images/cadrPhone.png',
+	cadr2_1: '/assets/images/cadr2_1.png',
+	cadr2_2: '/assets/images/cadr2_2.png',
+	cadr_mac: '/assets/images/cadr_mac.png',
+	cadr_macscr: '/assets/images/cadr_macscr.png',
+	cadr_cm1: '/assets/images/cadr_cm1.png',
+	cadr_cm2: '/assets/images/cadr_cm2.png',
+	cadr_ct1: '/assets/images/cadr_ct1.png',
+	cadr_ct2: '/assets/images/cadr_ct2.png',
+	cadr_rp: '/assets/images/cadr_rp.png',
+	cadr_cmb: '/assets/images/cadr_cmb.png',
+	cadr_ctb: '/assets/images/cadr_ctb.png',
+	cadr_rpb: '/assets/images/cadr_rpb.png',
 };
 
 export default images;
