@@ -29,6 +29,9 @@ const CadBS3 = ({
 					onClick={onPrevClick}
 				/>
 				<div className='s3-frame'>
+					<div className='s3-frame-scroll'>
+						마우스를 화면 위로 올려 스크롤 해보세요.
+					</div>
 					<div
 						className='s3-frame-mode'
 						style={{

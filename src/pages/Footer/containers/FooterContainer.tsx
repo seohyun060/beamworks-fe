@@ -8,7 +8,7 @@ const FooterContainer = (props: Props) => {
 	console.log(location.pathname);
 	const [type, setType] = useState('');
 	useEffect(() => {
-		if (location.pathname === '/cadb') {
+		if (location.pathname === '/cadb' || location.pathname === '/cadr') {
 			setType('black');
 		} else {
 			setType('');
