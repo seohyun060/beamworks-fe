@@ -8,13 +8,14 @@ const ProductS7 = (props: Props) => {
 			<div className='product-s7-text'>
 				<img src={images.calogo_b} className='s7-header' />
 				<div className='s7-descript'>
-					갑상선 초음파 검사를 위한 솔루션으로, 갑상선 영역에서 병변을 탐지하고
-					그 위치를 실시간으로 식별합니다. 또한, 갑상선 관련 카테고리와 용어
-					정보를 제공하여 의사와 환자에게 소중한 도움을 제공합니다.
+					CadAI R&C는 CadAI를 사용하는 인증된 의사들만 가입할 수 있는
+					커뮤니티로, CadAI로 진료한 환자의 초음파를 어디에서나 확인 할 수 있는
+					플랫폼을 제공합니다. 의사들뿐만 아니라 다양한 의료 정보와 학회 정보
+					등도 제공되어 의료 전문가들에게 유용한 정보의 공유와 소통의 장을
+					제공합니다.
 				</div>
 			</div>
 			<div className='product-s7-image'>
-				<img className='s7-phone' src={images.product7_2} />
 				<img className='s7-com' src={images.product7_1} />
 			</div>
 		</div>

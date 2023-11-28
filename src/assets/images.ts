@@ -140,6 +140,12 @@ const images = {
 	cadr_cmb: '/assets/images/cadr_cmb.png',
 	cadr_ctb: '/assets/images/cadr_ctb.png',
 	cadr_rpb: '/assets/images/cadr_rpb.png',
+	cadr6_1b: '/assets/images/cadr6_1b.png',
+	cadr6_2b: '/assets/images/cadr6_2b.png',
+	cadr6_3b: '/assets/images/cadr6_3b.png',
+	cadr6_1c: '/assets/images/cadr6_1c.png',
+	cadr6_2c: '/assets/images/cadr6_2c.png',
+	cadr6_3c: '/assets/images/cadr6_3c.png',
 };
 
 export default images;

@@ -48,6 +48,9 @@ const CadRS4 = ({ content }: Props) => {
 			<div className='cadr-s4-text'>
 				<div className='s4-series'>CadAI-Series+</div>
 				<div className='s4-header'>{content.header}</div>
+				<div className={content.type === 'rp' ? 's4-nomo-active' : 's4-nomo'}>
+					모바일은 제공하지 않습니다.
+				</div>
 				<div className='s4-body'>{content.body}</div>
 			</div>
 		</div>
