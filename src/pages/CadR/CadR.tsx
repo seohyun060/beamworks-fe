@@ -8,6 +8,7 @@ import CadRS2Container from './containers/CadRS2Container';
 import CadRS4Container from './containers/CadRS4Container';
 import useCadrStore from '@store/zustand/cadrZustand';
 import CadRS5Container from './containers/CadRS5Container';
+import CadRS6Container from './containers/CadRS6Container';
 type Props = {};
 
 const CadR = (props: Props) => {
@@ -21,6 +22,7 @@ const CadR = (props: Props) => {
 			<CadRS4Container content={contents} />
 			<CadRS4Container content={report} />
 			<CadRS5Container />
+			<CadRS6Container />
 			<FooterContainer />
 		</div>
 	);

@@ -436,13 +436,13 @@
 			display: flex;
 			flex-direction: column;
 			margin-left: 18.7vw;
-			margin-bottom: 43.79vh;
+			margin-bottom: 33.79vh;
 			.s7-header {
 				width: 26.66vw;
 			}
 			.s7-descript {
-				width: 22vw;
-				margin-top: 4.74vw;
+				width: 25.37vw;
+				margin-top: 2.55vw;
 				color: #000;
 
 				/* 본문 */
@@ -454,16 +454,10 @@
 			}
 		}
 		&-image {
-			position: relative;
+			position: absolute;
 			width: 46.19vw;
-			margin-left: 1.25vw;
-			margin-bottom: 8.99vh;
-			.s7-phone {
-				position: absolute;
-				width: 10.78vw;
-				bottom: 1.354vw;
-				left: -3.125vw;
-			}
+			right: 8.23vw;
+
 			.s7-com {
 				width: 100%;
 			}

@@ -389,14 +389,14 @@
   display: flex;
   flex-direction: column;
   margin-left: 18.7vw;
-  margin-bottom: 43.79vh;
+  margin-bottom: 33.79vh;
 }
 .product-s7-text .s7-header {
   width: 26.66vw;
 }
 .product-s7-text .s7-descript {
-  width: 22vw;
-  margin-top: 4.74vw;
+  width: 25.37vw;
+  margin-top: 2.55vw;
   color: #000;
   /* 본문 */
   font-family: Pretendard;
@@ -406,16 +406,9 @@
   line-height: 1.4166; /* 141.667% */
 }
 .product-s7-image {
-  position: relative;
-  width: 46.19vw;
-  margin-left: 1.25vw;
-  margin-bottom: 8.99vh;
-}
-.product-s7-image .s7-phone {
   position: absolute;
-  width: 10.78vw;
-  bottom: 1.354vw;
-  left: -3.125vw;
+  width: 46.19vw;
+  right: 8.23vw;
 }
 .product-s7-image .s7-com {
   width: 100%;
