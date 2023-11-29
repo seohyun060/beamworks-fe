@@ -1,0 +1,107 @@
+::-webkit-scrollbar {
+	width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.eeasy {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	font-size: 0.52083333vw;
+
+	& * {
+		word-break: keep-all;
+	}
+	&-s1 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: column;
+		background-image: url('/public/assets/images/eeasy1.png');
+		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+		background-repeat: no-repeat;
+		position: relative;
+		// justify-content: center;
+		align-items: center;
+		&-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 16.48vh;
+			.s1-header {
+				width: 22.81vw;
+				margin-bottom: 1.09vw;
+			}
+			.s1-body {
+				color: white;
+				text-align: center;
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+			}
+		}
+	}
+	&-s2 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: column;
+		background-image: url('/public/assets/images/eeasy2.png');
+		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+		background-repeat: no-repeat;
+		position: relative;
+		padding-left: 55.9375vw;
+		// justify-content: center;
+		//align-items: center;
+		&-easy {
+			margin-top: 50vh;
+			color: var(--Dark-Glay, #4d4f58);
+
+			/* 본문 */
+			font-family: Pretendard;
+			font-size: 2.4em;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.416; /* 141.667% */
+			margin-bottom: 1.25vw;
+		}
+		&-header {
+			margin-bottom: 1.25vw;
+			color: var(--Black, #000);
+			width: 12.5vw;
+			/* 주 헤드 */
+			font-family: Pretendard;
+			font-size: 5em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1.24; /* 124% */
+		}
+		&-body {
+			color: var(--Dark-Glay, #4d4f58);
+
+			/* 본문 */
+			font-family: Pretendard;
+			font-size: 2.4em;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.416; /* 141.667% */
+		}
+	}
+}

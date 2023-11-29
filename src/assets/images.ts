@@ -146,6 +146,7 @@ const images = {
 	cadr6_1c: '/assets/images/cadr6_1c.png',
 	cadr6_2c: '/assets/images/cadr6_2c.png',
 	cadr6_3c: '/assets/images/cadr6_3c.png',
+	eeasyLogo: '/assets/images/eeasyLogo.png',
 };
 
 export default images;

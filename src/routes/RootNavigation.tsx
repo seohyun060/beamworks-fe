@@ -17,6 +17,7 @@ import {
 	Routes,
 } from 'react-router-dom';
 import './styles/rootnavigation.style.css';
+import EeasyContainer from 'src/pages/Eeasy/containers/EeasyContainer';
 
 const RootNavigation = () => {
 	const location = useLocation();
@@ -34,6 +35,7 @@ const RootNavigation = () => {
 				<Route path='/cadb' element={<CadBContainer />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/cadr' element={<CadRContainer />} />
+				<Route path='/eeasy' element={<EeasyContainer />} />
 			</Routes>
 		</>
 	);

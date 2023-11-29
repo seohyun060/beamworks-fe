@@ -5,10 +5,10 @@ import useProductStore from '@store/zustand/productZustand';
 type Props = {
 	solutionList: Solution[];
 	onSolutionClick: (index: number) => void;
-	bannerName: string;
+	//bannerName: string;
 };
 
-const ProductS5 = ({ solutionList, onSolutionClick, bannerName }: Props) => {
+const ProductS5 = ({ solutionList, onSolutionClick }: Props) => {
 	const { selectedSolution } = useProductStore();
 	return (
 		<div className='product-s5'>

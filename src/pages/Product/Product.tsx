@@ -13,14 +13,14 @@ import useProductStore from '@store/zustand/productZustand';
 type Props = {};
 
 const Product = (props: Props) => {
-	const { cadsExplore } = useProductStore();
+	const { cadsExplore, cadaiSolution } = useProductStore();
 	return (
 		<div className='product'>
 			<ProductS1Container />
 			<ProductS2Container />
 			<ProductS3Container />
 			<ProductS4Container />
-			<ProductS5Container />
+			<ProductS5Container solution={cadaiSolution} />
 			<ProductS6Container />
 			<ProductS7Container />
 			<ProductS8Container exploreType={cadsExplore} />
