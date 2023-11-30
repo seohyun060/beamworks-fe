@@ -64,3 +64,9 @@ export type CadrContent = {
 	img2: string;
 	backImg: string;
 };
+
+export type SolutionContent = {
+	title: string;
+	solutionList: Solution[];
+	bannerList: string[];
+};

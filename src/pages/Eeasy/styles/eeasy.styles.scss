@@ -104,4 +104,320 @@
 			line-height: 1.416; /* 141.667% */
 		}
 	}
+	&-s3 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: row;
+		//justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		background: linear-gradient(to bottom right, #242b59 0%, #000 50%) bottom
+				right / 50.1% 50.1% no-repeat,
+			linear-gradient(to bottom left, #242b59 0%, #000 50%) bottom left / 50.1%
+				50.1% no-repeat,
+			linear-gradient(to top left, #242b59 0%, #000 50%) top left / 50.1% 50.1%
+				no-repeat,
+			linear-gradient(to top right, #242b59 0%, #000 50%) top right / 50.1%
+				50.1% no-repeat;
+		&-search {
+			margin-top: 22.5vh;
+			margin-left: 12.1875vw;
+			width: 25.47vw;
+			height: fit-content;
+			padding-right: 0.83vw;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			.s3-sbox {
+				width: 22.44vw;
+				margin-bottom: 1.04vw;
+			}
+			.s3-header {
+				margin-bottom: 0.625vw;
+				color: var(--White-idle, #fff);
+				text-align: right;
+
+				/* 카테고리 */
+				font-family: Pretendard;
+				font-size: 3em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.33; /* 133.333% */
+			}
+			.s3-body {
+				color: var(--White-Hover, #ddd);
+				text-align: right;
+
+				/* 본문 */
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+			}
+			.s3-cbox {
+				width: 8.49vw;
+				margin-top: 6.35vw;
+				margin-bottom: 1.04vw;
+			}
+			// .s3-cheader {
+			// 	@extend .s3-sheader;
+			// 	margin-top: 0.625vw;
+			// }
+			// .s3-cbody {
+			// 	@extend .s3-sbody;
+			// }
+		}
+		&-mobile {
+			width: 29.90625vw;
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 14.1vh;
+			overflow: hidden;
+			.s3-logo {
+				width: 11.66vw;
+				margin-bottom: 1.55vw;
+			}
+			.s3-mini {
+				width: 8.75vw;
+			}
+			.s3-mobile {
+				width: 29.90625vw;
+			}
+		}
+		&-medical {
+			display: flex;
+			flex-direction: column;
+			//align-items: flex-start;
+			width: 22.5vw;
+			margin-top: 31.76vh;
+			.s3-mbox {
+				width: 100%;
+			}
+			.s3-header {
+				margin-bottom: 0.625vw;
+				color: var(--White-idle, #fff);
+
+				/* 카테고리 */
+				font-family: Pretendard;
+				font-size: 3em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.33; /* 133.333% */
+			}
+			.s3-body {
+				color: var(--White-Hover, #ddd);
+
+				/* 본문 */
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+			}
+		}
+	}
+	&-s4 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-image: url('/public/assets/images/eeasy4b.png');
+		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+		background-repeat: no-repeat;
+		position: relative;
+		overflow: hidden;
+		// justify-content: center;
+		//align-items: center;
+		&-lt {
+			width: 25.99vw;
+			display: flex;
+			flex-direction: column;
+			margin-left: 8.7vw;
+			margin-top: 53.33vh;
+			.s4-header {
+				margin-bottom: 0.625vw;
+				color: var(--White-idle, #fff);
+				text-align: right;
+				/* 카테고리 */
+				font-family: Pretendard;
+				font-size: 3em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.33; /* 133.333% */
+			}
+			.s4-body {
+				color: var(--White-Hover, #ddd);
+				text-align: right;
+				/* 본문 */
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+			}
+		}
+		&-img {
+			width: 28.9vw;
+			margin-top: 25.37vh;
+		}
+		&-rt {
+			width: 17.14vw;
+			display: flex;
+			flex-direction: column;
+			margin-left: 1.77vw;
+			margin-bottom: 27.1vh;
+			.s4-body {
+				margin-bottom: 0.83vw;
+				color: var(--White-Hover, #ddd);
+				text-align: right;
+				/* 본문 */
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+			}
+			.s4-neuron {
+				width: 6.82vw;
+			}
+		}
+	}
+	&-s5 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		position: relative;
+		&-img {
+			width: 23vw;
+			margin-left: 26.77vw;
+			margin-top: 5vh;
+		}
+		&-text {
+			display: flex;
+			flex-direction: column;
+			margin-left: 1.14vw;
+			margin-top: 4.6vh;
+			.s5-header {
+				margin-left: 3.75vw;
+				margin-bottom: 0.625vw;
+				color: var(--Dark-Glay, #4d4f58);
+
+				/* 카테고리 */
+				font-family: Pretendard;
+				font-size: 3em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.33; /* 133.333% */
+			}
+			.s5-body {
+				width: 20.05vw;
+				margin-left: 3.75vw;
+				margin-bottom: 4vw;
+				color: var(--Dark-Glay, #4d4f58);
+
+				/* 본문 */
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+			}
+			.s5-pain {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				&-left {
+					width: 2.7vw;
+				}
+				&-face {
+					width: 20.46vw;
+					margin-left: 1.04vw;
+					margin-right: 1.04vw;
+				}
+			}
+		}
+	}
+	&-s6 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		position: relative;
+		&-mobile {
+			width: 23vw;
+			margin-left: 26.77vw;
+			margin-top: 5vh;
+		}
+		&-text {
+			display: flex;
+			flex-direction: column;
+			width: 22vw;
+			margin-left: 4.85vw;
+			.s6-header {
+				margin-bottom: 0.625vw;
+				color: var(--Dark-Glay, #4d4f58);
+
+				/* 카테고리 */
+				font-family: Pretendard;
+				font-size: 3em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.33; /* 133.333% */
+			}
+			.s6-body {
+				color: var(--Middle-Glay-Hover, #8e8e8e);
+
+				/* 본문 */
+				font-family: Pretendard;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.416; /* 141.667% */
+				span {
+					color: var(--Dark-Glay, #4d4f58);
+					font-weight: 600;
+				}
+			}
+			.s6-play {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5625vw;
+				width: 10.625vw;
+				margin-top: 2.5vw;
+				&-box {
+					border-radius: 18px;
+
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.play-content {
+						height: 1.25vw;
+					}
+					&-active {
+						@extend .s6-play-box;
+						background: var(--White-Hover, #ddd);
+					}
+				}
+			}
+		}
+	}
 }
