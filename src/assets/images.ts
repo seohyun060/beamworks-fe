@@ -147,6 +147,8 @@ const images = {
 	cadr6_2c: '/assets/images/cadr6_2c.png',
 	cadr6_3c: '/assets/images/cadr6_3c.png',
 	eeasyLogo: '/assets/images/eeasyLogo.png',
+	ORCA_logo: '/assets/images/ORCA_logo.svg',
+	world_map: '/assets/images/world_map.svg',
 };
 
 export default images;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import IntroduceAbout from "./components/IntroduceAbout";
 import IntroduceSlogun from "./components/IntroduceSlogun";
@@ -11,9 +11,26 @@ import Footer from "src/pages/Footer/Footer";
 import images from "src/assets/images";
 
 const Introduce = () => {
+  const scrollContainerRef = useRef(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Access the current scroll position using scrollContainerRef
+      const scrollPosition = scrollContainerRef.current.scrollTop;
+      console.log('Current Scroll Position:', scrollPosition);
+    };
+
+    // Attach the scroll event listener to the scroll container
+    scrollContainerRef.current.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      // scrollContainerRef.current.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="Introduce">
+    <div className="Introduce" ref={scrollContainerRef}>
       {/* 슬로건 섹션 */}
       <IntroduceSlogun />
       {/* 인사말 섹션 */}

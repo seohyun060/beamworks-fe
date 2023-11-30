@@ -9,6 +9,8 @@ import Recruitment from 'src/pages/Recruitment/Recruitment';
 import CadBContainer from 'src/pages/CadB/containers/CadBContainer';
 import Contact from 'src/pages/Contact/Contact';
 import CadRContainer from 'src/pages/CadR/containers/CadRContainer';
+import Orca from 'src/pages/Orca/Orca'
+
 import React, { useEffect, useState } from 'react';
 import {
 	BrowserRouter as Router,
@@ -36,6 +38,7 @@ const RootNavigation = () => {
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/cadr' element={<CadRContainer />} />
 				<Route path='/eeasy' element={<EeasyContainer />} />
+				<Route path='/orca' element={<Orca />} />
 			</Routes>
 		</>
 	);

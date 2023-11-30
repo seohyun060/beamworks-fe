@@ -16,14 +16,8 @@ const ContactInquire = () => {
     "Minsu",
     "None",
   ];
-  // const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [affiliation, setAffiliation] = useState("");
-  const [inquireTitle, setInquireTitle] = useState("");
-  const [inquireContents, setInquireContents] = useState("");
 
+  // 추후 메일을 보내기 위한 로딩과정에서 사용, 전역관리?
   const [isLoading, setIsLoading] = useState(false);
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
