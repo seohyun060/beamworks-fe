@@ -1,23 +1,23 @@
 import React from 'react';
 import images from 'src/assets/images';
-import { Solution } from '@typedef/types';
+import { Solution, SolutionContent } from '@typedef/types';
 import useProductStore from '@store/zustand/productZustand';
 type Props = {
-	solutionList: Solution[];
+	solution: SolutionContent;
 	onSolutionClick: (index: number) => void;
 	//bannerName: string;
 };
 
-const ProductS5 = ({ solutionList, onSolutionClick }: Props) => {
+const ProductS5 = ({ solution, onSolutionClick }: Props) => {
 	const { selectedSolution } = useProductStore();
 	return (
 		<div className='product-s5'>
 			<div className='product-s5-text'>
-				<div className='product-s5-text-cadai'>CadAI-Series</div>
+				<div className='product-s5-text-cadai'>{solution.title}</div>
 				<div className='product-s5-text-header'>기존 문제의 해결</div>
 				<div className='product-s5-text-divider' />
 				<div className='product-s5-text-body'>
-					{solutionList.map((solution, index) => (
+					{solution.solutionList.map((solution, index) => (
 						<div
 							className={
 								selectedSolution === index ? 'solbox-active' : 'solbox'
@@ -40,12 +40,7 @@ const ProductS5 = ({ solutionList, onSolutionClick }: Props) => {
 			<div
 				className={'product-s5-image'}
 				style={{
-					backgroundImage:
-						selectedSolution === 0
-							? `url('/assets/images/product5_2.png')`
-							: selectedSolution === 1
-							? `url('/assets/images/product5_3.png')`
-							: `url('/assets/images/product5_1.png')`,
+					backgroundImage: `url(${solution.bannerList[selectedSolution]})`,
 					transition: 'background-image 0.3s ease-in-out',
 				}}
 			/>

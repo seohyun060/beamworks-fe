@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import ProductS5 from '../components/ProductS5';
-import { Solution } from '@typedef/types';
+import { Solution, SolutionContent } from '@typedef/types';
 import useProductStore from '@store/zustand/productZustand';
 import images from 'src/assets/images';
 type Props = {
-	solution: any;
+	solution: SolutionContent;
 };
 
 const ProductS5Container = ({ solution }: Props) => {
@@ -36,8 +36,9 @@ const ProductS5Container = ({ solution }: Props) => {
 
 	return (
 		<ProductS5
-			solutionList={solution.solutionList}
+			solution={solution}
 			onSolutionClick={onSolutionClick}
+
 			//bannerName={bannerName}
 		/>
 	);

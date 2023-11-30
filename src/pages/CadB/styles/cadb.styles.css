@@ -57,9 +57,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.75; /* 175% */
-  -webkit-text-emphasis-color: black;
-          text-emphasis-color: black;
-  -webkit-text-stroke: 0.03em black;
 }
 .cadb-s1-button .s1-buy {
   display: inline-flex;

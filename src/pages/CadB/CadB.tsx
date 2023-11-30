@@ -10,14 +10,17 @@ import useCadbStore from '@store/zustand/cadbZustand';
 import FooterContainer from 'src/pages/Footer/containers/FooterContainer';
 import ProductS8Container from 'src/pages/Product/containers/ProductS8Container';
 import useProductStore from '@store/zustand/productZustand';
-type Props = {};
+type Props = {
+	pageRef: any;
+	scrollPosition: number;
+};
 
-const CadB = (props: Props) => {
+const CadB = ({ pageRef, scrollPosition }: Props) => {
 	const { rmode, mmode, fmode, smode } = useCadbStore();
 	const { cadbExplore } = useProductStore();
 	return (
-		<div className='cadb'>
-			<CadBS1Coontainer />
+		<div className='cadb' ref={pageRef}>
+			<CadBS1Coontainer scrollPosition={scrollPosition} />
 			<CadBS2Container />
 			<CadBS3Container />
 			<CadBS4Container modeType={rmode} />

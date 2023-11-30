@@ -99,4 +99,292 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.416; /* 141.667% */
+}
+.eeasy-s3 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #242b59 0%, #000 50%) bottom right/50.1% 50.1% no-repeat, linear-gradient(to bottom left, #242b59 0%, #000 50%) bottom left/50.1% 50.1% no-repeat, linear-gradient(to top left, #242b59 0%, #000 50%) top left/50.1% 50.1% no-repeat, linear-gradient(to top right, #242b59 0%, #000 50%) top right/50.1% 50.1% no-repeat;
+}
+.eeasy-s3-search {
+  margin-top: 22.5vh;
+  margin-left: 12.1875vw;
+  width: 25.47vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-right: 0.83vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.eeasy-s3-search .s3-sbox {
+  width: 22.44vw;
+  margin-bottom: 1.04vw;
+}
+.eeasy-s3-search .s3-header {
+  margin-bottom: 0.625vw;
+  color: var(--White-idle, #fff);
+  text-align: right;
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.eeasy-s3-search .s3-body {
+  color: var(--White-Hover, #ddd);
+  text-align: right;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.eeasy-s3-search .s3-cbox {
+  width: 8.49vw;
+  margin-top: 6.35vw;
+  margin-bottom: 1.04vw;
+}
+.eeasy-s3-mobile {
+  width: 29.90625vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14.1vh;
+  overflow: hidden;
+}
+.eeasy-s3-mobile .s3-logo {
+  width: 11.66vw;
+  margin-bottom: 1.55vw;
+}
+.eeasy-s3-mobile .s3-mini {
+  width: 8.75vw;
+}
+.eeasy-s3-mobile .s3-mobile {
+  width: 29.90625vw;
+}
+.eeasy-s3-medical {
+  display: flex;
+  flex-direction: column;
+  width: 22.5vw;
+  margin-top: 31.76vh;
+}
+.eeasy-s3-medical .s3-mbox {
+  width: 100%;
+}
+.eeasy-s3-medical .s3-header {
+  margin-bottom: 0.625vw;
+  color: var(--White-idle, #fff);
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.eeasy-s3-medical .s3-body {
+  color: var(--White-Hover, #ddd);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.eeasy-s4 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url("/public/assets/images/eeasy4b.png");
+  background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.eeasy-s4-lt {
+  width: 25.99vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8.7vw;
+  margin-top: 53.33vh;
+}
+.eeasy-s4-lt .s4-header {
+  margin-bottom: 0.625vw;
+  color: var(--White-idle, #fff);
+  text-align: right;
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.eeasy-s4-lt .s4-body {
+  color: var(--White-Hover, #ddd);
+  text-align: right;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.eeasy-s4-img {
+  width: 28.9vw;
+  margin-top: 25.37vh;
+}
+.eeasy-s4-rt {
+  width: 17.14vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.77vw;
+  margin-bottom: 27.1vh;
+}
+.eeasy-s4-rt .s4-body {
+  margin-bottom: 0.83vw;
+  color: var(--White-Hover, #ddd);
+  text-align: right;
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.eeasy-s4-rt .s4-neuron {
+  width: 6.82vw;
+}
+.eeasy-s5 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.eeasy-s5-img {
+  width: 23vw;
+  margin-left: 26.77vw;
+  margin-top: 5vh;
+}
+.eeasy-s5-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.14vw;
+  margin-top: 4.6vh;
+}
+.eeasy-s5-text .s5-header {
+  margin-left: 3.75vw;
+  margin-bottom: 0.625vw;
+  color: var(--Dark-Glay, #4d4f58);
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.eeasy-s5-text .s5-body {
+  width: 20.05vw;
+  margin-left: 3.75vw;
+  margin-bottom: 4vw;
+  color: var(--Dark-Glay, #4d4f58);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.eeasy-s5-text .s5-pain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.eeasy-s5-text .s5-pain-left {
+  width: 2.7vw;
+}
+.eeasy-s5-text .s5-pain-face {
+  width: 20.46vw;
+  margin-left: 1.04vw;
+  margin-right: 1.04vw;
+}
+.eeasy-s6 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.eeasy-s6-mobile {
+  width: 23vw;
+  margin-left: 26.77vw;
+  margin-top: 5vh;
+}
+.eeasy-s6-text {
+  display: flex;
+  flex-direction: column;
+  width: 22vw;
+  margin-left: 4.85vw;
+}
+.eeasy-s6-text .s6-header {
+  margin-bottom: 0.625vw;
+  color: var(--Dark-Glay, #4d4f58);
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33; /* 133.333% */
+}
+.eeasy-s6-text .s6-body {
+  color: var(--Middle-Glay-Hover, #8e8e8e);
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.eeasy-s6-text .s6-body span {
+  color: var(--Dark-Glay, #4d4f58);
+  font-weight: 600;
+}
+.eeasy-s6-text .s6-play {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625vw;
+  width: 10.625vw;
+  margin-top: 2.5vw;
+}
+.eeasy-s6-text .s6-play-box, .eeasy-s6-text .s6-play-box-active {
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.eeasy-s6-text .s6-play-box .play-content, .eeasy-s6-text .s6-play-box-active .play-content {
+  height: 1.25vw;
+}
+.eeasy-s6-text .s6-play-box-active {
+  background: var(--White-Hover, #ddd);
 }/*# sourceMappingURL=eeasy.styles.css.map */

@@ -1,12 +1,22 @@
 import React from 'react';
 import images from 'src/assets/images';
-type Props = {};
+type Props = {
+	scrollPosition: number;
+};
 
-const CadBS1 = (props: Props) => {
+const CadBS1 = ({ scrollPosition }: Props) => {
+	console.log(scrollPosition);
 	return (
 		<div className='cadb-s1'>
 			<div className='cadb-s1-button'>
-				<span className='s1-demo'>데모버전 사용하기</span>
+				<span
+					className='s1-demo'
+					style={{
+						color: scrollPosition == 1 || scrollPosition == 2 ? '#000' : '#fff',
+					}}
+				>
+					데모버전 사용하기
+				</span>
 				<button className='s1-buy'>구입하기</button>
 			</div>
 			<div className='cadb-s1-text'>
