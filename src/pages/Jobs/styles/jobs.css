@@ -7,7 +7,7 @@
   width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
 }
 
-.Recruitment {
+.Jobs {
   height: 100vh;
   font-size: 0.5208333333vw;
   overflow-x: hidden;
@@ -15,7 +15,7 @@
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-.Recruitment section {
+.Jobs section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,21 +27,21 @@
   background-color: white;
   transition: all 0.5s ease-out;
 }
-.Recruitment section article {
+.Jobs section article {
   position: relative;
   flex-basis: 62.5%;
   aspect-ratio: 1200/760;
 }
 
-.RecruitmentMain {
+.JobsMain {
   background-image: url("/public/assets/images/recruitment_main.png");
   background-size: cover;
   background-position: center center;
 }
-.RecruitmentMain .Main .Title {
+.JobsMain .Main .Title {
   margin-bottom: 2.4em;
 }
-.RecruitmentMain .Main .Title label {
+.JobsMain .Main .Title label {
   color: #000;
   font-family: Pretendard;
   font-size: 5em;
@@ -49,7 +49,7 @@
   font-weight: 600;
   line-height: 132%;
 }
-.RecruitmentMain .Main .Description label {
+.JobsMain .Main .Description label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -58,25 +58,25 @@
   line-height: 141.667%;
 }
 
-.RecruitmentJob > img {
+.JobsJob > img {
   width: 5.2em;
   height: 7.4em;
   margin: 2em;
   padding: 2em;
   z-index: 10;
 }
-.RecruitmentJob > img:hover {
+.JobsJob > img:hover {
   cursor: pointer;
 }
-.RecruitmentJob .Job {
+.JobsJob .Job {
   aspect-ratio: 1200/828;
 }
-.RecruitmentJob .Job .TitleHeader {
+.JobsJob .Job .TitleHeader {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5em;
 }
-.RecruitmentJob .Job .TitleHeader label {
+.JobsJob .Job .TitleHeader label {
   color: #000;
   font-family: Pretendard;
   font-size: 4em;
@@ -84,7 +84,7 @@
   font-weight: 600;
   line-height: 125%;
 }
-.RecruitmentJob .Job .TitleHeader .ApplyButton {
+.JobsJob .Job .TitleHeader .ApplyButton {
   display: flex;
   width: 20em;
   height: 3em;
@@ -96,13 +96,13 @@
   border: 0.1em solid var(--Dark-Glay, #4d4f58);
   background: var(--Dark-Glay, #4d4f58);
 }
-.RecruitmentJob .Job .TitleHeader .ApplyButton:hover {
+.JobsJob .Job .TitleHeader .ApplyButton:hover {
   cursor: pointer;
 }
-.RecruitmentJob .Job .TitleHeader .ApplyButton :hover {
+.JobsJob .Job .TitleHeader .ApplyButton :hover {
   cursor: pointer;
 }
-.RecruitmentJob .Job .TitleHeader .ApplyButton label {
+.JobsJob .Job .TitleHeader .ApplyButton label {
   color: var(--White, #fff);
   text-align: right;
   font-family: Pretendard;
@@ -111,32 +111,32 @@
   font-weight: 400;
   line-height: 140%;
 }
-.RecruitmentJob .Job .TitleHeader .ApplyButton img {
+.JobsJob .Job .TitleHeader .ApplyButton img {
   width: 1.4em;
   height: 1.4em;
 }
-.RecruitmentJob .Job .TeamListCarousel {
+.JobsJob .Job .TeamListCarousel {
   width: 120em;
   height: 72.8em;
 }
-.RecruitmentJob .Job .TeamListCarousel .Carousel {
+.JobsJob .Job .TeamListCarousel .Carousel {
   display: flex;
   height: 100%;
 }
 
-.RecruitmentJobCard {
+.JobsJobCard {
   width: 38.4em;
   height: 72.8em;
   margin-right: 2.4em;
 }
-.RecruitmentJobCard img {
+.JobsJobCard img {
   width: 38.4em;
   height: 60em;
 }
-.RecruitmentJobCard .JobName {
+.JobsJobCard .JobName {
   margin: 3em 0px;
 }
-.RecruitmentJobCard .JobName label {
+.JobsJobCard .JobName label {
   color: #000;
   font-family: Pretendard;
   font-size: 3em;
@@ -144,10 +144,10 @@
   font-weight: 600;
   line-height: 133.333%;
 }
-.RecruitmentJobCard .GoDetails :hover {
+.JobsJobCard .GoDetails :hover {
   cursor: pointer;
 }
-.RecruitmentJobCard .GoDetails label {
+.JobsJobCard .GoDetails label {
   padding-right: 1.2em;
   color: #000;
   font-family: Pretendard;
@@ -156,23 +156,23 @@
   font-weight: 400;
   line-height: 140%;
 }
-.RecruitmentJobCard .GoDetails img {
+.JobsJobCard .GoDetails img {
   width: 1.4em;
   height: 1.4em;
 }
-.RecruitmentJobCard.unactive {
+.JobsJobCard.unactive {
   opacity: 0.3;
 }
 
-.RecruitmentInternship {
+.JobsInternship {
   background-image: url("/public/assets/images/recruitment_internship.png");
   background-size: cover;
   background-position: center center;
 }
-.RecruitmentInternship .Internship .Title {
+.JobsInternship .Internship .Title {
   margin-bottom: 2.4em;
 }
-.RecruitmentInternship .Internship .Title label {
+.JobsInternship .Internship .Title label {
   color: #000;
   font-family: Pretendard;
   font-size: 5em;
@@ -180,10 +180,10 @@
   font-weight: 600;
   line-height: 132%;
 }
-.RecruitmentInternship .Internship .Description {
+.JobsInternship .Internship .Description {
   margin-bottom: 5em;
 }
-.RecruitmentInternship .Internship .Description label {
+.JobsInternship .Internship .Description label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -191,7 +191,7 @@
   font-weight: 400;
   line-height: 141.667%;
 }
-.RecruitmentInternship .Internship .ApplyButton {
+.JobsInternship .Internship .ApplyButton {
   display: flex;
   width: 20em;
   height: 3em;
@@ -203,13 +203,13 @@
   border: 0.1em solid var(--Dark-Glay, #4d4f58);
   background: var(--Dark-Glay, #4d4f58);
 }
-.RecruitmentInternship .Internship .ApplyButton:hover {
+.JobsInternship .Internship .ApplyButton:hover {
   cursor: pointer;
 }
-.RecruitmentInternship .Internship .ApplyButton :hover {
+.JobsInternship .Internship .ApplyButton :hover {
   cursor: pointer;
 }
-.RecruitmentInternship .Internship .ApplyButton label {
+.JobsInternship .Internship .ApplyButton label {
   color: var(--White, #fff);
   text-align: right;
   font-family: Pretendard;
@@ -218,7 +218,7 @@
   font-weight: 400;
   line-height: 140%;
 }
-.RecruitmentInternship .Internship .ApplyButton img {
+.JobsInternship .Internship .ApplyButton img {
   width: 1.4em;
   height: 1.4em;
-}/*# sourceMappingURL=recruitment.css.map */
+}/*# sourceMappingURL=jobs.css.map */

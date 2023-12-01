@@ -63,9 +63,6 @@
      object-fit: contain;
 }
 
-.CultureWelfare {
-  height: 3000px !important;
-}
 .CultureWelfare .Welfare .WelfareHead {
   display: flex;
   flex-direction: column;

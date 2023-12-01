@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 import images from "src/assets/images";
 
-const RecruitmentJobCard = (props) => {
+const JobCard = (props) => {
   const { jobName, imageName, isVisible } = props;
 
   const cardRef = useRef(0);
@@ -15,7 +15,7 @@ const RecruitmentJobCard = (props) => {
   return (
     <div
       className={
-        isVisible ? "RecruitmentJobCard" : "RecruitmentJobCard unactive"
+        isVisible ? "JobsJobCard" : "JobsJobCard unactive"
       }
       ref={cardRef}
     >
@@ -31,4 +31,4 @@ const RecruitmentJobCard = (props) => {
   );
 };
 
-export default RecruitmentJobCard;
+export default JobCard;

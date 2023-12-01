@@ -1,10 +1,10 @@
 import React from "react";
 
-import '../styles/recruitment.css'
+import '../styles/jobs.css'
 
-const RecruitmentMain = () => {
+const JobsMain = () => {
   return (
-    <section className="RecruitmentMain">
+    <section className="JobsMain">
       <article className="Main">
         <div className="Title">
           <label>
@@ -25,4 +25,4 @@ const RecruitmentMain = () => {
   );
 };
 
-export default RecruitmentMain;
+export default JobsMain;

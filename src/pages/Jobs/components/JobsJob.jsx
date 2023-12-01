@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import RecruitmentJobCard from "./RecruitmentJobCard";
+import JobsJobCard from "./JobCard";
 
 import images from "src/assets/images";
-import RecruitmentJobs from "../RecruitmentJobs.json";
+import JobsJobs from "../JobsList.json";
 
-const RecruitmentJob = () => {
+const JobsJob = () => {
   const carouselRef = useRef(0);
 
-  const maxCarouselCount = RecruitmentJobs.data.length - 3;
+  const maxCarouselCount = JobsJobs.data.length - 3;
 
   const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
 
@@ -52,7 +52,7 @@ const RecruitmentJob = () => {
   }, []);
 
   return (
-    <section className="RecruitmentJob">
+    <section className="JobsJob">
       <img src={images.carousel_back} onClick={(e) => carouselMoveBackward()} />
       <article className="Job">
         <div className="TitleHeader">
@@ -64,8 +64,8 @@ const RecruitmentJob = () => {
         </div>
         <div className="TeamListCarousel">
           <div className="Carousel" ref={carouselRef}>
-            {RecruitmentJobs.data.map((data, index) => (
-              <RecruitmentJobCard
+            {JobsJobs.data.map((data, index) => (
+              <JobsJobCard
                 key={index}
                 jobName={data.jobName}
                 imageName={data.imageName}
@@ -83,4 +83,4 @@ const RecruitmentJob = () => {
   );
 };
 
-export default RecruitmentJob;
+export default JobsJob;

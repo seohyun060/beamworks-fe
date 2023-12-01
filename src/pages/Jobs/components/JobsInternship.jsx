@@ -2,9 +2,9 @@ import React from "react";
 
 import images from "src/assets/images";
 
-const RecruitmentInternship = () => {
+const JobsInternship = () => {
   return (
-    <section className="RecruitmentInternship">
+    <section className="JobsInternship">
       <article className="Internship">
         <div className="Title">
           <label>
@@ -29,4 +29,4 @@ const RecruitmentInternship = () => {
   );
 };
 
-export default RecruitmentInternship;
+export default JobsInternship;

@@ -6,7 +6,7 @@
   width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
 }
 
-.Recruitment {
+.Jobs {
   height: 100vh;
   font-size: 0.5208333333333vw; // 10px 기준 하위 항목 1em
   overflow-x: hidden;
@@ -34,7 +34,7 @@
   }
 }
 
-.RecruitmentMain {
+.JobsMain {
   background-image: url("/public/assets/images/recruitment_main.png");
   background-size: cover;
   background-position: center center;
@@ -63,7 +63,7 @@
   }
 }
 
-.RecruitmentJob {
+.JobsJob {
   > img {
     width: 5.2em;
     height: 7.4em;
@@ -132,7 +132,7 @@
   }
 }
 
-.RecruitmentJobCard {
+.JobsJobCard {
   width: 38.4em;
   height: 72.8em;
   margin-right: 2.4em;
@@ -174,7 +174,7 @@
   }
 }
 
-.RecruitmentInternship {
+.JobsInternship {
   background-image: url("/public/assets/images/recruitment_internship.png");
   background-size: cover;
   background-position: center center;
