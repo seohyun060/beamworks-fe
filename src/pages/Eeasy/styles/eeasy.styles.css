@@ -213,14 +213,13 @@
   background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
 }
 .eeasy-s4-lt {
   width: 25.99vw;
   display: flex;
   flex-direction: column;
   margin-left: 8.7vw;
-  margin-top: 53.33vh;
+  margin-top: 29.8vw;
 }
 .eeasy-s4-lt .s4-header {
   margin-bottom: 0.625vw;
@@ -245,19 +244,25 @@
 }
 .eeasy-s4-img {
   width: 28.9vw;
-  margin-top: 25.37vh;
+  margin-top: 14.27vw;
+  height: 41.9vw;
+  position: relative;
+  overflow-y: scroll;
+}
+.eeasy-s4-img img {
+  width: 100%;
 }
 .eeasy-s4-rt {
   width: 17.14vw;
   display: flex;
   flex-direction: column;
   margin-left: 1.77vw;
-  margin-bottom: 27.1vh;
+  margin-bottom: 15.24vw;
 }
 .eeasy-s4-rt .s4-body {
   margin-bottom: 0.83vw;
   color: var(--White-Hover, #ddd);
-  text-align: right;
+  text-align: left;
   /* 본문 */
   font-family: Pretendard;
   font-size: 2.4em;
@@ -316,12 +321,33 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
-.eeasy-s5-text .s5-pain-left {
+.eeasy-s5-text .s5-pain-left, .eeasy-s5-text .s5-pain-right {
   width: 2.7vw;
+  z-index: 10;
+}
+.eeasy-s5-text .s5-pain-frame {
+  height: 19.22vw;
+  width: 20.47vw;
+  margin-left: 1.04vw;
+  margin-right: 1.04vw;
+  overflow-x: hidden;
+}
+.eeasy-s5-text .s5-pain-frame .s5-carousel {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.eeasy-s5-text .s5-pain-frame .s5-carousel-slide {
+  width: 100%;
+  height: 19.22vw;
+  width: 20.47vw;
+  border-radius: 20px;
 }
 .eeasy-s5-text .s5-pain-face {
-  width: 20.46vw;
+  width: 20.47vw;
   margin-left: 1.04vw;
   margin-right: 1.04vw;
 }
@@ -377,14 +403,34 @@
   margin-top: 2.5vw;
 }
 .eeasy-s6-text .s6-play-box, .eeasy-s6-text .s6-play-box-active {
+  width: 10.625vw;
+  height: 1.875vw;
   border-radius: 18px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  position: relative;
 }
 .eeasy-s6-text .s6-play-box .play-content, .eeasy-s6-text .s6-play-box-active .play-content {
   height: 1.25vw;
+  position: absolute;
+  left: 1.822vw;
+}
+.eeasy-s6-text .s6-play-box .play-button, .eeasy-s6-text .s6-play-box-active .play-button {
+  width: 0.573vw;
+  position: absolute;
+  right: 0.68vw;
 }
 .eeasy-s6-text .s6-play-box-active {
   background: var(--White-Hover, #ddd);
+}
+.eeasy-s7 {
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }/*# sourceMappingURL=eeasy.styles.css.map */

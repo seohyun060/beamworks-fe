@@ -235,7 +235,7 @@
 		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
 		background-repeat: no-repeat;
 		position: relative;
-		overflow: hidden;
+		//overflow: hidden;
 		// justify-content: center;
 		//align-items: center;
 		&-lt {
@@ -243,7 +243,7 @@
 			display: flex;
 			flex-direction: column;
 			margin-left: 8.7vw;
-			margin-top: 53.33vh;
+			margin-top: 29.8vw;
 			.s4-header {
 				margin-bottom: 0.625vw;
 				color: var(--White-idle, #fff);
@@ -268,18 +268,24 @@
 		}
 		&-img {
 			width: 28.9vw;
-			margin-top: 25.37vh;
+			margin-top: 14.27vw;
+			height: 41.9vw;
+			position: relative;
+			overflow-y: scroll;
+			img {
+				width: 100%;
+			}
 		}
 		&-rt {
 			width: 17.14vw;
 			display: flex;
 			flex-direction: column;
 			margin-left: 1.77vw;
-			margin-bottom: 27.1vh;
+			margin-bottom: 15.24vw;
 			.s4-body {
 				margin-bottom: 0.83vw;
 				color: var(--White-Hover, #ddd);
-				text-align: right;
+				text-align: left;
 				/* 본문 */
 				font-family: Pretendard;
 				font-size: 2.4em;
@@ -341,11 +347,36 @@
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				&-left {
+				position: relative;
+				&-left,
+				&-right {
 					width: 2.7vw;
+					z-index: 10;
+				}
+				&-frame {
+					height: 19.22vw;
+					width: 20.47vw;
+
+					margin-left: 1.04vw;
+					margin-right: 1.04vw;
+					overflow-x: hidden;
+					.s5-carousel {
+						height: 100%;
+						//width: 100%;
+						display: flex;
+						flex-direction: row;
+						gap: 0;
+						//transform: translateX(-100%);
+						&-slide {
+							width: 100%;
+							height: 19.22vw;
+							width: 20.47vw;
+							border-radius: 20px;
+						}
+					}
 				}
 				&-face {
-					width: 20.46vw;
+					width: 20.47vw;
 					margin-left: 1.04vw;
 					margin-right: 1.04vw;
 				}
@@ -404,13 +435,24 @@
 				width: 10.625vw;
 				margin-top: 2.5vw;
 				&-box {
+					width: 10.625vw;
+					height: 1.875vw;
 					border-radius: 18px;
 
 					display: flex;
-					flex-direction: column;
+					flex-direction: row;
 					align-items: center;
+					position: relative;
+					//justify-content: center;
 					.play-content {
 						height: 1.25vw;
+						position: absolute;
+						left: 1.822vw;
+					}
+					.play-button {
+						width: 0.573vw;
+						position: absolute;
+						right: 0.68vw;
 					}
 					&-active {
 						@extend .s6-play-box;
@@ -419,5 +461,16 @@
 				}
 			}
 		}
+	}
+	&-s7 {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		scroll-snap-align: start;
+		display: flex;
+		flex-direction: column;
+		//align-items: center;
+		justify-content: center;
+		position: relative;
 	}
 }
