@@ -163,13 +163,20 @@ const images = {
 	eeasy4_mobile: '/assets/images/eeasy4_mobile.png',
 	eeasy4_neuron: '/assets/images/eeasy4_neuron.png',
 	eeasy5_mobile: '/assets/images/eeasy5_mobile.png',
-	eeasy5_pain: '/assets/images/eeasy5_pain.png',
+	eeasy5_pain0: '/assets/images/eeasy5_pain0.png',
 	painLeft: '/assets/images/painLeft.svg',
 	painRight: '/assets/images/painRight.svg',
 	eeasy6_mobile: '/assets/images/eeasy6_mobile.png',
 	eeasy6_1: '/assets/images/eeasy6_1.png',
 	eeasy6_2: '/assets/images/eeasy6_2.png',
 	eeasy6_3: '/assets/images/eeasy6_3.png',
+	painPlay: '/assets/images/painPlay.svg',
+	eeasy4_mobile2: '/assets/images/eeasy4_mobile2.png',
+	eeasy5_pain2: '/assets/images/eeasy5_pain2.png',
+	eeasy5_pain4: '/assets/images/eeasy5_pain4.png',
+	eeasy5_pain6: '/assets/images/eeasy5_pain6.png',
+	eeasy5_pain8: '/assets/images/eeasy5_pain8.png',
+	eeasy5_pain10: '/assets/images/eeasy5_pain10.png',
 };
 
 export default images;

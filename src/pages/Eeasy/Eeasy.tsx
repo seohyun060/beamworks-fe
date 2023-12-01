@@ -9,10 +9,13 @@ import EeasyS3Container from './containers/EeasyS3Container';
 import EeasyS4Container from './containers/EeasyS4Container';
 import EeasyS5Container from './containers/EeasyS5Container';
 import EeasyS6Container from './containers/EeasyS6Container';
+import EeasyS7Container from './containers/EeasyS7Container';
+import ChatAIS7Container from 'src/pages/ChatAI/containers/ChatAIS7Container';
+import ProductS8Container from 'src/pages/Product/containers/ProductS8Container';
 type Props = {};
 
 const Eeasy = (props: Props) => {
-	const { eeasySolution } = useProductStore();
+	const { eeasySolution, chataiExplore } = useProductStore();
 	return (
 		<div className='eeasy'>
 			<EeasyS1Container />
@@ -22,6 +25,7 @@ const Eeasy = (props: Props) => {
 			<EeasyS4Container />
 			<EeasyS5Container />
 			<EeasyS6Container />
+			<ProductS8Container exploreType={chataiExplore} />
 		</div>
 	);
 };
