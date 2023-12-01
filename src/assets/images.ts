@@ -147,8 +147,11 @@ const images = {
 	cadr6_2c: '/assets/images/cadr6_2c.png',
 	cadr6_3c: '/assets/images/cadr6_3c.png',
 	eeasyLogo: '/assets/images/eeasyLogo.png',
-	ORCA_logo: '/assets/images/ORCA_logo.svg',
+	ORCA_logo_white: '/assets/images/ORCA_logo_white.svg',
+	ORCA_logo_black: '/assets/images/ORCA_logo_black.svg',
 	world_map: '/assets/images/world_map.svg',
+	ORCA_demo_computer: '/assets/images/ORCA_demo_computer.png',
+	ORCA_demo_phone: '/assets/images/ORCA_demo_phone.png',
 };
 
 export default images;
