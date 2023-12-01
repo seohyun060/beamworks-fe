@@ -32,6 +32,7 @@ const EeasyS6 = ({ playList, onPlayClick }: Props) => {
 							}}
 						>
 							<img src={play.content} className='play-content' />
+							<img src={images.painPlay} className='play-button' />
 						</div>
 					))}
 				</div>
