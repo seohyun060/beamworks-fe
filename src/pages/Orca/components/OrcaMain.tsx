@@ -8,7 +8,7 @@ const OrcaMain = () => {
         <button className="VisitWebsite">웹사이트 방문</button>
       </a>
       <div className="OrcaMainDescription">
-        <img src={images.ORCA_logo} className="header" />
+        <img src={images.ORCA_logo_white} className="header" />
         <div className="body">/ˈɔːr.kə/ Optimized Research in Clinical AI</div>
       </div>
     </section>
