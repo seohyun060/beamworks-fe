@@ -56,11 +56,12 @@
 
 		justify-content: center;
 		align-items: center;
+		position: relative;
 		&-text {
 			width: 24.74vw;
 			color: #000;
-			margin-top: 6.39vh;
-			margin-bottom: 6.5625vw;
+			margin-top: 7vw;
+
 			text-align: center;
 
 			/* 보조헤드 */
@@ -71,7 +72,9 @@
 			line-height: 1.25; /* 125% */
 		}
 		&-img {
-			width: 43.28vw;
+			position: relative;
+			width: 64.21vw;
+			margin-left: 8.5vw;
 		}
 	}
 	&-s3 {
@@ -327,12 +330,13 @@
 		flex-direction: row;
 		position: relative;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 
 		&-b {
 			width: 36vw;
-			height: 46.25vw;
-			margin-top: 17.625vw;
+			height: fit-content;
+			margin-top: 12.625vw;
+			//align-self: flex-end;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
@@ -370,20 +374,23 @@
 			}
 			.b-image {
 				align-self: flex-start;
-				width: 36vw;
+				width: 52.5vw;
 			}
 		}
 		&-t {
 			width: 45.58vw;
 			height: 45.83vw;
+			align-self: center;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
-
+			position: relative;
 			margin-bottom: 0;
 			margin-left: 0px;
 			.t-image {
+				position: absolute;
 				align-self: flex-end;
+				top: 2vw;
 				width: 45.58vw;
 			}
 			.t-header {
@@ -392,6 +399,7 @@
 				flex-direction: row;
 				align-items: center;
 				margin-left: 3vw;
+				margin-top: 28vw;
 				img {
 					width: 18.72vw;
 				}
