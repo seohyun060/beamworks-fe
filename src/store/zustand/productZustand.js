@@ -1,7 +1,7 @@
 import create from 'zustand';
 import images from 'src/assets/images';
 const useProductStore = create((set, get) => ({
-	selectedSolution: 4,
+	selectedSolution: 0,
 	setSelectedSolution: (solution) => set({ selectedSolution: solution }),
 	toggle: false,
 	setToggle1: () =>

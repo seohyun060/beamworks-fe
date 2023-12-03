@@ -17,11 +17,12 @@ const Product = (props: Props) => {
 	return (
 		<div className='product'>
 			<ProductS1Container />
+			<ProductS5Container solution={cadaiSolution} />
 			<ProductS2Container />
+			<ProductS6Container />
 			<ProductS3Container />
 			<ProductS4Container />
-			<ProductS5Container solution={cadaiSolution} />
-			<ProductS6Container />
+
 			<ProductS7Container />
 			<ProductS8Container exploreType={cadsExplore} />
 			<FooterContainer />

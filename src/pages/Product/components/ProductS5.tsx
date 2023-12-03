@@ -40,7 +40,7 @@ const ProductS5 = ({ solution, onSolutionClick }: Props) => {
 			<div
 				className={'product-s5-image'}
 				style={{
-					backgroundImage: `url(${solution.bannerList[selectedSolution]})`,
+					backgroundImage: `url(${solution.bannerList[4]})`,
 					transition: 'background-image 0.3s ease-in-out',
 				}}
 			/>
