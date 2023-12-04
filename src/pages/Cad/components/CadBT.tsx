@@ -11,6 +11,7 @@ const CadBT = (props: Props) => {
 					그 위치를 표시하며, 병변의 종류와 관련 용어 정보를 제공해주는
 					도우미입니다.
 				</div>
+				<div className='b-mini'>캐디-비</div>
 				<div className='b-header'>
 					<img src={images.cblogo_b}></img>
 					<span>(유방)</span>
@@ -23,6 +24,7 @@ const CadBT = (props: Props) => {
 					<img src={images.ctlogo_b}></img>
 					<span>(갑상선)</span>
 				</div>
+				<div className='t-mini'>캐디-티</div>
 				<div className='t-descript'>
 					갑상선 초음파 검사를 위한 솔루션으로, 갑상선 영역에서 병변을 탐지하고
 					그 위치를 실시간으로 식별합니다. 또한, 갑상선 관련 카테고리와 용어
