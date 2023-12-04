@@ -2,27 +2,27 @@
   "data": {
     "research&development": {
       "jobNameKor": "연구개발팀",
-      "jobNameEng": "research&development",
+      "jobNameEng": "RDT",
       "imageName": "recruitment_job1"
     },
     "regulatory_strategy": {
       "jobNameKor": "임상 인허가팀",
-      "jobNameEng": "regulatory_strategy",
+      "jobNameEng": "RST",
       "imageName": "recruitment_job2"
     },
     "GMP": {
       "jobNameKor": "품질경영팀",
-      "jobNameEng": "GMP",
+      "jobNameEng": "GST",
       "imageName": "recruitment_job3"
     },
     "marketing&design": {
       "jobNameKor": "마케팅, 디자인 팀",
-      "jobNameEng": "marketing&design",
+      "jobNameEng": "CST",
       "imageName": "recruitment_job4"
     },
     "operations": {
       "jobNameKor": "운영팀",
-      "jobNameEng": "operations",
+      "jobNameEng": "MST",
       "imageName": "recruitment_job5"
     }
   }

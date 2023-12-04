@@ -70,6 +70,7 @@ const JobsJob = () => {
               <JobsJobCard
                 key={index}
                 jobName={data[1].jobNameKor}
+                link={data[1].jobNameEng}
                 imageName={data[1].imageName}
                 isVisible={
                   index >= currentCarouselPage &&

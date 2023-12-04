@@ -81,6 +81,7 @@
       }
     }
     .Slogun {
+      white-space: pre-wrap;
       p {
         color: var(--Black, #000);
         text-align: center;
@@ -181,6 +182,7 @@
   }
   .CardDescription {
     height: 23.8em;
+    white-space: pre-wrap;
     p {
       color: var(--Dark-Glay, #4d4f58);
       font-family: Pretendard;

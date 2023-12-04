@@ -3,23 +3,24 @@ import React from "react";
 import "../styles/team.css";
 import images from "src/assets/images";
 
-const TeamIntro = () => {
+import TeamInfo from "../TeamList.json";
+
+const TeamIntro = (props) => {
+  const { jobName } = props;
+  const jobData = TeamInfo.data[jobName]
+
   return (
     <section className="TeamIntro">
       <div className="Description">
         <div className="Title">
-          <span>마케팅 디자인팀</span>
+          <span>{jobData.teamNameEng}</span>
         </div>
         <div className="Slogun">
-          <p>
-            아름다운 디자인은 숨은 노력과 아이디어를,
-            <br />
-            창의적인 마케팅은 혁신을 전 세계에 널리 알립니다.
-          </p>
+          <p>{jobData.teamSlogun}</p>
         </div>
       </div>
       <div className="ImageSection">
-        <img src={images.marketing_design_intro} />
+        <img src={images[jobData.teamSlogunImage]} />
       </div>
     </section>
   );

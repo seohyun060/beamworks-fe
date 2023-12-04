@@ -33,11 +33,11 @@ const RootNavigation = () => {
 				<Route path='/award' element={<AwardContainer />} />
 				<Route path='/culture' element={<Culture />} />
 				<Route path="/jobs" element={<Jobs />} />
-				<Route path="/team/marketing&design" element={<Team jobName="marketing&design"/>} />
-				<Route path="/team/research&development" element={<Team jobName="research&development"/>} />
-				<Route path="/team/operations" element={<Team jobName="operations"/>} />
-				<Route path="/team/GMP" element={<Team jobName="GMP"/>} />
-				<Route path="/team/regulatory_strategy" element={<Team jobName="regulatory_strategy"/>} />
+				<Route path="/team/CST" element={<Team jobName="CST"/>} />
+				<Route path="/team/RDT" element={<Team jobName="RDT"/>} />
+				<Route path="/team/MST" element={<Team jobName="MST"/>} />
+				<Route path="/team/GST" element={<Team jobName="GST"/>} />
+				<Route path="/team/RST" element={<Team jobName="RST"/>} />
 				<Route path='/chatai' element={<ChatAIContainer />} />
 				<Route path='/product' element={<CadContainer />} />
 				<Route path='/cadb' element={<CadBContainer />} />

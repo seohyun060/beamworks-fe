@@ -183,8 +183,16 @@ const images = {
 	rvmode: '/assets/images/rvmode.png',
 
 	//Team
-	marketing_design_intro: '/assets/images/team/marketing&design_intro.png',
-	marketing_design_goal: '/assets/images/team/marketing&design_goal.png',
+	teamGoalImage_CST: '/assets/images/team/teamGoalImage_CST.png',
+	teamSlogunImage_CST: '/assets/images/team/teamSlogunImage_CST.png',
+	teamGoalImage_MST: '/assets/images/team/teamGoalImage_MST.png',
+	teamSlogunImage_MST: '/assets/images/team/teamSlogunImage_MST.png',
+	teamGoalImage_GST: '/assets/images/team/teamGoalImage_GST.png',
+	teamSlogunImage_GST: '/assets/images/team/teamSlogunImage_GST.png',
+	teamGoalImage_RDT: '/assets/images/team/teamGoalImage_RDT.png',
+	teamSlogunImage_RDT: '/assets/images/team/teamSlogunImage_RDT.png',
+	teamGoalImage_RST: '/assets/images/team/teamGoalImage_RST.png',
+	teamSlogunImage_RST: '/assets/images/team/teamSlogunImage_RST.png',
 };
 
 export default images;

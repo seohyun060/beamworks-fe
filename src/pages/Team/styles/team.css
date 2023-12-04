@@ -81,6 +81,9 @@
   font-weight: 600;
   line-height: 133.333%;
 }
+.TeamIntro .Description .Slogun {
+  white-space: pre-wrap;
+}
 .TeamIntro .Description .Slogun p {
   color: var(--Black, #000);
   text-align: center;
@@ -178,6 +181,7 @@
 }
 .DoingCard .CardDescription {
   height: 23.8em;
+  white-space: pre-wrap;
 }
 .DoingCard .CardDescription p {
   color: var(--Dark-Glay, #4d4f58);

@@ -2,30 +2,135 @@
   "주석1": "필요한 것 우선 첫페이지 팀 이름, 슬로건 사진 세부설명",
   "주석2": "두번째는 업무 리스트, 업무명과 업무상세까지",
   "data": {
-    "research&development": {
-      "jobNameKor": "연구개발팀",
-      "jobNameEng": "research&development",
-      "imageName": "recruitment_job1"
+    "RDT": {
+      "teamNameKor": "연구개발팀",
+      "teamNameEng": "Research and Development Team (RDT)",
+      "teamSlogun": "사람 중심의 소프트웨어 개발은\n팀의 협업과 열정에 기반합니다.",
+      "teamSlogunImage": "teamSlogunImage_RDT",
+      "teamGoal": "개발팀은 혁신적이고 효율적인 소프트웨어 및 기술 솔루션을 개발하여 기업의 기술적 경쟁력을 향상시키는 데 주력하고 있습니다. 최신 개발 도구와 첨단 기술을 적용하여 안정성과 성능을 극대화하며, 사용자 요구사항을 충족하는 동시에 향상된 사용자 경험을 제공하는 것을 목표로 하고 있습니다.",
+      "teamGoalImage": "teamGoalImage_RDT",
+      "teamDoing": [
+        {
+          "doingName": "Visual Intelligence Team",
+          "doingDescription": "이 팀은 CadAI-Apps, CadAI-R&C, CadAI-CMS의 프로젝트를 진행하고 있습니다.  이 프로젝트 들은 ~~ 설명 들어가고 어떠한 실력이나 그런것들이 요구됩니다.\nAI model, Front app, Front R&C, Backend의 역할이 있습니다."
+        },
+        {
+          "doingName": "Conversational Intelligence Team",
+          "doingDescription": "이 팀은 응급프로, 응급이지, 닥터키위의 프로젝트를 진행하고 있습니다.  이 프로젝트 들은 ~~ 설명 들어가고 어떠한 실력이나 그런것들이 요구됩니다.\nAI model, Front, Backend의 역할이 있습니다."
+        },
+        {
+          "doingName": "Predictive Intelligence Team",
+          "doingDescription": "이 팀은 CadAI-Q, 예측모델, Breast Twin의 프로젝트를 진행하고 있습니다.  이 프로젝트 들은 ~~ 설명 들어가고 어떠한 실력이나 그런것들이 요구됩니다.\nPredictive AI, Generative AI의 역할이 있습니다."
+        },
+        {
+          "doingName": "Data Intelligence Team",
+          "doingDescription": "이 팀은 ORCA, BeamWorks Homepage, Alexandria Series, Thoth의 프로젝트를 진행하고 있습니다.  이 프로젝트 들은 ~~ 설명 들어가고 어떠한 실력이나 그런것들이 요구됩니다.\nDA, Homepage, ORCA, Alexandria-CTS, Alexandria-CRF, Thoth 의 역할이 있습니다."
+        }
+      ]
     },
-    "regulatory_strategy": {
-      "jobNameKor": "임상 인허가팀",
-      "jobNameEng": "regulatory_strategy",
-      "imageName": "recruitment_job2"
+    "RST": {
+      "teamNameKor": "임상 인허가팀",
+      "teamNameEng": "Regulatory Strategy Team (RST)",
+      "teamSlogun": "숨은 혁신을 찾아내어\n세계적으로 인정받는 안전한 의료 솔루션을 제공합니다.",
+      "teamSlogunImage": "teamSlogunImage_RST",
+      "teamGoal": "임상 인허가팀은 안전하고 효과적인 의약품과 의료기기를 세상에 선보일 수 있도록 감춰진 노력과 혁신적인 아이디어로 업무를 수행합니다. 정교한 기획과 규정 준수를 통해 제품을 세계에 알리며, 환자 안전을 최우선으로 삼아 아름다운 의료 기술을 선보입니다.",
+      "teamGoalImage": "teamGoalImage_RST",
+      "teamDoing": [
+        {
+          "doingName": "국내 인허가",
+          "doingDescription": "품질책임자는 조직의 제품과 서비스 품질을 책임지며, GMP와 품질 기준을 엄격히 준수합니다. 효과적인 품질 관리 시스템을 구축하고 운영하여 지속적인 개선을 이끌며, 팀원들과 협력하여 고객의 기대를 초과하는 품질을 제공합니다. 뛰어난 커뮤니케이션과 기술적 능력을 바탕으로 조직 전체의 품질 문화를 유지하고 높이는 역할을 수행합니다."
+        },
+        {
+          "doingName": "CE",
+          "doingDescription": "과정에서 일관성 있는 기준을 제시하여 안전하고 효과적인 생산을 촉진합니다. 기업이 GMP를 준수함으로써 고객에게 높은 품질의 제품을 제공할 뿐만 아니라, 규제 요구사항을 충족하며 산업 표준을 유지할 수 있습니다. GMP는 생산 프로세스의 투명성과 신뢰성을 높여 소비자 신뢰를 증진시키는 핵심적인 역할을 합니다."
+        },
+        {
+          "doingName": "FDA",
+          "doingDescription": "소프트웨어 개발 품질 관리는 개발 과정 전반에서 품질 표준을 준수하며, 철저한 테스트와 코드 리뷰를 통해 안정성을 확보합니다. 지속적인 통합과 개발 수명 주기 동안의 높은 품질을 유지하여 사용자에게 우수한 경험을 제공하고, 이를 통해 고객 만족도와 제품의 경쟁력을 향상시킵니다."
+        },
+        {
+          "doingName": "임상시험",
+          "doingDescription": "제품의 안정성과 신뢰성을 모니터링하고 사용자 피드백을 수집하여 제품의 향상을 지속적으로 이루어내는 역할을 합니다. PMS는 고객 만족도를 유지하면서 규제 요구사항을 충족시키며, 제품의 안전성을 지속적으로 보장합니다. 이를 통해 기업은 높은 품질의 제품을 제공하고 시장에서의 지위를 강화할 수 있습니다."
+        },
+        {
+          "doingName": "QA",
+          "doingDescription": "품질보증(QA)은 소프트웨어 및 제품 개발과정에서 결함을 예방하고, 표준 및 규정을 준수하여 품질을 보장하는 활동입니다. 엄격한 테스트와 코드 검토를 통해 안정성을 확보하며, 고객 요구사항을 충족시키는 역할을 합니다. QA는 지속적인 품질 향상과 고객 만족도 증진을 위한 필수적인 역할을 수행합니다."
+        }
+      ]
     },
-    "GMP": {
-      "jobNameKor": "품질경영팀",
-      "jobNameEng": "GMP",
-      "imageName": "recruitment_job3"
+    "GST": {
+      "teamNameKor": "품질경영팀",
+      "teamNameEng": "GMP Strategy Team (GST)",
+      "teamSlogun": "GMP 원칙을 따르며,\n최고 수준의 품질을 제공하며 팀 협력을 강조합니다.",
+      "teamSlogunImage": "teamSlogunImage_GST",
+      "teamGoal": "GMP 원칙에 입각하여 품질을 책임지는 품질 경영팀은 소프트웨어 개발과 PMS를 효과적으로 관리하며, 고객의 기대를 초월하는 제품을 창출하기 위해 팀원 간의 조화로운 협력을 강조합니다.",
+      "teamGoalImage": "teamGoalImage_GST",
+      "teamDoing": [
+        {
+          "doingName": "품질책임자",
+          "doingDescription": "품질책임자는 조직의 제품과 서비스 품질을 책임지며, GMP와 품질 기준을 엄격히 준수합니다. 효과적인 품질 관리 시스템을 구축하고 운영하여 지속적인 개선을 이끌며, 팀원들과 협력하여 고객의 기대를 초과하는 품질을 제공합니다. 뛰어난 커뮤니케이션과 기술적 능력을 바탕으로 조직 전체의 품질 문화를 유지하고 높이는 역할을 수행합니다."
+        },
+        {
+          "doingName": "GMP 전반",
+          "doingDescription": "과정에서 일관성 있는 기준을 제시하여 안전하고 효과적인 생산을 촉진합니다. 기업이 GMP를 준수함으로써 고객에게 높은 품질의 제품을 제공할 뿐만 아니라, 규제 요구사항을 충족하며 산업 표준을 유지할 수 있습니다. GMP는 생산 프로세스의 투명성과 신뢰성을 높여 소비자 신뢰를 증진시키는 핵심적인 역할을 합니다."
+        },
+        {
+          "doingName": "소프트웨어 개발 품질 관리",
+          "doingDescription": "소프트웨어 개발 품질 관리는 개발 과정 전반에서 품질 표준을 준수하며, 철저한 테스트와 코드 리뷰를 통해 안정성을 확보합니다. 지속적인 통합과 개발 수명 주기 동안의 높은 품질을 유지하여 사용자에게 우수한 경험을 제공하고, 이를 통해 고객 만족도와 제품의 경쟁력을 향상시킵니다."
+        },
+        {
+          "doingName": "PMS",
+          "doingDescription": "제품의 안정성과 신뢰성을 모니터링하고 사용자 피드백을 수집하여 제품의 향상을 지속적으로 이루어내는 역할을 합니다. PMS는 고객 만족도를 유지하면서 규제 요구사항을 충족시키며, 제품의 안전성을 지속적으로 보장합니다. 이를 통해 기업은 높은 품질의 제품을 제공하고 시장에서의 지위를 강화할 수 있습니다."
+        },
+        {
+          "doingName": "QA",
+          "doingDescription": "품질보증(QA)은 소프트웨어 및 제품 개발과정에서 결함을 예방하고, 표준 및 규정을 준수하여 품질을 보장하는 활동입니다. 엄격한 테스트와 코드 검토를 통해 안정성을 확보하며, 고객 요구사항을 충족시키는 역할을 합니다. QA는 지속적인 품질 향상과 고객 만족도 증진을 위한 필수적인 역할을 수행합니다."
+        }
+      ]
     },
-    "marketing&design": {
-      "jobNameKor": "마케팅, 디자인 팀",
-      "jobNameEng": "marketing&design",
-      "imageName": "recruitment_job4"
+    "CST": {
+      "teamNameKor": "마케팅, 디자인 팀",
+      "teamNameEng": "Creative Strategy Team (CST)",
+      "teamSlogun": "아름다운 디자인은 숨은 노력과 아이디어를,\n창의적인 마케팅은 혁신을 전 세계에 널리 알립니다.",
+      "teamSlogunImage": "teamSlogunImage_CST",
+      "teamGoal": "효과적인 디자인은 제품과 서비스의 가치를 강조하며 경쟁우위를 확보합니다. 또한, 사용자 중심의 디자인은 고객 만족도를 높여 기업의 성과를 향상시킵니다.\n사용자가 제품을 통해 어떤 경험을 할 수 있는지에 중점을 두어 성공적인 디자인을 추구합니다. ",
+      "teamGoalImage": "teamGoalImage_CST",
+      "teamDoing": [
+        {
+          "doingName": "Communication Design",
+          "doingDescription": "Communication Design은 정보를 명확하게 전달하고 사용자 경험을 향상시키는 디자인의 한 분야입니다. 시각적인 효과와 문화적 컨텍스트를 고려하여 디자인 요소를 조화롭게 결합하여 메시지를 전달합니다. 로고, 포스터, 웹사이트, 앱 인터페이스 등 다양한 매체를 활용하여 브랜드의 아이덴티티를 강화하고 고객과의 소통을 향상시킵니다. Communication Design은 미적 감각과 전략적 사고를 결합하여 효과적이고 의미 있는 디자인을 창조합니다."
+        },
+        {
+          "doingName": "UI/UX Design",
+          "doingDescription": "UI/UX Design은 사용자 편의성과 브랜드 아이덴티티 강화를 위해 직관적이고 매력적인 디자인을 추구합니다. 사용자 중심의 디자인으로 더 나은 경험을 제공하며, 혁신과 만족을 동시에 실현합니다. 우리는 사용자 중심의 디자인 원칙에 기반하여 더 나은 사용자 경험을 제공함으로써 브랜드의 성공과 고객의 만족을 동시에 추구합니다."
+        },
+        {
+          "doingName": "영상 제작 및 편집자",
+          "doingDescription": "강력한 시각적 효과로 이야기를 풀어내는 것이 우리 영상 제작 및 편집자들의 역할입니다. 다양한 매체에서 효과적으로 전달되는 비주얼 스토리텔링을 통해 브랜드의 메시지를 강조하고 고객의 감정을 공감시킵니다. 최신의 기술과 창의력을 결합하여 강렬한 영상 콘텐츠를 만들어내며, 브랜드의 가시성과 영향력을 최대한으로 향상시킵니다."
+        },
+        {
+          "doingName": "기획 및 마케팅 전문가",
+          "doingDescription": "우리 팀의 기획 및 마케팅 전문가들은 창의적이고 전략적인 마케팅 솔루션을 제공합니다. 명확한 비전과 목표를 기반으로 혁신적인 캠페인을 기획하고, 데이터 기반의 마케팅 전략을 통해 클라이언트의 비즈니스 성과를 극대화합니다. 고객의 니즈를 파악하고 최신 트렌드를 반영하여 브랜드의 경쟁력을 강화하는 것이 우리의 핵심 가치입니다."
+        }
+      ]
     },
-    "operations": {
-      "jobNameKor": "운영팀",
-      "jobNameEng": "operations",
-      "imageName": "recruitment_job5"
+    "MST": {
+      "teamNameKor": "운영팀",
+      "teamNameEng": "Management Strategy Team (MST)",
+      "teamSlogun": "조화로운 업무 운영과\n원활한 팀 협력을 통해 성공을 이끌어냅니다.",
+      "teamSlogunImage": "teamSlogunImage_MST",
+      "teamGoal": "효과적인 디자인은 제품과 서비스의 가치를 강조하며 경쟁우위를 확보합니다. 또한, 사용자 중심의 디자인은 고객 만족도를 높여 기업의 성과를 향상시킵니다.\n사용자가 제품을 통해 어떤 경험을 할 수 있는지에 중점을 두어 성공적인 디자인을 추구합니다.",
+      "teamGoalImage": "teamGoalImage_MST",
+      "teamDoing": [
+        {
+          "doingName": "재무/총무/노무",
+          "doingDescription": "재무, 총무, 노무 팀은 기업의 핵심적인 경영 영역을 담당하며, 조직 전반의 원활한 운영을 보장합니다. 금융, 회계, 인사, 법무 등 다양한 분야에서 전문 지식을 바탕으로 팀원들이 협력하여 효율적이고 투명한 업무 프로세스를 구축하고 있습니다. 적극적이고 혁신적인 사고를 기반으로 변화하는 업무 환경에 대응하며, 팀원들 간의 소통과 협력을 촉진하여 긍정적인 조직 분위기를 유지하고 있습니다."
+        },
+        {
+          "doingName": "기술영업/전시/고객관리",
+          "doingDescription": "기술영업, 전시, 고객관리 팀은 혁신적인 기술 솔루션을 고객에게 성공적으로 소개하고 제공하는 역할을 맡고 있습니다. 기술영업 팀은 최신 기술과 제품을 고객에게 적합하게 소개하고, 고객의 비즈니스에 가치를 더하는 솔루션을 제안합니다. 이를 위해 산업 동향과 기술 트렌드에 대한 심층적인 이해와 뛰어난 커뮤니케이션 기술이 필요합니다. 기술과 비즈니스 간의 다리 역할을 수행하며, 혁신적인 제품이나 서비스를 고객에게 성공적으로 전달하여 기업의 성장을 이끌고 있습니다."
+        }
+      ]
     }
   }
 }
