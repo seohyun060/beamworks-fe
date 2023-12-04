@@ -6,12 +6,12 @@
       "imageName": "recruitment_job1"
     },
     "regulatory_strategy": {
-      "jobNameKor": "임상 인허가팀",
+      "jobNameKor": "인허가팀",
       "jobNameEng": "RST",
       "imageName": "recruitment_job2"
     },
     "GMP": {
-      "jobNameKor": "품질경영팀",
+      "jobNameKor": "GMP",
       "jobNameEng": "GST",
       "imageName": "recruitment_job3"
     },

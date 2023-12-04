@@ -52,28 +52,27 @@
   line-height: 132%;
 }
 
-.IntroduceAbout {
-  background-image: url("/public/assets/images/about_background.png");
-  background-size: cover;
-  background-position: center center;
+.IntroduceAbout article {
+  display: flex;
+  justify-content: space-between;
 }
 .IntroduceAbout .About {
-  width: 66%;
+  width: 40.5%;
   height: 100%;
 }
 .IntroduceAbout .About .Title {
-  margin-bottom: 2.4%;
+  margin-top: 2.1em;
 }
 .IntroduceAbout .About .Title label {
   color: var(--Middle-Glay, #a0a0a0);
   font-family: Pretendard;
-  font-size: 4em;
+  font-size: 3em;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%;
+  line-height: 133.333%;
 }
 .IntroduceAbout .About .BoardMember {
-  margin-bottom: 3%;
+  margin-top: 1.2em;
 }
 .IntroduceAbout .About .BoardMember label {
   color: var(--Black, #000);
@@ -81,13 +80,13 @@
   font-size: 5em;
   font-style: normal;
   font-weight: 600;
-  line-height: 80%;
+  line-height: 124%;
 }
 .IntroduceAbout .About .Greeting {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 83.5%;
+  margin-top: 14.5em;
 }
 .IntroduceAbout .About .Greeting label {
   color: #000;
@@ -95,24 +94,28 @@
   font-size: 2.4em;
   font-style: normal;
   font-weight: 400;
-  line-height: 166.667%;
+  line-height: 141.667%;
 }
 .IntroduceAbout .About .Signature {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 5.2%;
-  float: inline-end;
+  margin-top: 4.2em;
 }
 .IntroduceAbout .About .Signature img:nth-child(1) {
-  width: 15%;
+  width: 15em;
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 5%;
 }
 .IntroduceAbout .About .Signature img:nth-child(2) {
-  width: 15%;
+  width: 11.8em;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.IntroduceAbout .ChiefPicture {
+  width: 49%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .IntroduceMission .Mission .MissionTitle {

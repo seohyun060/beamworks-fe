@@ -29,11 +29,11 @@
       ]
     },
     "RST": {
-      "teamNameKor": "임상 인허가팀",
+      "teamNameKor": "인허가팀",
       "teamNameEng": "Regulatory Strategy Team (RST)",
       "teamSlogun": "숨은 혁신을 찾아내어\n세계적으로 인정받는 안전한 의료 솔루션을 제공합니다.",
       "teamSlogunImage": "teamSlogunImage_RST",
-      "teamGoal": "임상 인허가팀은 안전하고 효과적인 의약품과 의료기기를 세상에 선보일 수 있도록 감춰진 노력과 혁신적인 아이디어로 업무를 수행합니다. 정교한 기획과 규정 준수를 통해 제품을 세계에 알리며, 환자 안전을 최우선으로 삼아 아름다운 의료 기술을 선보입니다.",
+      "teamGoal": "인허가팀은 안전하고 효과적인 의약품과 의료기기를 세상에 선보일 수 있도록 감춰진 노력과 혁신적인 아이디어로 업무를 수행합니다. 정교한 기획과 규정 준수를 통해 제품을 세계에 알리며, 환자 안전을 최우선으로 삼아 아름다운 의료 기술을 선보입니다.",
       "teamGoalImage": "teamGoalImage_RST",
       "teamDoing": [
         {
@@ -59,7 +59,7 @@
       ]
     },
     "GST": {
-      "teamNameKor": "품질경영팀",
+      "teamNameKor": "GMP",
       "teamNameEng": "GMP Strategy Team (GST)",
       "teamSlogun": "GMP 원칙을 따르며,\n최고 수준의 품질을 제공하며 팀 협력을 강조합니다.",
       "teamSlogunImage": "teamSlogunImage_GST",
