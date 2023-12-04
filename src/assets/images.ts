@@ -181,6 +181,10 @@ const images = {
 	eeasy5_pain8: '/assets/images/eeasy5_pain8.png',
 	eeasy5_pain10: '/assets/images/eeasy5_pain10.png',
 	rvmode: '/assets/images/rvmode.png',
+
+	//Team
+	marketing_design_intro: '/assets/images/team/marketing&design_intro.png',
+	marketing_design_goal: '/assets/images/team/marketing&design_goal.png',
 };
 
 export default images;

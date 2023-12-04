@@ -8,9 +8,11 @@ import JobsJobs from "../JobsList.json";
 const JobsJob = () => {
   const carouselRef = useRef(0);
 
-  const maxCarouselCount = JobsJobs.data.length - 3;
+  const maxCarouselCount = Object.entries(JobsJobs.data).length - 3;
 
   const [currentCarouselPage, setCurrentCarouselPage] = useState(0);
+
+  console.log(JobsJobs.data.length);
 
   const carouselMoveBackward = () => {
     if (currentCarouselPage - 3 >= 0) {
@@ -64,11 +66,11 @@ const JobsJob = () => {
         </div>
         <div className="TeamListCarousel">
           <div className="Carousel" ref={carouselRef}>
-            {JobsJobs.data.map((data, index) => (
+            {Object.entries(JobsJobs.data).map((data, index) => (
               <JobsJobCard
                 key={index}
-                jobName={data.jobName}
-                imageName={data.imageName}
+                jobName={data[1].jobNameKor}
+                imageName={data[1].imageName}
                 isVisible={
                   index >= currentCarouselPage &&
                   index <= currentCarouselPage + 2

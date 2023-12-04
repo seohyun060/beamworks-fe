@@ -1,0 +1,213 @@
+.scroll {
+  overflow: hidden;
+}
+
+.Introduce::-webkit-scrollbar {
+  width: 0rem; /* 스크롤바 너비를 최소로 줄임 */
+}
+
+.Team {
+  height: 100vh;
+  font-size: 0.5208333333333vw; // 10px 기준 하위 항목 1em
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    scroll-snap-align: start;
+    // 추후 상단바의 높이만큼 동적조절 필요
+    padding-top: 52px;
+    background-color: white;
+    transition: all 0.5s ease-out;
+    article {
+      position: relative;
+      width: 62.5%;
+    }
+  }
+
+  .ApplyButton {
+    position: fixed;
+    top: 8.89vh;
+    right: 10.41vw;
+    width: fit-content;
+    z-index: 10;
+    display: inline-flex;
+    padding: 0.104vw 1.56vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.52vw;
+    border-radius: 0.208vw;
+    border: 1px solid var(--Check, #346ec5);
+    background: var(--Check, #346ec5);
+    color: var(--White, #fff);
+    text-align: right;
+    font-family: Pretendard;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4; /* 140% */
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.TeamIntro {
+  flex-direction: column;
+  .Description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42.5%;
+    .Title {
+      margin-bottom: 1.2em;
+      span {
+        color: var(--Black, #000);
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 3em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 133.333%;
+      }
+    }
+    .Slogun {
+      p {
+        color: var(--Black, #000);
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 5em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 124%;
+      }
+    }
+  }
+  .ImageSection {
+    width: 100%;
+    height: 57.5%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.TeamGoal {
+  flex-direction: column;
+  .GoalDescription {
+    width: 100%;
+    height: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Goal {
+      width: 41.25%;
+      p {
+        color: var(--Dark-Glay, #4d4f58);
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 2.4em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 141.667%;
+      }
+    }
+  }
+
+  .ImageSection {
+    width: 100%;
+    height: 64%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.TeamDoing {
+  flex-direction: column;
+  article {
+    padding-left: 5vw;
+    padding-right: 10vw;
+  }
+  .DoingHeader {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 5vw;
+    margin-bottom: 10%;
+    .HeaderTitle {
+      span {
+        color: var(--Dark-Glay, #4d4f58);
+        font-family: Pretendard;
+        font-size: 4em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+      }
+    }
+  }
+  .DoingDescription {
+    width: 100%;
+    height: 75%;
+  }
+}
+
+.DoingCard {
+  margin-bottom: 1.3em;
+  .CardTitle {
+    margin-bottom: 1.4em;
+    span {
+      color: var(--Check, #346ec5);
+      font-family: Pretendard;
+      font-size: 3em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 133.333%;
+    }
+  }
+  .CardDescription {
+    height: 23.8em;
+    p {
+      color: var(--Dark-Glay, #4d4f58);
+      font-family: Pretendard;
+      font-size: 2.4em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 141.667%;
+    }
+  }
+}
+
+.TeamOther {
+  .TeamOtherTitle {
+    text-align: center;
+    margin-bottom: 5.2em;
+    span {
+      color: var(--Middle-Glay, #a0a0a0);
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 4em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+    }
+  }
+  .TeamOtherContents {
+    display: flex;
+    flex-direction: row;
+  }
+}
