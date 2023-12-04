@@ -13,7 +13,7 @@ export type MainNews = {
 	type: string;
 };
 
-export type Solution = {
+export type SolutionType = {
 	index: number;
 	problem: string;
 	solution: string;
@@ -31,7 +31,7 @@ export type CadbMode = {
 	image3: string;
 };
 
-export type Explore = {
+export type ExploreType = {
 	type: string;
 	title: string;
 	contents: {
@@ -67,6 +67,6 @@ export type CadrContent = {
 
 export type SolutionContent = {
 	title: string;
-	solutionList: Solution[];
+	solutionList: SolutionType[];
 	bannerList: string[];
 };

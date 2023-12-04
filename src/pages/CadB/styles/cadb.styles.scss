@@ -460,6 +460,21 @@
 				margin-left: 1.82vw;
 			}
 		}
+		&-review {
+			width: fit-content;
+			height: fit-content;
+			margin-top: 2.03vw;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			position: relative;
+			.s4-rvmode {
+				position: relative;
+				margin-left: 7.7vw;
+				width: 44.9vw;
+			}
+		}
 		&-setting {
 			width: fit-content;
 			height: 14.17vw;

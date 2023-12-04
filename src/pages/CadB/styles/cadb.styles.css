@@ -419,6 +419,22 @@
   width: 20.78vw;
   margin-left: 1.82vw;
 }
+.cadb-s4-review {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 2.03vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.cadb-s4-review .s4-rvmode {
+  position: relative;
+  margin-left: 7.7vw;
+  width: 44.9vw;
+}
 .cadb-s4-setting {
   width: -moz-fit-content;
   width: fit-content;
