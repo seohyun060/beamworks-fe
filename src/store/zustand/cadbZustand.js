@@ -49,6 +49,18 @@ const useCadbStore = create((set) => ({
 		image2: images.smode_box,
 		image3: images.smode,
 	},
+	rvmode: {
+		type: 'review',
+		title: 'Review-mode',
+		descript:
+			'Review mode는 초음파 검사가 끝나고 저장된 화면을 다시 볼 수 있습니다. 조작법은 크게 어렵지 않으며 단지 몇번의 클릭만 하면 됩니다. 병변에 대한 정보 수정은 R&C 홈페이지에서 가능합니다.',
+		button: '',
+		modeOff: '',
+		modeOn: '',
+		image1: images.rvmode,
+		image2: '',
+		image3: '',
+	},
 }));
 
 export default useCadbStore;

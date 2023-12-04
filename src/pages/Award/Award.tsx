@@ -1,6 +1,6 @@
 import React from 'react';
-import AwardS1Container from './containers/AwardS1Container';
-import AwardS2Container from './containers/AwardS2Container';
+import AwardBannerContainer from './containers/AwardBannerContainer';
+import AwardHistoryContainer from './containers/AwardHistoryContainer';
 import './styles/award.styles.css';
 import FooterContainer from 'src/pages/Footer/containers/FooterContainer';
 type Props = {};
@@ -8,8 +8,8 @@ type Props = {};
 const Award = (props: Props) => {
 	return (
 		<div className='award'>
-			<AwardS1Container />
-			<AwardS2Container />
+			<AwardBannerContainer />
+			<AwardHistoryContainer />
 			<FooterContainer />
 		</div>
 	);

@@ -1,31 +1,30 @@
 import React from 'react';
 import images from 'src/assets/images';
 import './styles/eeasy.styles.css';
-import EeasyS1Container from './containers/EeasyS1Container';
-import EeasyS2Container from './containers/EeasyS2Container';
+import EeasyBannerContainer from './containers/EeasyBannerContainer';
+import EeasyHandContainer from './containers/EeasyHandContainer';
 import useProductStore from '@store/zustand/productZustand';
-import ProductS5Container from 'src/pages/Product/containers/ProductS5Container';
-import EeasyS3Container from './containers/EeasyS3Container';
-import EeasyS4Container from './containers/EeasyS4Container';
-import EeasyS5Container from './containers/EeasyS5Container';
-import EeasyS6Container from './containers/EeasyS6Container';
-import EeasyS7Container from './containers/EeasyS7Container';
-import ChatAIS7Container from 'src/pages/ChatAI/containers/ChatAIS7Container';
-import ProductS8Container from 'src/pages/Product/containers/ProductS8Container';
+import SolvingContainer from 'src/pages/Cad/containers/SolvingContainer';
+import EeasyInfoContainer from './containers/EeasyInfoContainer';
+import EeasyNervContainer from './containers/EeasyNervContainer';
+import EeasyPainContainer from './containers/EeasyPainContainer';
+import EeasyVideoContainer from './containers/EeasyVideoContainer';
+import ChatAIDownContainer from '@components/ChatAI/containers/ChatAIDownContainer';
+import ExploreContainer from 'src/pages/Cad/containers/ExploreContainer';
 type Props = {};
 
 const Eeasy = (props: Props) => {
 	const { eeasySolution, chataiExplore } = useProductStore();
 	return (
 		<div className='eeasy'>
-			<EeasyS1Container />
-			<EeasyS2Container />
-			<ProductS5Container solution={eeasySolution} />
-			<EeasyS3Container />
-			<EeasyS4Container />
-			<EeasyS5Container />
-			<EeasyS6Container />
-			<ProductS8Container exploreType={chataiExplore} />
+			<EeasyBannerContainer />
+			<EeasyHandContainer />
+			<SolvingContainer solution={eeasySolution} />
+			<EeasyInfoContainer />
+			<EeasyNervContainer />
+			<EeasyPainContainer />
+			<EeasyVideoContainer />
+			<ExploreContainer exploreType={chataiExplore} />
 		</div>
 	);
 };

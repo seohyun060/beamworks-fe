@@ -180,6 +180,7 @@ const images = {
 	eeasy5_pain6: '/assets/images/eeasy5_pain6.png',
 	eeasy5_pain8: '/assets/images/eeasy5_pain8.png',
 	eeasy5_pain10: '/assets/images/eeasy5_pain10.png',
+	rvmode: '/assets/images/rvmode.png',
 };
 
 export default images;
