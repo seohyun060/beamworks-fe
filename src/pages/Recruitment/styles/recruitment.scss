@@ -1,4 +1,4 @@
-.Contact {
+.Recruitment {
   font-size: 0.5208333333333vw; // 10px 기준 하위 항목 1em
   section {
     display: flex;
@@ -16,7 +16,7 @@
   }
 }
 
-.ContactHeader {
+.RecruitmentHeader {
   .PageName {
     margin-bottom: 1.2em;
     label {
@@ -51,7 +51,7 @@
   }
 }
 
-.ContactContents {
+.RecruitmentContents {
   display: flex;
   margin: 4em 0em;
   .buttonBar {
@@ -94,7 +94,7 @@
 
   .ContentsArticle {
     width: 78.5%;
-    .ContactInquire {
+    .RecriutmentApply {
       position: relative;
       width: 69em;
       .Name {
@@ -282,69 +282,4 @@
       }
     }
   }
-}
-
-.ContactFindUs {
-  .title span {
-    color: var(--Black, #000);
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 2.4em;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 133.333%;
-  }
-  .subTitle span {
-    color: var(--Black, #000);
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 1.6em;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 175%;
-  }
-  .description span {
-    color: var(--Black, #000);
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 1.6em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 175%;
-  }
-  .CompanyName {
-    margin-bottom: 1.2em;
-  }
-  .Address {
-    margin-bottom: 3.2em;
-  }
-  .ContactInformation {
-    margin-bottom: 3.6em;
-    .ContactNumber,
-    .ContactEmail,
-    .ContactFax {
-      display: flex;
-      margin-bottom: 0.4em;
-      div:first-child {
-        margin-right: 1em;
-      }
-    }
-  }
-  .Transportation {
-    margin-bottom: 6.1em;
-    .TransportationTitle {
-      margin-bottom: 1.2em;
-    }
-    .TransportationSubway,
-    .TransportationCar {
-      display: flex;
-      margin-bottom: 0.4em;
-    }
-  }
-}
-
-.LoadingMansYou {
-  background-color: #000;
-  opacity: 0.5;
-  z-index: 100;
 }

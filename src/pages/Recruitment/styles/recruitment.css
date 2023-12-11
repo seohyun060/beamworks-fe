@@ -1,0 +1,266 @@
+.Recruitment {
+  font-size: 0.5208333333vw;
+}
+.Recruitment section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: calc(52px + 10em);
+  background-color: white;
+}
+.Recruitment article {
+  position: relative;
+  width: 62.5%;
+}
+
+.RecruitmentHeader .PageName {
+  margin-bottom: 1.2em;
+}
+.RecruitmentHeader .PageName label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+.RecruitmentHeader .HeaderTitle {
+  margin-bottom: 2.4em;
+}
+.RecruitmentHeader .HeaderTitle label {
+  color: var(--Black, #000);
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 124%;
+}
+.RecruitmentHeader .HeaderDescription label {
+  color: var(--Dark-Glay, #4d4f58);
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.667%;
+}
+
+.RecruitmentContents {
+  display: flex;
+  margin: 4em 0em;
+}
+.RecruitmentContents .buttonBar {
+  display: flex;
+  flex-direction: column;
+  width: 19.5%;
+  margin-right: 2%;
+}
+.RecruitmentContents .buttonBar .navButton {
+  display: flex;
+  width: 18em;
+  padding: 0.2em 3em;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7em 0em 2.5em 0em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--Check, #346ec5);
+  background: var(--White, #fff);
+}
+.RecruitmentContents .buttonBar .navButton span {
+  color: var(--Check, #346ec5);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.RecruitmentContents .buttonBar .navButton:hover {
+  cursor: pointer;
+}
+.RecruitmentContents .buttonBar .navButton.selected {
+  background: var(--Check, #346ec5);
+}
+.RecruitmentContents .buttonBar .navButton.selected span {
+  color: var(--White, #fff);
+}
+.RecruitmentContents .ContentsArticle {
+  width: 78.5%;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply {
+  position: relative;
+  width: 69em;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .Name {
+  display: flex;
+  justify-content: space-between;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .Name .FirstName {
+  width: 28.2em;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .Name .LastName {
+  width: 38.4em;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .PrivacyPoilcyAgree {
+  display: flex;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .PrivacyPoilcyAgree .Test {
+  width: 2em;
+  height: 2em;
+  margin-top: 0.4em;
+  margin-right: 0.8em;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .PrivacyPoilcyAgree .Test input {
+  width: 100%;
+  height: 100%;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .PrivacyPoilcyAgree .PrivacyPoilcyDescription label {
+  color: var(--Middle-Glay, #a0a0a0);
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .InquireSubmit {
+  font-size: 0.5208333333vw;
+  display: flex;
+  width: 18em;
+  padding: 0.2em 3em;
+  justify-content: center;
+  align-items: center;
+  margin: 7.9em 0em 2.5em 0em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--Check, #346ec5);
+  background: var(--White, #fff);
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .InquireSubmit span {
+  color: var(--Check, #346ec5);
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .InquireSubmit:hover {
+  cursor: pointer;
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .InquireSubmit.isActive {
+  background: var(--Check, #346ec5);
+}
+.RecruitmentContents .ContentsArticle .RecriutmentApply .InquireSubmit.isActive span {
+  color: var(--White, #fff);
+}
+.RecruitmentContents .FormSpace {
+  margin-bottom: 2em;
+}
+.RecruitmentContents .FormSpace .FormName {
+  display: flex;
+  position: relative;
+}
+.RecruitmentContents .FormSpace .FormName label {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+.RecruitmentContents .FormSpace .FormName img {
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.2em;
+}
+.RecruitmentContents .FormSpace .FormName div {
+  margin-left: 1em;
+}
+.RecruitmentContents .FormSpace .FormName div label {
+  color: #9c1111;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+}
+.RecruitmentContents .FormSpace .InputCategory {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2em 1.3em;
+  margin: 2em 0em;
+  border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+}
+.RecruitmentContents .FormSpace .InputCategory input {
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.RecruitmentContents .FormSpace .InputCategory img {
+  width: 1.6em;
+  height: 1em;
+  transition: 0.1s linear;
+}
+.RecruitmentContents .FormSpace .InputCategory img.isOpen {
+  transform: rotate(180deg);
+}
+.RecruitmentContents .FormSpace .InputCategory:hover {
+  cursor: pointer;
+}
+.RecruitmentContents .FormSpace .CategorySelectBox {
+  position: absolute;
+  top: 10.7em;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  z-index: 10;
+}
+.RecruitmentContents .FormSpace .CategorySelectBox li {
+  height: 5.2em;
+  padding: 1.2em 1.3em;
+  border-width: 0em 0.1em 0.1em 0.1em;
+  border-color: var(--Middle-Glay, #a0a0a0);
+  border-style: solid;
+}
+.RecruitmentContents .FormSpace .CategorySelectBox li span {
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.RecruitmentContents .FormSpace .CategorySelectBox :hover {
+  cursor: pointer;
+}
+.RecruitmentContents .FormSpace .InputFormBox {
+  padding: 1.2em 1.3em;
+  margin: 2em 0em;
+  border: 0.1em solid var(--Middle-Glay, #a0a0a0);
+}
+.RecruitmentContents .FormSpace .InputFormBox.text {
+  height: 30em;
+}
+.RecruitmentContents .FormSpace .InputFormBox input {
+  width: 100%;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.RecruitmentContents .FormSpace .InputFormBox textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}/*# sourceMappingURL=recruitment.css.map */

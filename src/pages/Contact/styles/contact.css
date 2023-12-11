@@ -86,38 +86,37 @@
 .ContactContents .buttonBar .navButton.selected span {
   color: var(--White, #fff);
 }
-
-.ContentsArticle {
+.ContactContents .ContentsArticle {
   width: 78.5%;
 }
-.ContentsArticle .ContactInquire {
+.ContactContents .ContentsArticle .ContactInquire {
   position: relative;
   width: 69em;
 }
-.ContentsArticle .ContactInquire .Name {
+.ContactContents .ContentsArticle .ContactInquire .Name {
   display: flex;
   justify-content: space-between;
 }
-.ContentsArticle .ContactInquire .Name .FirstName {
+.ContactContents .ContentsArticle .ContactInquire .Name .FirstName {
   width: 28.2em;
 }
-.ContentsArticle .ContactInquire .Name .LastName {
+.ContactContents .ContentsArticle .ContactInquire .Name .LastName {
   width: 38.4em;
 }
-.ContentsArticle .ContactInquire .PrivacyPoilcyAgree {
+.ContactContents .ContentsArticle .ContactInquire .PrivacyPoilcyAgree {
   display: flex;
 }
-.ContentsArticle .ContactInquire .PrivacyPoilcyAgree .Test {
+.ContactContents .ContentsArticle .ContactInquire .PrivacyPoilcyAgree .Test {
   width: 2em;
   height: 2em;
   margin-top: 0.4em;
   margin-right: 0.8em;
 }
-.ContentsArticle .ContactInquire .PrivacyPoilcyAgree .Test input {
+.ContactContents .ContentsArticle .ContactInquire .PrivacyPoilcyAgree .Test input {
   width: 100%;
   height: 100%;
 }
-.ContentsArticle .ContactInquire .PrivacyPoilcyAgree .PrivacyPoilcyDescription label {
+.ContactContents .ContentsArticle .ContactInquire .PrivacyPoilcyAgree .PrivacyPoilcyDescription label {
   color: var(--Middle-Glay, #a0a0a0);
   font-family: Pretendard;
   font-size: 1.6em;
@@ -125,7 +124,7 @@
   font-weight: 400;
   line-height: 175%;
 }
-.ContentsArticle .ContactInquire .InquireSubmit {
+.ContactContents .ContentsArticle .ContactInquire .InquireSubmit {
   font-size: 0.5208333333vw;
   display: flex;
   width: 18em;
@@ -137,7 +136,7 @@
   border: 0.1em solid var(--Check, #346ec5);
   background: var(--White, #fff);
 }
-.ContentsArticle .ContactInquire .InquireSubmit span {
+.ContactContents .ContentsArticle .ContactInquire .InquireSubmit span {
   color: var(--Check, #346ec5);
   text-align: right;
   font-family: Pretendard;
@@ -146,24 +145,23 @@
   font-weight: 400;
   line-height: 140%;
 }
-.ContentsArticle .ContactInquire .InquireSubmit:hover {
+.ContactContents .ContentsArticle .ContactInquire .InquireSubmit:hover {
   cursor: pointer;
 }
-.ContentsArticle .ContactInquire .InquireSubmit.isActive {
+.ContactContents .ContentsArticle .ContactInquire .InquireSubmit.isActive {
   background: var(--Check, #346ec5);
 }
-.ContentsArticle .ContactInquire .InquireSubmit.isActive span {
+.ContactContents .ContentsArticle .ContactInquire .InquireSubmit.isActive span {
   color: var(--White, #fff);
 }
-
-.FormSpace {
+.ContactContents .FormSpace {
   margin-bottom: 2em;
 }
-.FormSpace .FormName {
+.ContactContents .FormSpace .FormName {
   display: flex;
   position: relative;
 }
-.FormSpace .FormName label {
+.ContactContents .FormSpace .FormName label {
   color: #000;
   font-family: Pretendard;
   font-size: 2.4em;
@@ -171,15 +169,15 @@
   font-weight: 600;
   line-height: 133.333%;
 }
-.FormSpace .FormName img {
+.ContactContents .FormSpace .FormName img {
   width: 0.8em;
   height: 0.8em;
   margin-left: 0.2em;
 }
-.FormSpace .FormName div {
+.ContactContents .FormSpace .FormName div {
   margin-left: 1em;
 }
-.FormSpace .FormName div label {
+.ContactContents .FormSpace .FormName div label {
   color: #9c1111;
   font-family: Pretendard;
   font-size: 1.6em;
@@ -187,7 +185,7 @@
   font-weight: 400;
   line-height: 200%;
 }
-.FormSpace .InputCategory {
+.ContactContents .FormSpace .InputCategory {
   display: flex;
   position: relative;
   align-items: center;
@@ -196,25 +194,25 @@
   margin: 2em 0em;
   border: 0.1em solid var(--Middle-Glay, #a0a0a0);
 }
-.FormSpace .InputCategory input {
+.ContactContents .FormSpace .InputCategory input {
   font-family: Pretendard;
   font-size: 1.6em;
   font-style: normal;
   font-weight: 400;
   line-height: 175%;
 }
-.FormSpace .InputCategory img {
+.ContactContents .FormSpace .InputCategory img {
   width: 1.6em;
   height: 1em;
   transition: 0.1s linear;
 }
-.FormSpace .InputCategory img.isOpen {
+.ContactContents .FormSpace .InputCategory img.isOpen {
   transform: rotate(180deg);
 }
-.FormSpace .InputCategory:hover {
+.ContactContents .FormSpace .InputCategory:hover {
   cursor: pointer;
 }
-.FormSpace .CategorySelectBox {
+.ContactContents .FormSpace .CategorySelectBox {
   position: absolute;
   top: 10.7em;
   width: 100%;
@@ -223,32 +221,32 @@
   background-color: white;
   z-index: 10;
 }
-.FormSpace .CategorySelectBox li {
+.ContactContents .FormSpace .CategorySelectBox li {
   height: 5.2em;
   padding: 1.2em 1.3em;
   border-width: 0em 0.1em 0.1em 0.1em;
   border-color: var(--Middle-Glay, #a0a0a0);
   border-style: solid;
 }
-.FormSpace .CategorySelectBox li span {
+.ContactContents .FormSpace .CategorySelectBox li span {
   font-family: Pretendard;
   font-size: 1.6em;
   font-style: normal;
   font-weight: 400;
   line-height: 175%;
 }
-.FormSpace .CategorySelectBox :hover {
+.ContactContents .FormSpace .CategorySelectBox :hover {
   cursor: pointer;
 }
-.FormSpace .InputFormBox {
+.ContactContents .FormSpace .InputFormBox {
   padding: 1.2em 1.3em;
   margin: 2em 0em;
   border: 0.1em solid var(--Middle-Glay, #a0a0a0);
 }
-.FormSpace .InputFormBox.text {
+.ContactContents .FormSpace .InputFormBox.text {
   height: 30em;
 }
-.FormSpace .InputFormBox input {
+.ContactContents .FormSpace .InputFormBox input {
   width: 100%;
   font-family: Pretendard;
   font-size: 1.6em;
@@ -256,7 +254,7 @@
   font-weight: 400;
   line-height: 175%;
 }
-.FormSpace .InputFormBox textarea {
+.ContactContents .FormSpace .InputFormBox textarea {
   width: 100%;
   height: 100%;
   resize: none;

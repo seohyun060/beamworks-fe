@@ -5,6 +5,7 @@ import Introduce from "src/pages/Introduce/Introduce";
 import Culture from "src/pages/Culture/Culture";
 import Jobs from "src/pages/Jobs/Jobs";
 import Team from "src/pages/Team/Team";
+import Recruitment from "src/pages/Recruitment/Recruitment";
 import CadContainer from "src/pages/Cad/containers/CadContainer";
 import ChatAIContainer from "src/pages/ChatAI/containers/ChatAIContainer";
 import CadBContainer from "src/pages/CadB/containers/CadBContainer";
@@ -38,6 +39,7 @@ const RootNavigation = () => {
 				<Route path="/team/MST" element={<Team jobName="MST"/>} />
 				<Route path="/team/GST" element={<Team jobName="GST"/>} />
 				<Route path="/team/RST" element={<Team jobName="RST"/>} />
+				<Route path="/Recruitment" element={<Recruitment/>} />
 				<Route path='/chatai' element={<ChatAIContainer />} />
 				<Route path='/product' element={<CadContainer />} />
 				<Route path='/cadb' element={<CadBContainer />} />

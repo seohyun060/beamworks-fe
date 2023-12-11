@@ -1,57 +1,24 @@
 import React, { useState } from "react";
 import { useFormik, Formik, Field, Form } from "formik";
-import emailjs from "@emailjs/browser";
 
 import images from "src/assets/images";
 
-// Inquire Form 부분
-const ContactInquire = () => {
+const RecruitmentApply = () => {
   const [selectedCategory, setSelectedCategory] = useState("공통");
   const [isCategorySelectBoxOpen, setIsCategorySelectBoxOpen] = useState(false);
-  const categoryArray = ["공통", "문의1", "문의2", "문의3", "문의4"];
-
-  // 추후 메일을 보내기 위한 로딩과정에서 사용, 전역관리?
-  const [isLoading, setIsLoading] = useState(false);
+  const categoryArray = ["공통", "팀1", "팀2", "팀3", "팀4", "팀5"];
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
 
-  // sumbit버튼 동작, 눌렀을 떄 로딩동작 필요
-  const onSubmitButtonClick = async (data) => {
-    setIsLoading(true);
-    console.log(data);
-    await emailjs
-      .sendForm(
-        // Outlook Email Serives
-        "service_5y4y492",
-        // EmailJS templeate
-        "template_9zizcyu",
-        document.getElementById("inquireForm"),
-        process.env.REACT_APP_EMAILJS_PUBLICK_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("이메일 전송이 완료되었습니다.");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("이메일 전송에 실패하였습니다.");
-        }
-      );
-    setIsLoading(false);
-    window.location.replace("/contact");
-  };
-
-  const inquireFormik = useFormik({
+  const recruitmentFormik = useFormik({
     initialValues: {
       category: "",
       firstName: "",
       lastName: "",
       email: "",
       phoneNumber: "",
-      affiliation: "",
-      inquireTitle: "",
-      inquireContents: "",
+      resume: null,
+      portfolio: null,
     },
     validate: (values) => {
       const errors = {};
@@ -78,37 +45,32 @@ const ContactInquire = () => {
       if (!values.phoneNumber) {
         errors.phoneNumber = "이 필드는 필수입니다.";
       }
-      if (!values.affiliation) {
-        errors.affiliation = "이 필드는 필수입니다.";
-      }
-      if (!values.inquireTitle) {
-        errors.inquireTitle = "이 필드는 필수입니다.";
-      }
-      if (!values.inquireContents) {
-        errors.inquireContents = "이 필드는 필수입니다.";
+      if (!values.resume) {
+        errors.resume = "이 필드는 필수입니다.";
       }
       return errors;
     },
     onSubmit: (values) => {
       // values는 JSON형식의 데이터
-      onSubmitButtonClick(values);
+      // onSubmitButtonClick(values);
     },
   });
 
   return (
     <form
-      className="ContactInquire"
+      className="RecriutmentApply"
       id="inquireForm"
-      onSubmit={inquireFormik.handleSubmit}
+      onSubmit={recruitmentFormik.handleSubmit}
     >
-      {/* 문의항목 입력, Select Box */}
+      {/* 문의항목 입력, Select Box(Drob down) */}
       <div className="FormSpace">
         <div className="FormName">
-          <label>문의항목</label>
+          <label>지원 팀</label>
           <img src={images.required_mark} />
-          {inquireFormik.touched.category && inquireFormik.errors.category ? (
+          {recruitmentFormik.touched.category &&
+          recruitmentFormik.errors.category ? (
             <div>
-              <label>{inquireFormik.errors.category}</label>
+              <label>{recruitmentFormik.errors.category}</label>
             </div>
           ) : null}
         </div>
@@ -118,9 +80,8 @@ const ContactInquire = () => {
         >
           <input
             name="category"
-            placeholder="선택"
+            placeholder="공통"
             value={selectedCategory}
-            // onBlur={inquireFormik.handleBlur}
             readOnly
             required
           />
@@ -129,6 +90,18 @@ const ContactInquire = () => {
             src={images.select_box_open}
           />
         </div>
+        {/* <select
+          className="InputCategory"
+          name="category"
+          value={recruitmentFormik.values.category}
+          onChange={recruitmentFormik.handleChange}
+          onBlur={recruitmentFormik.handleBlur}
+        >
+          <option value="" label="공통"></option>
+          <option value="팀1" label="팀1"></option>
+          <option value="팀2" label="팀2"></option>
+          <option value="팀3" label="팀3"></option>
+        </select> */}
         {/* 문의항목 선택 바 */}
         {isCategorySelectBoxOpen && (
           <div className="CategorySelectBox">
@@ -138,7 +111,6 @@ const ContactInquire = () => {
                 onClick={() => {
                   setSelectedCategory(data);
                   setIsCategorySelectBoxOpen((prev) => !prev);
-                  inquireFormik.values.category = selectedCategory;
                 }}
               >
                 <span>{data}</span>
@@ -154,10 +126,10 @@ const ContactInquire = () => {
             <div className="FormName">
               <label>성</label>
               <img src={images.required_mark} />
-              {inquireFormik.touched.firstName &&
-              inquireFormik.errors.firstName ? (
+              {recruitmentFormik.touched.firstName &&
+              recruitmentFormik.errors.firstName ? (
                 <div>
-                  <label>{inquireFormik.errors.firstName}</label>
+                  <label>{recruitmentFormik.errors.firstName}</label>
                 </div>
               ) : null}
             </div>
@@ -165,9 +137,9 @@ const ContactInquire = () => {
               <input
                 name="firstName"
                 placeholder="성을 입력해주세요"
-                value={inquireFormik.values.firstName}
-                onChange={inquireFormik.handleChange}
-                onBlur={inquireFormik.handleBlur}
+                value={recruitmentFormik.values.firstName}
+                onChange={recruitmentFormik.handleChange}
+                onBlur={recruitmentFormik.handleBlur}
               />
             </div>
           </div>
@@ -177,10 +149,10 @@ const ContactInquire = () => {
             <div className="FormName">
               <label>이름</label>
               <img src={images.required_mark} />
-              {inquireFormik.touched.lastName &&
-              inquireFormik.errors.lastName ? (
+              {recruitmentFormik.touched.lastName &&
+              recruitmentFormik.errors.lastName ? (
                 <div>
-                  <label>{inquireFormik.errors.lastName}</label>
+                  <label>{recruitmentFormik.errors.lastName}</label>
                 </div>
               ) : null}
             </div>
@@ -188,9 +160,9 @@ const ContactInquire = () => {
               <input
                 name="lastName"
                 placeholder="이름을 입력해주세요"
-                value={inquireFormik.values.lastName}
-                onChange={inquireFormik.handleChange}
-                onBlur={inquireFormik.handleBlur}
+                value={recruitmentFormik.values.lastName}
+                onChange={recruitmentFormik.handleChange}
+                onBlur={recruitmentFormik.handleBlur}
               />
             </div>
           </div>
@@ -202,9 +174,10 @@ const ContactInquire = () => {
           <div className="FormName">
             <label>이메일</label>
             <img src={images.required_mark} />
-            {inquireFormik.touched.email && inquireFormik.errors.email ? (
+            {recruitmentFormik.touched.email &&
+            recruitmentFormik.errors.email ? (
               <div>
-                <label>{inquireFormik.errors.email}</label>
+                <label>{recruitmentFormik.errors.email}</label>
               </div>
             ) : null}
           </div>
@@ -213,9 +186,9 @@ const ContactInquire = () => {
               type="email"
               name="email"
               placeholder="example@beamworks.co.kr"
-              value={inquireFormik.values.email}
-              onChange={inquireFormik.handleChange}
-              onBlur={inquireFormik.handleBlur}
+              value={recruitmentFormik.values.email}
+              onChange={recruitmentFormik.handleChange}
+              onBlur={recruitmentFormik.handleBlur}
             />
           </div>
         </div>
@@ -225,10 +198,10 @@ const ContactInquire = () => {
           <div className="FormName">
             <label>전화번호</label>
             <img src={images.required_mark} />
-            {inquireFormik.touched.phoneNumber &&
-            inquireFormik.errors.phoneNumber ? (
+            {recruitmentFormik.touched.phoneNumber &&
+            recruitmentFormik.errors.phoneNumber ? (
               <div>
-                <label>{inquireFormik.errors.phoneNumber}</label>
+                <label>{recruitmentFormik.errors.phoneNumber}</label>
               </div>
             ) : null}
           </div>
@@ -236,80 +209,57 @@ const ContactInquire = () => {
             <input
               name="phoneNumber"
               placeholder="연락이 가능한 전화번호를 입력하세요"
-              value={inquireFormik.values.phoneNumber}
-              onChange={inquireFormik.handleChange}
-              onBlur={inquireFormik.handleBlur}
+              value={recruitmentFormik.values.phoneNumber}
+              onChange={recruitmentFormik.handleChange}
+              onBlur={recruitmentFormik.handleBlur}
             />
           </div>
         </div>
       </div>
-      {/* 회사 입력 */}
-      <div className="Affiliation">
+      {/* 이력서 파일등록 */}
+      <div className="Resume">
         <div className="FormSpace">
           <div className="FormName">
-            <label>회사</label>
+            <label>이력서 첨부파일</label>
             <img src={images.required_mark} />
-            {inquireFormik.touched.affiliation &&
-            inquireFormik.errors.affiliation ? (
+            {recruitmentFormik.touched.resume &&
+            recruitmentFormik.errors.resume ? (
               <div>
-                <label>{inquireFormik.errors.affiliation}</label>
+                <label>{recruitmentFormik.errors.resume}</label>
               </div>
             ) : null}
           </div>
           <div className="InputFormBox">
             <input
-              name="affiliation"
-              placeholder="회사명을 입력해주세요"
-              value={inquireFormik.values.affiliation}
-              onChange={inquireFormik.handleChange}
-              onBlur={inquireFormik.handleBlur}
+              name="resume"
+              placeholder="이력서의 양식은 자유롭게 작성하여 첨부해주세요."
+              value={recruitmentFormik.values.resume}
+              onChange={recruitmentFormik.handleChange}
+              onBlur={recruitmentFormik.handleBlur}
             />
           </div>
         </div>
       </div>
-      {/* 제목 입력 */}
-      <div className="InquireTitle">
+      {/* 포트폴리오 파일등록 필수X */}
+      <div className="Portfolio">
         <div className="FormSpace">
           <div className="FormName">
-            <label>제목</label>
+            <label>이력서 첨부파일</label>
             <img src={images.required_mark} />
-            {inquireFormik.touched.inquireTitle &&
-            inquireFormik.errors.inquireTitle ? (
+            {recruitmentFormik.touched.portfolio &&
+            recruitmentFormik.errors.portfolio ? (
               <div>
-                <label>{inquireFormik.errors.inquireTitle}</label>
+                <label>{recruitmentFormik.errors.portfolio}</label>
               </div>
             ) : null}
           </div>
           <div className="InputFormBox">
             <input
-              name="inquireTitle"
-              placeholder="제목을 입력해주세요"
-              value={inquireFormik.values.inquireTitle}
-              onChange={inquireFormik.handleChange}
-              onBlur={inquireFormik.handleBlur}
-            />
-          </div>
-        </div>
-      </div>
-      {/* 문의 내용 입력 */}
-      <div className="InquireContents">
-        <div className="FormSpace">
-          <div className="FormName">
-            <label>문의 내용</label>
-            <img src={images.required_mark} />
-            {inquireFormik.touched.inquireContents &&
-            inquireFormik.errors.inquireContents ? (
-              <div>
-                <label>{inquireFormik.errors.inquireContents}</label>
-              </div>
-            ) : null}
-          </div>
-          <div className="InputFormBox text">
-            <textarea
-              name="inquireContents"
-              value={inquireFormik.values.inquireContents}
-              onChange={inquireFormik.handleChange}
-              onBlur={inquireFormik.handleBlur}
+              name="portfolio"
+              placeholder="포트폴리오 첨부는 선택사항입니다."
+              value={recruitmentFormik.values.portfolio}
+              onChange={recruitmentFormik.handleChange}
+              onBlur={recruitmentFormik.handleBlur}
             />
           </div>
         </div>
@@ -353,4 +303,4 @@ const ContactInquire = () => {
   );
 };
 
-export default ContactInquire;
+export default RecruitmentApply;
