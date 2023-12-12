@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useFormik, Formik, Field, Form } from "formik";
+import emailjs from "@emailjs/browser";
 
 import images from "src/assets/images";
 
@@ -9,6 +10,32 @@ const RecruitmentApply = () => {
   const categoryArray = ["공통", "팀1", "팀2", "팀3", "팀4", "팀5"];
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
+
+  // sumbit버튼 동작, 눌렀을 떄 로딩동작 필요
+  const onSubmitButtonClick = async (data) => {
+    console.log(data);
+
+    await emailjs
+      .sendForm(
+        // Outlook Email Serives
+        "service_5y4y492",
+        // EmailJS templeate
+        "template_gz63itt",
+        document.getElementById("recruitmentForm"),
+        process.env.REACT_APP_EMAILJS_PUBLICK_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("이메일 전송이 완료되었습니다.");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("이메일 전송에 실패하였습니다.");
+        }
+      );
+    window.location.replace("/recruitment");
+  };
 
   const recruitmentFormik = useFormik({
     initialValues: {
@@ -52,17 +79,17 @@ const RecruitmentApply = () => {
     },
     onSubmit: (values) => {
       // values는 JSON형식의 데이터
-      // onSubmitButtonClick(values);
+      onSubmitButtonClick(values);
     },
   });
 
   return (
     <form
       className="RecriutmentApply"
-      id="inquireForm"
+      id="recruitmentForm"
       onSubmit={recruitmentFormik.handleSubmit}
     >
-      {/* 문의항목 입력, Select Box(Drob down) */}
+      {/* 문의항목 입력, Select Box */}
       <div className="FormSpace">
         <div className="FormName">
           <label>지원 팀</label>
@@ -80,7 +107,7 @@ const RecruitmentApply = () => {
         >
           <input
             name="category"
-            placeholder="공통"
+            placeholder="선택"
             value={selectedCategory}
             readOnly
             required
@@ -111,6 +138,7 @@ const RecruitmentApply = () => {
                 onClick={() => {
                   setSelectedCategory(data);
                   setIsCategorySelectBoxOpen((prev) => !prev);
+                  recruitmentFormik.values.category = data;
                 }}
               >
                 <span>{data}</span>
@@ -230,9 +258,23 @@ const RecruitmentApply = () => {
             ) : null}
           </div>
           <div className="InputFormBox">
+            <label
+              className={
+                recruitmentFormik.values.resume
+                  ? "fileUpload"
+                  : "fileUpload empty"
+              }
+              for="resume"
+            >
+              {recruitmentFormik.values.resume
+                ? recruitmentFormik.values.resume
+                : "이력서의 양식은 자유롭게 작성하여 첨부해주세요."}
+            </label>
             <input
+              className="file"
               name="resume"
-              placeholder="이력서의 양식은 자유롭게 작성하여 첨부해주세요."
+              type="file"
+              id="resume"
               value={recruitmentFormik.values.resume}
               onChange={recruitmentFormik.handleChange}
               onBlur={recruitmentFormik.handleBlur}
@@ -244,8 +286,8 @@ const RecruitmentApply = () => {
       <div className="Portfolio">
         <div className="FormSpace">
           <div className="FormName">
-            <label>이력서 첨부파일</label>
-            <img src={images.required_mark} />
+            <label>포트폴리오 첨부파일</label>
+            {/* <img src={images.required_mark} /> */}
             {recruitmentFormik.touched.portfolio &&
             recruitmentFormik.errors.portfolio ? (
               <div>
@@ -253,10 +295,39 @@ const RecruitmentApply = () => {
               </div>
             ) : null}
           </div>
-          <div className="InputFormBox">
+          {/* <label className="InputFormBox">
+            <div htmlFor="imagePath">
+              {recruitmentFormik.values.portfolio ? (
+                <div className="imagePath">{recruitmentFormik.values.portfolio.name}</div>
+              ) : (
+                <div className="imagePath">포트폴리오 첨부는 선택사항입니다.</div>
+              )}
+            </div>
             <input
+              type="file"
+              id="portfolio"
+              // onChange={(e) => uploadMainHandler(e)}
+              style={{ display: "none" }}
+            />
+          </label> */}
+          <div className="InputFormBox">
+            <label
+              className={
+                recruitmentFormik.values.portfolio
+                  ? "fileUpload"
+                  : "fileUpload empty"
+              }
+              for="portfolio"
+            >
+              {recruitmentFormik.values.portfolio
+                ? recruitmentFormik.values.portfolio
+                : "포트폴리오 첨부는 선택사항입니다."}
+            </label>
+            <input
+              className="file"
               name="portfolio"
-              placeholder="포트폴리오 첨부는 선택사항입니다."
+              type="file"
+              id="portfolio"
               value={recruitmentFormik.values.portfolio}
               onChange={recruitmentFormik.handleChange}
               onBlur={recruitmentFormik.handleBlur}
@@ -283,15 +354,9 @@ const RecruitmentApply = () => {
           </label>
         </div>
       </div>
-      {/* 촘 제출하기 버튼 */}
+      {/* 폼 제출하기 버튼 */}
       {isPolicyAgreed ? (
-        <button
-          type="submit"
-          className="InquireSubmit isActive"
-          // onClick={(e) => {
-          //   onSubmitButtonClick(e);
-          // }}
-        >
+        <button type="submit" className="InquireSubmit isActive">
           <span>제출하기</span>
         </button>
       ) : (

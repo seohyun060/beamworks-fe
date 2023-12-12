@@ -138,7 +138,7 @@ const ContactInquire = () => {
                 onClick={() => {
                   setSelectedCategory(data);
                   setIsCategorySelectBoxOpen((prev) => !prev);
-                  inquireFormik.values.category = selectedCategory;
+                  inquireFormik.values.category = data;
                 }}
               >
                 <span>{data}</span>
@@ -333,7 +333,7 @@ const ContactInquire = () => {
           </label>
         </div>
       </div>
-      {/* 촘 제출하기 버튼 */}
+      {/* 폼 제출하기 버튼 */}
       {isPolicyAgreed ? (
         <button
           type="submit"

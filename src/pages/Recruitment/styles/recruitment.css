@@ -263,4 +263,23 @@
   font-style: normal;
   font-weight: 400;
   line-height: 175%;
+}
+.RecruitmentContents .FormSpace .InputFormBox input[type=file] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.RecruitmentContents .FormSpace .InputFormBox .fileUpload {
+  width: 100%;
+  font-family: Pretendard;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+.RecruitmentContents .FormSpace .InputFormBox .fileUpload.empty {
+  color: var(--Middle-Glay, #a0a0a0);
 }/*# sourceMappingURL=recruitment.css.map */
