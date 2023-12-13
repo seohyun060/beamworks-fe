@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import images from "src/assets/images";
 
@@ -23,10 +23,12 @@ const JobCard = (props) => {
       <div className="JobName">
         <label>{jobName}</label>
       </div>
-      <div className="GoDetails" onClick={(e) => navitage(`/team/${link}`)}>
-        <label>직무확인</label>
-        <img src={images.go_details} />
-      </div>
+      <Link to={`/team/${link}`}>
+        <div className="GoDetails">
+          <label>직무확인</label>
+          <img src={images.go_details} />
+        </div>
+      </Link>
     </div>
   );
 };

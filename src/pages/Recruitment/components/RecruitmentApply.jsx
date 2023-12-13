@@ -1,13 +1,25 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { useFormik, Formik, Field, Form } from "formik";
 import emailjs from "@emailjs/browser";
 
 import images from "src/assets/images";
 
 const RecruitmentApply = () => {
+  const location = useLocation();
+  console.log(location)
+  // const teamName = location?.state.team;
+
   const [selectedCategory, setSelectedCategory] = useState("공통");
   const [isCategorySelectBoxOpen, setIsCategorySelectBoxOpen] = useState(false);
-  const categoryArray = ["공통", "팀1", "팀2", "팀3", "팀4", "팀5"];
+  const categoryArray = [
+    "공통",
+    "Research and Development Team (RDT)",
+    "Regulatory Strategy Team (RST)",
+    "GMP Strategy Team (GST)",
+    "Creative Strategy Team (CST)",
+    "Management Strategy Team (MST)",
+  ];
 
   const [isPolicyAgreed, setIsPolicyAgreed] = useState(false);
 
@@ -44,8 +56,8 @@ const RecruitmentApply = () => {
       lastName: "",
       email: "",
       phoneNumber: "",
-      resume: null,
-      portfolio: null,
+      resume: undefined,
+      portfolio: undefined,
     },
     validate: (values) => {
       const errors = {};
@@ -264,7 +276,7 @@ const RecruitmentApply = () => {
                   ? "fileUpload"
                   : "fileUpload empty"
               }
-              for="resume"
+              htmlFor="resume"
             >
               {recruitmentFormik.values.resume
                 ? recruitmentFormik.values.resume
@@ -295,21 +307,6 @@ const RecruitmentApply = () => {
               </div>
             ) : null}
           </div>
-          {/* <label className="InputFormBox">
-            <div htmlFor="imagePath">
-              {recruitmentFormik.values.portfolio ? (
-                <div className="imagePath">{recruitmentFormik.values.portfolio.name}</div>
-              ) : (
-                <div className="imagePath">포트폴리오 첨부는 선택사항입니다.</div>
-              )}
-            </div>
-            <input
-              type="file"
-              id="portfolio"
-              // onChange={(e) => uploadMainHandler(e)}
-              style={{ display: "none" }}
-            />
-          </label> */}
           <div className="InputFormBox">
             <label
               className={
@@ -317,7 +314,7 @@ const RecruitmentApply = () => {
                   ? "fileUpload"
                   : "fileUpload empty"
               }
-              for="portfolio"
+              htmlFor="portfolio"
             >
               {recruitmentFormik.values.portfolio
                 ? recruitmentFormik.values.portfolio

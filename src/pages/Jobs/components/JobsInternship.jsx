@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import images from "src/assets/images";
 
@@ -20,10 +21,12 @@ const JobsInternship = () => {
             적응하고 미래의 직무에 대한 강한 관심과 자신감을 갖게 해줍니다.
           </label>
         </div>
-        <div className="ApplyButton">
-          <label>지원 하기</label>
-          <img src={images.go_apply} />
-        </div>
+        <Link to={`/recruitment`}>
+          <div className="ApplyButton">
+            <label>지원 하기</label>
+            <img src={images.go_apply} />
+          </div>
+        </Link>
       </article>
     </section>
   );

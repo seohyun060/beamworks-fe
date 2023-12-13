@@ -195,6 +195,7 @@
   border: 0.1em solid var(--Middle-Glay, #a0a0a0);
 }
 .RecruitmentContents .FormSpace .InputCategory input {
+  width: 100%;
   font-family: Pretendard;
   font-size: 1.6em;
   font-style: normal;

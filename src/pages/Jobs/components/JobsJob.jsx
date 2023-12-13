@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import JobsJobCard from "./JobCard";
 
@@ -59,10 +60,12 @@ const JobsJob = () => {
       <article className="Job">
         <div className="TitleHeader">
           <label>주요 직무</label>
-          <div className="ApplyButton">
-            <label>지원 하기</label>
-            <img src={images.go_apply} />
-          </div>
+          <Link to={`/recruitment`}>
+            <div className="ApplyButton">
+              <label>지원 하기</label>
+              <img src={images.go_apply} />
+            </div>
+          </Link>
         </div>
         <div className="TeamListCarousel">
           <div className="Carousel" ref={carouselRef}>
