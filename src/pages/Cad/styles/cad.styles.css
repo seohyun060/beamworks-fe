@@ -37,6 +37,15 @@
   justify-content: center;
   align-items: center;
 }
+.product-s1-img {
+  color: #fff;
+  /* 메인헤드 */
+  font-family: Pretendard;
+  font-size: 8em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.175; /* 117.5% */
+}
 .product-s1-text {
   color: #fff;
   text-align: center;
@@ -302,20 +311,30 @@
 }
 .product-s6-b .b-descript {
   color: #000;
+  text-align: right;
   /* 본문 */
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.416; /* 141.667% */
-  text-align: left;
-  width: 23vw;
+  width: 28vw;
+}
+.product-s6-b .b-mini {
+  margin-top: 0.5vw;
+  color: var(--Middle-Glay, #a0a0a0);
+  /* 카테고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.333; /* 133.333% */
 }
 .product-s6-b .b-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 1.51vw;
+  margin-top: 0.5vw;
   margin-bottom: 0.845vw;
 }
 .product-s6-b .b-header img {
@@ -335,11 +354,11 @@
 }
 .product-s6-t {
   width: 45.58vw;
-  height: 45.83vw;
+  height: -moz-fit-content;
+  height: fit-content;
   align-self: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   position: relative;
   margin-bottom: 0;
   margin-left: 0px;
@@ -369,10 +388,22 @@
   font-weight: 800;
   line-height: 0.61; /* 60.909% */
 }
+.product-s6-t .t-mini {
+  margin-top: 0.5vw;
+  margin-left: 3.5vw;
+  color: var(--Middle-Glay, #a0a0a0);
+  text-align: left;
+  /* 카테e고리 */
+  font-family: Pretendard;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.333; /* 133.333% */
+}
 .product-s6-t .t-descript {
   align-self: baseline;
   margin-left: 3.6vw;
-  margin-top: 1.2625vw;
+  margin-top: 0.5vw;
   width: 27.31vw;
   color: #000;
   /* 본문 */
