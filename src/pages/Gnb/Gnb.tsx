@@ -16,6 +16,12 @@ type Props = {
 		label: string;
 		path: string;
 	}[];
+	globeToggle: boolean;
+	onGlobeClicked: VoidFunction;
+	languages: {
+		text: string;
+		code: string;
+	}[];
 };
 
 const Gnb = ({
@@ -27,7 +33,11 @@ const Gnb = ({
 	tab1List,
 	tabs1,
 	tabs2,
+	globeToggle,
+	onGlobeClicked,
+	languages,
 }: Props) => {
+	const { setLanguageCode } = useGnbStore();
 	return (
 		<div className='gnb'>
 			<img
@@ -108,7 +118,25 @@ const Gnb = ({
 					</div>
 				))}
 			</div>
-			<img className='gnb-language' src={images.language} />
+			<img
+				className='gnb-language'
+				src={images.language}
+				onClick={onGlobeClicked}
+			></img>
+			<div className={globeToggle ? `popup4-active` : `popup4`}>
+				{languages.map((language, index) => (
+					<div
+						className='tabs'
+						key={index}
+						onClick={() => {
+							setLanguageCode(language.code);
+							onGlobeClicked();
+						}}
+					>
+						<div>{language.text}</div>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };

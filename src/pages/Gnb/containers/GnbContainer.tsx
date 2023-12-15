@@ -12,6 +12,46 @@ const GnbContainer = ({ location }: Props) => {
 	const { company, product, community, tabs1, tabs2 } =
 		useGnbStore() as GnbStore;
 	const tab1List = [company, product, community];
+	const [globeToggle, setGlobeToggle] = useState(false);
+	const languages = [
+		{
+			text: '한국어',
+			code: 'ko',
+		},
+		{
+			text: 'English',
+			code: 'en',
+		},
+		{
+			text: 'ру́сский язы́к',
+			code: 'ru',
+		},
+		{
+			text: '日本語',
+			code: 'ja',
+		},
+		{
+			text: '中文',
+			code: 'zh',
+		},
+		{
+			text: 'Español',
+			code: 'es',
+		},
+		{
+			text: 'Deutsch',
+			code: 'de',
+		},
+		{
+			text: 'Français',
+			code: 'fr',
+		},
+		{
+			text: 'हिन्दी',
+			code: 'hi',
+		},
+	];
+
 	const navigate = useNavigate();
 	const tabs = [
 		'회사소개',
@@ -48,6 +88,9 @@ const GnbContainer = ({ location }: Props) => {
 			navigate(path);
 		}
 	}, []);
+	const onGlobeClicked = useCallback(() => {
+		setGlobeToggle((prev) => !prev);
+	}, [globeToggle]);
 
 	return (
 		<Gnb
@@ -59,6 +102,9 @@ const GnbContainer = ({ location }: Props) => {
 			tabHovered={tabHovered}
 			onPathClick={onPathClick}
 			tab1List={tab1List}
+			globeToggle={globeToggle}
+			onGlobeClicked={onGlobeClicked}
+			languages={languages}
 		/>
 	);
 };
