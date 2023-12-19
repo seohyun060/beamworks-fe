@@ -13,11 +13,14 @@ import useProductStore from '@store/zustand/productZustand';
 type Props = {};
 
 const Cad = (props: Props) => {
-	const { cadsExplore, cadaiSolution } = useProductStore();
+	const { cadsExplore, cadaiSolution, setCadaiSolution } = useProductStore();
 	return (
 		<div className='product'>
 			<CadBannerContainer />
-			<SolvingContainer solution={cadaiSolution} />
+			<SolvingContainer
+				solution={cadaiSolution}
+				setSolution={setCadaiSolution}
+			/>
 			<CadIntroContainer />
 			<CadBTContainer />
 			<CadHelpConainer />

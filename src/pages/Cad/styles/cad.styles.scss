@@ -21,7 +21,7 @@
 	font-size: 0.52083333vw;
 
 	& * {
-		word-break: keep-all;
+		word-break: normal;
 	}
 	&-s1 {
 		width: 100%;
@@ -68,18 +68,20 @@
 		align-items: center;
 		position: relative;
 		&-text {
-			width: 24.74vw;
+			width: 50vw;
 			color: #000;
 			margin-top: 7vw;
 
-			text-align: center;
-
-			/* 보조헤드 */
-			font-family: Pretendard;
-			font-size: 4em;
-			font-style: normal;
-			font-weight: 600;
-			line-height: 1.25; /* 125% */
+			p {
+				text-align: center;
+				width: 50vw;
+				/* 보조헤드 */
+				font-family: Pretendard;
+				font-size: 4em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.25; /* 125% */
+			}
 		}
 		&-img {
 			position: relative;
@@ -160,13 +162,16 @@
 			}
 			&-body {
 				color: var(--Black, #000);
-				width: 26.042vw;
+				width: 23.042vw;
+				margin-top: 1vw;
 				/* 주 헤드 */
-				font-family: Pretendard;
-				font-size: 5em;
-				font-style: normal;
-				font-weight: 600;
-				line-height: 1.24; /* 124% */
+				p {
+					font-family: Pretendard;
+					font-size: 4em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.24; /* 124% */
+				}
 			}
 		}
 		&-img {
@@ -191,11 +196,15 @@
 			width: 28.28vw;
 			margin-right: 6.5625vw;
 			height: fit-content;
+			position: relative;
 			display: flex;
 			flex-direction: column;
+			//justify-content: center;
 			&-cadai {
 				margin-left: 2.97vw;
 				margin-bottom: 0.625vw;
+				// position: absolute;
+				// top: 3vw;
 				color: var(--Middle-Glay, #a0a0a0);
 
 				/* 카테고리 */
@@ -206,12 +215,14 @@
 				line-height: 1.33; /* 133.333% */
 			}
 			&-header {
+				//position: absolute;
+				//top: 5.5vw;
 				margin-left: 2.97vw;
 				color: var(--Black, #000);
 
 				/* 주 헤드 */
 				font-family: Pretendard;
-				font-size: 5em;
+				font-size: 4em;
 				font-style: normal;
 				font-weight: 600;
 				line-height: 1.24; /* 124% */
@@ -228,15 +239,17 @@
 				height: fit-content;
 				.solbox {
 					width: 100%;
-					height: 'fit-content';
+					height: fit-content;
+					display: flex;
+					flex-direction: column;
 
 					.problem {
 						display: flex;
 						flex-direction: row;
-						align-items: center;
+						//align-items: flex-end;
 						justify-content: space-between;
-						margin-top: 1.25vw;
-						margin-bottom: 1.25vw;
+						margin-top: 1vw;
+						margin-bottom: 1vw;
 
 						img {
 							width: 1.667vw;
@@ -247,7 +260,7 @@
 
 							/* 본문 강조 */
 							font-family: Pretendard;
-							font-size: 2.4em;
+							font-size: 2em;
 							font-style: normal;
 							font-weight: 600;
 							line-height: 1.333; /* 133.333% */
@@ -259,14 +272,9 @@
 
 						//transition: height 0.3s ease-in-out;
 						//height: 0;
-						max-height: 0;
+						height: 0;
 						//background-color: #4d4f58;
 						/* 본문 */
-						font-family: Pretendard;
-						font-size: 2em;
-						font-style: normal;
-						font-weight: 400;
-						line-height: 1.416; /* 141.667% */
 						opacity: 0; /* 초기에 숨겨짐 */
 						visibility: hidden; /* 초기에 숨겨짐 */
 						//max-height: 0;
@@ -275,7 +283,14 @@
 							// 사라지는거
 							visibility 0.3s ease-out 0.3s;
 						transition: opacity 0s ease-out, visibility 0s ease-out,
-							max-height 0.3s ease-in-out;
+							height 0.3s ease-in-out;
+						p {
+							font-family: Pretendard;
+							font-size: 2em;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 1.416; /* 141.667% */
+						}
 					}
 					&-active {
 						@extend .solbox;
@@ -285,15 +300,17 @@
 							}
 						}
 						.solution {
-							// d
-							font-size: 2em;
-							margin-top: 2.08vw;
-							margin-bottom: 0.833vw;
+							// d								margin-top: 2.08vw;
+							//margin-bottom: 0.833vw;
 							//height: 3.54vw;
-							max-height: 2.9vw; /* 적절한 최대 높이 값	 설정 */
+							height: 4.2vw; /* 적절한 최대 높이 값	 설정 */
+							display: flex;
+							flex-direction: column;
+							justify-content: flex-end;
+							margin-bottom: 1vw;
 							opacity: 1; /* 나타남 */
 							visibility: visible; /* 나타남 */
-							transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in 0.3s,
+							transition: height 0.3s ease-in-out, opacity 0.3s ease-in 0.3s,
 								// 없었다 나타나는거
 								visibility 0.3s ease-in 0.3s;
 
@@ -357,12 +374,12 @@
 				text-align: right;
 				/* 본문 */
 				font-family: Pretendard;
-				font-size: 2.4em;
+				font-size: 2em;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 1.416; /* 141.667% */
 				//text-align: left;
-				width: 28vw;
+				width: 28.4vw;
 			}
 			.b-mini {
 				margin-top: 0.5vw;
@@ -449,12 +466,12 @@
 				align-self: baseline;
 				margin-left: 3.6vw;
 				margin-top: 0.5vw;
-				width: 27.31vw;
+				width: 38.65vw;
 				color: #000;
 
 				/* 본문 */
 				font-family: Pretendard;
-				font-size: 2.4em;
+				font-size: 2em;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 1.416; /* 141.667% */
@@ -477,7 +494,7 @@
 			display: flex;
 			flex-direction: column;
 			margin-left: 18.7vw;
-			margin-bottom: 33.79vh;
+			margin-bottom: 25.79vh;
 			.s7-header {
 				width: 26.66vw;
 			}
@@ -488,7 +505,7 @@
 
 				/* 본문 */
 				font-family: Pretendard;
-				font-size: 2.4em;
+				font-size: 2.2em;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 1.4166; /* 141.667% */

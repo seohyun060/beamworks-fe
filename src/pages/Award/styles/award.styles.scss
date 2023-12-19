@@ -90,7 +90,7 @@
 			margin-left: 18.75vw;
 		}
 		&-body {
-			width: 62.5vw;
+			width: 75vw;
 			height: 27vw;
 			display: flex;
 			flex-direction: row;
@@ -122,12 +122,12 @@
 				}
 			}
 			&-achieves {
-				width: 51.9vw;
+				width: 75vw;
 				margin-left: 6.67vw;
 				height: fit-content;
 				display: flex;
 				flex-direction: column;
-				margin-top: -1.1vw;
+				margin-top: -0.7vw;
 				.achieve {
 					color: #fff;
 					font-family: Pretendard;
@@ -143,7 +143,7 @@
 
 					&-active {
 						@extend .achieve;
-						font-size: 2.4em;
+						font-size: 2em;
 
 						opacity: 1;
 						visibility: visible;

@@ -7,9 +7,15 @@ type Props = {
 		achieve: string[];
 	}[];
 	onYearClick: (year: number) => void;
+	headerText: string[];
 };
 
-const AwardHistory = ({ selectedYear, histories, onYearClick }: Props) => {
+const AwardHistory = ({
+	selectedYear,
+	histories,
+	onYearClick,
+	headerText,
+}: Props) => {
 	return (
 		<div
 			className='award-s2'
@@ -24,7 +30,7 @@ const AwardHistory = ({ selectedYear, histories, onYearClick }: Props) => {
 			}}
 		>
 			{/* <img src={images.awardback2} /> */}
-			<div className='award-s2-header'>빔웍스의 연혁</div>
+			<div className='award-s2-header'>{headerText[0]}</div>
 			<div className='award-s2-body'>
 				<div className='award-s2-body-years'>
 					{histories.map((history, index) => (
@@ -40,33 +46,18 @@ const AwardHistory = ({ selectedYear, histories, onYearClick }: Props) => {
 					))}
 				</div>
 				<div className='award-s2-body-achieves'>
-					{
-						histories.map((history, index) =>
-							history.achieve.map((achieve, index) => (
-								<div
-									className={
-										history.year === selectedYear ? 'achieve-active' : 'achieve'
-									}
-									key={index}
-								>
-									{achieve}
-								</div>
-							)),
-						)
-						// .find((history) => selectedYear === selectedYear)
-						// ?.achieve.map((achieve, index) => (
-						// 	<div
-						// 		className='achieve'
-						// 		key={index}
-						// 		style={{
-						// 			opacity: 1, // 초기값
-						// 			transition: 'opacity 0.3s ease-in-out', // 트랜지션 설정
-						// 		}}
-						// 	>
-						// 		{achieve}
-						// 	</div>
-						// ))
-					}
+					{histories.map((history, index) =>
+						history.achieve.map((achieve, index) => (
+							<div
+								className={
+									history.year === selectedYear ? 'achieve-active' : 'achieve'
+								}
+								key={index}
+							>
+								{achieve}
+							</div>
+						)),
+					)}
 				</div>
 			</div>
 		</div>

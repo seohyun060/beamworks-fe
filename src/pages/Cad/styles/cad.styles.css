@@ -22,7 +22,7 @@
   font-size: 0.52083333vw;
 }
 .product * {
-  word-break: keep-all;
+  word-break: normal;
 }
 .product-s1 {
   width: 100%;
@@ -68,10 +68,13 @@
   position: relative;
 }
 .product-s2-text {
-  width: 24.74vw;
+  width: 50vw;
   color: #000;
   margin-top: 7vw;
+}
+.product-s2-text p {
   text-align: center;
+  width: 50vw;
   /* 보조헤드 */
   font-family: Pretendard;
   font-size: 4em;
@@ -153,10 +156,13 @@
 }
 .product-s4-text-body {
   color: var(--Black, #000);
-  width: 26.042vw;
+  width: 23.042vw;
+  margin-top: 1vw;
   /* 주 헤드 */
+}
+.product-s4-text-body p {
   font-family: Pretendard;
-  font-size: 5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.24; /* 124% */
@@ -184,6 +190,7 @@
   margin-right: 6.5625vw;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -203,7 +210,7 @@
   color: var(--Black, #000);
   /* 주 헤드 */
   font-family: Pretendard;
-  font-size: 5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.24; /* 124% */
@@ -222,15 +229,17 @@
 }
 .product-s5-text-body .solbox, .product-s5-text-body .solbox-active {
   width: 100%;
-  height: "fit-content";
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 .product-s5-text-body .solbox .problem, .product-s5-text-body .solbox-active .problem {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  margin-top: 1.25vw;
-  margin-bottom: 1.25vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 }
 .product-s5-text-body .solbox .problem img, .product-s5-text-body .solbox-active .problem img {
   width: 1.667vw;
@@ -240,7 +249,7 @@
   color: var(--Middle-Glay, #a0a0a0);
   /* 본문 강조 */
   font-family: Pretendard;
-  font-size: 2.4em;
+  font-size: 2em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.333; /* 133.333% */
@@ -248,30 +257,33 @@
 .product-s5-text-body .solbox .solution, .product-s5-text-body .solbox-active .solution {
   color: var(--Check, #346ec5);
   margin-left: 2.97vw;
-  max-height: 0;
+  height: 0;
   /* 본문 */
+  opacity: 0; /* 초기에 숨겨짐 */
+  visibility: hidden; /* 초기에 숨겨짐 */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-out 0.3s, visibility 0.3s ease-out 0.3s;
+  transition: opacity 0s ease-out, visibility 0s ease-out, height 0.3s ease-in-out;
+}
+.product-s5-text-body .solbox .solution p, .product-s5-text-body .solbox-active .solution p {
   font-family: Pretendard;
   font-size: 2em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.416; /* 141.667% */
-  opacity: 0; /* 초기에 숨겨짐 */
-  visibility: hidden; /* 초기에 숨겨짐 */
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-out 0.3s, visibility 0.3s ease-out 0.3s;
-  transition: opacity 0s ease-out, visibility 0s ease-out, max-height 0.3s ease-in-out;
 }
 .product-s5-text-body .solbox-active .problem span {
   color: #000;
 }
 .product-s5-text-body .solbox-active .solution {
-  font-size: 2em;
-  margin-top: 2.08vw;
-  margin-bottom: 0.833vw;
-  max-height: 2.9vw; /* 적절한 최대 높이 값	 설정 */
+  height: 4.2vw; /* 적절한 최대 높이 값	 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1vw;
   opacity: 1; /* 나타남 */
   visibility: visible; /* 나타남 */
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in 0.3s, visibility 0.3s ease-in 0.3s;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in 0.3s, visibility 0.3s ease-in 0.3s;
 }
 .product-s5-text-body .solbox .divider, .product-s5-text-body .solbox-active .divider {
   margin-left: 2.97vw;
@@ -314,11 +326,11 @@
   text-align: right;
   /* 본문 */
   font-family: Pretendard;
-  font-size: 2.4em;
+  font-size: 2em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.416; /* 141.667% */
-  width: 28vw;
+  width: 28.4vw;
 }
 .product-s6-b .b-mini {
   margin-top: 0.5vw;
@@ -404,11 +416,11 @@
   align-self: baseline;
   margin-left: 3.6vw;
   margin-top: 0.5vw;
-  width: 27.31vw;
+  width: 38.65vw;
   color: #000;
   /* 본문 */
   font-family: Pretendard;
-  font-size: 2.4em;
+  font-size: 2em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.416; /* 141.667% */
@@ -428,7 +440,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 18.7vw;
-  margin-bottom: 33.79vh;
+  margin-bottom: 25.79vh;
 }
 .product-s7-text .s7-header {
   width: 26.66vw;
@@ -439,7 +451,7 @@
   color: #000;
   /* 본문 */
   font-family: Pretendard;
-  font-size: 2.4em;
+  font-size: 2.2em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.4166; /* 141.667% */

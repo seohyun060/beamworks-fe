@@ -14,12 +14,15 @@ import ExploreContainer from 'src/pages/Cad/containers/ExploreContainer';
 type Props = {};
 
 const Eeasy = (props: Props) => {
-	const { eeasySolution, chataiExplore } = useProductStore();
+	const { eeasySolution, chataiExplore, setEeasySolution } = useProductStore();
 	return (
 		<div className='eeasy'>
 			<EeasyBannerContainer />
 			<EeasyHandContainer />
-			<SolvingContainer solution={eeasySolution} />
+			<SolvingContainer
+				solution={eeasySolution}
+				setSolution={setEeasySolution}
+			/>
 			<EeasyInfoContainer />
 			<EeasyNervContainer />
 			<EeasyPainContainer />

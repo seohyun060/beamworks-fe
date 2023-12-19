@@ -231,4 +231,29 @@
 .gnb-language {
   position: absolute;
   right: 10.4%;
+}
+.gnb .popup4, .gnb .popup4-active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 52px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 트랜지션 적용 */
+}
+.gnb .popup4 .tabs, .gnb .popup4-active .tabs {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gnb .popup4-active {
+  opacity: 1; /* 나타남 */
+  visibility: visible; /* 나타남 */
 }/*# sourceMappingURL=gnb.styles.css.map */
