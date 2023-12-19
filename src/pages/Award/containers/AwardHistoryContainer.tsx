@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import AwardHistory from '../components/AwardHistory';
-import { historyTextKo } from 'src/lang/AwardTexts';
+import { historyTextsKo } from 'src/lang/AwardTexts';
 import useGnbStore from '@store/zustand/gnbZustand';
 import GoogleTranslate from 'src/lang/GoogleTranslate';
 type Props = {};
@@ -9,21 +9,33 @@ const AwardHistoryContainer = (props: Props) => {
 	const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
 	const { languageCode } = useGnbStore();
 	const [selectedHistory, setSelectedHistory] = useState();
-	const [headerText, setHeaderText] = useState(historyTextKo[0]);
-	const [text2021, setText2021] = useState(historyTextKo[1]);
-	const [text2022, setText2022] = useState(historyTextKo[2]);
-	const [text2023, setText2023] = useState(historyTextKo[3]);
+	const [headerText, setHeaderText] = useState(historyTextsKo.header);
+	const [text2021, setText2021] = useState(historyTextsKo.history21);
+	const [text2022, setText2022] = useState(historyTextsKo.history22);
+	const [text2023, setText2023] = useState(historyTextsKo.history23);
 	const getTranslate = useCallback(async () => {
 		if (languageCode === 'ko') {
-			setHeaderText(historyTextKo[0]);
-			setText2021(historyTextKo[1]);
-			setText2022(historyTextKo[2]);
-			setText2023(historyTextKo[3]);
+			setHeaderText(historyTextsKo.header);
+			setText2021(historyTextsKo.history21);
+			setText2022(historyTextsKo.history22);
+			setText2023(historyTextsKo.history23);
 		} else {
-			const dataHeader = await GoogleTranslate(historyTextKo[0], languageCode);
-			const data2021 = await GoogleTranslate(historyTextKo[1], languageCode);
-			const data2022 = await GoogleTranslate(historyTextKo[2], languageCode);
-			const data2023 = await GoogleTranslate(historyTextKo[3], languageCode);
+			const dataHeader = await GoogleTranslate(
+				historyTextsKo.header,
+				languageCode,
+			);
+			const data2021 = await GoogleTranslate(
+				historyTextsKo.history21,
+				languageCode,
+			);
+			const data2022 = await GoogleTranslate(
+				historyTextsKo.history22,
+				languageCode,
+			);
+			const data2023 = await GoogleTranslate(
+				historyTextsKo.history23,
+				languageCode,
+			);
 
 			setHeaderText(dataHeader);
 			setText2021(data2021);

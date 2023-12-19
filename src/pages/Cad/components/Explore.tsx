@@ -3,15 +3,16 @@ import React from 'react';
 import images from 'src/assets/images';
 type Props = {
 	exploreType: ExploreType;
+	exploreTexts: string[];
 };
 
-const Explore = ({ exploreType }: Props) => {
+const Explore = ({ exploreType, exploreTexts }: Props) => {
 	console.log(exploreType.type);
 	return (
 		<div
 			className={exploreType.type == 'cadb' ? 'product-s8-black' : 'product-s8'}
 		>
-			<div className='s8-header'>{exploreType.title}</div>
+			<div className='s8-header'>{exploreTexts[0]}</div>
 			<div className='s8-body'>
 				{exploreType.contents.map((content, index) => (
 					<div className={`s8-body-box${index + 1}`} key={index}>
@@ -23,7 +24,7 @@ const Explore = ({ exploreType }: Props) => {
 						) : (
 							<>
 								<img className={`s8box-logo`} src={content.logo1} />
-								<span className='s8box-text'>{content.text}</span>
+								<span className='s8box-text'>{exploreTexts[index + 1]}</span>
 							</>
 						)}
 					</div>

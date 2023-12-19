@@ -20,8 +20,13 @@ const GoogleTranslate = async (texts, languageCode) => {
 		const translatedList = [];
 		if (data?.data?.translations?.length > 0) {
 			data.data.translations.map((translation) =>
-				translatedList.push(translation.translatedText),
+				translatedList.push(
+					translation.translatedText
+						.replaceAll('&#39;', "'")
+						.replaceAll('&amp;', '&'),
+				),
 			);
+			console.log(translatedList);
 			return translatedList;
 		} else {
 			throw new Error('Invalid response from the Google Translate API');

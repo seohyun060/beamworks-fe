@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import AwardBanner from '../components/AwardBanner';
 import GoogleTranslate from 'src/lang/GoogleTranslate';
 import useGnbStore from '@store/zustand/gnbZustand';
-import { bannerTextsKo, bannerTextEn } from 'src/lang/AwardTexts';
+import { bannerTextsKo, bannerTextsEn } from 'src/lang/AwardTexts';
 type Props = {};
 
 const AwardBannerContainer = (props: Props) => {

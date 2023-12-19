@@ -66,6 +66,7 @@ export type CadrContent = {
 };
 
 export type SolutionContent = {
+	type: string;
 	title: string;
 	solutionList: SolutionType[];
 	bannerList: string[];
