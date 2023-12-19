@@ -22,7 +22,7 @@
   font-size: 0.52083333vw;
 }
 .chatai * {
-  word-break: keep-all;
+  word-break: normal;
 }
 .chatai-s1 {
   width: 100%;
@@ -81,8 +81,10 @@
   margin-bottom: 2.916vw;
   color: var(--Black, #000);
   /* 주 헤드 */
+}
+.chatai-s2-text .s2-header p {
   font-family: Pretendard;
-  font-size: 5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.24; /* 124% */
@@ -121,7 +123,7 @@
 }
 .chatai-s3-text {
   margin-left: 18.75vw;
-  width: 33.65vw;
+  width: 33.66vw;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -131,6 +133,8 @@
 .chatai-s3-text .s3-header {
   color: var(--White, #fff);
   /* 보조헤드 */
+}
+.chatai-s3-text .s3-header p {
   font-family: Pretendard;
   font-size: 4em;
   font-style: normal;
@@ -176,7 +180,10 @@
 }
 .chatai-s4-text .s4-body {
   color: #000;
+  width: 19.5vw;
   /* 본문 강조 */
+}
+.chatai-s4-text .s4-body p {
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;
@@ -221,7 +228,9 @@
 }
 .chatai-s5-text .s5-body {
   color: #000;
-  /* 본문 강조 */
+  width: 19.5vw;
+}
+.chatai-s5-text .s5-body p {
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;
@@ -278,6 +287,8 @@
 .chatai-s6-text .s6-body {
   color: #000;
   /* 본문 강조 */
+}
+.chatai-s6-text .s6-body p {
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;
@@ -319,6 +330,8 @@
   width: 30.41vw;
   margin-bottom: 2.76vw;
   color: var(--Black, #000);
+}
+.chatai-s7-text .s7-body p {
   font-family: Pretendard;
   font-size: 2.4em;
   font-style: normal;

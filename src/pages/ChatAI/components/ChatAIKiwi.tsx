@@ -1,8 +1,10 @@
 import React from 'react';
 import images from 'src/assets/images';
-type Props = {};
+type Props = {
+	kiwiTexts: string[];
+};
 
-const ChatAIKiwi = (props: Props) => {
+const ChatAIKiwi = ({ kiwiTexts }: Props) => {
 	return (
 		<div className='chatai-s6'>
 			<img className='s6-kiwi1' src={images.chatai6_1}></img>
@@ -11,7 +13,9 @@ const ChatAIKiwi = (props: Props) => {
 				<img className='s6-kiwi' src={images.kiwi} />
 				<img className='s6-header' src={images.kiwilogo}></img>
 				<div className='s6-body'>
-					일반인을 위한 응급 자가 분류 및<br /> 응급 처치 안내 서비스 앱
+					{kiwiTexts[0].split('\n').map((text, i) => (
+						<p key={i}>{text}</p>
+					))}
 				</div>
 			</div>
 		</div>

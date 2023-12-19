@@ -1,8 +1,10 @@
 import React from 'react';
 import images from 'src/assets/images';
-type Props = {};
+type Props = {
+	eProTexts: string[];
+};
 
-const ChatAIPro = (props: Props) => {
+const ChatAIPro = ({ eProTexts }: Props) => {
 	return (
 		<div className='chatai-s4'>
 			<div className='chatai-s4-text'>
@@ -11,8 +13,9 @@ const ChatAIPro = (props: Props) => {
 					<img className='s4-header-pro' src={images.epro} />
 				</div>
 				<div className='s4-body'>
-					응급 의료진을 위한
-					<br /> 한국형 응급환자 분류 서비스 앱
+					{eProTexts[0].split('\n').map((text, i) => (
+						<p key={i}>{text}</p>
+					))}
 				</div>
 			</div>
 			<img className='chatai-s4-image' src={images.chatai4} />
