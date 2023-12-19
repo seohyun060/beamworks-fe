@@ -1,7 +1,7 @@
 // GoogleTranslate.js
 
 const GoogleTranslate = async (texts, languageCode) => {
-	const apiKey = process.env.REACT_APP_GOOGLE_TRANSLATE_API_KEY;
+	const apiKey = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 	const apiUrl = 'https://translation.googleapis.com/language/translate/v2';
 
 	try {
