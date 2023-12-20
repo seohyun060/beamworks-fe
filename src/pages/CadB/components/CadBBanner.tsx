@@ -2,9 +2,10 @@ import React from 'react';
 import images from 'src/assets/images';
 type Props = {
 	scrollPosition: number;
+	bannerTexts: string[];
 };
 
-const CadBBanner = ({ scrollPosition }: Props) => {
+const CadBBanner = ({ scrollPosition, bannerTexts }: Props) => {
 	console.log(scrollPosition);
 	return (
 		<div className='cadb-s1'>
@@ -15,13 +16,13 @@ const CadBBanner = ({ scrollPosition }: Props) => {
 						color: scrollPosition == 1 || scrollPosition == 2 ? '#000' : '#fff',
 					}}
 				>
-					데모버전 사용하기
+					{bannerTexts[0]}
 				</span>
-				<button className='s1-buy'>구입하기</button>
+				<button className='s1-buy'>{bannerTexts[1]}</button>
 			</div>
 			<div className='cadb-s1-text'>
 				<img src={images.cadb_w} className='s1-header' />
-				<div className='s1-body'>유방 초음파 실시간 인공지능 프로그램</div>
+				<div className='s1-body'>{bannerTexts[2]}</div>
 			</div>
 		</div>
 	);

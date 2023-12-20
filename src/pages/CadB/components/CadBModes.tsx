@@ -7,6 +7,7 @@ type Props = {
 	onNextClick: VoidFunc;
 	current: number;
 	modeNames: string[];
+	modesTexts: string[];
 };
 
 const CadBModes = ({
@@ -15,12 +16,13 @@ const CadBModes = ({
 	onPrevClick,
 	current,
 	modeNames,
+	modesTexts,
 }: Props) => {
 	return (
 		<div className='cadb-s3'>
 			<div className='cadb-s3-cadb'>CadAI-B</div>
-			<div className='cadb-s3-header'>진단을 도와줄 4가지의 모드</div>
-			<div className='cadb-s3-realtime'>{modeNames[current]}</div>
+			<div className='cadb-s3-header'>{modesTexts[0]}</div>
+			<div className='cadb-s3-realtime'>{modesTexts[current + 1]}</div>
 			<div className='cadb-s3-carousel'>
 				<img className='s3-mock' src={images.mock2} />
 				<img
