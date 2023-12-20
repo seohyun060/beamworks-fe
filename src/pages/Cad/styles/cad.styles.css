@@ -183,6 +183,7 @@
   flex-direction: row;
   position: relative;
   justify-content: center;
+  overflow: hidden;
   align-items: center;
 }
 .product-s5-text {

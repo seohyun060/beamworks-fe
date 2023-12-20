@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import EeasyPain from '../components/EeasyPain';
 import images from 'src/assets/images';
+import useGnbStore from '@store/zustand/gnbZustand';
+import { painTextsKo } from 'src/lang/EEasyTexts';
+import GoogleTranslate from 'src/lang/GoogleTranslate';
 
 type Props = {};
 
@@ -50,6 +53,20 @@ const EeasyPainContainer = (props: Props) => {
 			setTimeout(() => setButtonDisabled(false), 200);
 		}
 	}, [state, isButtonDisabled]);
+	const { languageCode } = useGnbStore();
+	const [painTexts, setPainTexts] = useState(painTextsKo);
+	const getTranslate = useCallback(async () => {
+		if (languageCode === 'ko') {
+			setPainTexts(painTextsKo);
+		} else {
+			const data = await GoogleTranslate(painTextsKo, languageCode);
+			setPainTexts(data);
+		}
+	}, [painTexts, languageCode]);
+	useEffect(() => {
+		getTranslate();
+		return () => {};
+	}, [languageCode]);
 	useEffect(() => {
 		if (state.current === 0) {
 			setTimeout(() => {
@@ -70,6 +87,7 @@ const EeasyPainContainer = (props: Props) => {
 			reposition={state.reposition}
 			onPrevClick={onPrevClick}
 			onNextClick={onNextClick}
+			painTexts={painTexts}
 		/>
 	);
 };

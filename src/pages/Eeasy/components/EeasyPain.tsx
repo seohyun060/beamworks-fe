@@ -7,6 +7,7 @@ type Props = {
 	reposition: boolean;
 	onPrevClick: VoidFunc;
 	onNextClick: VoidFunc;
+	painTexts: string[];
 };
 
 const EeasyPain = ({
@@ -15,17 +16,15 @@ const EeasyPain = ({
 	reposition,
 	onNextClick,
 	onPrevClick,
+	painTexts,
 }: Props) => {
 	console.log(current);
 	return (
 		<div className='eeasy-s5'>
 			<img className='eeasy-s5-img' src={images.eeasy5_mobile} />
 			<div className='eeasy-s5-text'>
-				<div className='s5-header'>통증 정도의 선택</div>
-				<div className='s5-body'>
-					자신에게 느껴지는 통증의 선택을 통해 더 세밀한 진단을 내릴 수 있도록
-					합니다.
-				</div>
+				<div className='s5-header'>{painTexts[0]}</div>
+				<div className='s5-body'>{painTexts[1]}</div>
 				<div className='s5-pain'>
 					<img
 						className='s5-pain-left'
