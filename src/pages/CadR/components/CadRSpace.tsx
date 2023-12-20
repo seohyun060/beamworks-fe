@@ -3,9 +3,10 @@ import React from 'react';
 import images from 'src/assets/images';
 type Props = {
 	content: CadrContent;
+	spaceTexts: string[];
 };
 
-const CadRSpace = ({ content }: Props) => {
+const CadRSpace = ({ content, spaceTexts }: Props) => {
 	return (
 		<div
 			className='cadr-s4'
@@ -21,21 +22,21 @@ const CadRSpace = ({ content }: Props) => {
 							content.type == 'cm' ? 's4-tab-item-active' : 's4-tab-item'
 						}
 					>
-						커뮤니티
+						{spaceTexts[0]}
 					</span>
 					<span
 						className={
 							content.type == 'ct' ? 's4-tab-item-active' : 's4-tab-item'
 						}
 					>
-						컨텐츠
+						{spaceTexts[1]}
 					</span>
 					<span
 						className={
 							content.type == 'rp' ? 's4-tab-item-active' : 's4-tab-item'
 						}
 					>
-						리포트
+						{spaceTexts[2]}
 					</span>
 				</div>
 				<img className='s4-tablet' src={content.img1} />
@@ -46,12 +47,12 @@ const CadRSpace = ({ content }: Props) => {
 				)}
 			</div>
 			<div className='cadr-s4-text'>
-				<div className='s4-series'>CadAI-Series+</div>
-				<div className='s4-header'>{content.header}</div>
+				<div className='s4-series'>CadAI-R&C</div>
+				<div className='s4-header'>{spaceTexts[3]}</div>
 				<div className={content.type === 'rp' ? 's4-nomo-active' : 's4-nomo'}>
-					모바일은 제공하지 않습니다.
+					{spaceTexts[5]}
 				</div>
-				<div className='s4-body'>{content.body}</div>
+				<div className='s4-body'>{spaceTexts[4]}</div>
 			</div>
 		</div>
 	);
