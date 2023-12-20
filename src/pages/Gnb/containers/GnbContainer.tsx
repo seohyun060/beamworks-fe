@@ -9,9 +9,9 @@ type Props = {
 };
 
 const GnbContainer = ({ location }: Props) => {
-	const { company, product, community, tabs1, tabs2 } =
+	const { company, product, tabs1, tabs2, news, visit } =
 		useGnbStore() as GnbStore;
-	const tab1List = [company, product, community];
+	const tab1List = [company, news, product, visit];
 	const [globeToggle, setGlobeToggle] = useState(false);
 	const languages = [
 		{
@@ -53,14 +53,6 @@ const GnbContainer = ({ location }: Props) => {
 	];
 
 	const navigate = useNavigate();
-	const tabs = [
-		'회사소개',
-		'제품소개',
-		'커뮤니티',
-		'제품 구입/다운',
-		'문의하기',
-		'채용',
-	];
 
 	const [tabHovered, setTabHovered] = useState(Array(6).fill(false));
 	const onTabEnter = useCallback(
@@ -94,7 +86,6 @@ const GnbContainer = ({ location }: Props) => {
 
 	return (
 		<Gnb
-			tabs={tabs}
 			tabs1={tabs1}
 			tabs2={tabs2}
 			onTabEnter={onTabEnter}

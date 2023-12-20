@@ -5,7 +5,6 @@ import useGnbStore from '@store/zustand/gnbZustand';
 import { NavTitle, NavContext } from '@typedef/types';
 import { GnbStore } from '@store/zustand/gnbZustand';
 type Props = {
-	tabs: string[];
 	onTabEnter: (index: number) => void;
 	onTabLeave: (index: number) => void;
 	tabHovered: boolean[];
@@ -25,7 +24,6 @@ type Props = {
 };
 
 const Gnb = ({
-	tabs,
 	onTabEnter,
 	onTabLeave,
 	tabHovered,
@@ -68,39 +66,25 @@ const Gnb = ({
 									: `popup${index + 1}`
 							}
 						>
-							{index === 0
-								? tab1List[index].map((tab: NavTitle, index: number) => (
-										<div className='tab' key={index}>
+							{tab1List[index].map((tab: NavContext, index: number) => (
+								<div className='tab' key={index}>
+									<div className='tab-text'>
+										<div className='tab-text-title'>{tab.title}</div>
+										{tab.context.map((sub, index) => (
 											<div
-												className='tab-text'
+												className='tab-text-sub'
+												key={index}
 												onClick={() => {
-													onPathClick(tab.title.label, tab.title.path);
+													onPathClick(sub.label, sub.path);
 												}}
 											>
-												{tab.title.label}
+												{sub.label}
 											</div>
-											{index !== 2 ? <div className='tab-divider' /> : ''}
-										</div>
-								  ))
-								: tab1List[index].map((tab: NavContext, index: number) => (
-										<div className='tab' key={index}>
-											<div className='tab-text'>
-												<div className='tab-text-title'>{tab.title}</div>
-												{tab.context.map((sub, index) => (
-													<div
-														className='tab-text-sub'
-														key={index}
-														onClick={() => {
-															onPathClick(sub.label, sub.path);
-														}}
-													>
-														{sub.label}
-													</div>
-												))}
-											</div>
-											{index !== 2 ? <div className='tab-divider' /> : ''}
-										</div>
-								  ))}
+										))}
+									</div>
+									{index !== 2 ? <div className='tab-divider' /> : ''}
+								</div>
+							))}
 						</div>
 					</div>
 				))}
@@ -123,7 +107,7 @@ const Gnb = ({
 				src={images.language}
 				onClick={onGlobeClicked}
 			></img>
-			<div className={globeToggle ? `popup4-active` : `popup4`}>
+			<div className={globeToggle ? `popup5-active` : `popup5`}>
 				{languages.map((language, index) => (
 					<div
 						className='tabs'

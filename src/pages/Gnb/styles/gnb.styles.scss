@@ -44,14 +44,16 @@
 				line-height: 30px; /* 175% */
 				margin-right: 4px;
 			}
-			.popup1 {
-				position: absolute;
 
+			.popup1,
+			.popup2,
+			.popup3,
+			.popup4 {
+				//@extend .popup;
+				position: absolute;
 				width: 100vw;
-				height: 100px;
 				top: 52px;
 				left: calc(-21.8vw);
-
 				color: black;
 				background-color: white;
 				opacity: 0; /* 초기에 숨겨짐 */
@@ -59,50 +61,7 @@
 				transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 트랜지션 적용 */
 				display: flex;
 				flex-direction: row;
-				align-items: center;
 				padding-left: 19.5vw;
-				//justify-content: center;
-				.tab {
-					width: fit-content;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-
-					&-text {
-						//z-index: 100;
-						width: 131px;
-						text-align: center;
-						color: #000;
-						text-align: center;
-						font-family: Pretendard;
-						font-size: 20px;
-						font-style: normal;
-						font-weight: 600;
-						line-height: 28px; /* 140% */
-						&:hover {
-							cursor: pointer;
-							text-decoration: underline;
-						}
-					}
-					&-divider {
-						height: 50px;
-						width: 0.75px;
-						margin-left: 37px;
-						margin-right: 37px;
-						margin-top: 0px;
-						background-color: #ddd;
-					}
-				}
-
-				&-active {
-					@extend .popup1;
-					opacity: 1; /* 나타남 */
-					visibility: visible; /* 나타남 */
-				}
-			}
-			.popup2,
-			.popup3 {
-				@extend .popup1;
 				align-items: flex-start;
 				height: 254px;
 				.tab {
@@ -117,7 +76,7 @@
 					margin-top: 50px;
 					&-text {
 						//z-index: 100;
-						width: 132px;
+						width: 148px;
 						height: 148px;
 						display: flex;
 						flex-direction: column;
@@ -160,7 +119,7 @@
 				}
 
 				&-active {
-					@extend .popup2;
+					@extend .popup1;
 					opacity: 1; /* 나타남 */
 					visibility: visible; /* 나타남 */
 				}
@@ -183,7 +142,7 @@
 		position: absolute;
 		right: 10.4%;
 	}
-	.popup4 {
+	.popup5 {
 		//@extend .popup1;
 		display: grid;
 		//grid-template-rows: repeat(3, 1fr);
@@ -210,7 +169,7 @@
 		}
 		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 트랜지션 적용 */
 		&-active {
-			@extend .popup4;
+			@extend .popup5;
 			opacity: 1; /* 나타남 */
 			visibility: visible; /* 나타남 */
 		}
