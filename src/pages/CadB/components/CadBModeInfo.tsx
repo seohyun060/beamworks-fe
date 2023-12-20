@@ -5,16 +5,22 @@ type Props = {
 	toggle: boolean;
 	onToggleClick: VoidFunc;
 	modeType: CadbMode;
+	modeInfoTexts: string[];
 };
 
-const CadModeInfo = ({ toggle, onToggleClick, modeType }: Props) => {
+const CadModeInfo = ({
+	toggle,
+	onToggleClick,
+	modeType,
+	modeInfoTexts,
+}: Props) => {
 	console.log(modeType);
 	return (
 		<div className='cadb-s4'>
 			<div className='cadb-s4-cadb'>CadAI-B</div>
-			<div className='cadb-s4-header'>{modeType.title}</div>
+			<div className='cadb-s4-header'>{modeInfoTexts[0]}</div>
 			<div className='cadb-s4-descript'>
-				{modeType.descript.split('\n').map((line, index) => (
+				{modeInfoTexts[1].split('\n').map((line, index) => (
 					<React.Fragment key={index}>
 						{line}
 						<br />
@@ -24,7 +30,7 @@ const CadModeInfo = ({ toggle, onToggleClick, modeType }: Props) => {
 			{modeType.type === 'realtime' || modeType.type === 'measure' ? (
 				<div className='cadb-s4-body'>
 					<div className='s4-button'>
-						<div className='s4-button-text'>직접 켜보세요</div>
+						<div className='s4-button-text'>{modeInfoTexts[2]}</div>
 						<div className='s4-button-body'>
 							<span className='rm-title'>{modeType.button}</span>
 							<div

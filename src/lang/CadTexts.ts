@@ -1,4 +1,4 @@
-export const bannerTextsKo = ['유방 초음파 실시간 인공지능 프로그램'];
+export const bannerTextsKo = ['실시간 영상 분석 인공지능 프로그램'];
 
 export const solvingTextsKo = {
 	header: ['기존 문제의 해결'],

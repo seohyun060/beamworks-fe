@@ -22,7 +22,7 @@
   font-size: 0.52083333vw;
 }
 .cadb * {
-  word-break: keep-all;
+  word-break: normal;
 }
 .cadb-s1 {
   width: 100%;
@@ -109,7 +109,7 @@
   margin-top: 12.5vh;
 }
 .cadb-s2-text {
-  width: 20vw;
+  width: 25vw;
   display: flex;
   flex-direction: column;
   margin-left: 67.9vw;
@@ -276,7 +276,7 @@
 }
 .cadb-s4-descript {
   color: var(--White, #fff);
-  width: 35.9vw;
+  width: 49vw;
   /* 본문 */
   font-family: Pretendard;
   font-size: 2.4em;

@@ -5,7 +5,7 @@ const useCadbStore = create((set) => ({
 		type: 'realtime',
 		title: 'Realtime-mode',
 		descript:
-			'Realtime mode는 초음파 검사시에 실시간으로 보여지는 화면입니다. CadAI-map을 활용하여 더 편리하고 더 빠르게 병변을 진단하세요. CadAI-map은 어떤 모드에서든 쉽게 끄고 켤 수 있습니다.',
+			'Realtime mode는 초음파 검사시에 실시간으로 보여지는 화면입니다.\nCadAI-map을 활용하여 더 편리하고 더 빠르게 병변을 진단하세요.\nCadAI-map은 어떤 모드에서든 쉽게 끄고 켤 수 있습니다.',
 		button: 'CadAI-map',
 		modeOff: images.rmode_off,
 		modeOn: images.rmode_on,
@@ -17,7 +17,7 @@ const useCadbStore = create((set) => ({
 		type: 'measure',
 		title: 'Measure-mode',
 		descript:
-			'더 자세한 병변의 상태를 알고싶다면, Measure mode를 이용하세요. 상세한 Lexicon의 정보를 알려줍니다.',
+			'더 자세한 병변의 상태를 알고싶다면, Measure mode를 이용하세요.\n상세한 Lexicon의 정보를 알려줍니다.',
 		button: 'Measure',
 		modeOff: images.mmode_off,
 		modeOn: images.mmode_on,
@@ -53,7 +53,7 @@ const useCadbStore = create((set) => ({
 		type: 'review',
 		title: 'Review-mode',
 		descript:
-			'Review mode는 초음파 검사가 끝나고 저장된 화면을 다시 볼 수 있습니다. 조작법은 크게 어렵지 않으며 단지 몇번의 클릭만 하면 됩니다. 병변에 대한 정보 수정은 R&C 홈페이지에서 가능합니다.',
+			'Review mode는 초음파 검사가 끝나고 저장된 화면을 다시 볼 수 있습니다.\n조작법은 크게 어렵지 않으며 단지 몇번의 클릭만 하면 됩니다.\n병변에 대한 정보 수정은 R&C 홈페이지에서 가능합니다.',
 		button: '',
 		modeOff: '',
 		modeOn: '',
