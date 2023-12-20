@@ -9,20 +9,18 @@ export type GnbStore = {
 		label: string;
 		path: string;
 	}[];
-	company: NavTitle[];
+	company: NavContext[];
 	product: NavContext[];
-	community: NavContext[];
+
+	news: NavContext[];
+	visit: NavContext[];
 };
 const useGnbStore = create<GnbStore>((set) => ({
-	tabs1: ['회사소개', '제품소개', '커뮤니티'],
+	tabs1: ['회사소개', '뉴스', '비전・제품소개', '방문・다운로드'],
 	languageCode: 'ko',
 	setLanguageCode: (lang: string) =>
 		set((state) => ({ ...state, languageCode: lang })),
 	tabs2: [
-		{
-			label: '제품 구입/다운',
-			path: '/purchase',
-		},
 		{
 			label: '문의하기',
 			path: '/contact',
@@ -32,42 +30,107 @@ const useGnbStore = create<GnbStore>((set) => ({
 			path: '/recruitment',
 		},
 	],
+
+	///
 	company: [
 		{
-			title: {
-				label: '회사소개',
-				path: '/introduce',
-			},
-		},
-		{
-			title: {
-				label: '활동',
-				path: '/award',
-			},
-		},
-		{
-			title: {
-				label: '팀문화',
-				path: '/culture',
-			},
-		},
-	],
-	product: [
-		{
-			title: '제품소개',
+			title: '회사소개',
 			context: [
 				{
-					label: 'CadAI-Series',
+					label: '회사소개',
+					path: '/introduce',
+				},
+				{
+					label: '연혁',
+					path: '/award',
+				},
+			],
+		},
+		{
+			title: '팀문화',
+			context: [
+				{
+					label: '팀문화',
+					path: '/culture',
+				},
+				{
+					label: '직무소개',
+					path: '/jobs',
+				},
+			],
+		},
+		{
+			title: 'IR',
+			context: [
+				{
+					label: '재무정보',
+					path: '/finance',
+				},
+				{
+					label: 'IR 정보',
+					path: '/ir',
+				},
+			],
+		},
+	],
+	news: [
+		{
+			title: '보도자료',
+			context: [
+				{
+					label: '뉴스・기사',
+					path: '/news',
+				},
+				{
+					label: 'Youtube',
+					path: '/youtube',
+				},
+			],
+		},
+		{
+			title: '연구자료',
+			context: [
+				{
+					label: '논문',
+					path: '/publication',
+				},
+				{
+					label: 'White paper',
+					path: '/white',
+				},
+			],
+		},
+		{
+			title: '교육',
+			context: [
+				{
+					label: '뭐',
+					path: '/what',
+				},
+				{
+					label: '적지',
+					path: '/write',
+				},
+			],
+		},
+	],
+
+	product: [
+		{
+			title: '비전소개',
+			context: [
+				{
+					label: 'Vision AI',
 					path: '/product',
 				},
 				{
-					label: 'ChatAI-Series',
+					label: 'Conversation AI',
 					path: '/chatai',
 				},
 			],
 		},
 		{
-			title: 'CadAI-Series',
+			title: 'Vision AI',
 			context: [
 				{
 					label: 'CadAI-B',
@@ -84,7 +147,7 @@ const useGnbStore = create<GnbStore>((set) => ({
 			],
 		},
 		{
-			title: 'ChatAI-Series',
+			title: 'Conversation AI',
 			context: [
 				{
 					label: '응급프로',
@@ -101,30 +164,17 @@ const useGnbStore = create<GnbStore>((set) => ({
 			],
 		},
 	],
-	community: [
+	visit: [
 		{
-			title: 'IR',
+			title: 'CadAI-R&C',
 			context: [
 				{
-					label: '재무정보',
-					path: '/finance',
+					label: 'R&C 소개',
+					path: '/cadr',
 				},
 				{
-					label: 'IR정보',
-					path: '/ir',
-				},
-			],
-		},
-		{
-			title: '뉴스',
-			context: [
-				{
-					label: '보도자료',
-					path: '/press',
-				},
-				{
-					label: '연구자료',
-					path: '/research',
+					label: 'R&C 바로가기',
+					path: '/cadr',
 				},
 			],
 		},
@@ -138,6 +188,19 @@ const useGnbStore = create<GnbStore>((set) => ({
 				{
 					label: 'ORCA 바로가기',
 					path: 'https://dga4tyl72gqaj.cloudfront.net/',
+				},
+			],
+		},
+		{
+			title: 'Download',
+			context: [
+				{
+					label: 'Vision AI',
+					path: '/downv',
+				},
+				{
+					label: 'Conversation AI',
+					path: '/downc',
 				},
 			],
 		},
