@@ -11,6 +11,7 @@ type Props = {
 	}[];
 	formatDate: (date: Date) => string;
 	filteredList: MainNews[];
+	newsTexts: string[];
 };
 
 const HomeNews = ({
@@ -19,15 +20,14 @@ const HomeNews = ({
 	tabs,
 	formatDate,
 	filteredList,
+	newsTexts,
 }: Props) => {
 	return (
 		<div className='home-s3'>
 			<div className='home-s3-header'>
-				<span className='home-s3-header-text'>
-					빔웍스의 최근 소식을 확인하세요
-				</span>
+				<span className='home-s3-header-text'>{newsTexts[0]}</span>
 				<div className='home-s3-header-readmore'>
-					<span>빔웍스 소식 더보기</span>
+					<span>{newsTexts[1]}</span>
 					<img src={images.rightB} />
 				</div>
 			</div>

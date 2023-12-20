@@ -7,13 +7,14 @@ type Props = {
 		type: string;
 		text: string;
 	}[];
+	techTexts: string[];
 };
 
-const HomeTech = ({ selectedTab, onTabClick, tabs }: Props) => {
+const HomeTech = ({ selectedTab, onTabClick, tabs, techTexts }: Props) => {
 	return (
 		<div className='home-s2'>
 			<div className='home-s2-container'>
-				<div className='home-s2-container-header'>빔웍스의 기술력</div>
+				<div className='home-s2-container-header'>{techTexts[0]}</div>
 				<div className='home-s2-container-tabs'>
 					{tabs.map((tab, index) => (
 						<div

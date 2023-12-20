@@ -1,13 +1,16 @@
 import React from 'react';
 import images from 'src/assets/images';
-type Props = {};
+type Props = {
+	bannerTexts: string[];
+};
 
-const HomeBanner = (props: Props) => {
+const HomeBanner = ({ bannerTexts }: Props) => {
 	return (
 		<div className='home-s1'>
-			{/* <img src={images.mainback1} /> */}
 			<div className='home-s1-text'>
-				BeamWorks, 모두를 위한 건강을 위한 기술을 선도합니다.
+				{bannerTexts[0].split('\n').map((text, i) => (
+					<p key={i}>{text}</p>
+				))}
 			</div>
 		</div>
 	);

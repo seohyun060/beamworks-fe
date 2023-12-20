@@ -1,5 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import HomeTech from '../components/HomeTech';
+import { techTextsKo } from 'src/lang/HomeTexts';
+import useGnbStore from '@store/zustand/gnbZustand';
+import GoogleTranslate from 'src/lang/GoogleTranslate';
 type Props = {};
 
 const HomeTechContainer = (props: Props) => {
@@ -25,9 +28,27 @@ const HomeTechContainer = (props: Props) => {
 		},
 		[selectedTab],
 	);
-
+	const { languageCode } = useGnbStore();
+	const [techTexts, setTechTexts] = useState(techTextsKo);
+	const getTranslate = useCallback(async () => {
+		if (languageCode === 'ko') {
+			setTechTexts(techTextsKo);
+		} else {
+			const data = await GoogleTranslate(techTextsKo, languageCode);
+			setTechTexts(data);
+		}
+	}, [techTexts, languageCode]);
+	useEffect(() => {
+		getTranslate();
+		return () => {};
+	}, [languageCode]);
 	return (
-		<HomeTech selectedTab={selectedTab} onTabClick={onTabClick} tabs={tabs} />
+		<HomeTech
+			selectedTab={selectedTab}
+			onTabClick={onTabClick}
+			tabs={tabs}
+			techTexts={techTexts}
+		/>
 	);
 };
 
