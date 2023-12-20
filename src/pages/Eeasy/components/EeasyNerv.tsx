@@ -5,18 +5,15 @@ import images from 'src/assets/images';
 type Props = {
 	toggle: boolean;
 	onToggleClick: VoidFunc;
-	ntext: string;
+	nervTexts: string[];
 };
 
-const EeasyNerv = ({ toggle, onToggleClick, ntext }: Props) => {
+const EeasyNerv = ({ toggle, onToggleClick, nervTexts }: Props) => {
 	return (
 		<div className='eeasy-s4'>
 			<div className='eeasy-s4-lt'>
-				<div className='s4-header'>주 증상 선택을 통한 자가 분류</div>
-				<div className='s4-body'>
-					자신에게 해당하는 주 증상을 선택하여 언제 어디서나 간편하게 자가분류를
-					수행할 수 있습니다.
-				</div>
+				<div className='s4-header'>{nervTexts[0]}</div>
+				<div className='s4-body'>{nervTexts[1]}</div>
 			</div>
 			{/* <img
 				className='eeasy-s4-img'
@@ -45,7 +42,7 @@ const EeasyNerv = ({ toggle, onToggleClick, ntext }: Props) => {
 			</div>
 
 			<div className='eeasy-s4-rt'>
-				<div className='s4-body'>{ntext}</div>
+				<div className='s4-body'>{!toggle ? nervTexts[2] : nervTexts[3]}</div>
 				<img
 					className='s4-neuron'
 					src={images.eeasy4_neuron}

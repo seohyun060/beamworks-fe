@@ -1,18 +1,38 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import EeasyNerv from '../components/EeasyNerv';
+import { nervTextsKo } from 'src/lang/EEasyTexts';
+import GoogleTranslate from 'src/lang/GoogleTranslate';
+import useGnbStore from '@store/zustand/gnbZustand';
 
 type Props = {};
 
 const EeasyNervContainer = (props: Props) => {
 	const [toggle, setToggle] = useState(false);
-	const [ntext, setNtext] = useState('아래의 "신경계" 버튼을 눌러주세요');
+	const { languageCode } = useGnbStore();
+	const [nervTexts, setNervTexts] = useState(nervTextsKo);
+
+	const getTranslate = useCallback(async () => {
+		if (languageCode === 'ko') {
+			setNervTexts(nervTextsKo);
+		} else {
+			const data = await GoogleTranslate(nervTextsKo, languageCode);
+			setNervTexts(data);
+		}
+	}, [nervTexts, languageCode]);
+	useEffect(() => {
+		getTranslate();
+		return () => {};
+	}, [languageCode]);
 	const onToggleClick = useCallback(() => {
 		setToggle(true);
-		setNtext('스크롤을 내려주세요');
-	}, [toggle]);
+	}, [toggle, nervTexts]);
 
 	return (
-		<EeasyNerv toggle={toggle} onToggleClick={onToggleClick} ntext={ntext} />
+		<EeasyNerv
+			toggle={toggle}
+			onToggleClick={onToggleClick}
+			nervTexts={nervTexts}
+		/>
 	);
 };
 
