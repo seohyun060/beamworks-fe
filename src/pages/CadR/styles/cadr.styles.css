@@ -22,7 +22,7 @@
   font-size: 0.52083333vw;
 }
 .cadr * {
-  word-break: keep-all;
+  word-break: normal;
 }
 .cadr-s1 {
   width: 100%;
@@ -93,14 +93,14 @@
   position: absolute;
   top: 0px;
   left: 0;
-  width: 44vw;
+  width: 40vw;
 }
 .cadr-s2-text {
-  width: 24.48vw;
+  width: 31.7vw;
   display: flex;
   flex-direction: column;
-  margin-left: 24.06vw;
-  margin-top: 21.66vh;
+  margin-left: 16.75vw;
+  margin-top: 25.66vh;
 }
 .cadr-s2-text .s2-demo {
   color: var(--Dark-Glay, #4d4f58);
@@ -115,15 +115,17 @@
 .cadr-s2-text .s2-header {
   color: var(--Black, #000);
   /* 주 헤드 */
+  margin-bottom: 4.6vw;
+}
+.cadr-s2-text .s2-header p {
   font-family: Pretendard;
-  font-size: 5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.24; /* 124% */
-  margin-bottom: 5.5vw;
 }
 .cadr-s2-text .s2-body {
-  width: 20vw;
+  width: 26.57vw;
   color: #000;
   /* 본문 */
   font-family: Pretendard;
@@ -160,7 +162,8 @@
   position: absolute;
   color: var(--Dark-Glay, #4d4f58);
   top: -1.635vw;
-  left: 15vw;
+  text-align: center;
+  width: 48vw;
   /* 본문 */
   font-family: Pretendard;
   font-size: 2.4em;
@@ -197,7 +200,7 @@
   overflow-y: auto;
 }
 .cadr-s3-text {
-  width: 20.9vw;
+  width: 25.9vw;
   display: flex;
   flex-direction: column;
   margin-left: 1.98vw;
@@ -216,12 +219,14 @@
 .cadr-s3-text .s3-header {
   color: var(--Black, #000);
   /* 주 헤드 */
+  margin-bottom: 0.9375vw;
+}
+.cadr-s3-text .s3-header p {
   font-family: Pretendard;
   font-size: 5em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.24; /* 124% */
-  margin-bottom: 0.9375vw;
 }
 .cadr-s3-text .s3-logo {
   width: 21.875vw;
@@ -260,15 +265,14 @@
   margin-bottom: 14vh;
 }
 .cadr-s4-image .s4-tab {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 41.66;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 4.16vw;
   margin-bottom: 6.4vw;
-  margin-left: 7.7vw;
 }
 .cadr-s4-image .s4-tab-item, .cadr-s4-image .s4-tab-item-active {
   color: #fff;
@@ -294,7 +298,7 @@
   right: -3vw;
 }
 .cadr-s4-text {
-  width: 26.1vw;
+  width: 30.1vw;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -315,7 +319,7 @@
   color: var(--White, #fff);
   /* 주 헤드 */
   font-family: Pretendard;
-  font-size: 5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 600;
   line-height: 1.24; /* 124% */
@@ -339,7 +343,7 @@
 }
 .cadr-s4-text .s4-body {
   color: var(--White, #fff);
-  width: 20vw;
+  width: 28vw;
   /* 본문 */
   font-family: Pretendard;
   font-size: 2.4em;
@@ -364,6 +368,7 @@
   margin-top: 38.14vh;
   margin-bottom: 1.25vw;
   color: var(--Black, #000);
+  width: 34vw;
   /* 보조헤드 */
   font-family: Pretendard;
   font-size: 4em;

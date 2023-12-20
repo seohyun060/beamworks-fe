@@ -21,7 +21,7 @@
 	font-size: 0.52083333vw;
 
 	& * {
-		word-break: keep-all;
+		word-break: normal;
 	}
 	&-s1 {
 		width: 100%;
@@ -92,14 +92,14 @@
 			position: absolute;
 			top: 0px;
 			left: 0;
-			width: 44vw;
+			width: 40vw;
 		}
 		&-text {
-			width: 24.48vw;
+			width: 31.7vw;
 			display: flex;
 			flex-direction: column;
-			margin-left: 24.06vw;
-			margin-top: 21.66vh;
+			margin-left: 16.75vw;
+			margin-top: 25.66vh;
 			.s2-demo {
 				color: var(--Dark-Glay, #4d4f58);
 
@@ -113,18 +113,20 @@
 			}
 			.s2-header {
 				color: var(--Black, #000);
-
+				p {
+					font-family: Pretendard;
+					font-size: 4em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.24; /* 124% */
+				}
 				/* 주 헤드 */
-				font-family: Pretendard;
-				font-size: 5em;
-				font-style: normal;
-				font-weight: 600;
-				line-height: 1.24; /* 124% */
-				margin-bottom: 5.5vw;
+
+				margin-bottom: 4.6vw;
 			}
 
 			.s2-body {
-				width: 20vw;
+				width: 26.57vw;
 				color: #000;
 
 				/* 본문 */
@@ -163,7 +165,9 @@
 				position: absolute;
 				color: var(--Dark-Glay, #4d4f58);
 				top: -1.635vw;
-				left: 15vw;
+				//left: 15vw;
+				text-align: center;
+				width: 48vw;
 				/* 본문 */
 				font-family: Pretendard;
 				font-size: 2.4em;
@@ -209,7 +213,7 @@
 			overflow-y: auto; // Show vertical scrollbar on hover
 		}
 		&-text {
-			width: 20.9vw;
+			width: 25.9vw;
 			display: flex;
 			flex-direction: column;
 			margin-left: 1.98vw;
@@ -227,13 +231,15 @@
 			}
 			.s3-header {
 				color: var(--Black, #000);
-
+				p {
+					font-family: Pretendard;
+					font-size: 5em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.24; /* 124% */
+				}
 				/* 주 헤드 */
-				font-family: Pretendard;
-				font-size: 5em;
-				font-style: normal;
-				font-weight: 600;
-				line-height: 1.24; /* 124% */
+
 				margin-bottom: 0.9375vw;
 			}
 			.s3-logo {
@@ -274,13 +280,14 @@
 			position: relative;
 			margin-bottom: 14vh;
 			.s4-tab {
-				width: fit-content;
+				width: 41.66;
 				height: fit-content;
 				display: flex;
 				flex-direction: row;
+				justify-content: center;
 				gap: 4.16vw;
 				margin-bottom: 6.4vw;
-				margin-left: 7.7vw;
+				//margin-left: 7.7vw;
 				&-item {
 					color: #fff;
 
@@ -310,7 +317,7 @@
 			}
 		}
 		&-text {
-			width: 26.1vw;
+			width: 30.1vw;
 			height: fit-content;
 			display: flex;
 			flex-direction: column;
@@ -331,7 +338,7 @@
 
 				/* 주 헤드 */
 				font-family: Pretendard;
-				font-size: 5em;
+				font-size: 4em;
 				font-style: normal;
 				font-weight: 600;
 				line-height: 1.24; /* 124% */
@@ -352,12 +359,14 @@
 				top: 5.67vw;
 				&-active {
 					@extend .s4-nomo;
+					//margin-top: -20vw;
+
 					display: block;
 				}
 			}
 			.s4-body {
 				color: var(--White, #fff);
-				width: 20vw;
+				width: 28vw;
 
 				/* 본문 */
 				font-family: Pretendard;
@@ -386,7 +395,7 @@
 			margin-top: 38.14vh;
 			margin-bottom: 1.25vw;
 			color: var(--Black, #000);
-
+			width: 34vw;
 			/* 보조헤드 */
 			font-family: Pretendard;
 			font-size: 4em;

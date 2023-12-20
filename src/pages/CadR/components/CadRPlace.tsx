@@ -9,14 +9,21 @@ type Props = {
 	};
 	onPrevClick: VoidFunc;
 	onNextClick: VoidFunc;
+	placeTexts: string[];
 };
 
-const CadRPlace = ({ current, content, onPrevClick, onNextClick }: Props) => {
+const CadRPlace = ({
+	current,
+	content,
+	onPrevClick,
+	onNextClick,
+	placeTexts,
+}: Props) => {
 	return (
 		<div className='cadr-s6'>
 			<div className='cadr-s6-rc'>CadAI-R&C</div>
-			<div className='cadr-s6-header'>장소에 제한을 두지마세요.</div>
-			<div className='cadr-s6-where'>{content.text}</div>
+			<div className='cadr-s6-header'>{placeTexts[0]}</div>
+			<div className='cadr-s6-where'>{placeTexts[1]}</div>
 			<div className='cadr-s6-carousel'>
 				<img
 					className='s6-prev'
