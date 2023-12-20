@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import HomeNews from '../components/HomeNews';
 import { MainNews } from '@typedef/types';
+import useGnbStore from '@store/zustand/gnbZustand';
+import { newsTextsKo } from 'src/lang/HomeTexts';
+import GoogleTranslate from 'src/lang/GoogleTranslate';
 type Props = {};
 
 const HomeNewsContainer = (props: Props) => {
@@ -19,20 +22,7 @@ const HomeNewsContainer = (props: Props) => {
 		};
 		newsList.push(tempNews);
 	}
-	const tabs = [
-		{
-			type: 'all',
-			text: 'All',
-		},
-		{
-			type: 'news',
-			text: '보도자료',
-		},
-		{
-			type: 'research',
-			text: '연구자료',
-		},
-	];
+
 	const formatDate = (date: Date) => {
 		const year = date.getFullYear().toString(); // 년도의 마지막 두 자리
 		const month = date.getMonth() + 1; // 월을 문자열로 변환
@@ -45,6 +35,34 @@ const HomeNewsContainer = (props: Props) => {
 		},
 		[selectedTab],
 	);
+	const { languageCode } = useGnbStore();
+	const [newsTexts, setNewsTexts] = useState(newsTextsKo);
+	const getTranslate = useCallback(async () => {
+		if (languageCode === 'ko') {
+			setNewsTexts(newsTextsKo);
+		} else {
+			const data = await GoogleTranslate(newsTextsKo, languageCode);
+			setNewsTexts(data);
+		}
+	}, [newsTexts, languageCode]);
+	const tabs = [
+		{
+			type: 'all',
+			text: 'All',
+		},
+		{
+			type: 'news',
+			text: newsTexts[2],
+		},
+		{
+			type: 'research',
+			text: newsTexts[3],
+		},
+	];
+	useEffect(() => {
+		getTranslate();
+		return () => {};
+	}, [languageCode]);
 	useEffect(() => {
 		switch (selectedTab) {
 			case 'all':
@@ -70,6 +88,7 @@ const HomeNewsContainer = (props: Props) => {
 			tabs={tabs}
 			formatDate={formatDate}
 			filteredList={filteredList}
+			newsTexts={newsTexts}
 		/>
 	);
 };
