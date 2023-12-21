@@ -42,10 +42,8 @@ export type ExploreType = {
 	}[];
 };
 export type NavTitle = {
-	title: {
-		label: string;
-		path: string;
-	};
+	label: string;
+	path: string;
 };
 
 export type NavContext = {

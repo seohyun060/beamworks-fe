@@ -14,7 +14,7 @@
 .footer-news {
   margin-top: 12.3vh;
   margin-left: 18.75vw;
-  margin-bottom: 27.68vh;
+  margin-bottom: 24.68vh;
 }
 .footer-news-logo {
   width: 8.49vw;
@@ -30,7 +30,7 @@
 }
 .footer-news-body {
   color: var(--Dark-Glay, #4d4f58);
-  width: 47.18vw;
+  width: 50.18vw;
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 0.986vw;

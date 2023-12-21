@@ -3,9 +3,10 @@ import images from 'src/assets/images';
 import './styles/footer.styles.css';
 type Props = {
 	type: string;
+	infoTexts: string[];
 };
 
-const Footer = ({ type }: Props) => {
+const Footer = ({ type, infoTexts }: Props) => {
 	return (
 		<div
 			className='footer'
@@ -24,14 +25,9 @@ const Footer = ({ type }: Props) => {
 						color: type === 'black' ? '#fff' : '#000',
 					}}
 				>
-					뉴스레터를 구독해보세요
+					{infoTexts[0]}
 				</div>
-				<div className='footer-news-body'>
-					뉴스레터를 구독하면 최신 소식과 유용한 정보를 주기적으로 받아볼 수
-					있어, 항상 업데이트된 정보를 손쉽게 얻을 수 있습니다. 뉴스레터를
-					구독하면, 계속해서 풍부한 지식과 인사이트를 쌓을 수 있는 기회를 놓치지
-					않을 것입니다.
-				</div>
+				<div className='footer-news-body'>{infoTexts[1]}</div>
 				<div className='footer-news-input'>
 					<input
 						style={{
@@ -46,7 +42,7 @@ const Footer = ({ type }: Props) => {
 							backgroundColor: type === 'black' ? '#A0A0A0' : '#4D4F58',
 						}}
 					>
-						<span>구독</span>
+						<span>{infoTexts[2]}</span>
 						<img src={images.rightW} />
 					</div>
 				</div>
