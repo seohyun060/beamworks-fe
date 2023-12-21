@@ -3,20 +3,23 @@ import images from 'src/assets/images';
 import { NavContext, NavTitle } from '@typedef/types';
 export type GnbStore = {
 	tabs1: string[];
+	setTabs1: (tabs: string[]) => void;
 	languageCode: string;
 	setLanguageCode: (lang: string) => void;
-	tabs2: {
-		label: string;
-		path: string;
-	}[];
+	tabs2: NavTitle[];
+	setTabs2: (tabs: NavTitle[]) => void;
 	company: NavContext[];
+	setCompany: (updatedCompany: NavContext[]) => void;
 	product: NavContext[];
-
+	setProduct: (updatedCompany: NavContext[]) => void;
 	news: NavContext[];
+	setNews: (updatedNews: NavContext[]) => void;
 	visit: NavContext[];
+	setVisit: (updatedCompany: NavContext[]) => void;
 };
 const useGnbStore = create<GnbStore>((set) => ({
 	tabs1: ['회사소개', '뉴스', '비전・제품소개', '방문・다운로드'],
+	setTabs1: (tabs: string[]) => set((state) => ({ ...state, tabs1: tabs })),
 	languageCode: 'ko',
 	setLanguageCode: (lang: string) =>
 		set((state) => ({ ...state, languageCode: lang })),
@@ -30,7 +33,7 @@ const useGnbStore = create<GnbStore>((set) => ({
 			path: '/recruitment',
 		},
 	],
-
+	setTabs2: (tabs: NavTitle[]) => set((state) => ({ ...state, tabs2: tabs })),
 	///
 	company: [
 		{
@@ -73,6 +76,8 @@ const useGnbStore = create<GnbStore>((set) => ({
 			],
 		},
 	],
+	setCompany: (updatedCompany: NavContext[]) =>
+		set((state) => ({ ...state, company: updatedCompany })),
 	news: [
 		{
 			title: '보도자료',
@@ -101,20 +106,21 @@ const useGnbStore = create<GnbStore>((set) => ({
 			],
 		},
 		{
-			title: '교육',
+			title: '일정',
 			context: [
 				{
-					label: '뭐',
+					label: '이벤트',
 					path: '/what',
 				},
 				{
-					label: '적지',
+					label: '빔웍스 일정',
 					path: '/write',
 				},
 			],
 		},
 	],
-
+	setNews: (updatedNews: NavContext[]) =>
+		set((state) => ({ ...state, news: updatedNews })),
 	product: [
 		{
 			title: '비전소개',
@@ -164,6 +170,8 @@ const useGnbStore = create<GnbStore>((set) => ({
 			],
 		},
 	],
+	setProduct: (updatedProduct: NavContext[]) =>
+		set((state) => ({ ...state, product: updatedProduct })),
 	visit: [
 		{
 			title: 'CadAI-R&C',
@@ -205,6 +213,8 @@ const useGnbStore = create<GnbStore>((set) => ({
 			],
 		},
 	],
+	setVisit: (updatedVisit: NavContext[]) =>
+		set((state) => ({ ...state, visit: updatedVisit })),
 }));
 
 export default useGnbStore;

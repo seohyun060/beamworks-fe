@@ -13,6 +13,7 @@ const CadRPlaceContainer = (props: Props) => {
 		text: '길거리에서',
 		imgs: [images.cadr6_1c, images.cadr6_2b, images.cadr6_3b],
 	});
+
 	const placeTextsKo = ['장소에 제한을 두지마세요', content.text];
 	const onPrevClick = useCallback(() => {
 		if (current > 0) {
