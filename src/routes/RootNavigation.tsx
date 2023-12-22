@@ -22,7 +22,7 @@ import {
 } from 'react-router-dom';
 import './styles/rootnavigation.style.css';
 import EeasyContainer from 'src/pages/Eeasy/containers/EeasyContainer';
-
+import NewsContainer from 'src/pages/News/containers/NewsContainer';
 const RootNavigation = () => {
 	const location = useLocation();
 	return (
@@ -48,6 +48,7 @@ const RootNavigation = () => {
 				<Route path='/eeasy' element={<EeasyContainer />} />
 				<Route path='/orca' element={<Orca />} />
 				<Route path='/Jobs' element={<Jobs />} />
+				<Route path='/news' element={<NewsContainer />} />
 			</Routes>
 		</>
 	);
