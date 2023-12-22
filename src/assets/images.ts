@@ -181,7 +181,16 @@ const images = {
 	eeasy5_pain8: '/assets/images/eeasy5_pain8.png',
 	eeasy5_pain10: '/assets/images/eeasy5_pain10.png',
 	rvmode: '/assets/images/rvmode.png',
-
+	search: '/assets/images/search.svg',
+	newsImg: '/assets/images/newsImg.png',
+	prevW: '/assets/images/prevW.svg',
+	prevB: '/assets/images/prevB.svg',
+	nextW: '/assets/images/nextW.svg',
+	nextB: '/assets/images/nextB.svg',
+	startW: '/assets/images/startW.svg',
+	startB: '/assets/images/startB.svg',
+	endW: '/assets/images/endW.svg',
+	endB: '/assets/images/endB.svg',
 	//Team
 	teamGoalImage_CST: '/assets/images/team/teamGoalImage_CST.png',
 	teamSlogunImage_CST: '/assets/images/team/teamSlogunImage_CST.png',

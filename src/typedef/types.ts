@@ -69,3 +69,10 @@ export type SolutionContent = {
 	solutionList: SolutionType[];
 	bannerList: string[];
 };
+
+export type NewsThumbnail = {
+	image: string;
+	title: string;
+	content: string;
+	date: string;
+};

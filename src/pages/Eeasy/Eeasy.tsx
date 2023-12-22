@@ -9,7 +9,6 @@ import EeasyInfoContainer from './containers/EeasyInfoContainer';
 import EeasyNervContainer from './containers/EeasyNervContainer';
 import EeasyPainContainer from './containers/EeasyPainContainer';
 import EeasyVideoContainer from './containers/EeasyVideoContainer';
-import ChatAIDownContainer from '@components/ChatAI/containers/ChatAIDownContainer';
 import ExploreContainer from 'src/pages/Cad/containers/ExploreContainer';
 type Props = {};
 
