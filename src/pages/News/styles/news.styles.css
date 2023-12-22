@@ -47,12 +47,16 @@
 }
 .news-lst {
   width: 100vw;
-  height: 130vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
   padding-top: 52px;
+  padding-bottom: 52px;
   position: relative;
   display: flex;
   flex-direction: column;
   padding-left: 18.75vw;
+  justify-content: center;
   scroll-snap-align: start;
 }
 .news-lst-mini {
@@ -203,6 +207,7 @@
   margin-right: 18.75vw;
   margin-top: 3.64vw;
   height: 1.67vw;
+  margin-bottom: 2vw;
 }
 .news-lst .page-number, .news-lst .page-number-active {
   width: 1.67vw;

@@ -1,0 +1,151 @@
+::-webkit-scrollbar {
+	width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+.youtube {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	font-size: 0.52083333vw;
+	&-bn {
+		width: 100vw;
+		height: 100vh;
+		padding-top: 52px;
+
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		//align-items: center;
+		background-image: url('/public/assets/images/youtubeBanner.png');
+		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+		background-repeat: no-repeat;
+
+		scroll-snap-align: start;
+		&-text {
+			margin-left: 18.75vw;
+			margin-bottom: 22vh;
+			color: #fff;
+
+			/* Web/주 헤드 */
+			font-family: Pretendard;
+			font-size: 5em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 62px; /* 124% */
+		}
+	}
+	&-lst {
+		width: 100vw;
+		height: 100vh;
+		padding-top: 52px;
+
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		scroll-snap-align: start;
+		&-mini {
+			color: var(--Middle-Glay, #a0a0a0);
+			text-align: center;
+
+			/* Web/카테고리 */
+			font-family: Pretendard;
+			font-size: 3em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1.33; /* 133.333% */
+		}
+		&-title {
+			margin-top: 1.25vw;
+			color: var(--Black, #000);
+			text-align: center;
+
+			/* Web/주 헤드 */
+			font-family: Pretendard;
+			font-size: 5em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1.24; /* 124% */
+		}
+		&-body {
+			width: 62.5vw;
+			height: 15.65vw;
+			margin-top: 6.35vw;
+			margin-bottom: 6.3vw;
+
+			display: flex;
+			flex-direction: row;
+			gap: 1.25vw;
+			.player {
+				width: 20vw;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				&-frame {
+					width: 19.91111111111111vw;
+					height: 11.17vw;
+					border-radius: 0.625vw;
+				}
+				&-title {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: center;
+					height: 3.75vw;
+
+					margin-top: 0.7vw;
+					color: #000;
+
+					/* Web/본문 강조 */
+					font-family: Pretendard;
+					font-size: 2.4em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.333; /* 133.333% */
+				}
+			}
+		}
+		&-visit {
+			width: 10.625vw;
+			height: 1.875vw;
+			border-radius: 18px;
+			background: var(--White-Hover, #ddd);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			position: relative;
+			//justify-content: center;
+			.visit-text {
+				margin-left: 1.67vw;
+				color: #242b59;
+				font-family: Pretendard;
+				font-size: 1.6em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 150%; /* 24px */
+				letter-spacing: -0.08px;
+			}
+			.visit-play {
+				width: 0.573vw;
+				position: absolute;
+				right: 0.68vw;
+			}
+		}
+	}
+}
