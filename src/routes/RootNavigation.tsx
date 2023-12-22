@@ -23,6 +23,7 @@ import {
 import './styles/rootnavigation.style.css';
 import EeasyContainer from 'src/pages/Eeasy/containers/EeasyContainer';
 import NewsContainer from 'src/pages/News/containers/NewsContainer';
+import YoutubeContainer from 'src/pages/Youtube/containers/YoutubeContainer';
 const RootNavigation = () => {
 	const location = useLocation();
 	return (
@@ -49,6 +50,7 @@ const RootNavigation = () => {
 				<Route path='/orca' element={<Orca />} />
 				<Route path='/Jobs' element={<Jobs />} />
 				<Route path='/news' element={<NewsContainer />} />
+				<Route path='/youtube' element={<YoutubeContainer />} />
 			</Routes>
 		</>
 	);
