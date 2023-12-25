@@ -9,7 +9,6 @@ const YoutubePlayer = ({ youtube }: Props) => {
 	return (
 		<div className='player'>
 			<iframe
-				//width='100%'
 				className='player-frame'
 				src={youtube.path}
 				title='YouTube video player'

@@ -76,3 +76,9 @@ export type NewsThumbnail = {
 	content: string;
 	date: string;
 };
+
+export type PubInfo = {
+	title: string;
+	author: string;
+	date: string;
+};

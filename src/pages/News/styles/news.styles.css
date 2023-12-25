@@ -196,7 +196,8 @@
   font-weight: 400;
   line-height: 2.5; /* 250% */
 }
-.news-lst .page {
+
+.page {
   align-self: center;
   display: flex;
   flex-direction: row;
@@ -209,7 +210,7 @@
   height: 1.67vw;
   margin-bottom: 2vw;
 }
-.news-lst .page-number, .news-lst .page-number-active {
+.page-number, .page-number-active {
   width: 1.67vw;
   text-align: center;
   color: var(--Button-Hovered, #d9d9d9);
@@ -220,12 +221,12 @@
   font-weight: 600;
   line-height: 1.33; /* 133.333% */
 }
-.news-lst .page-number:hover, .news-lst .page-number-active:hover {
+.page-number:hover, .page-number-active:hover {
   cursor: pointer;
 }
-.news-lst .page-number-active {
+.page-number-active {
   color: black;
 }
-.news-lst .page img:hover {
+.page img:hover {
   cursor: pointer;
 }/*# sourceMappingURL=news.styles.css.map */

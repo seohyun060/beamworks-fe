@@ -1,0 +1,163 @@
+::-webkit-scrollbar {
+	width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+.pub {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	font-size: 0.52083333vw;
+	&-bn {
+		width: 100vw;
+		height: 100vh;
+		padding-top: 52px;
+
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		//align-items: center;
+		background-image: url('/public/assets/images/pubBanner.png');
+		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
+		background-repeat: no-repeat;
+
+		scroll-snap-align: start;
+		&-text {
+			margin-left: 18.75vw;
+			margin-bottom: 22vh;
+			color: #fff;
+			width: 38.49vw;
+			/* Web/주 헤드 */
+			font-family: Pretendard;
+			font-size: 5em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 62px; /* 124% */
+		}
+	}
+	&-lst {
+		width: 100vw;
+		height: fit-content;
+		min-height: 100vh;
+		padding-top: 52px;
+		padding-bottom: 52px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding-left: 18.75vw;
+		justify-content: center;
+		//align-items: center;
+
+		scroll-snap-align: start;
+		&-title {
+			margin-top: 7.92vw;
+			color: var(--Black, #000);
+
+			/* Web/주 헤드 */
+			font-family: Pretendard;
+			font-size: 5em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1.24; /* 124% */
+		}
+		&-search {
+			width: 25.3125vw;
+			height: 2.1vw;
+			margin-top: 1.875vw;
+			margin-bottom: 4.74vw;
+			position: relative;
+			border-radius: 1.7vw;
+
+			background: var(--White-Block-font, #ebebeb);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.search-input {
+				margin-left: 1.25vw;
+				width: 21.5vw;
+				background-color: #ebebeb;
+			}
+			.search-img {
+				position: absolute;
+				width: 1.04vw;
+				right: 0.8vw;
+			}
+		}
+		&-body {
+			width: 51.875vw;
+			height: 39.17vw;
+			margin-bottom: 3.645vw;
+			display: flex;
+			flex-direction: column;
+			gap: 3.64vw;
+			.pinfo {
+				width: 100%;
+				height: 10.625vw;
+				border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+				&-title {
+					color: #000;
+
+					/* Web/본문 강조 */
+					font-family: Pretendard;
+					font-size: 2.4em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.333; /* 133.333% */
+				}
+				&-author,
+				&-date {
+					width: fit-content;
+					display: flex;
+					flex-direction: row;
+					gap: 1.3vw;
+					margin-top: 0.31215vw;
+					&-label {
+						width: 5.21vw;
+						color: var(--Middle-Glay, #a0a0a0);
+
+						/* Web/NAV */
+						font-family: Pretendard;
+						font-size: 1.6em;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 1.75; /* 175% */
+					}
+					&-text {
+						@extend .pinfo-author-label;
+						width: fit-content;
+					}
+				}
+				&-more {
+					width: fit-content;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					margin-top: 1.04vw;
+					gap: 0.625vw;
+					&-text {
+						color: #000;
+						text-align: right;
+
+						/* Web/버튼 */
+						font-family: Pretendard;
+						font-size: 2em;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 1.4; /* 140% */
+					}
+				}
+			}
+		}
+	}
+}

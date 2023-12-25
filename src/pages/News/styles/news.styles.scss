@@ -206,40 +206,40 @@
 				}
 			}
 		}
-		.page {
-			align-self: center;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 1.98vw;
-			width: fit-content;
-			margin-right: 18.75vw;
-			margin-top: 3.64vw;
-			height: 1.67vw;
-			margin-bottom: 2vw;
-			&-number {
-				width: 1.67vw;
-				text-align: center;
-				color: var(--Button-Hovered, #d9d9d9);
+	}
+}
+.page {
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.98vw;
+	width: fit-content;
+	margin-right: 18.75vw;
+	margin-top: 3.64vw;
+	height: 1.67vw;
+	margin-bottom: 2vw;
+	&-number {
+		width: 1.67vw;
+		text-align: center;
+		color: var(--Button-Hovered, #d9d9d9);
 
-				/* Web/본문 강조 */
-				font-family: Pretendard;
-				font-size: 2.4em;
-				font-style: normal;
-				font-weight: 600;
-				line-height: 1.33; /* 133.333% */
+		/* Web/본문 강조 */
+		font-family: Pretendard;
+		font-size: 2.4em;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 1.33; /* 133.333% */
 
-				&:hover {
-					cursor: pointer;
-				}
-				&-active {
-					@extend .page-number;
-					color: black;
-				}
-			}
-			img:hover {
-				cursor: pointer;
-			}
+		&:hover {
+			cursor: pointer;
 		}
+		&-active {
+			@extend .page-number;
+			color: black;
+		}
+	}
+	img:hover {
+		cursor: pointer;
 	}
 }
