@@ -8,9 +8,10 @@ import { PubInfo } from '@typedef/types';
 import useWhitePageStore from '@store/zustand/whitePageZustand';
 type Props = {
 	whites: PubInfo[];
+	onInsightClick: (id: number) => void;
 };
 
-const WhiteList = ({ whites }: Props) => {
+const WhiteList = ({ whites, onInsightClick }: Props) => {
 	const { currentPage, totalPage, onMovePage, onNumberClick } =
 		useWhitePageStore();
 	return (
@@ -22,7 +23,11 @@ const WhiteList = ({ whites }: Props) => {
 			</div>
 			<div className='white-lst-body'>
 				{whites.map((white, index) => (
-					<WhiteInfo white={white} key={index} />
+					<WhiteInfo
+						white={white}
+						key={index}
+						onInsightClick={onInsightClick}
+					/>
 				))}
 			</div>
 			<Pagination

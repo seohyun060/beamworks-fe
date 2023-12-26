@@ -1,0 +1,107 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 썸 색상 */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.idetail {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-size: 0.52083333vw;
+}
+.idetail-pdf {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 18.75vw;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+.idetail-pdf-back {
+  position: relative;
+  margin-top: 7.4vh;
+  margin-bottom: 1.5625vw;
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: end;
+  align-items: center;
+}
+.idetail-pdf-back div {
+  color: #000;
+  /* web. re.22 */
+  font-family: Pretendard;
+  font-size: 2.2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.27; /* 127.273% */
+  margin-left: 1.9em;
+}
+.idetail-pdf-back img {
+  position: absolute;
+  width: 1.458vw;
+  left: 0;
+}
+.idetail-pdf-back:hover {
+  cursor: pointer;
+}
+.idetail-pdf-back:hover img {
+  left: -0.52vw;
+  transition: 0.2s ease-in-out;
+}
+.idetail-pdf-title {
+  color: #000;
+  width: 62.5vw;
+  /* Web/주 헤드 */
+  font-family: Pretendard;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.24; /* 124% */
+  margin-bottom: 1.5625vw;
+}
+.idetail-pdf-type {
+  margin-bottom: 0.416vw;
+  color: var(--Midium-gray, #9e9e9e);
+  /* Web/보조헤드 */
+  font-family: Pretendard;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25; /* 125% */
+}
+.idetail-pdf-date {
+  margin-bottom: 3.33vw;
+  color: var(--Midium-gray, #9e9e9e);
+  /* Web/본문 */
+  font-family: Pretendard;
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.416; /* 141.667% */
+}
+.idetail-pdf .pageContainer {
+  width: 62.5vw;
+}
+.idetail-pdf .pageContainer Page {
+  width: 100%;
+}/*# sourceMappingURL=idetail.styles.css.map */

@@ -7,9 +7,10 @@ import PublicationInfo from './PublicationInfo';
 import { PubInfo } from '@typedef/types';
 type Props = {
 	pubs: PubInfo[];
+	onInsightClick: (id: number) => void;
 };
 
-const PublicationList = ({ pubs }: Props) => {
+const PublicationList = ({ pubs, onInsightClick }: Props) => {
 	const { currentPage, totalPage, onMovePage, onNumberClick } =
 		usePubPageStore();
 	return (
@@ -21,7 +22,11 @@ const PublicationList = ({ pubs }: Props) => {
 			</div>
 			<div className='pub-lst-body'>
 				{pubs.map((pub, index) => (
-					<PublicationInfo pub={pub} key={index} />
+					<PublicationInfo
+						pub={pub}
+						key={index}
+						onInsightClick={onInsightClick}
+					/>
 				))}
 			</div>
 			<Pagination
