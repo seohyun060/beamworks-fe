@@ -25,6 +25,7 @@ import EeasyContainer from 'src/pages/Eeasy/containers/EeasyContainer';
 import NewsContainer from 'src/pages/News/containers/NewsContainer';
 import YoutubeContainer from 'src/pages/Youtube/containers/YoutubeContainer';
 import PublicationContainer from 'src/pages/Publication/containers/PublicationContainer';
+import WhiteContainer from 'src/pages/White/containers/WhiteContainer';
 const RootNavigation = () => {
 	const location = useLocation();
 	return (
@@ -53,6 +54,7 @@ const RootNavigation = () => {
 				<Route path='/news' element={<NewsContainer />} />
 				<Route path='/youtube' element={<YoutubeContainer />} />
 				<Route path='/publication' element={<PublicationContainer />} />
+				<Route path='/white' element={<WhiteContainer />} />
 			</Routes>
 		</>
 	);
