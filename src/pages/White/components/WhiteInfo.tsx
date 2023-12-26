@@ -4,11 +4,17 @@ import React from 'react';
 
 type Props = {
 	white: PubInfo;
+	onInsightClick: (id: number) => void;
 };
 
-const whitelicationInfo = ({ white }: Props) => {
+const whitelicationInfo = ({ white, onInsightClick }: Props) => {
 	return (
-		<div className='winfo'>
+		<div
+			className='winfo'
+			onClick={() => {
+				onInsightClick(white.id);
+			}}
+		>
 			<div className='winfo-title'>{white.title}</div>
 			<div className='winfo-author'>
 				<span className='winfo-author-label'>Author</span>

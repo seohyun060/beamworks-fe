@@ -191,6 +191,7 @@ const images = {
 	startB: '/assets/images/startB.svg',
 	endW: '/assets/images/endW.svg',
 	endB: '/assets/images/endB.svg',
+	leftB: '/assets/images/leftB.svg',
 	//Team
 	teamGoalImage_CST: '/assets/images/team/teamGoalImage_CST.png',
 	teamSlogunImage_CST: '/assets/images/team/teamSlogunImage_CST.png',

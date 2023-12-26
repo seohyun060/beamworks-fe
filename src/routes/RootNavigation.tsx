@@ -26,6 +26,7 @@ import NewsContainer from 'src/pages/News/containers/NewsContainer';
 import YoutubeContainer from 'src/pages/Youtube/containers/YoutubeContainer';
 import PublicationContainer from 'src/pages/Publication/containers/PublicationContainer';
 import WhiteContainer from 'src/pages/White/containers/WhiteContainer';
+import IDetailContainer from 'src/pages/IDetail/containers/IDetailContainer';
 const RootNavigation = () => {
 	const location = useLocation();
 	return (
@@ -55,6 +56,7 @@ const RootNavigation = () => {
 				<Route path='/youtube' element={<YoutubeContainer />} />
 				<Route path='/publication' element={<PublicationContainer />} />
 				<Route path='/white' element={<WhiteContainer />} />
+				<Route path='/idetail/:id' element={<IDetailContainer />} />
 			</Routes>
 		</>
 	);

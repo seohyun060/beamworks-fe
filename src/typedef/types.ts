@@ -78,6 +78,8 @@ export type NewsThumbnail = {
 };
 
 export type PubInfo = {
+	id: number;
+	type: string;
 	title: string;
 	author: string;
 	date: string;

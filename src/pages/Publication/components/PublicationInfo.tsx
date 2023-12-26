@@ -4,11 +4,17 @@ import React from 'react';
 
 type Props = {
 	pub: PubInfo;
+	onInsightClick: (id: number) => void;
 };
 
-const PublicationInfo = ({ pub }: Props) => {
+const PublicationInfo = ({ pub, onInsightClick }: Props) => {
 	return (
-		<div className='pinfo'>
+		<div
+			className='pinfo'
+			onClick={() => {
+				onInsightClick(pub.id);
+			}}
+		>
 			<div className='pinfo-title'>{pub.title}</div>
 			<div className='pinfo-author'>
 				<span className='pinfo-author-label'>Author</span>
