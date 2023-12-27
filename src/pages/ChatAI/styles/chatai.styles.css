@@ -37,6 +37,15 @@
   justify-content: center;
   align-items: center;
 }
+.chatai-s1-img {
+  color: #fff;
+  /* 메인헤드 */
+  font-family: Pretendard;
+  font-size: 8em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.175; /* 117.5% */
+}
 .chatai-s1-text {
   color: #fff;
   text-align: center;
@@ -369,4 +378,208 @@
 }
 .chatai-s7-image .s7-app {
   width: 12.34vw;
+}
+
+@media (orientation: portrait) {
+  .chatai {
+    position: relative;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+    font-size: 2.5445292621vw;
+  }
+  .chatai-s1 {
+    height: 76.335vw;
+    background-image: url("/public/assets/images/chataiBanner_m.png");
+  }
+  .chatai-s1-img {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2.5em;
+  }
+  .chatai-s1-text {
+    font-size: 1.1em;
+  }
+  .chatai-s2 {
+    height: 109.4vw;
+    padding-top: 0;
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .chatai-s2-text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 0;
+  }
+  .chatai-s2-text .s2-store,
+  .chatai-s2-text .s2-descript {
+    display: none;
+  }
+  .chatai-s2-text .s2-header {
+    text-align: center;
+  }
+  .chatai-s2-text .s2-header p {
+    font-size: 1.9em;
+  }
+  .chatai-s2-image {
+    width: 96vw;
+    top: 32.8vw;
+    left: 0;
+    margin-top: 0;
+  }
+  .chatai-s3 {
+    height: 56.23vw;
+    margin-bottom: 16.3vw;
+    position: relative;
+    overflow: visible;
+    background-image: url("/public/assets/images/chataiProvide_m.png");
+  }
+  .chatai-s3-text {
+    width: 78.11vw;
+    margin-left: 0;
+    position: absolute;
+    top: 61.3vw;
+    left: 4.07vw;
+  }
+  .chatai-s3-text .s3-header {
+    color: black;
+    /* 보조헤드 */
+  }
+  .chatai-s3-text .s3-header p {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+  }
+  .chatai-s3-text .s3-body {
+    display: none;
+  }
+  .chatai-s4, .chatai-s5 {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 0;
+    margin-top: 36.1vw;
+    overflow: visible;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .chatai-s4-text, .chatai-s5-text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 4.07vw;
+    margin-bottom: 2.5vw;
+  }
+  .chatai-s4-text .s4-header-cross,
+  .chatai-s4-text .s5-header-cross, .chatai-s5-text .s4-header-cross,
+  .chatai-s5-text .s5-header-cross {
+    width: 5.9vw;
+  }
+  .chatai-s4-text .s4-header-pro,
+  .chatai-s4-text .s5-header-pro, .chatai-s5-text .s4-header-pro,
+  .chatai-s5-text .s5-header-pro {
+    width: 23.6vw;
+  }
+  .chatai-s4-text .s4-body,
+  .chatai-s4-text .s5-body, .chatai-s5-text .s4-body,
+  .chatai-s5-text .s5-body {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .chatai-s4-text .s4-body p,
+  .chatai-s4-text .s5-body p, .chatai-s5-text .s4-body p,
+  .chatai-s5-text .s5-body p {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문 */
+    font-family: Pretendard;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36; /* 136.364% */
+  }
+  .chatai-s4-image, .chatai-s5-image {
+    position: relative;
+    right: 0;
+    width: 111vw;
+    margin-top: 0;
+  }
+  .chatai-s6 {
+    padding-top: 0;
+    height: 100vw;
+  }
+  .chatai-s6 .s6-kiwi1 {
+    width: 55vw;
+    margin-left: -5vw;
+  }
+  .chatai-s6 .s6-kiwi2 {
+    width: 32vw;
+    left: 32vw;
+  }
+  .chatai-s6-text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 22vw;
+    margin-left: 10vw;
+  }
+  .chatai-s6-text .s6-kiwi {
+    width: 14.5vw;
+    margin-bottom: 1.27vw;
+  }
+  .chatai-s6-text .s6-header {
+    width: 14vw;
+    margin-bottom: 5.3vw;
+  }
+  .chatai-s6-text .s6-body {
+    color: #000;
+    /* 본문 강조 */
+  }
+  .chatai-s6-text .s6-body p {
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문 */
+    font-family: Pretendard;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36; /* 136.364% */
+  }
+  .chatai-s7 {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chatai-s7-text {
+    width: 72.8vw;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .chatai-s7-text .s7-header {
+    font-size: 1.9em;
+    text-align: center;
+  }
+  .chatai-s7-text .s7-body {
+    display: none;
+  }
+  .chatai-s7-text .s7-download {
+    margin-top: 5.08vw;
+    border-radius: 0.4em;
+    width: 29.5vw;
+    font-size: 1.1em;
+  }
+  .chatai-s7-image {
+    margin-left: 0;
+    margin-top: 11.45vw;
+  }
+  .chatai-s7-image .s7-app {
+    width: 22.4vw;
+  }
 }/*# sourceMappingURL=chatai.styles.css.map */

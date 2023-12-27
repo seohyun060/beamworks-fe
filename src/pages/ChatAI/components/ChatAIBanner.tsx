@@ -8,7 +8,7 @@ type Props = {
 const ChatAIBanner = ({ bannerTexts }: Props) => {
 	return (
 		<div className='chatai-s1'>
-			<img className='chatai-s1-img' src={images.chlogo_w} />
+			<div className='chatai-s1-img'>Conversation AI</div>
 			<div className='chatai-s1-text'>{bannerTexts[0]}</div>
 		</div>
 	);
