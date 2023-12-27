@@ -15,9 +15,9 @@ const CadBT = ({ btTexts }: Props) => {
 				<div className='b-header'>
 					<img src={images.cblogo_b}></img>
 					<span
-						style={{
-							fontSize: languageCode === 'ru' ? '4em' : '5.5em',
-						}}
+					// style={{
+					// 	fontSize: languageCode === 'ru' ? '4em' : '5.5em',
+					// }}
 					>{`${btTexts[1]}`}</span>
 				</div>
 				<img className='b-image' src={images.product6_2}></img>
@@ -27,9 +27,9 @@ const CadBT = ({ btTexts }: Props) => {
 				<div className='t-header'>
 					<img src={images.ctlogo_b}></img>
 					<span
-						style={{
-							fontSize: languageCode === 'ru' ? '4em' : '5.5em',
-						}}
+					// style={{
+					// 	fontSize: languageCode === 'ru' ? '4em' : '5.5em',
+					// }}
 					>{`${btTexts[2]}`}</span>
 				</div>
 				<div className='t-mini'>캐디-티</div>
