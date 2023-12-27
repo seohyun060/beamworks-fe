@@ -455,4 +455,70 @@
 .cadb-s4-setting .s4-smode {
   width: 25.3125vw;
   margin-top: 2.5vw;
+}
+
+@media (orientation: portrait) {
+  .cadb {
+    position: relative;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+    align-items: normal;
+    font-size: 2.5445292621vw;
+  }
+  .cadb-s1 {
+    background-image: url("/public/assets/images/cadbBanner_m.png");
+    height: 76.4vw;
+    padding-top: 0;
+  }
+  .cadb-s1-button {
+    display: none;
+  }
+  .cadb-s1-text {
+    margin-top: 42vw;
+  }
+  .cadb-s1-text .s1-header {
+    width: 36.13vw;
+  }
+  .cadb-s1-text .s1-body {
+    margin-top: 1vw;
+    font-size: 1.1em;
+  }
+  .cadb-s2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 0;
+  }
+  .cadb-s2 .s2-demo,
+  .cadb-s2 .s2-logo,
+  .cadb-s2 .s2-body {
+    display: none;
+  }
+  .cadb-s2-text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 0;
+  }
+  .cadb-s2-text .s2-header {
+    color: #000;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+  }
+  .cadb-s2-image {
+    width: 97.45vw;
+    margin-left: 10vw;
+    margin-top: 2.54vw;
+    position: relative;
+  }
 }/*# sourceMappingURL=cadb.styles.css.map */

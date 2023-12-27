@@ -2,12 +2,16 @@ import React from 'react';
 import images from 'src/assets/images';
 type Props = {
 	introTexts: string[];
+	portrait: boolean;
 };
 
-const CadBIntro = ({ introTexts }: Props) => {
+const CadBIntro = ({ introTexts, portrait }: Props) => {
 	return (
 		<div className='cadb-s2'>
-			<img className='cadb-s2-image' src={images.cadb2} />
+			<img
+				className='cadb-s2-image'
+				src={portrait ? images.cadb2_m : images.cadb2}
+			/>
 			<div className='cadb-s2-text'>
 				<div className='s2-demo'>{introTexts[0]}</div>
 				<div className='s2-header'>{introTexts[1]}</div>

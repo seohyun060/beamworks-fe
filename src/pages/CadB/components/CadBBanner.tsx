@@ -3,9 +3,10 @@ import images from 'src/assets/images';
 type Props = {
 	scrollPosition: number;
 	bannerTexts: string[];
+	portrait: boolean;
 };
 
-const CadBBanner = ({ scrollPosition, bannerTexts }: Props) => {
+const CadBBanner = ({ scrollPosition, bannerTexts, portrait }: Props) => {
 	console.log(scrollPosition);
 	return (
 		<div className='cadb-s1'>

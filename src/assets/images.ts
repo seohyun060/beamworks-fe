@@ -192,6 +192,7 @@ const images = {
 	endW: '/assets/images/endW.svg',
 	endB: '/assets/images/endB.svg',
 	leftB: '/assets/images/leftB.svg',
+	cadb2_m: '/assets/images/cadb2_m.png',
 	//Team
 	teamGoalImage_CST: '/assets/images/team/teamGoalImage_CST.png',
 	teamSlogunImage_CST: '/assets/images/team/teamSlogunImage_CST.png',

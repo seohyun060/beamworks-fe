@@ -498,3 +498,71 @@
 		}
 	}
 }
+@media (orientation: portrait) {
+	.cadb {
+		position: relative;
+
+		width: 100vw;
+		height: fit-content;
+
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: none;
+		scroll-behavior: smooth;
+		align-items: normal;
+		font-size: 2.5445292620865vw;
+		&-s1 {
+			background-image: url('/public/assets/images/cadbBanner_m.png');
+			height: 76.4vw;
+			padding-top: 0;
+			&-button {
+				display: none;
+			}
+			&-text {
+				margin-top: 42vw;
+
+				.s1-header {
+					width: 36.13vw;
+				}
+				.s1-body {
+					margin-top: 1vw;
+					font-size: 1.1em;
+				}
+			}
+		}
+		&-s2 {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			padding-top: 0;
+			.s2-demo,
+			.s2-logo,
+			.s2-body {
+				display: none;
+			}
+			&-text {
+				width: fit-content;
+				margin-left: 0;
+
+				.s2-header {
+					color: #000;
+					text-align: center;
+					font-feature-settings: 'clig' off, 'liga' off;
+
+					/* Mobile/주헤드 */
+					font-family: Pretendard;
+					font-size: 1.9em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.21; /* 121.053% */
+				}
+			}
+			&-image {
+				width: 97.45vw;
+				margin-left: 10vw;
+				margin-top: 2.54vw;
+				position: relative;
+			}
+		}
+	}
+}
