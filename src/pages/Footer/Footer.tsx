@@ -66,6 +66,26 @@ const Footer = ({ type, infoTexts }: Props) => {
 						Korea (Hakjeong-dong)
 					</div>
 				</div>
+				<div className='footer-info-maddr'>
+					<div className='maddr-label'>주소</div>
+					<div className='maddr-text'>
+						대구광역시 북구 칠곡중앙대로 136길 107 (학정동) 3층 빔웍스
+					</div>
+				</div>
+				<div className='footer-info-memail'>
+					<div className='maddr-label'>이메일</div>
+					<div className='maddr-text'>bws@beamworks.co.kr</div>
+				</div>
+				<div className='footer-info-mnumber'>
+					<div className='mnumber'>
+						<div className='mnumber-label'>대표번호</div>
+						<div className='mnumber-text'>053-322-2107</div>
+					</div>
+					<div className='mnumber'>
+						<div className='mnumber-label'>팩스</div>
+						<div className='mnumber-text'>053-322-2108</div>
+					</div>
+				</div>
 				<div className='footer-info-number'>
 					<div className='number1'>General Contact Number</div>
 					<div className='number2'>053-322-2107</div>
