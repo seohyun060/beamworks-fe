@@ -34,6 +34,16 @@
 		background-repeat: no-repeat;
 		justify-content: center;
 		align-items: center;
+		&-img {
+			color: #fff;
+
+			/* 메인헤드 */
+			font-family: Pretendard;
+			font-size: 8em;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 1.175; /* 117.5% */
+		}
 		&-text {
 			color: #fff;
 			text-align: center;
@@ -370,6 +380,207 @@
 			margin-left: 7.08vw;
 			.s7-app {
 				width: 12.34vw;
+			}
+		}
+	}
+}
+
+@media (orientation: portrait) {
+	.chatai {
+		position: relative;
+
+		width: 100vw;
+		height: fit-content;
+
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: none;
+		scroll-behavior: smooth;
+
+		font-size: 2.5445292620865vw;
+		&-s1 {
+			height: 76.335vw;
+			background-image: url('/public/assets/images/chataiBanner_m.png');
+			&-img {
+				width: fit-content;
+				font-size: 2.5em;
+			}
+			&-text {
+				font-size: 1.1em;
+			}
+		}
+		&-s2 {
+			height: 109.4vw;
+			padding-top: 0;
+			margin-top: 0;
+			flex-direction: column;
+
+			&-text {
+				width: fit-content;
+				margin-left: 0;
+				.s2-store,
+				.s2-descript {
+					display: none;
+				}
+				.s2-header {
+					text-align: center;
+					p {
+						font-size: 1.9em;
+					}
+				}
+			}
+			&-image {
+				width: 96vw;
+				top: 32.8vw;
+				left: 0;
+				margin-top: 0;
+			}
+		}
+		&-s3 {
+			height: 56.23vw;
+			margin-bottom: 16.3vw;
+			position: relative;
+			overflow: visible;
+			background-image: url('/public/assets/images/chataiProvide_m.png');
+			&-text {
+				width: 78.11vw;
+				margin-left: 0;
+				position: absolute;
+				top: 61.3vw;
+				left: 4.07vw;
+				.s3-header {
+					color: black;
+					p {
+						color: #000;
+						font-feature-settings: 'clig' off, 'liga' off;
+
+						/* Mobile/주헤드 */
+						font-family: Pretendard;
+						font-size: 1.9em;
+						font-style: normal;
+						font-weight: 600;
+						line-height: 1.21; /* 121.053% */
+					}
+					/* 보조헤드 */
+				}
+				.s3-body {
+					display: none;
+				}
+			}
+		}
+		&-s4,
+		&-s5 {
+			height: fit-content;
+			padding-top: 0;
+			margin-top: 36.1vw;
+			overflow: visible;
+			flex-direction: column;
+			align-items: normal;
+			&-text {
+				width: fit-content;
+				margin-left: 4.07vw;
+				margin-bottom: 2.5vw;
+				.s4-header,
+				.s5-header {
+					&-cross {
+						width: 5.9vw;
+					}
+					&-pro {
+						width: 23.6vw;
+					}
+				}
+				.s4-body,
+				.s5-body {
+					width: fit-content;
+					p {
+						color: #000;
+						font-feature-settings: 'clig' off, 'liga' off;
+
+						/* Mobile/본문 */
+						font-family: Pretendard;
+						font-size: 1.1em;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 1.36; /* 136.364% */
+					}
+				}
+			}
+			&-image {
+				position: relative;
+				right: 0;
+				width: 111vw;
+				margin-top: 0;
+			}
+		}
+		&-s6 {
+			padding-top: 0;
+			height: 100vw;
+			.s6-kiwi1 {
+				width: 55vw;
+				margin-left: -5vw;
+			}
+			.s6-kiwi2 {
+				width: 32vw;
+				left: 32vw;
+			}
+			&-text {
+				width: fit-content;
+				margin-top: 22vw;
+				margin-left: 10vw;
+				.s6-kiwi {
+					width: 14.5vw;
+					margin-bottom: 1.27vw;
+				}
+				.s6-header {
+					width: 14vw;
+					margin-bottom: 5.3vw;
+				}
+				.s6-body {
+					color: #000;
+					p {
+						font-feature-settings: 'clig' off, 'liga' off;
+
+						/* Mobile/본문 */
+						font-family: Pretendard;
+						font-size: 1.1em;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 1.36; /* 136.364% */
+					}
+					/* 본문 강조 */
+				}
+			}
+		}
+		&-s7 {
+			height: fit-content;
+			flex-direction: column;
+			align-items: center;
+			&-text {
+				width: 72.8vw;
+				flex-direction: column;
+				align-items: center;
+				margin-left: 0;
+				.s7-header {
+					font-size: 1.9em;
+					text-align: center;
+				}
+				.s7-body {
+					display: none;
+				}
+				.s7-download {
+					margin-top: 5.08vw;
+					border-radius: 0.4em;
+
+					width: 29.5vw;
+					font-size: 1.1em;
+				}
+			}
+			&-image {
+				margin-left: 0;
+				margin-top: 11.45vw;
+				.s7-app {
+					width: 22.4vw;
+				}
 			}
 		}
 	}
