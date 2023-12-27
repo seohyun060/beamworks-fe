@@ -179,3 +179,9 @@
 		}
 	}
 }
+
+@media (orientation: portrait) {
+	.gnb {
+		display: none;
+	}
+}

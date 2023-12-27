@@ -1,10 +1,21 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import HomeNews from '../components/HomeNews';
-import { MainNews } from '@typedef/types';
+import { MainNews, NewsThumbnail } from '@typedef/types';
 import useGnbStore from '@store/zustand/gnbZustand';
 import { newsTextsKo } from 'src/lang/HomeTexts';
 import GoogleTranslate from 'src/lang/GoogleTranslate';
+import images from 'src/assets/images';
 type Props = {};
+const newsLst: NewsThumbnail[] = [];
+for (let i = 0; i < 3; i++) {
+	newsLst.push({
+		image: images.newsImg,
+		title: '빔웍스, 위급상황서 중증환자들을 이러쿵 저러쿵 어쩌고 저쩌고',
+		content:
+			'의료 AI(인공지능) 전문기업 빔웍스(대표 김원화·김재일)가 응급상황에서 이러쿵 저러쿵 어쩌고 저쩌고 테스트를 위한 쓸데없이 긴 문장',
+		date: '2023.11.07',
+	});
+}
 
 const HomeNewsContainer = (props: Props) => {
 	const [selectedTab, setSelectedTab] = useState('all');
@@ -22,7 +33,6 @@ const HomeNewsContainer = (props: Props) => {
 		};
 		newsList.push(tempNews);
 	}
-
 	const formatDate = (date: Date) => {
 		const year = date.getFullYear().toString(); // 년도의 마지막 두 자리
 		const month = date.getMonth() + 1; // 월을 문자열로 변환
@@ -89,6 +99,7 @@ const HomeNewsContainer = (props: Props) => {
 			formatDate={formatDate}
 			filteredList={filteredList}
 			newsTexts={newsTexts}
+			newsLst={newsLst}
 		/>
 	);
 };

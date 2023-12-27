@@ -85,6 +85,9 @@
 			width: fit-content;
 			height: fit-content;
 			margin-top: 2.4vh;
+			.s2m {
+				display: none;
+			}
 			//margin: auto;
 			&-header {
 				width: 62.5vw;
@@ -93,7 +96,7 @@
 				margin-bottom: 0;
 				color: #000;
 				font-family: Pretendard;
-				font-size: 2.08vw;
+				font-size: 4em;
 				font-style: normal;
 				font-weight: 600;
 				line-height: 1; /* 100% */
@@ -165,6 +168,7 @@
 		scroll-snap-align: start;
 		justify-content: center;
 		align-items: center;
+		padding-bottom: 18.5vh;
 		&-header {
 			position: relative;
 			width: 62.5vw;
@@ -263,26 +267,23 @@
 		&-news {
 			display: flex;
 			flex-direction: row;
-			justify-content: center;
-			gap: 1.2vw;
-			width: 62.5vw;
-			height: 33.57vw;
-			//background-color: #e9e9e9;
-			margin-top: 2.08vw;
-			&-component {
+			width: fit-content;
+			gap: 1.25vw;
+			margin-top: 9.1vw;
+
+			.ninfo {
+				width: 20vw;
+				background-color: white;
+				height: 21.09vw;
 				display: flex;
 				flex-direction: column;
-				width: 14.74vw;
-				height: 100%;
-				transition: 0.3s ease-in-out;
-				.news-banner {
-					width: 100%;
-					margin-bottom: 1.14vw;
-				}
-				.news-title {
+				position: relative;
+				border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+				&-title {
+					margin-top: 0.41vw;
 					color: #000;
 
-					/* 본문 강조 */
+					/* Web/본문 강조 */
 					font-family: Pretendard;
 					font-size: 2.4em;
 					font-style: normal;
@@ -292,11 +293,11 @@
 					white-space: nowrap;
 					text-overflow: ellipsis;
 				}
-				.news-content {
+				&-content {
+					margin-top: 0.41vw;
 					color: var(--Dark-Glay, #4d4f58);
-					margin-top: 1.25vw;
-					height: 2.916vw;
-					/* NAV */
+					opacity: 0.5;
+					/* Web/NAV */
 					font-family: Pretendard;
 					font-size: 1.6em;
 					font-style: normal;
@@ -308,14 +309,14 @@
 					-webkit-line-clamp: 2;
 					-webkit-box-orient: vertical;
 				}
-				.news-footer {
+				&-date {
 					width: 100%;
-					margin-top: 0.625vw;
+					height: 2.08vw;
 					display: flex;
 					flex-direction: row;
-					justify-content: space-between;
 					align-items: center;
-					.date {
+					justify-content: space-between;
+					.date-text {
 						color: var(--Middle-Glay, #a0a0a0);
 						text-align: center;
 						font-family: Pretendard;
@@ -324,11 +325,79 @@
 						font-weight: 400;
 						line-height: 2.5; /* 250% */
 					}
-					.rightB {
+					.date-arrow {
 						width: 0.73vw;
 					}
 				}
 			}
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: center;
+			// gap: 1.2vw;
+			// width: 62.5vw;
+			// height: 33.57vw;
+			// //background-color: #e9e9e9;
+			// margin-top: 2.08vw;
+			// &-component {
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	width: 14.74vw;
+			// 	height: 100%;
+			// 	transition: 0.3s ease-in-out;
+			// 	.news-banner {
+			// 		width: 100%;
+			// 		margin-bottom: 1.14vw;
+			// 	}
+			// 	.news-title {
+			// 		color: #000;
+
+			// 		/* 본문 강조 */
+			// 		font-family: Pretendard;
+			// 		font-size: 2.4em;
+			// 		font-style: normal;
+			// 		font-weight: 600;
+			// 		line-height: 1.33; /* 133.333% */
+			// 		overflow: hidden;
+			// 		white-space: nowrap;
+			// 		text-overflow: ellipsis;
+			// 	}
+			// 	.news-content {
+			// 		color: var(--Dark-Glay, #4d4f58);
+			// 		margin-top: 1.25vw;
+			// 		height: 2.916vw;
+			// 		/* NAV */
+			// 		font-family: Pretendard;
+			// 		font-size: 1.6em;
+			// 		font-style: normal;
+			// 		font-weight: 400;
+			// 		line-height: 1.75; /* 175% */
+			// 		overflow: hidden;
+
+			// 		display: -webkit-box;
+			// 		-webkit-line-clamp: 2;
+			// 		-webkit-box-orient: vertical;
+			// 	}
+			// 	.news-footer {
+			// 		width: 100%;
+			// 		margin-top: 0.625vw;
+			// 		display: flex;
+			// 		flex-direction: row;
+			// 		justify-content: space-between;
+			// 		align-items: center;
+			// 		.date {
+			// 			color: var(--Middle-Glay, #a0a0a0);
+			// 			text-align: center;
+			// 			font-family: Pretendard;
+			// 			font-size: 1.6em;
+			// 			font-style: normal;
+			// 			font-weight: 400;
+			// 			line-height: 2.5; /* 250% */
+			// 		}
+			// 		.rightB {
+			// 			width: 0.73vw;
+			// 		}
+			// 	}
+			// }
 		}
 	}
 	&-s4 {
@@ -409,5 +478,223 @@
 	.footer {
 		scroll-snap-align: start;
 		// }
+	}
+}
+
+@media (orientation: portrait) {
+	.home {
+		position: relative;
+		// display: flex;
+		// flex-wrap: wrap;
+		// flex-direction: column;
+		width: 100vw;
+		height: fit-content;
+		//height: fit-content;
+		//scroll-snap-type: y mandatory;
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: none;
+		scroll-behavior: smooth;
+		//scroll-margin: 100px 0px;
+		font-size: 2.5445292620865vw;
+
+		& * {
+			word-break: normal;
+		}
+		&-s1 {
+			background-image: url('/public/assets/images/homeBanner_m.png');
+
+			height: 76.4vw;
+			&-text {
+				width: fit-content;
+				margin-left: 4.07vw;
+				p {
+					font-size: 2.5em;
+				}
+			}
+		}
+		&-s2 {
+			height: fit-content;
+			padding-top: 0;
+
+			&-container {
+				margin-top: 12.7vw;
+				&-header {
+					width: fit-content;
+					font-size: 1.9em;
+				}
+				&-tabs {
+					display: none;
+				}
+				&-body {
+					display: none;
+				}
+				.s2m {
+					width: fit-content;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					&-title {
+						width: fit-content;
+						margin-top: 3.05vw;
+						color: var(--Dark-Glay, #4d4f58);
+						text-align: center;
+						font-feature-settings: 'clig' off, 'liga' off;
+
+						/* Mobile/보조헤드 */
+						font-family: Pretendard;
+						font-size: 1.7em;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 1.29; /* 129.412% */
+					}
+					&-more {
+						width: fit-content;
+						height: 3.81vw;
+						margin-top: 0.5vw;
+						margin-bottom: 2.54vw;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 1.52vw;
+						span {
+							color: var(--Dark-Glay, #4d4f58);
+							text-align: right;
+							font-feature-settings: 'clig' off, 'liga' off;
+
+							/* Mobile/본문 */
+							font-family: Pretendard;
+							font-size: 1.1em;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 2; /* 136.364% */
+						}
+						img {
+							width: 2.54vw;
+							margin-bottom: 0.255vw;
+						}
+					}
+					&-body {
+						width: fit-content;
+						height: 44.78vw;
+						display: flex;
+						flex-direction: row;
+						gap: 2.8vw;
+						.vBox {
+							width: 28.75vw;
+							height: 100%;
+							background: var(--White-Block-font, #ebebeb);
+						}
+						margin-bottom: 9.1vw;
+					}
+				}
+			}
+		}
+		&-s3 {
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			&-header {
+				flex-direction: column;
+				&-text {
+					font-size: 1.9em;
+				}
+				&-readmore {
+					width: fit-content;
+					margin-top: 2.03vw;
+					span {
+						font-size: 1.1em;
+					}
+					img {
+						width: 2.54vw;
+					}
+				}
+			}
+			&-news {
+				display: flex;
+				flex-direction: row;
+				overflow: hidden;
+				width: 91.85vw;
+				height: fit-content;
+				gap: 2.78vw;
+				margin-top: 9.1vw;
+				margin-bottom: 26.2vw;
+				.ninfo {
+					width: 44.53vw;
+					height: 52.67vw;
+					background-color: white;
+
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+					&-title {
+						margin-top: 2.3vw;
+
+						font-size: 1.4em;
+					}
+					&-content {
+						font-size: 1.1em;
+						margin-top: 2.3vw;
+						line-height: 1.36;
+					}
+					&-date {
+						width: 100%;
+						height: 2.08vw;
+						margin-top: 1.15vw;
+
+						.date-text {
+							font-size: 1.1em;
+
+							line-height: 1.36; /* 250% */
+						}
+						.date-arrow {
+							width: 2.54vw;
+						}
+					}
+				}
+			}
+		}
+		&-s4 {
+			width: 100vw;
+			height: 76.33vw;
+			background-image: url('/public/assets/images/homefind_m.png');
+			&-text {
+				width: fit-content;
+				height: fit-content;
+				margin-top: 25.4vw;
+				margin-left: 4.07vw;
+				.header {
+					font-size: 1.9em;
+					width: 38.8vw;
+					word-break: keep-all;
+					line-height: 1.21;
+				}
+				.body {
+					width: fit-content;
+					margin-top: 3.8vw;
+					p {
+						color: #fff;
+						width: fit-content;
+						font-feature-settings: 'clig' off, 'liga' off;
+
+						/* Mobile/본문 */
+						font-family: Pretendard;
+						font-size: 2.8vw;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 1.36; /* 136.364% */
+					}
+				}
+				.readmore {
+					margin-top: 4.58vw;
+					div {
+						font-size: 1.1em;
+					}
+				}
+			}
+		}
 	}
 }

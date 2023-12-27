@@ -279,4 +279,10 @@
 .gnb .popup5-active {
   opacity: 1; /* 나타남 */
   visibility: visible; /* 나타남 */
+}
+
+@media (orientation: portrait) {
+  .gnb {
+    display: none;
+  }
 }/*# sourceMappingURL=gnb.styles.css.map */
