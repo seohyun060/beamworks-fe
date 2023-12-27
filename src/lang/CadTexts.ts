@@ -25,7 +25,7 @@ export const solvingTextsKo = {
 };
 
 export const introTextsKo = [
-	'더 정확하고, 더 실시간적인\n초음파 영역의 혁신 프로그램\nCadAI-Series를 소개합니다.',
+	'더 정확하고, 더 실시간적인\n초음파 영역의 혁신 프로그램\nVision AI를 소개합니다.',
 ];
 
 export const btTextsKo = [

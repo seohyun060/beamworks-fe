@@ -31,6 +31,7 @@
 		display: flex;
 		flex-direction: column;
 		background-image: url('/public/assets/images/product1.png');
+		background-position: right;
 		background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
 		background-repeat: no-repeat;
 		justify-content: center;
@@ -74,7 +75,7 @@
 
 			p {
 				text-align: center;
-				width: 50vw;
+				width: 100%;
 				/* 보조헤드 */
 				font-family: Pretendard;
 				font-size: 4em;
@@ -108,7 +109,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			opacity: 0.8;
+			opacity: 0.5;
 			background: linear-gradient(260deg, #000 11.02%, rgba(0, 0, 0, 0) 87.46%);
 		}
 		&-text {
@@ -364,6 +365,7 @@
 			width: 36vw;
 			height: fit-content;
 			margin-top: 12.625vw;
+			position: relative;
 			//align-self: flex-end;
 			display: flex;
 			flex-direction: column;
@@ -405,7 +407,7 @@
 				span {
 					color: #000;
 					font-family: Pretendard;
-					font-size: 5.5em;
+					font-size: 4em;
 					font-style: normal;
 					font-weight: 800;
 					line-height: 0.61; /* 60.909% */
@@ -445,7 +447,7 @@
 				span {
 					color: #000;
 					font-family: Pretendard;
-					font-size: 5.5em;
+					font-size: 4em;
 					font-style: normal;
 					font-weight: 800;
 					line-height: 0.61; /* 60.909% */
@@ -598,6 +600,227 @@
 		&-black {
 			@extend .product-s8;
 			background-color: black;
+		}
+	}
+}
+
+@media (orientation: portrait) {
+	.product {
+		position: relative;
+		// display: flex;
+		// flex-wrap: wrap;
+		// flex-direction: column;
+		width: 100vw;
+		height: fit-content;
+		//height: fit-content;
+		//scroll-snap-type: y mandatory;
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: none;
+		scroll-behavior: smooth;
+		//scroll-margin: 100px 0px;
+		font-size: 2.5445292620865vw;
+
+		& * {
+			word-break: normal;
+		}
+		&-s1 {
+			background-image: url('/public/assets/images/cadBanner_m.png');
+
+			height: 76.4vw;
+			&-img {
+				width: 25.95vw;
+				font-size: 2.5em;
+			}
+			&-text {
+				font-size: 1.1em;
+			}
+		}
+		&-s5 {
+			display: none;
+		}
+		&-s2 {
+			height: fit-content;
+			&-text {
+				width: 53.8vw;
+				p {
+					font-size: 1.9em;
+				}
+			}
+			&-img {
+				width: 90vw;
+				margin-top: 2.54vw;
+				margin-left: 12vw;
+			}
+		}
+		&-s6 {
+			padding-top: 10vw;
+			.b-descript,
+			.t-descript {
+				display: none;
+			}
+
+			.b-header,
+			.t-header {
+				span {
+					font-size: 1.2em;
+				}
+			}
+			.b-mini,
+			.t-mini {
+				font-size: 1.4em;
+				width: fit-content;
+			}
+
+			&-t {
+				margin-bottom: 95vw;
+				.t-header {
+					position: absolute;
+					top: -57.5vw;
+					left: -20vw;
+					img {
+						width: 25.95vw;
+					}
+				}
+				.t-mini {
+					position: absolute;
+					top: -25vw;
+					left: -15vw;
+				}
+				.t-image {
+					width: 70.74vw;
+					top: -20vw;
+					right: -5vw;
+				}
+			}
+			&-b {
+				margin-top: 50vw;
+
+				margin-bottom: 0vw;
+				.b-image {
+					width: 119vw;
+					margin-left: -15vw;
+					margin-top: 5vw;
+				}
+				.b-header {
+					position: absolute;
+					width: 40vw;
+					top: -5vw;
+					left: 10vw;
+					img {
+						width: 25.95vw;
+					}
+				}
+				.b-mini {
+					position: absolute;
+					width: 40vw;
+					left: 15vw;
+				}
+			}
+		}
+		&-s3 {
+			height: 56.23vw;
+			padding-top: 0;
+
+			background-image: url('/public/assets/images/cadHelp_m.png');
+			&-text {
+				position: absolute;
+				margin-left: 0;
+				left: 4.07vw;
+				top: 61.3vw;
+				&-header {
+					word-break: keep-all;
+					color: #000;
+					width: 71.75vw;
+					font-feature-settings: 'clig' off, 'liga' off;
+
+					/* Mobile/주헤드 */
+					font-family: Pretendard;
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 23px; /* 121.053% */
+				}
+				&-body {
+					display: none;
+				}
+			}
+		}
+		&-s4 {
+			height: 108vw;
+			padding-top: 0;
+			&-text {
+				margin-top: 44.27vw;
+				margin-left: 9.9vw;
+				&-header {
+					display: none;
+				}
+				&-body {
+					width: 35.6vw;
+					p {
+						color: var(--Dark-Glay, #4d4f58);
+						font-feature-settings: 'clig' off, 'liga' off;
+
+						/* Mobile/본문강조 */
+						font-family: Pretendard;
+						font-size: 1.4em;
+						font-style: normal;
+						font-weight: 600;
+						line-height: 1.357; /* 135.714% */
+					}
+				}
+			}
+			&-img {
+				width: 72.7vw;
+				right: 0;
+				height: 71vw;
+				top: 23vw;
+			}
+		}
+		&-s7 {
+			height: 76.3vw;
+			margin-top: 5vw;
+			padding-top: 0vw;
+			&-text {
+				width: fit-content;
+				margin-left: 30vw;
+				margin-top: 0;
+				margin-bottom: 65vw;
+				.s7-header {
+					width: 52.16vw;
+				}
+				.s7-descript {
+					display: none;
+				}
+			}
+			&-image {
+				width: 74.5vw;
+				right: 4.07vw;
+				top: 10vw;
+			}
+		}
+		&-s8 {
+			height: fit-content;
+			.s8-header {
+				color: var(--Middle-Glay, #a0a0a0);
+				text-align: center;
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/보조헤드 */
+				font-family: Pretendard;
+				font-size: 1.7em;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 1.29; /* 129.412% */
+			}
+			.s8-body {
+				width: 91.85vw;
+				height: 29.51vw;
+				&-box1 {
+					width: 28.75vw;
+					background: #d9d9d9;
+				}
+			}
 		}
 	}
 }

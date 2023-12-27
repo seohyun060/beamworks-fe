@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   background-image: url("/public/assets/images/product1.png");
+  background-position: right;
   background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
   background-repeat: no-repeat;
   justify-content: center;
@@ -74,7 +75,7 @@
 }
 .product-s2-text p {
   text-align: center;
-  width: 50vw;
+  width: 100%;
   /* 보조헤드 */
   font-family: Pretendard;
   font-size: 4em;
@@ -105,7 +106,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.5;
   background: linear-gradient(260deg, #000 11.02%, rgba(0, 0, 0, 0) 87.46%);
 }
 .product-s3-text {
@@ -316,6 +317,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 12.625vw;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -356,7 +358,7 @@
 .product-s6-b .b-header span {
   color: #000;
   font-family: Pretendard;
-  font-size: 5.5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 800;
   line-height: 0.61; /* 60.909% */
@@ -396,7 +398,7 @@
 .product-s6-t .t-header span {
   color: #000;
   font-family: Pretendard;
-  font-size: 5.5em;
+  font-size: 4em;
   font-style: normal;
   font-weight: 800;
   line-height: 0.61; /* 60.909% */
@@ -526,4 +528,213 @@
 }
 .product-s8-black {
   background-color: black;
+}
+
+@media (orientation: portrait) {
+  .product {
+    position: relative;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+    font-size: 2.5445292621vw;
+  }
+  .product * {
+    word-break: normal;
+  }
+  .product-s1 {
+    background-image: url("/public/assets/images/cadBanner_m.png");
+    height: 76.4vw;
+  }
+  .product-s1-img {
+    width: 25.95vw;
+    font-size: 2.5em;
+  }
+  .product-s1-text {
+    font-size: 1.1em;
+  }
+  .product-s5 {
+    display: none;
+  }
+  .product-s2 {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .product-s2-text {
+    width: 53.8vw;
+  }
+  .product-s2-text p {
+    font-size: 1.9em;
+  }
+  .product-s2-img {
+    width: 90vw;
+    margin-top: 2.54vw;
+    margin-left: 12vw;
+  }
+  .product-s6 {
+    padding-top: 10vw;
+  }
+  .product-s6 .b-descript,
+  .product-s6 .t-descript {
+    display: none;
+  }
+  .product-s6 .b-header span,
+  .product-s6 .t-header span {
+    font-size: 1.2em;
+  }
+  .product-s6 .b-mini,
+  .product-s6 .t-mini {
+    font-size: 1.4em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .product-s6-t {
+    margin-bottom: 95vw;
+  }
+  .product-s6-t .t-header {
+    position: absolute;
+    top: -57.5vw;
+    left: -20vw;
+  }
+  .product-s6-t .t-header img {
+    width: 25.95vw;
+  }
+  .product-s6-t .t-mini {
+    position: absolute;
+    top: -25vw;
+    left: -15vw;
+  }
+  .product-s6-t .t-image {
+    width: 70.74vw;
+    top: -20vw;
+    right: -5vw;
+  }
+  .product-s6-b {
+    margin-top: 50vw;
+    margin-bottom: 0vw;
+  }
+  .product-s6-b .b-image {
+    width: 119vw;
+    margin-left: -15vw;
+    margin-top: 5vw;
+  }
+  .product-s6-b .b-header {
+    position: absolute;
+    width: 40vw;
+    top: -5vw;
+    left: 10vw;
+  }
+  .product-s6-b .b-header img {
+    width: 25.95vw;
+  }
+  .product-s6-b .b-mini {
+    position: absolute;
+    width: 40vw;
+    left: 15vw;
+  }
+  .product-s3 {
+    height: 56.23vw;
+    padding-top: 0;
+    background-image: url("/public/assets/images/cadHelp_m.png");
+  }
+  .product-s3-text {
+    position: absolute;
+    margin-left: 0;
+    left: 4.07vw;
+    top: 61.3vw;
+  }
+  .product-s3-text-header {
+    word-break: keep-all;
+    color: #000;
+    width: 71.75vw;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px; /* 121.053% */
+  }
+  .product-s3-text-body {
+    display: none;
+  }
+  .product-s4 {
+    height: 108vw;
+    padding-top: 0;
+  }
+  .product-s4-text {
+    margin-top: 44.27vw;
+    margin-left: 9.9vw;
+  }
+  .product-s4-text-header {
+    display: none;
+  }
+  .product-s4-text-body {
+    width: 35.6vw;
+  }
+  .product-s4-text-body p {
+    color: var(--Dark-Glay, #4d4f58);
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문강조 */
+    font-family: Pretendard;
+    font-size: 1.4em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.357; /* 135.714% */
+  }
+  .product-s4-img {
+    width: 72.7vw;
+    right: 0;
+    height: 71vw;
+    top: 23vw;
+  }
+  .product-s7 {
+    height: 76.3vw;
+    margin-top: 5vw;
+    padding-top: 0vw;
+  }
+  .product-s7-text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 30vw;
+    margin-top: 0;
+    margin-bottom: 65vw;
+  }
+  .product-s7-text .s7-header {
+    width: 52.16vw;
+  }
+  .product-s7-text .s7-descript {
+    display: none;
+  }
+  .product-s7-image {
+    width: 74.5vw;
+    right: 4.07vw;
+    top: 10vw;
+  }
+  .product-s8, .product-s8-black {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .product-s8 .s8-header, .product-s8-black .s8-header {
+    color: var(--Middle-Glay, #a0a0a0);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/보조헤드 */
+    font-family: Pretendard;
+    font-size: 1.7em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.29; /* 129.412% */
+  }
+  .product-s8 .s8-body, .product-s8-black .s8-body {
+    width: 91.85vw;
+    height: 29.51vw;
+  }
+  .product-s8 .s8-body-box1, .product-s8-black .s8-body-box1, .product-s8 .s8-body-box2, .product-s8 .s8-body-box3, .product-s8-black .s8-body-box2, .product-s8-black .s8-body-box3 {
+    width: 28.75vw;
+    background: #d9d9d9;
+  }
 }/*# sourceMappingURL=cad.styles.css.map */

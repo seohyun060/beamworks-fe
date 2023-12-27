@@ -8,7 +8,7 @@ type Props = {
 const CadBanner = ({ bannerTexts }: Props) => {
 	return (
 		<div className='product-s1'>
-			<div className='product-s1-img'>Visual AI</div>
+			<div className='product-s1-img'>Vision AI</div>
 			<div className='product-s1-text'>{bannerTexts[0]}</div>
 		</div>
 	);
