@@ -39,6 +39,7 @@ export type ExploreType = {
 		logo2: string;
 		text: string;
 		background: string;
+		path: string;
 	}[];
 };
 export type NavTitle = {
@@ -84,3 +85,13 @@ export type PubInfo = {
 	author: string;
 	date: string;
 };
+interface PartialPath {
+	pathname?: string;
+	search?: string;
+	hash?: string;
+}
+type To = string | PartialPath;
+export type Navigate = (
+	to: To,
+	options?: { replace?: boolean; state?: unknown },
+) => void;

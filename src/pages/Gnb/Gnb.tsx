@@ -36,6 +36,7 @@ const Gnb = ({
 	languages,
 }: Props) => {
 	const { setLanguageCode } = useGnbStore();
+	console.log(tab1List[3]);
 	return (
 		<div className='gnb'>
 			<img
@@ -66,8 +67,8 @@ const Gnb = ({
 									: `popup${index + 1}`
 							}
 						>
-							{tab1List[index].map((tab: NavContext, index: number) => (
-								<div className='tab' key={index}>
+							{tab1List[index].map((tab: NavContext, idx: number) => (
+								<div className='tab' key={idx}>
 									<div className='tab-text'>
 										<div className='tab-text-title'>{tab.title}</div>
 										{tab.context.map((sub, index) => (
@@ -82,7 +83,11 @@ const Gnb = ({
 											</div>
 										))}
 									</div>
-									{index !== 2 ? <div className='tab-divider' /> : ''}
+									{idx !== tab1List[index].length - 1 ? (
+										<div className='tab-divider' />
+									) : (
+										''
+									)}
 								</div>
 							))}
 						</div>

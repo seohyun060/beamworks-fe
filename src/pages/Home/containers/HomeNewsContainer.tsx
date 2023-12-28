@@ -21,6 +21,7 @@ const HomeNewsContainer = (props: Props) => {
 	const [selectedTab, setSelectedTab] = useState('all');
 	//const [tabs, setTabs] = useState(['all', 'cadai', 'chatai']);
 	const newsList: MainNews[] = [];
+
 	const [filteredList, setFilteredList] = useState<MainNews[]>([]);
 	for (let i = 0; i < 4; i++) {
 		const tempNews: MainNews = {

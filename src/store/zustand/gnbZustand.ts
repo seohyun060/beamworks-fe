@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import images from 'src/assets/images';
-import { NavContext, NavTitle } from '@typedef/types';
+import { NavContext, NavTitle, Navigate } from '@typedef/types';
+import { useNavigate } from 'react-router-dom';
 export type GnbStore = {
 	tabs1: string[];
 	setTabs1: (tabs: string[]) => void;
@@ -16,9 +17,15 @@ export type GnbStore = {
 	setNews: (updatedNews: NavContext[]) => void;
 	visit: NavContext[];
 	setVisit: (updatedCompany: NavContext[]) => void;
+	onPathClick: (path: string, navigate: Navigate) => void;
 };
+
 const useGnbStore = create<GnbStore>((set) => ({
 	tabs1: ['회사소개', '뉴스', '비전・제품소개', '방문・다운로드'],
+
+	onPathClick: (path: string, navigate: Navigate) => {
+		navigate(path);
+	},
 	setTabs1: (tabs: string[]) => set((state) => ({ ...state, tabs1: tabs })),
 	languageCode: 'ko',
 	setLanguageCode: (lang: string) =>
@@ -109,12 +116,12 @@ const useGnbStore = create<GnbStore>((set) => ({
 			title: '일정',
 			context: [
 				{
-					label: '이벤트',
-					path: '/what',
+					label: '학회 및 전시',
+					path: '/event',
 				},
 				{
-					label: '빔웍스 일정',
-					path: '/write',
+					label: '제품 일정',
+					path: '/pdate',
 				},
 			],
 		},

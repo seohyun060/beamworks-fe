@@ -10,6 +10,7 @@ import EeasyNervContainer from './containers/EeasyNervContainer';
 import EeasyPainContainer from './containers/EeasyPainContainer';
 import EeasyVideoContainer from './containers/EeasyVideoContainer';
 import ExploreContainer from 'src/pages/Cad/containers/ExploreContainer';
+import FooterContainer from 'src/pages/Footer/containers/FooterContainer';
 type Props = {};
 
 const Eeasy = (props: Props) => {
@@ -27,6 +28,7 @@ const Eeasy = (props: Props) => {
 			<EeasyPainContainer />
 			<EeasyVideoContainer />
 			<ExploreContainer exploreType={chataiExplore} />
+			<FooterContainer />
 		</div>
 	);
 };

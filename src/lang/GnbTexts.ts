@@ -27,8 +27,8 @@ export const newsTextsKo = [
 	'논문',
 	'White paper',
 	'일정',
-	'이벤트',
-	'빔웍스 일정',
+	'학회 및 전시',
+	'제품 일정',
 ];
 
 export const visitTextsKo = [

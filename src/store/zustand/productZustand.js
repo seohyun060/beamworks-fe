@@ -16,48 +16,55 @@ const useProductStore = create((set, get) => ({
 	cadsExplore: {
 		type: 'cads',
 		title: 'Vision AI 둘러보기',
+
 		contents: [
 			{
 				logo1: images.cadb_b,
 				logo2: '',
 				text: '(유방)',
 				background: '',
+				path: '/cadb',
 			},
 			{
 				logo1: images.cadt_b,
 				logo2: '',
 				text: '(갑상선)',
 				background: '',
+				path: '/cadt',
 			},
 			{
 				logo1: images.cadr_b,
 				logo2: '',
 				text: '',
 				background: '',
+				path: '/cadr',
 			},
 		],
 	},
 	chataiExplore: {
 		type: 'chatai',
-		title: 'ChatAI-Series 둘러보기',
+		title: 'Conversation AI 둘러보기',
 		contents: [
 			{
 				logo1: images.ecross,
 				logo2: images.epro,
 				text: '',
 				background: '',
+				path: '/epro',
 			},
 			{
 				logo1: images.ecross,
 				logo2: images.eeasy,
 				text: '',
 				background: '',
+				path: '/eeasy',
 			},
 			{
 				logo1: images.kiwilogo,
 				logo2: '',
 				text: '',
 				background: '',
+				path: '/kiwi',
 			},
 		],
 	},

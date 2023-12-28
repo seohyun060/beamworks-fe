@@ -1,4 +1,6 @@
+import useGnbStore from '@store/zustand/gnbZustand';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import images from 'src/assets/images';
 
 type Props = {
@@ -6,6 +8,8 @@ type Props = {
 };
 
 const HomeFind = ({ findTexts }: Props) => {
+	const { onPathClick } = useGnbStore();
+	const navigate = useNavigate();
 	return (
 		<div className='home-s4'>
 			<div className='home-s4-text'>
@@ -15,7 +19,12 @@ const HomeFind = ({ findTexts }: Props) => {
 						<p key={i}>{text}</p>
 					))}
 				</div>
-				<div className='readmore'>
+				<div
+					className='readmore'
+					onClick={() => {
+						onPathClick('/jobs', navigate);
+					}}
+				>
 					<div>{findTexts[2]}</div>
 					<img src={images.rightW} />
 				</div>
