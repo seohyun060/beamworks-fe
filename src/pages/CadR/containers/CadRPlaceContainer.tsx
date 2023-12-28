@@ -1,9 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import CadRPlace from '../components/CadRPlace';
 import images from 'src/assets/images';
 import useCadbStore from '@store/zustand/cadbZustand';
 import useGnbStore from '@store/zustand/gnbZustand';
 import GoogleTranslate from 'src/lang/GoogleTranslate';
+import { captureRejectionSymbol } from 'events';
 type Props = {};
 
 const CadRPlaceContainer = (props: Props) => {
@@ -13,8 +14,8 @@ const CadRPlaceContainer = (props: Props) => {
 		text: '길거리에서',
 		imgs: [images.cadr6_1c, images.cadr6_2b, images.cadr6_3b],
 	});
-
-	const placeTextsKo = ['장소에 제한을 두지마세요', content.text];
+	const contentRef = useRef<any>(content);
+	const placeTextsKo = ['장소에 제한을 두지마세요', contentRef.current.text];
 	const onPrevClick = useCallback(() => {
 		if (current > 0) {
 			setCurrent(current - 1);
@@ -28,13 +29,15 @@ const CadRPlaceContainer = (props: Props) => {
 	const { languageCode } = useGnbStore();
 	const [placeTexts, setPlaceTexts] = useState(placeTextsKo);
 	const getTranslate = useCallback(async () => {
+		const placeTextsKo = ['장소에 제한을 두지마세요', content.text];
+		console.log(content, contentRef.current);
 		if (languageCode === 'ko') {
 			setPlaceTexts(placeTextsKo);
 		} else {
 			const data = await GoogleTranslate(placeTextsKo, languageCode);
 			setPlaceTexts(data);
 		}
-	}, [placeTexts, languageCode]);
+	}, [placeTexts, languageCode, content, contentRef, current]);
 
 	useEffect(() => {
 		if (current === 0) {
