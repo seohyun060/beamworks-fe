@@ -25,7 +25,7 @@ const FooterContainer = (props: Props) => {
 		return () => {};
 	}, [languageCode]);
 	useEffect(() => {
-		if (location.pathname === '/cadb' || location.pathname === '/cadr') {
+		if (location.pathname === '/cadb') {
 			setType('black');
 		} else {
 			setType('');

@@ -599,6 +599,7 @@
 				width: 39vw;
 				margin-left: 0;
 				margin-top: 10vw;
+				align-items: end;
 				.s3-demo {
 					display: none;
 				}
@@ -617,7 +618,112 @@
 						line-height: 1.21; /* 121.053% */
 					}
 				}
+				.s3-logo {
+					width: 49.6vw;
+					margin-bottom: 5.2vw;
+				}
 			}
+		}
+		&-s4 {
+			height: fit-content;
+			margin-top: 7vw;
+			position: relative;
+			align-items: start;
+			padding-top: 0;
+			padding-left: 8vw;
+			&-image {
+				width: 65.4vw;
+				margin-left: 0;
+				margin-bottom: 12.7vw;
+				.s4-tab {
+					justify-content: start;
+					margin-bottom: 9vw;
+					&-item {
+						display: none;
+						&-active {
+							display: block;
+							color: var(--Dark-Glay, #4d4f58);
+							font-feature-settings: 'clig' off, 'liga' off;
+
+							/* Mobile/본문강조 */
+							font-family: Pretendard;
+							font-size: 1.4em;
+							font-style: normal;
+							font-weight: 600;
+							line-height: 1.35; /* 135.714% */
+						}
+					}
+				}
+				.s4-tablet {
+					border: 1vw solid black;
+					border-radius: 1vw;
+				}
+				.s4-mobile {
+					width: 17.4vw;
+					top: 15.5vw;
+					right: -20.1vw;
+				}
+			}
+			&-text {
+				width: fit-content;
+				position: absolute;
+				margin-left: 0;
+				top: 5.1vw;
+				.s4-header {
+					color: var(--Black, #000);
+					font-feature-settings: 'clig' off, 'liga' off;
+
+					/* Mobile/주헤드 */
+					font-family: Pretendard;
+					font-size: 1.9em;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 1.21; /* 121.053% */
+				}
+				.s4-series,
+				.s4-nomo,
+				.s4-body {
+					display: none;
+				}
+			}
+		}
+		&-s5 {
+			height: 56.23vw;
+			padding-left: 8.9vw;
+			padding-top: 0;
+			margin-bottom: 13.48vw;
+			&-header {
+				margin-top: 0;
+				top: 58.27vw;
+				width: 57.8vw;
+				color: var(--Black, #000);
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/주헤드 */
+				font-family: Pretendard;
+				font-size: 1.9em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.21; /* 121.053% */
+				position: absolute;
+			}
+			&-body {
+				position: absolute;
+				top: 66.15vw;
+				width: 55.8vw;
+				color: var(--Dark-Glay, #4d4f58);
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/본문 */
+				font-family: Pretendard;
+				font-size: 1.1em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.36; /* 136.364% */
+			}
+		}
+		&-s6 {
+			display: none;
 		}
 	}
 }

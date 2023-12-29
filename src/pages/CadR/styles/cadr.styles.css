@@ -549,6 +549,7 @@
     width: 39vw;
     margin-left: 0;
     margin-top: 10vw;
+    align-items: end;
   }
   .cadr-s3-text .s3-demo {
     display: none;
@@ -566,5 +567,109 @@
     font-style: normal;
     font-weight: 600;
     line-height: 1.21; /* 121.053% */
+  }
+  .cadr-s3-text .s3-logo {
+    width: 49.6vw;
+    margin-bottom: 5.2vw;
+  }
+  .cadr-s4 {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 7vw;
+    position: relative;
+    align-items: start;
+    padding-top: 0;
+    padding-left: 8vw;
+  }
+  .cadr-s4-image {
+    width: 65.4vw;
+    margin-left: 0;
+    margin-bottom: 12.7vw;
+  }
+  .cadr-s4-image .s4-tab {
+    justify-content: start;
+    margin-bottom: 9vw;
+  }
+  .cadr-s4-image .s4-tab-item, .cadr-s4-image .s4-tab-item-active {
+    display: none;
+  }
+  .cadr-s4-image .s4-tab-item-active {
+    display: block;
+    color: var(--Dark-Glay, #4d4f58);
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문강조 */
+    font-family: Pretendard;
+    font-size: 1.4em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.35; /* 135.714% */
+  }
+  .cadr-s4-image .s4-tablet {
+    border: 1vw solid black;
+    border-radius: 1vw;
+  }
+  .cadr-s4-image .s4-mobile {
+    width: 17.4vw;
+    top: 15.5vw;
+    right: -20.1vw;
+  }
+  .cadr-s4-text {
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    margin-left: 0;
+    top: 5.1vw;
+  }
+  .cadr-s4-text .s4-header {
+    color: var(--Black, #000);
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+  }
+  .cadr-s4-text .s4-series,
+  .cadr-s4-text .s4-nomo,
+  .cadr-s4-text .s4-nomo-active,
+  .cadr-s4-text .s4-body {
+    display: none;
+  }
+  .cadr-s5 {
+    height: 56.23vw;
+    padding-left: 8.9vw;
+    padding-top: 0;
+    margin-bottom: 13.48vw;
+  }
+  .cadr-s5-header {
+    margin-top: 0;
+    top: 58.27vw;
+    width: 57.8vw;
+    color: var(--Black, #000);
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+    position: absolute;
+  }
+  .cadr-s5-body {
+    position: absolute;
+    top: 66.15vw;
+    width: 55.8vw;
+    color: var(--Dark-Glay, #4d4f58);
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문 */
+    font-family: Pretendard;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36; /* 136.364% */
+  }
+  .cadr-s6 {
+    display: none;
   }
 }/*# sourceMappingURL=cadr.styles.css.map */
