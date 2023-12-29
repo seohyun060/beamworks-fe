@@ -201,9 +201,8 @@
 			line-height: 1.25; /* 125% */
 		}
 		&-carousel {
-			width: 100%;
-			width: 40.9375vw;
-			height: 27.34375vw;
+			width: 40.9375vw; //40.9375   66.8
+			height: 27.34375vw; //27.34375
 			position: relative;
 			margin-top: 2.7vw;
 			display: flex;
@@ -212,28 +211,28 @@
 
 			//background-color: #a0a0a0;
 			.s3-mock {
-				width: 60.26vw;
+				width: 147.2%;
 				position: absolute;
 				//left: 14.68vw;
-				left: -5.420657vw;
-				top: -2.5vw;
+				left: -13.2412995419847%;
+				top: -9.142857142857143%;
 				z-index: -1;
 			}
 			.s3-prev {
-				width: 0.625vw;
+				width: 1.526717557251908%;
 				position: absolute;
-				left: -3.125vw;
-				top: 12.471875vw;
+				left: -7.633587786259542%;
+				top: 45.611428571428571%;
 				z-index: 20;
 			}
 			.s3-next {
 				@extend .s3-prev;
 				left: auto;
-				right: -3.125vw;
+				right: -7.633587786259542%;
 			}
 			.s3-frame {
-				width: 40.9375vw;
-				height: 27.34375vw;
+				width: 100%;
+				height: 100%;
 				background-color: black;
 				//background-color: red;
 				z-index: 2;
@@ -338,6 +337,7 @@
 				}
 				&-body {
 					width: 15.47vw;
+					height: 4.0625vw;
 					display: inline-flex;
 					flex-direction: row;
 					padding: 0.52vw 0.52vw 0.52vw 1.04vw;
@@ -345,6 +345,7 @@
 					align-items: center;
 					gap: 1.25vw;
 					border-radius: 0.625vw;
+
 					background: var(--layer-color-background-color, #1b1b21);
 					.rm-title {
 						color: #fff;
@@ -393,6 +394,7 @@
 						}
 						&-toggle {
 							position: absolute;
+							margin-top: 0.04vw;
 							width: 2.685vw;
 							height: 2.685vw;
 							border-radius: 0.416vw;
@@ -415,6 +417,7 @@
 					}
 				}
 			}
+
 			.s4-rmode {
 				position: absolute;
 				width: 54.9vw;
@@ -562,6 +565,168 @@
 				margin-left: 10vw;
 				margin-top: 2.54vw;
 				position: relative;
+			}
+		}
+		&-s3 {
+			height: fit-content;
+			align-items: center;
+			&-cadb {
+				display: none;
+			}
+			&-header {
+				color: var(--Black, #000);
+				margin-left: 0;
+				text-align: center;
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/주헤드 */
+				font-family: Pretendard;
+				font-size: 1.9em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.21053; /* 121.053% */
+			}
+			&-realtime {
+				margin-left: 0;
+				color: var(--Dark-Glay, #4d4f58);
+				text-align: center;
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/본문강조 */
+				font-family: Pretendard;
+				font-size: 1.4em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.35714; /* 135.714% */
+			}
+			&-carousel {
+				margin-left: 0;
+				margin-top: 6.23vw;
+				margin-bottom: 15.52vw;
+				width: 52vw;
+				height: 34.736vw;
+			}
+		}
+		&-s4 {
+			padding-left: 8.65vw;
+			padding-top: 15.7vw;
+			&-cadb {
+				display: none;
+			}
+			&-header {
+				color: var(--White-idle, #fff);
+				margin-bottom: 2.54vw;
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/주헤드 */
+				font-family: Pretendard;
+				font-size: 1.9em;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.21053; /* 121.053% */
+			}
+			&-descript {
+				width: 83.3vw;
+				color: var(--White, #fff);
+				font-feature-settings: 'clig' off, 'liga' off;
+
+				/* Mobile/본문 */
+				font-family: Pretendard;
+				font-size: 1.1em;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.36364; /* 136.364% */
+			}
+			&-body {
+				flex-direction: column;
+				height: 81.3vw;
+				align-items: normal;
+				position: relative;
+				.s4-button {
+					margin-left: 10vw;
+					margin-top: 7vw;
+					transform: scale(2.3);
+					position: relative;
+					&-text {
+						display: none;
+					}
+					&-body {
+						.rm-title {
+							color: #fff;
+							font-feature-settings: 'clig' off, 'liga' off;
+
+							/* Mobile/본문 */
+							font-family: Pretendard;
+							font-size: 0.5em;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 1.36; /* 136.364% */
+						}
+						.rm-switch {
+							font-size: 0.25em;
+						}
+					}
+				}
+				.s4-rmode {
+					left: 0;
+					width: 116.8vw;
+					margin-left: -8.65vw;
+					margin-top: 18vw;
+					&-active {
+						opacity: 1;
+						visibility: visible;
+					}
+					&-off {
+						z-index: 0;
+						//opacity: 0;
+					}
+				}
+			}
+			&-freeze {
+				width: 100%;
+				height: 61.3vw;
+				align-items: normal;
+				.s4-fmode {
+					width: 100.8vw;
+					left: -8vw;
+					top: 0;
+				}
+				.s4-fmodeb {
+					position: absolute;
+					margin-left: 0;
+					right: 5.6vw;
+					top: 8.14vw;
+					width: 28.75vw;
+				}
+				.s4-fmodec {
+					position: absolute;
+					width: 33.33vw;
+					margin-left: 0;
+					right: 5.6vw;
+					top: 33.8vw;
+				}
+			}
+			&-review {
+				position: relative;
+				height: 65.8vw;
+				.s4-rvmode {
+					width: 116.8vw;
+					position: absolute;
+					top: 5vw;
+					margin-left: -8.65vw;
+				}
+			}
+			&-setting {
+				height: 30.8vw;
+				.s4-hdmi {
+					width: 49.6vw;
+				}
+				.s4-box {
+					width: 27vw;
+				}
+				.s4-smode {
+					display: none;
+				}
 			}
 		}
 	}

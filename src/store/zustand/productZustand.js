@@ -70,7 +70,7 @@ const useProductStore = create((set, get) => ({
 	},
 	cadbExplore: {
 		type: 'cadb',
-		title: 'CadAI-Series 둘러보기',
+		title: 'Vision AI 둘러보기',
 		contents: [
 			{
 				logo1: images.cadb_b,

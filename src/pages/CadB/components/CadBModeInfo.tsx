@@ -6,6 +6,7 @@ type Props = {
 	onToggleClick: VoidFunc;
 	modeType: CadbMode;
 	modeInfoTexts: string[];
+	portrait: boolean;
 };
 
 const CadModeInfo = ({
@@ -13,6 +14,7 @@ const CadModeInfo = ({
 	onToggleClick,
 	modeType,
 	modeInfoTexts,
+	portrait,
 }: Props) => {
 	console.log(modeType);
 	return (
@@ -54,13 +56,25 @@ const CadModeInfo = ({
 				</div>
 			) : modeType.type === 'freeze' ? (
 				<div className='cadb-s4-freeze'>
-					<img className='s4-fmode' src={modeType.image1} />
-					<img className='s4-fmodeb' src={modeType.image2} />
-					<img className='s4-fmodec' src={modeType.image3} />
+					<img
+						className='s4-fmode'
+						src={portrait ? images.freeze1_m : modeType.image1}
+					/>
+					<img
+						className='s4-fmodeb'
+						src={portrait ? images.freeze2_m : modeType.image2}
+					/>
+					<img
+						className='s4-fmodec'
+						src={portrait ? images.freeze3_m : modeType.image3}
+					/>
 				</div>
 			) : modeType.type === 'setting' ? (
 				<div className='cadb-s4-setting'>
-					<img className='s4-hdmi' src={modeType.image1} />
+					<img
+						className='s4-hdmi'
+						src={portrait ? images.cadset_m : modeType.image1}
+					/>
 					<img className='s4-box' src={modeType.image2} />
 					<img className='s4-smode' src={modeType.image3} />
 				</div>
