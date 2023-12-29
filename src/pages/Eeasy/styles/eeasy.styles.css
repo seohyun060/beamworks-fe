@@ -56,6 +56,9 @@
   font-weight: 400;
   line-height: 1.416; /* 141.667% */
 }
+.eeasy-handm {
+  display: none;
+}
 .eeasy-s2 {
   width: 100%;
   height: 100%;
@@ -450,4 +453,80 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+}
+
+@media (orientation: portrait) {
+  .eeasy {
+    position: relative;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+    align-items: normal;
+    font-size: 2.5445292621vw;
+  }
+  .eeasy-s1 {
+    background-image: url("/public/assets/images/eeasyBanner_m.png");
+    height: 76.4vw;
+    padding-top: 0;
+    align-items: center;
+  }
+  .eeasy-s1-text {
+    margin-top: 43.5vw;
+  }
+  .eeasy-s1-text .s1-header {
+    margin-bottom: 2.3vw;
+  }
+  .eeasy-s1-text .s1-body {
+    color: #fff;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문 */
+    font-family: Pretendard;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36; /* 136.364% */
+  }
+  .eeasy-handm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 17vw;
+    height: 42vw;
+  }
+  .eeasy-handm-title {
+    color: var(--Black, #000);
+    margin-bottom: 2.5vw;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+  }
+  .eeasy-handm-body {
+    color: var(--Dark-Glay, #4d4f58);
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문 */
+    font-family: Pretendard;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36; /* 136.364% */
+  }
+  .eeasy-s2 {
+    height: 55.47vw;
+  }
+  .eeasy-s2-text {
+    display: none;
+  }
+  .eeasy-s3 {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }/*# sourceMappingURL=eeasy.styles.css.map */

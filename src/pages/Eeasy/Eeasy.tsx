@@ -11,13 +11,16 @@ import EeasyPainContainer from './containers/EeasyPainContainer';
 import EeasyVideoContainer from './containers/EeasyVideoContainer';
 import ExploreContainer from 'src/pages/Cad/containers/ExploreContainer';
 import FooterContainer from 'src/pages/Footer/containers/FooterContainer';
+import EeasyHandMobileContainer from './containers/EeasyHandMobileContainer';
 type Props = {};
 
 const Eeasy = (props: Props) => {
 	const { eeasySolution, chataiExplore, setEeasySolution } = useProductStore();
+	const { portrait } = useProductStore();
 	return (
 		<div className='eeasy'>
 			<EeasyBannerContainer />
+			<EeasyHandMobileContainer />
 			<EeasyHandContainer />
 			<SolvingContainer
 				solution={eeasySolution}
