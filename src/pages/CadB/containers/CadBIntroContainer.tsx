@@ -3,12 +3,14 @@ import CadBIntro from '../components/CadBIntro';
 import useGnbStore from '@store/zustand/gnbZustand';
 import { introTextsKo } from 'src/lang/CadBTexts';
 import GoogleTranslate from 'src/lang/GoogleTranslate';
+import useProductStore from '@store/zustand/productZustand';
 type Props = {};
 
 const CadBIntroContainer = (props: Props) => {
 	const { languageCode } = useGnbStore();
 	const [introTexts, setIntroTexts] = useState(introTextsKo);
-	const [portrait, setPortrait] = useState(false);
+	const { portrait, handleResize } = useProductStore();
+
 	const getTranslate = useCallback(async () => {
 		if (languageCode === 'ko') {
 			setIntroTexts(introTextsKo);
@@ -18,13 +20,6 @@ const CadBIntroContainer = (props: Props) => {
 			setIntroTexts(data);
 		}
 	}, [introTexts, languageCode]);
-	const handleResize = useCallback(() => {
-		if (window.innerWidth > window.innerHeight) {
-			setPortrait(false);
-		} else {
-			setPortrait(true);
-		}
-	}, [window.innerWidth, window.innerHeight, portrait]);
 
 	useEffect(() => {
 		handleResize();

@@ -1,3 +1,4 @@
+import useProductStore from '@store/zustand/productZustand';
 import { CadrContent } from '@typedef/types';
 import React from 'react';
 import images from 'src/assets/images';
@@ -7,11 +8,12 @@ type Props = {
 };
 
 const CadRSpace = ({ content, spaceTexts }: Props) => {
+	const { portrait } = useProductStore();
 	return (
 		<div
 			className='cadr-s4'
 			style={{
-				backgroundImage: `url(${content.backImg})`,
+				backgroundImage: !portrait ? `url(${content.backImg})` : 'none',
 			}}
 		>
 			{/* <img src={images.cadr_cm1} /> */}
