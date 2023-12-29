@@ -193,6 +193,10 @@ const images = {
 	endB: '/assets/images/endB.svg',
 	leftB: '/assets/images/leftB.svg',
 	cadb2_m: '/assets/images/cadb2_m.png',
+	freeze1_m: '/assets/images/freeze1_m.png',
+	freeze2_m: '/assets/images/freeze2_m.png',
+	freeze3_m: '/assets/images/freeze3_m.png',
+	cadset_m: '/assets/images/cadset_m.png',
 	//Team
 	teamGoalImage_CST: '/assets/images/team/teamGoalImage_CST.png',
 	teamSlogunImage_CST: '/assets/images/team/teamSlogunImage_CST.png',
