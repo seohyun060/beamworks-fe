@@ -252,6 +252,7 @@
   flex-direction: row;
   position: relative;
   align-items: center;
+  background-position: right;
   background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
   background-repeat: no-repeat;
 }
@@ -360,6 +361,7 @@
   display: flex;
   flex-direction: column;
   background-image: url("/public/assets/images/cadr5.png");
+  background-position: right;
   background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
   background-repeat: no-repeat;
   position: relative;
@@ -482,6 +484,9 @@
   }
   .cadr-s1-button {
     display: none;
+  }
+  .cadr-s1-text {
+    margin-top: 41.98vw;
   }
   .cadr-s1-text .s1-header {
     width: 49.7vw;

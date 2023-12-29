@@ -395,8 +395,13 @@
   .chatai-s1 {
     height: 76.335vw;
     background-image: url("/public/assets/images/chataiBanner_m.png");
+    padding-top: 0;
+    justify-content: start;
   }
   .chatai-s1-img {
+    padding-top: 0;
+    justify-content: start;
+    margin-top: 41.98vw;
     width: -moz-fit-content;
     width: fit-content;
     font-size: 2.5em;
@@ -407,13 +412,13 @@
   .chatai-s2 {
     height: 109.4vw;
     padding-top: 0;
-    margin-top: 0;
     flex-direction: column;
   }
   .chatai-s2-text {
     width: -moz-fit-content;
     width: fit-content;
     margin-left: 0;
+    margin-top: 12.7vw;
   }
   .chatai-s2-text .s2-store,
   .chatai-s2-text .s2-descript {

@@ -547,9 +547,12 @@
   }
   .product-s1 {
     background-image: url("/public/assets/images/cadBanner_m.png");
+    padding-top: 0;
+    justify-content: start;
     height: 76.4vw;
   }
   .product-s1-img {
+    margin-top: 41.98vw;
     width: 25.95vw;
     font-size: 2.5em;
     font-weight: 600;
