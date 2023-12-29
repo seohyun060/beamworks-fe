@@ -197,6 +197,7 @@ const images = {
 	freeze2_m: '/assets/images/freeze2_m.png',
 	freeze3_m: '/assets/images/freeze3_m.png',
 	cadset_m: '/assets/images/cadset_m.png',
+	cadrLogo_m: '/assets/images/cadrLogo_m.png',
 	//Team
 	teamGoalImage_CST: '/assets/images/team/teamGoalImage_CST.png',
 	teamSlogunImage_CST: '/assets/images/team/teamSlogunImage_CST.png',

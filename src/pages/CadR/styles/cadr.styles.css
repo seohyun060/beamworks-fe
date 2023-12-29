@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   background-image: url("/public/assets/images/cadr1.png");
+  background-position: right;
   background-size: cover; /* 이미지가 컨테이너에 맞게 조절됨 */
   background-repeat: no-repeat;
   position: relative;
@@ -459,4 +460,111 @@
   width: 41.25vw;
   height: 100%;
   margin-right: 1.25vw;
+}
+
+@media (orientation: portrait) {
+  .cadr {
+    position: relative;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+    align-items: normal;
+    font-size: 2.5445292621vw;
+  }
+  .cadr-s1 {
+    background-image: url("/public/assets/images/cadrBanner_m.png");
+    height: 76.4vw;
+    padding-top: 0;
+  }
+  .cadr-s1-button {
+    display: none;
+  }
+  .cadr-s1-text .s1-header {
+    width: 49.7vw;
+  }
+  .cadr-s1-text .s1-body {
+    color: #fff;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/본문 */
+    font-family: Pretendard;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36; /* 136.364% */
+  }
+  .cadr-s2 {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 0;
+  }
+  .cadr-s2-tablet {
+    width: 65vw;
+  }
+  .cadr-s2-text {
+    width: 40vw;
+    margin-top: 33.6vw;
+  }
+  .cadr-s2-text .s2-demo,
+  .cadr-s2-text .s2-body {
+    display: none;
+  }
+  .cadr-s2-text .s2-header p {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+  }
+  .cadr-s2-desktop {
+    display: none;
+  }
+  .cadr-s3 {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 10.4vw;
+    padding-top: 0;
+  }
+  .cadr-s3-image {
+    transform: scale(1.3);
+    margin-right: 7vw;
+  }
+  .cadr-s3-image .s3-scroll {
+    display: none;
+  }
+  .cadr-s3-image .s3-phone {
+    right: auto;
+    left: -7vw;
+  }
+  .cadr-s3-text {
+    width: 39vw;
+    margin-left: 0;
+    margin-top: 10vw;
+  }
+  .cadr-s3-text .s3-demo {
+    display: none;
+  }
+  .cadr-s3-text .s3-header {
+    width: 39vw;
+  }
+  .cadr-s3-text .s3-header p {
+    color: #000;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    /* Mobile/주헤드 */
+    font-family: Pretendard;
+    font-size: 1.9em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.21; /* 121.053% */
+  }
 }/*# sourceMappingURL=cadr.styles.css.map */

@@ -3,6 +3,7 @@ import CadBBanner from '../components/CadBBanner';
 import useGnbStore from '@store/zustand/gnbZustand';
 import { bannerTextsKo } from 'src/lang/CadBTexts';
 import GoogleTranslate from 'src/lang/GoogleTranslate';
+import useProductStore from '@store/zustand/productZustand';
 type Props = {
 	scrollPosition: number;
 };
@@ -11,7 +12,8 @@ const CadBBannerContainer = ({ scrollPosition }: Props) => {
 	console.log(scrollPosition, 'dfdfdf');
 	const { languageCode } = useGnbStore();
 	const [bannerTexts, setBannerTexts] = useState(bannerTextsKo);
-	const [portrait, setPortrait] = useState(false);
+	const { portrait, handleResize } = useProductStore();
+
 	const getTranslate = useCallback(async () => {
 		if (languageCode === 'ko') {
 			setBannerTexts(bannerTextsKo);
@@ -20,13 +22,6 @@ const CadBBannerContainer = ({ scrollPosition }: Props) => {
 			setBannerTexts(data);
 		}
 	}, [bannerTexts, languageCode]);
-	const handleResize = useCallback(() => {
-		if (window.innerWidth > window.innerHeight) {
-			setPortrait(false);
-		} else {
-			setPortrait(true);
-		}
-	}, [window.innerWidth, window.innerHeight, portrait]);
 
 	useEffect(() => {
 		handleResize();
